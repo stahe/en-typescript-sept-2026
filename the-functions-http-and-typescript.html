@@ -912,7 +912,7 @@
 <h1 id="12-the-functions-http-and-typescript">12. <span style="color: #2e74b5">The functions HTTP and TypeScript</span></h1>
 <p>Here we present two ways to make HTTP requests in TypeScript: the <strong><span style="color: #9a3412">[fetch]</span></strong> function, which has been native since Node 18, and the third-party library <strong><span style="color: #9a3412">[axios]</span></strong>. The scripts for this chapter are located in the <strong><span style="color: #9a3412">[http]</span></strong> folder of the project.</p>
 <h2 id="121-choosing-tools-http">12.1. <span style="color: #2e74b5">Choosing Tools HTTP</span></h2>
-<p>In 2019, <span style="color: #9a3412"><code>fetch</code> </span>had not yet been implemented by node.js, and the original document recommended the <code>&lt;span style="color: #9a3412"&gt;node-fetch</code> </span>package. Since Node 18 (2022), <strong><span style="color: #9a3412"><code>fetch</code> </span></strong>has been a <strong>native global</strong> function, standardized by the <code>fetch</code> standard—there is no longer a need to import it.</p>
+<p>In 2019, <span style="color: #9a3412"><code>fetch</code> </span>had not yet been implemented by node.js, and the original document recommended the <code>node-fetch</code> package. Since Node 18 (2022), <strong><span style="color: #9a3412"><code>fetch</code> </span></strong>has been a <strong>native global</strong> function, standardized by the <code>fetch</code> standard—there is no longer a need to import it.</p>
 <p><strong><span style="color: #9a3412">[axios] </span></strong>remains an interesting library, however: compatible with both node.js and browsers, it offers a slightly richer API (interceptors, automatic JSON serialization, standardized error handling). We present both, using the same example, to show that the coding approach is similar.</p>
 <h2 id="122-the-tax-calculation-server">12.2. <span style="color: #2e74b5">The Tax Calculation Server</span></h2>
 <p>This chapter, like the following ones, refers to the tax calculation server PHP built in the course “Introduction to the PHP7 Language Through Examples.” Its installation (Laragon, NetBeans, <span style="color: #9a3412">config.json</span> configuration) has not changed and is still described in this course PHP—we will not revisit it here.</p>
@@ -1027,10 +1027,10 @@
 </code></pre></div>
 <ul>
 <li>Lines 3–5: <strong><span style="color: #9a3412">[mise à jour 2026] </span></strong>— comment noting that <span style="color: #9a3412">fetch </span>is now native, unlike in 2019;</li>
-<li>line 18: <span style="color: #9a3412">AbortSignal.timeout(2000) </span>— replaces the <span style="color: #9a3412"><code>timeout</code></span> option in <code>&lt;span style="color: #9a3412"&gt;node-fetch</code> </span>(which does not exist in native <code>&lt;span style="color: #9a3412"&gt;fetch</code></span>): after 2 seconds, the request is automatically canceled;</li>
+<li>line 18: <span style="color: #9a3412">AbortSignal.timeout(2000) </span>— replaces the <span style="color: #9a3412"><code>timeout</code></span> option in <code>node-fetch</code> (which does not exist in native <code>fetch</code>): after 2 seconds, the request is automatically canceled;</li>
 <li>line 27: <span style="color: #9a3412">fetch(URL, options) </span>— the syntax remains that of standard fetch: a URL and an options object (method, cancellation signal, etc.);</li>
 <li>line 38: <span style="color: #9a3412">await response.json() </span>— extracts the JSON body from the response; this is itself an asynchronous operation (<span style="color: #9a3412">response </span>may be a stream currently being received);</li>
-<li>Line 50: <code>&lt;span style="color: #9a3412"&gt;fetch</code> </span>only throws an exception if the request HTTP <strong>failed</strong> (network unavailable, timeout, etc.). If a response is received—even with an error code (400, 500, etc.)—<span style="color: #9a3412"><code>fetch</code> </span><strong>does not</strong> throw an exception: the response is available as usual, line 38.</li>
+<li>Line 50: <code>fetch</code> only throws an exception if the request HTTP <strong>failed</strong> (network unavailable, timeout, etc.). If a response is received—even with an error code (400, 500, etc.)—<span style="color: #9a3412"><code>fetch</code> </span><strong>does not</strong> throw an exception: the response is available as usual, line 38.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npx tsx http/fetch-01.ts
 </code></pre></div>
@@ -1169,8 +1169,8 @@
 <a id="__codelineno-6-64" name="__codelineno-6-64" href="#__codelineno-6-64"></a> <span class="mi">64</span>  <span class="n">main</span><span class="p">();</span>
 </code></pre></div>
 <ul>
-<li>line 24: <span style="color: #9a3412">axios.request(options) </span>— unlike <code>&lt;span style="color: #9a3412"&gt;fetch&lt;/span&gt;</code>, the URL and options are grouped into a single configuration object;</li>
-<li>line 33: <span style="color: #9a3412">error.response </span>— if the server responded (even with an error code), Axios places this response in <span style="color: #9a3412">error.response</span>, which is accessible in the <code>&lt;span style="color: #9a3412"&gt;catch</code> block </span>— unlike <code>&lt;span style="color: #9a3412"&gt;fetch&lt;/span&gt;</code>, Axios <strong>always throws an exception</strong> whenever the status code is not a success (2xx);</li>
+<li>line 24: <span style="color: #9a3412">axios.request(options) </span>— unlike <code>fetch</code>, the URL and options are grouped into a single configuration object;</li>
+<li>line 33: <span style="color: #9a3412">error.response </span>— if the server responded (even with an error code), Axios places this response in <span style="color: #9a3412">error.response</span>, which is accessible in the <code>catch</code> block — unlike <code>fetch</code>, Axios <strong>always throws an exception</strong> whenever the status code is not a success (2xx);</li>
 <li>line 26: the successful response is in <span style="color: #9a3412">response.data </span>— axios automatically extracts JSON; there’s no need for a separate <span style="color: #9a3412">await response.json() </span>as with <span style="color: #9a3412">fetch</span>.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>npx tsx http/axios-01.ts
@@ -1294,7 +1294,7 @@
 </code></pre></div>
 <ul>
 <li>Lines 39–53: The request POST sends its parameters (<span style="color: #9a3412">user</span>, <span style="color: #9a3412">password</span>) encoded as <span style="color: #9a3412">application/x-www-form-urlencoded </span>via <span style="color: #9a3412">qs.stringify(...) </span>in <span style="color: #9a3412">options.data</span>;</li>
-<li>Both functions are executed <strong>sequentially</strong> in <span style="color: #9a3412"><code>main&lt;/span&gt;</code> (<span style="color: #9a3412">awaited </span>one after the other): the second function only makes sense if the first one succeeded, since it depends on the session cookie set by <code>&lt;span style="color: #9a3412"&gt;init-session&lt;/span&gt;</code>.</li>
+<li>Both functions are executed <strong>sequentially</strong> in <code>main</code> (<span style="color: #9a3412">awaited </span>one after the other): the second function only makes sense if the first one succeeded, since it depends on the session cookie set by <code>init-session</code>.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>npx tsx http/axios-03.ts
 </code></pre></div>

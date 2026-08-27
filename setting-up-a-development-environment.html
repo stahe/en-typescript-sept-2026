@@ -940,7 +940,7 @@
 <h2 id="22-setting-up-the-vscode-project">2.2. <span style="color: #2e74b5">Setting up the VSCode project</span></h2>
 <p>Let’s create a working directory, which we’ll open in VSCode. In it, we’ll create two files at the root: <span style="color: #9a3412">package.json </span>and <span style="color: #9a3412">tsconfig.json</span>.</p>
 <h3 id="221-the-packagejson-file">2.2.1. <span style="color: #1f4d78">The <code>package.json</code> file</span></h3>
-<p>This file lists the project’s dependencies. We also specify <span style="color: #9a3412"><code>&amp;quot;type&amp;quot;: &amp;quot;module&amp;quot;&lt;/span&gt;</code> so that Node.js natively treats our files as ECMAScript modules (with <span style="color: #9a3412">import/export</span>), without needing an intermediate tool as was the case in 2019 with the <span style="color: #9a3412">esm</span> package.</p>
+<p>This file lists the project’s dependencies. We also specify <code>"type": "module"</code> so that Node.js natively treats our files as ECMAScript modules (with <span style="color: #9a3412">import/export</span>), without needing an intermediate tool as was the case in 2019 with the <span style="color: #9a3412">esm</span> package.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>{
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  "type": "module",
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  "scripts": {
@@ -995,7 +995,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>  1  hello world!
 </code></pre></div>
 <h2 id="24-second-script-type-checking">2.4. <span style="color: #2e74b5">Second script: type checking</span></h2>
-<p>Let’s create a second file, <code>&lt;span style="color: #9a3412"&gt;tests/test-02.ts</code></span>, with an explicitly typed variable:</p>
+<p>Let’s create a second file, <code>tests/test-02.ts</code>, with an explicitly typed variable:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="s1">'use strict'</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"x="</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="p">);</span>

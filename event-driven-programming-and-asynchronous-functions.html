@@ -1038,7 +1038,7 @@
 </code></pre></div>
 <ul>
 <li>Line 8: <span style="color: #9a3412">import EventEmitter from &#x27;events&#x27; </span>— imports the class that allows you to trigger and listen for events;</li>
-<li>line 15: <span style="color: #9a3412">const eventEmitter = new EventEmitter() </span>— an event emitter is instantiated using <code>&lt;span style="color: #9a3412"&gt;new</code></span>;</li>
+<li>line 15: <span style="color: #9a3412">const eventEmitter = new EventEmitter() </span>— an event emitter is instantiated using <code>new</code>;</li>
 <li>lines 24 and 26: the function encapsulated in <span style="color: #9a3412">setTimeout </span>emits <strong>two</strong> events, <span style="color: #9a3412">timer1Success </span>and <span style="color: #9a3412">timer1Failure</span>, each with its own associated data (here, for demonstration purposes only—normally, a single task would emit only one or the other);</li>
 <li>lines 29–37: the main code <strong>subscribes</strong> to these two events using <span style="color: #9a3412">eventEmitter.on(nomÉvénement, callback)</span>—the callback will not execute until the event is actually emitted, not at the time of subscription;</li>
 <li>line 40: the main code ends here, but the <strong>global script</strong> does not end until the asynchronous task (and the subscribed callbacks) have finished executing.</li>
@@ -1150,7 +1150,7 @@
 <li><strong><span style="color: #9a3412">[rejected]</span></strong>: it has failed;</li>
 <li><strong><span style="color: #9a3412">[settled]</span></strong>: it has completed (regardless of whether it succeeded or failed).</li>
 </ul>
-<p>You subscribe to the results of a <span style="color: #9a3412">Promise </span>using the syntax <span style="color: #9a3412">promise.then(f1).catch(f2).finally(f3)</span>: <span style="color: #9a3412">f1 </span>executes on success (it receives the result passed by <span style="color: #9a3412">resolve</span>), <span style="color: #9a3412">f2 </span>on failure (it receives the error passed by <code>&lt;span style="color: #9a3412"&gt;reject</code></span>), and <span style="color: #9a3412">f3 </span>in all cases, without any parameters.</p>
+<p>You subscribe to the results of a <span style="color: #9a3412">Promise </span>using the syntax <span style="color: #9a3412">promise.then(f1).catch(f2).finally(f3)</span>: <span style="color: #9a3412">f1 </span>executes on success (it receives the result passed by <span style="color: #9a3412">resolve</span>), <span style="color: #9a3412">f2 </span>on failure (it receives the error passed by <code>reject</code>), and <span style="color: #9a3412">f3 </span>in all cases, without any parameters.</p>
 <h2 id="115-script-async-04">11.5. <span style="color: #2e74b5">script [async-04]</span></h2>
 <p>This script creates two independent <span style="color: #9a3412">Promises</span>, each encapsulating a <span style="color: #9a3412">setTimeout</span>, and subscribes to their results:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="w">  </span><span class="mf">1</span><span class="w">  </span><span class="s1">'use strict'</span><span class="p">;</span>
@@ -1247,7 +1247,7 @@
 <a id="__codelineno-10-92" name="__codelineno-10-92" href="#__codelineno-10-92"></a><span class="w"> </span><span class="mf">92</span><span class="w">  </span><span class="p">}</span>
 </code></pre></div>
 <ul>
-<li>Line 20: <span style="color: #9a3412">new Promise&lt;string&gt;(function (resolve) {...}) </span>— TypeScript allows you to specify, via the generic parameter <span style="color: #9a3412">&lt;string&gt;</span>, the type of value that <code>&lt;span style="color: #9a3412"&gt;resolve</code> </span>will return; without it, the type would be inferred as <code>&lt;span style="color: #9a3412"&gt;unknown</code></span>;</li>
+<li>Line 20: <span style="color: #9a3412">new Promise&lt;string&gt;(function (resolve) {...}) </span>— TypeScript allows you to specify, via the generic parameter <span style="color: #9a3412">&lt;string&gt;</span>, the type of value that <code>resolve</code> will return; without it, the type would be inferred as <code>unknown</code>;</li>
 <li><span style="color: #9a3412">promise1 </span>resolves successfully after 1 second (<span style="color: #9a3412">resolve(&#x27;[réussite]&#x27;)</span>); <span style="color: #9a3412">promise2 </span>fails after 2 seconds (<span style="color: #9a3412">reject(&#x27;[échec]&#x27;)</span>);</li>
 <li>the main code (line 78) finishes well before both promises have a result—the global script, however, continues until both are settled.</li>
 </ul>
@@ -1525,9 +1525,9 @@
 </code></pre></div>
 <ul>
 <li>line 79: <span style="color: #9a3412">async function main(): Promise&lt;void&gt; </span>— an <span style="color: #9a3412">async-tagged</span> function always returns a <span style="color: #9a3412">Promise</span>, even if its body does not explicitly indicate this;</li>
-<li>line 87: <span style="color: #9a3412"><code>await async01(débutAsync01)</code> </span><strong>suspends</strong> the execution of <span style="color: #9a3412"><code>main</code> </span>until the promise is resolved, without blocking the rest of the program (the <span style="color: #9a3412"><code>await</code> keyword </span>can only be used inside an <code>&lt;span style="color: #9a3412"&gt;async&lt;/span&gt;</code> function or at the top level of a module—see the chapter “Modules,” script <code>&lt;span style="color: #9a3412"&gt;import-04&lt;/span&gt;</code>);</li>
+<li>line 87: <span style="color: #9a3412"><code>await async01(débutAsync01)</code> </span><strong>suspends</strong> the execution of <span style="color: #9a3412"><code>main</code> </span>until the promise is resolved, without blocking the rest of the program (the <span style="color: #9a3412"><code>await</code> keyword </span>can only be used inside an <code>async</code> function or at the top level of a module—see the chapter “Modules,” script <code>import-04</code>);</li>
 <li>lines 85–100: <strong>sequential</strong> execution—each <span style="color: #9a3412"><code>await</code> </span>waits for the previous task to finish before starting the next one; the total duration is the <strong>sum</strong> of the three wait times (~6s);</li>
-<li>lines 106–113: <strong>parallel</strong> execution, with <span style="color: #9a3412"><code>await Promise.all([...])&lt;/span&gt;</code>—the total duration is that of the <strong>longest</strong> task (~3s);</li>
+<li>lines 106–113: <strong>parallel</strong> execution, with <code>await Promise.all([...])</code>—the total duration is that of the <strong>longest</strong> task (~3s);</li>
 <li>A standard <span style="color: #9a3412">try/catch</span> block is sufficient to handle the failure of an awaited promise—there’s no longer a need for chained <span style="color: #9a3412">.catch() calls </span>as in the previous scripts.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nx">npx</span><span class="w"> </span><span class="nx">tsx</span><span class="w"> </span><span class="k">async</span><span class="err">/async-06.ts</span>
@@ -1689,7 +1689,7 @@
 <li><strong><span style="color: #9a3412">[Promise.allSettled] </span></strong>(ES2020): unlike <span style="color: #9a3412">Promise.all </span>(<span style="color: #9a3412">async-05</span> script), it <strong>always</strong> waits for all promises to complete—whether they succeed or fail—and returns the details of each one—which is useful when you never want to lose the results of tasks that succeeded, even if another one failed;</li>
 <li><strong><span style="color: #9a3412">[Promise.any] </span></strong>(ES2021): returns the result of the <strong>first</strong> promise that succeeds, ignoring the others—only rejects if <strong>all</strong> fail;</li>
 <li><strong><span style="color: #9a3412">[Promise.withResolvers] </span></strong>(ES2024): extracts <span style="color: #9a3412"><code>resolve</code> </span>and <span style="color: #9a3412"><code>reject</code> </span>from the <span style="color: #9a3412"><code>Promise</code></span> constructor into a single expression, which is useful for resolving a promise later from another part of the code;</li>
-<li><strong><span style="color: #9a3412">[AbortController]</span></strong>: allows you to <strong>cancel</strong> a pending asynchronous operation—this is the standard mechanism used by <code>&lt;span style="color: #9a3412"&gt;fetch&lt;/span&gt;</code> for timeouts (see the chapter “The HTTP Functions”).</li>
+<li><strong><span style="color: #9a3412">[AbortController]</span></strong>: allows you to <strong>cancel</strong> a pending asynchronous operation—this is the standard mechanism used by <code>fetch</code> for timeouts (see the chapter “The HTTP Functions”).</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nx">npx</span><span class="w"> </span><span class="nx">tsx</span><span class="w"> </span><span class="k">async</span><span class="err">/async-07.ts</span>
 </code></pre></div>

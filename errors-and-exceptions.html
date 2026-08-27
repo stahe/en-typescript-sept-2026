@@ -904,7 +904,7 @@
 </code></pre></div>
 <ul>
 <li>Line 4: <span style="color: #9a3412">import moment from &#x27;moment&#x27; </span>— imports a third-party library, just like <span style="color: #9a3412">sprintf-js </span>in the chapter “Strings”;</li>
-<li>On each loop iteration, if the current number of milliseconds is even, an error is thrown (line 20) and caught by the <code>&lt;span style="color: #9a3412"&gt;catch</code> block</span>; otherwise, the message “no error” is displayed;</li>
+<li>On each loop iteration, if the current number of milliseconds is even, an error is thrown (line 20) and caught by the <code>catch</code> block; otherwise, the message “no error” is displayed;</li>
 <li>The <strong><span style="color: #9a3412">[finally]</span></strong> clause is executed systematically, regardless of whether an error occurred or not.</li>
 </ul>
 <p>This script depends on the exact execution time: the result below (obtained from an actual run) will therefore <strong>differ each time it is run</strong>—only the principle (the <code>finally</code> block is always executed) is guaranteed:</p>
@@ -997,8 +997,8 @@
 </code></pre></div>
 <ul>
 <li><strong><span style="color: #9a3412">[Error] </span></strong>is a built-in class whose constructor accepts an error message as its first parameter, which can be retrieved from <span style="color: #9a3412">error.message</span>;</li>
-<li>TypeScript sets the <span style="color: #9a3412">catch</span> variable’s default type to <span style="color: #9a3412"><code>unknown&lt;/span&gt;</code> (see the note on line 47): accessing a property such as <span style="color: #9a3412"><code>.message</code> </span>then requires either a type check (<span style="color: #9a3412"><code>instanceof&lt;/span&gt;</code>, see the following script) or an explicit <span style="color: #9a3412"><code>catch</code> </span>annotation <span style="color: #9a3412">(<code>error: any</code>) </span>as shown on line 47 here;</li>
-<li>There are other classes besides <code>&lt;span style="color: #9a3412"&gt;Error</code> </span>that can be used to signal an error: <span style="color: #9a3412">EvalError</span>, <span style="color: #9a3412">RangeError</span>, <span style="color: #9a3412">ReferenceError</span>, <span style="color: #9a3412">SyntaxError</span>, <span style="color: #9a3412">TypeError</span>, <span style="color: #9a3412">URIError</span>.</li>
+<li>TypeScript sets the <span style="color: #9a3412">catch</span> variable’s default type to <code>unknown</code> (see the note on line 47): accessing a property such as <span style="color: #9a3412"><code>.message</code> </span>then requires either a type check (<code>instanceof</code>, see the following script) or an explicit <span style="color: #9a3412"><code>catch</code> </span>annotation <span style="color: #9a3412">(<code>error: any</code>) </span>as shown on line 47 here;</li>
+<li>There are other classes besides <code>Error</code> that can be used to signal an error: <span style="color: #9a3412">EvalError</span>, <span style="color: #9a3412">RangeError</span>, <span style="color: #9a3412">ReferenceError</span>, <span style="color: #9a3412">SyntaxError</span>, <span style="color: #9a3412">TypeError</span>, <span style="color: #9a3412">URIError</span>.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>npx tsx exceptions/excep-02.ts
 </code></pre></div>
@@ -1169,7 +1169,7 @@
 <ul>
 <li>lines 17–22: When catching a low-level technical error to re-throw it in a more explicit form, the second parameter <span style="color: #9a3412">{cause} </span>of <span style="color: #9a3412">new Error(...) </span>allows you to <strong>keep track of the original error</strong>, which would otherwise be lost (behavior prior to 2022);</li>
 <li>line 30: <span style="color: #9a3412">erreur.cause?.message </span>retrieves the message from the original error, which is very useful for debugging;</li>
-<li>lines 39–51: A <strong>custom error class</strong> (<span style="color: #9a3412">ErreurValidation extends Error</span>) allows you to create your own business error types, which can then be distinguished using <span style="color: #9a3412"><code>instanceof&lt;/span&gt;</code> (line 62), just like <span style="color: #9a3412">ReferenceError </span>or <span style="color: #9a3412">RangeError </span>in the previous script.</li>
+<li>lines 39–51: A <strong>custom error class</strong> (<span style="color: #9a3412">ErreurValidation extends Error</span>) allows you to create your own business error types, which can then be distinguished using <code>instanceof</code> (line 62), just like <span style="color: #9a3412">ReferenceError </span>or <span style="color: #9a3412">RangeError </span>in the previous script.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>npx tsx exceptions/excep-04.ts
 </code></pre></div>

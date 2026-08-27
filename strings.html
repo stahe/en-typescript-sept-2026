@@ -962,7 +962,7 @@
 </code></pre></div>
 <ul>
 <li>Line 6: the standard way to define a string—<span style="color: #9a3412">string1 </span>will be of type <span style="color: #9a3412">string</span>;</li>
-<li>line 12: <span style="color: #9a3412"><code>new String(...)&lt;/span&gt;</code> creates a string <strong>object</strong>—<span style="color: #9a3412">string2 </span>will be of type <span style="color: #9a3412">object</span>. Here, the declared type TypeScript is <span style="color: #9a3412">String </span>(with a capital S), the *wrapper object* type, which is different from the primitive type <span style="color: #9a3412">string </span>(lowercase);</li>
+<li>line 12: <code>new String(...)</code> creates a string <strong>object</strong>—<span style="color: #9a3412">string2 </span>will be of type <span style="color: #9a3412">object</span>. Here, the declared type TypeScript is <span style="color: #9a3412">String </span>(with a capital S), the *wrapper object* type, which is different from the primitive type <span style="color: #9a3412">string </span>(lowercase);</li>
 <li>both types offer the same methods—those of the <span style="color: #9a3412">String</span> class.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>npx tsx strings/str-02.ts
@@ -993,7 +993,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>  1  [Introduction à Javascript par l'exemple].substr(3, 2)=ro
 </code></pre></div>
 <h2 id="64-script-str-04">6.4. <span style="color: #2e74b5">script [str-04]</span></h2>
-<p>The template string alone is insufficient for precise formatting (width, alignment, decimal precision, etc.). For this purpose, we use an external package, <strong><span style="color: #9a3412">[sprintf-js]</span></strong>, which replicates the <span style="color: #9a3412">printf/sprintf</span> functions familiar from other languages. It is installed with <code>&lt;span style="color: #9a3412"&gt;npm install sprintf-js&lt;/span&gt;</code> and can be easily imported:</p>
+<p>The template string alone is insufficient for precise formatting (width, alignment, decimal precision, etc.). For this purpose, we use an external package, <strong><span style="color: #9a3412">[sprintf-js]</span></strong>, which replicates the <span style="color: #9a3412">printf/sprintf</span> functions familiar from other languages. It is installed with <code>npm install sprintf-js</code> and can be easily imported:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>  <span class="mi">1</span>  <span class="s1">'use strict'</span><span class="p">;</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>  <span class="mi">2</span>  <span class="o">//</span> <span class="n">Using</span> <span class="n">an</span> <span class="n">external</span> <span class="n">package</span> <span class="n">to</span> <span class="n">access</span> <span class="n">the</span> <span class="n">sprintf</span> <span class="n">function</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>  <span class="mi">3</span>  <span class="kn">import</span><span class="w"> </span><span class="p">{</span> <span class="n">sprintf</span> <span class="p">}</span> <span class="kn">from</span><span class="w"> </span><span class="s1">'sprintf-js'</span><span class="p">;</span>
@@ -1177,7 +1177,7 @@
 </code></pre></div>
 <ul>
 <li><strong><span style="color: #9a3412">[replaceAll] </span></strong>(ES2021) replaces all occurrences of a string without requiring a <span style="color: #9a3412">/g</span> regular expression, as in the <span style="color: #9a3412">str-06</span> script;</li>
-<li><strong><span style="color: #9a3412">[matchAll] </span></strong>(ES2020) returns an <strong>iterator</strong> of all results found, each with its captured groups ET and its position—whereas <code>&lt;span style="color: #9a3412"&gt;match</code> </span>with the <span style="color: #9a3412"><code>g</code></span> flag returns only the found strings, without this detail;</li>
+<li><strong><span style="color: #9a3412">[matchAll] </span></strong>(ES2020) returns an <strong>iterator</strong> of all results found, each with its captured groups ET and its position—whereas <code>match</code> with the <span style="color: #9a3412"><code>g</code></span> flag returns only the found strings, without this detail;</li>
 <li><strong><span style="color: #9a3412">[isWellFormed]/[toWellFormed]</span></strong> (ES2024) detects and corrects strings containing an isolated “half Unicode character” (often caused by incorrect string splitting), which can cause certain functions—such as <span style="color: #9a3412">encodeURIComponent</span>—to crash.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>npx tsx strings/str-07.ts
