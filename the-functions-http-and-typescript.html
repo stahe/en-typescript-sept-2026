@@ -1034,7 +1034,7 @@
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="k">import</span><span class="w"> </span><span class="nx">moment</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'moment'</span><span class="p">;</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10"></a>
 <a id="__codelineno-0-11" name="__codelineno-0-11"></a>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="c1">// URL core of the tax calculation server</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="c1">// Basic URL from the tax calculation server</span>
 <a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="kd">const</span><span class="w"> </span><span class="nx">baseUrl</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'http://localhost/php7/scripts-web/impots/version-14/main.php?'</span><span class="p">;</span>
 <a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="c1">// init session</span>
 <a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">initSession</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
@@ -1115,16 +1115,16 @@
 <a id="__codelineno-0-90" name="__codelineno-0-90"></a><span class="w">    </span><span class="c1">// time and duration formatting</span>
 <a id="__codelineno-0-91" name="__codelineno-0-91"></a><span class="w">    </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">sprintf</span><span class="p">(</span><span class="s2">", durée= %s seconde(s) et %s millisecondes"</span><span class="p">,</span><span class="w"> </span><span class="nx">seconds</span><span class="p">,</span><span class="w"> </span><span class="nx">milliseconds</span><span class="p">);</span>
 <a id="__codelineno-0-92" name="__codelineno-0-92"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-0-93" name="__codelineno-0-93"></a><span class="w">  </span><span class="c1">// result</span>
+<a id="__codelineno-0-93" name="__codelineno-0-93"></a><span class="w">  </span><span class="c1">// Result</span>
 <a id="__codelineno-0-94" name="__codelineno-0-94"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">result</span><span class="p">;</span>
 <a id="__codelineno-0-95" name="__codelineno-0-95"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>Lines 3–5: <strong><span style="color: #9a3412">[mise à jour 2026] </span></strong>— comment noting that <span style="color: #9a3412">fetch </span>is now native, unlike in 2019;</li>
-<li>line 18: <span style="color: #9a3412">AbortSignal.timeout(2000) </span>— replaces the <span style="color: #9a3412"><code>timeout</code></span> option in <code>node-fetch</code> (which does not exist in native <code>fetch</code>): after 2 seconds, the request is automatically canceled;</li>
-<li>line 27: <span style="color: #9a3412">fetch(URL, options) </span>— the syntax remains that of standard fetch: a URL and an options object (method, cancellation signal, etc.);</li>
-<li>line 38: <span style="color: #9a3412">await response.json() </span>— extracts the JSON body from the response; this is itself an asynchronous operation (<span style="color: #9a3412">response </span>may be a stream currently being received);</li>
-<li>Line 50: <code>fetch</code> only throws an exception if the request HTTP <strong>failed</strong> (network unavailable, timeout, etc.). If a response is received—even with an error code (400, 500, etc.)—<span style="color: #9a3412"><code>fetch</code> </span><strong>does not</strong> throw an exception: the response is available as usual, line 38.</li>
+<li>line 22: <span style="color: #9a3412">AbortSignal.timeout(2000) </span>— replaces the <span style="color: #9a3412"><code>timeout</code></span> option in <code>node-fetch</code> (which does not exist in native <code>fetch</code>): after 2 seconds, the request is automatically canceled;</li>
+<li>line 29: <span style="color: #9a3412">fetch(URL, options) </span>— the syntax remains that of standard fetch: a URL and an options object (method, cancellation signal, etc.);</li>
+<li>line 43: <span style="color: #9a3412">await response.json() </span>— extracts the JSON body from the response; this is itself an asynchronous operation (<span style="color: #9a3412">response </span>may be a stream currently being received);</li>
+<li>Line 54: <code>fetch</code> only throws an exception if the request HTTP <strong>failed</strong> (network unavailable, timeout, etc.). If a response is received—even with an error code (400, 500, etc.)—<span style="color: #9a3412"><code>fetch</code> </span><strong>does not</strong> throw an exception: the response is available as usual, line 38.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npx tsx http/fetch-01.ts
 </code></pre></div>
@@ -1381,9 +1381,9 @@
 <a id="__codelineno-6-64" name="__codelineno-6-64"></a><span class="n">main</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>line 24: <span style="color: #9a3412">axios.request(options) </span>— unlike <code>fetch</code>, the URL and options are grouped into a single configuration object;</li>
-<li>line 33: <span style="color: #9a3412">error.response </span>— if the server responded (even with an error code), Axios places this response in <span style="color: #9a3412">error.response</span>, which is accessible in the <code>catch</code> block — unlike <code>fetch</code>, Axios <strong>always throws an exception</strong> whenever the status code is not a success (2xx);</li>
-<li>line 26: the successful response is in <span style="color: #9a3412">response.data </span>— axios automatically extracts JSON; there’s no need for a separate <span style="color: #9a3412">await response.json() </span>as with <span style="color: #9a3412">fetch</span>.</li>
+<li>line 26: <span style="color: #9a3412">axios.request(options) </span>— unlike <code>fetch</code>, the URL and options are grouped into a single configuration object;</li>
+<li>line 37: <span style="color: #9a3412">error.response </span>— if the server responded (even with an error code), Axios places this response in <span style="color: #9a3412">error.response</span>, which is accessible in the <code>catch</code> block — unlike <code>fetch</code>, Axios <strong>always throws an exception</strong> whenever the status code is not a success (2xx);</li>
+<li>line 31: the successful response is in <span style="color: #9a3412">response.data </span>— axios automatically extracts JSON; there’s no need for a separate <span style="color: #9a3412">await response.json() </span>as with <span style="color: #9a3412">fetch</span>.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>npx tsx http/axios-01.ts
 </code></pre></div>
@@ -1615,7 +1615,7 @@
 <a id="__codelineno-9-96" name="__codelineno-9-96"></a><span class="n">main</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Lines 39–53: The request POST sends its parameters (<span style="color: #9a3412">user</span>, <span style="color: #9a3412">password</span>) encoded as <span style="color: #9a3412">application/x-www-form-urlencoded </span>via <span style="color: #9a3412">qs.stringify(...) </span>in <span style="color: #9a3412">options.data</span>;</li>
+<li>Lines 40–53: The request POST sends its parameters (<span style="color: #9a3412">user</span>, <span style="color: #9a3412">password</span>) encoded as <span style="color: #9a3412">application/x-www-form-urlencoded </span>via <span style="color: #9a3412">qs.stringify(...) </span>in <span style="color: #9a3412">options.data</span>;</li>
 <li>Both functions are executed <strong>sequentially</strong> in <code>main</code> (<span style="color: #9a3412">awaited </span>one after the other): the second function only makes sense if the first one succeeded, since it depends on the session cookie set by <code>init-session</code>.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>npx tsx http/axios-03.ts
@@ -1725,7 +1725,7 @@
 <a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="c1">// added to these two files)</span>
 <a id="__codelineno-14-9" name="__codelineno-14-9"></a>
 <a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="c1">// URL—the base file for the tax calculation server (see http/README.md)</span>
-<a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="c1">// As with axios-01.js, this script assumes that the PHP server for the exchange rate is running</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="c1">// As with axios-01.js, this script assumes that the PHP server for the stock price is running</span>
 <a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="c1">// locally: without it, requests fail with "fetch failed," which is normal</span>
 <a id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="kd">const</span><span class="w"> </span><span class="nx">baseUrl</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'http://localhost/php7/scripts-web/impots/version-14/main.php'</span><span class="p">;</span>
 <a id="__codelineno-14-14" name="__codelineno-14-14"></a>

@@ -932,7 +932,7 @@
 
 
 <h1 id="3-the-basics-of-typescript">3. <span style="color: #2e74b5">The Basics of TypeScript</span></h1>
-<p><strong>Note</strong>: Hereinafter, the term <strong><span style="color: #9a3412">[TypeScript] </span></strong>will refer to the language as defined by its version 6, a typed superset of ECMAScript 2026.</p>
+<p><strong>Note</strong>: Hereinafter, the term <strong><span style="color: #9a3412">[TypeScript] </span></strong>will refer to the language as defined by version 6, a typed superset of ECMAScript 2026.</p>
 <p>The scripts in this chapter are located in the <strong><span style="color: #9a3412">[bases]</span></strong> folder of the project.</p>
 <h2 id="31-bases-01-script">3.1. <span style="color: #2e74b5">[bases-01] script</span></h2>
 <p>This script reproduces the introductory example from the original JavaScript course, translated and typed in TypeScript:</p>
@@ -1142,7 +1142,7 @@
 <a id="__codelineno-0-97" name="__codelineno-0-97"></a>
 <a id="__codelineno-0-98" name="__codelineno-0-98"></a><span class="c1">//----------------------------------</span>
 <a id="__codelineno-0-99" name="__codelineno-0-99"></a><span class="kd">function</span><span class="w"> </span><span class="nx">f1</span><span class="p">(</span><span class="nx">param</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-100" name="__codelineno-0-100"></a><span class="w">  </span><span class="c1">// adds 10 to the parameter</span>
+<a id="__codelineno-0-100" name="__codelineno-0-100"></a><span class="w">  </span><span class="c1">// adds 10 to param</span>
 <a id="__codelineno-0-101" name="__codelineno-0-101"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">param</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span>
 <a id="__codelineno-0-102" name="__codelineno-0-102"></a><span class="p">}</span>
 <a id="__codelineno-0-103" name="__codelineno-0-103"></a>
@@ -1156,10 +1156,10 @@
 <ul>
 <li>line 5: <strong><span style="color: #9a3412">[const nom: string = &quot;dupont&quot;] </span></strong>— in TypeScript, you can explicitly annotate a variable’s type by <span style="color: #9a3412">adding <code>type</code> </span>after its name. Here, <span style="color: #9a3412"><code>name</code> </span>is guaranteed to be a string throughout the program;</li>
 <li>line 10: <strong><span style="color: #9a3412">[const array: any[] = ...] </span></strong>— this array intentionally mixes strings and numbers. The type <span style="color: #9a3412"><code>any[]</code> </span>tells TypeScript not to check the types of the elements: this is an explicit choice, distinct from an omission of typing (which <span style="color: #9a3412">strict</span> mode prohibits);</li>
-<li>line 12: <strong><span style="color: #9a3412">[let n: any = tableau.length] </span></strong>— <span style="color: #9a3412"><code>n</code> </span>is typed <span style="color: #9a3412">as <code>any</code> </span>because, later on (line 28), it is reassigned a string after having been assigned a number. In JavaScript, a variable can change types freely; in TypeScript, this is permitted only if explicitly allowed with <code>any</code> (or a type union, such as <code>number | string</code>);</li>
-<li>line 51: <strong><span style="color: #9a3412">[&quot;2&quot; == (2 as any)] </span></strong>— TypeScript prohibits, by default, comparing two values of incompatible types (string and number) using <span style="color: #9a3412"><code>==</code></span>. The expression <span style="color: #9a3412">(2 as any) </span>is a type assertion: we explicitly tell TypeScript “treat this value as <span style="color: #9a3412">any</span>; do not check its type here,” which deliberately illustrates the type coercion specific to the <span style="color: #9a3412">==</span> operator;</li>
-<li>lines 82–84: the function <strong><span style="color: #9a3412">[function afficheType(name: string, variable: unknown): void] </span></strong>types its second parameter as <span style="color: #9a3412"><code>unknown</code> </span>rather than <span style="color: #9a3412"><code>any</code></span>. Unlike <code>any</code>, <span style="color: #9a3412"><code>unknown</code> </span>prohibits using the value without first checking it—here, we simply use <code>typeof(variable)</code>, which is allowed even on <span style="color: #9a3412"><code>unknown</code></span>;</li>
-<li>lines 89–92: Functions now have an <strong>explicit return type</strong> (<span style="color: #9a3412">: number</span>, <span style="color: #9a3412">: </span>void..., etc.), written after the parameter list.</li>
+<li>line 12: <strong><span style="color: #9a3412">[let n: any = tableau.length] </span></strong>— <span style="color: #9a3412"><code>n</code> </span>is typed <span style="color: #9a3412">as <code>any</code> </span>because, later on (line 32), it is reassigned a string after having been assigned a number. In JavaScript, a variable can change types freely; in TypeScript, this is permitted only if explicitly allowed with <code>any</code> (or a type union, such as <code>number | string</code>);</li>
+<li>line 54: <strong><span style="color: #9a3412">[&quot;2&quot; == (2 as any)] </span></strong>— TypeScript prohibits, by default, comparing two values of incompatible types (string and number) using <span style="color: #9a3412"><code>==</code></span>. The expression <span style="color: #9a3412">(2 as any) </span>is a type assertion: we explicitly tell TypeScript “treat this value as <code>any</code>; do not check its type here,” which deliberately illustrates the type coercion specific to the <span style="color: #9a3412">==</span> operator;</li>
+<li>line 93: the function <strong><span style="color: #9a3412">[function afficheType(name: string, variable: unknown): void] </span></strong>types its second parameter as <span style="color: #9a3412"><code>unknown</code> </span>rather than <span style="color: #9a3412"><code>any</code></span>. Unlike <span style="color: #9a3412"><code>any</code></span>, <span style="color: #9a3412"><code>unknown</code> </span>prohibits using the value without first checking it—here, we simply use <code>typeof(variable)</code>, which is allowed even on <span style="color: #9a3412"><code>unknown</code></span>;</li>
+<li>lines 86–108: Functions now have an <strong>explicit return type</strong> (<span style="color: #9a3412">: number</span>, <span style="color: #9a3412">: </span>void..., etc.), written after the parameter list.</li>
 </ul>
 <p>Let’s run this script:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npx tsx bases/bases-01.ts
@@ -1212,7 +1212,7 @@
 <a id="__codelineno-2-23" name="__codelineno-2-23"></a>somme= 13
 </code></pre></div></td></tr></table></div>
 <h2 id="32-script-bases-02">3.2. <span style="color: #2e74b5">script [bases-02]</span></h2>
-<p>The <strong><span style="color: #9a3412">[bases-02]</span></strong> script demonstrates the use of the keywords <strong><span style="color: #9a3412">[let] </span></strong>and <strong><span style="color: #9a3412">[const]</span></strong>:</p>
+<p>The script <strong><span style="color: #9a3412">[bases-02] </span></strong>demonstrates the use of the keywords <strong><span style="color: #9a3412">[let] </span></strong>and <strong><span style="color: #9a3412">[const]</span></strong>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
@@ -1316,7 +1316,7 @@
 <a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="mf">2</span><span class="w">  </span><span class="nx">count</span><span class="w"> </span><span class="nx">inside</span><span class="w"> </span><span class="kd">function</span><span class="o">=</span><span class="w"> </span><span class="mf">2</span>
 </code></pre></div>
 <h2 id="35-script-bases-05">3.5. <span style="color: #2e74b5">script [bases-05]</span></h2>
-<p>A local variable (<span style="color: #9a3412">const count </span>inside the function) is <strong>not visible</strong> outside that function:</p>
+<p>A local variable (<span style="color: #9a3412">const count </span>inside the function) is <strong>not visible</strong> outside of that function:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
@@ -1472,7 +1472,7 @@
 <ul>
 <li><strong><span style="color: #9a3412">[var5: { nom: string }] </span></strong>— an <strong>inline object type</strong>: the expected form of the object is described directly within curly braces, without having to declare a separate <span style="color: #9a3412">interface</span>;</li>
 <li><strong><span style="color: #9a3412">[var6: () =&gt; number] </span></strong>— a <strong>function</strong> type: a function with no parameters that returns a <span style="color: #9a3412">number</span>;</li>
-<li>At runtime, <span style="color: #9a3412"><code>typeof</code> </span>returns the type of <code>JavaScript</code> (it ignores type annotations, which exist only at compile time and are subsequently discarded): this is why <code>typeof(var4)</code> (an array) and <span style="color: #9a3412"><code>typeof(var5)</code> </span>(an object) both return <span style="color: #9a3412">&quot;object&quot;</span>.</li>
+<li>At runtime, <span style="color: #9a3412"><code>typeof</code> </span>remains that of <code>JavaScript</code> (it ignores type annotations, which exist only at compile time and disappear afterward): this is why <code>typeof(var4)</code> (an array) and <span style="color: #9a3412"><code>typeof(var5)</code> </span>(an object) both return <span style="color: #9a3412">&quot;object&quot;</span>.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>npx tsx bases/bases-07.ts
 </code></pre></div>
@@ -1678,7 +1678,7 @@
 <ul>
 <li>All functions in this script declare their <span style="color: #9a3412"><code>data</code> </span>parameter as <code>any</code>: this is intentional, since the goal is precisely to show how the <strong>same</strong> function behaves with values of very different types (string, array, <span style="color: #9a3412">null</span>, <span style="color: #9a3412">undefined</span>, etc.);</li>
 <li><strong><span style="color: #9a3412">[Boolean(data)]</span></strong>, <strong><span style="color: #9a3412">[Number(data)]</span></strong>, and <strong><span style="color: #9a3412">[String(data)] </span></strong>are <strong>explicit</strong> conversions—always preferable to implicit conversions, as they are more predictable and more readable;</li>
-<li>last block: <span style="color: #9a3412"><code>string1 + 1.034</code> </span>results <strong>in string concatenation</strong> (the <span style="color: #9a3412"><code>+</code> operator </span>with a string on either side prioritizes concatenation), whereas <code>Number(string1) + 1.034</code> results in <strong>numerical addition</strong>.</li>
+<li>last block: <code>string1 + 1.034</code> results <strong>in string concatenation</strong> (the <span style="color: #9a3412"><code>+</code></span> operator with a string on the left or right takes precedence over arithmetic), whereas <code>Number(string1) + 1.034</code> results in <strong>numerical addition</strong>.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>npx tsx bases/bases-08.ts
 </code></pre></div>

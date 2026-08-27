@@ -1136,9 +1136,9 @@
 <a id="__codelineno-13-27" name="__codelineno-13-27"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"[import-04] terminé"</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Line 20: Thanks to the top-level <code>await</code> used **in <code>**config-distante.ts</code>, the import on line 20 only completes once the configuration has finished loading—no need for <span style="color: #9a3412"><code>.then()</code> </span>or an <code>async</code> function here;</li>
+<li>Line 19: Thanks to the top-level <code>await</code> used **in <code>**config-distante.ts</code>, the import on line 19 only completes once the configuration has finished loading—no need for <span style="color: #9a3412"><code>.then()</code> </span>or an <code>async</code> function here;</li>
 <li>ES modules are always evaluated <strong>before</strong> the code of the module that imports them, even if the <span style="color: #9a3412">import</span> statement isn’t on the first line of the file: this is why the messages from <span style="color: #9a3412">config-distante.ts </span>are displayed before those from <span style="color: #9a3412">import-04.ts</span>, even though the latter is literally placed before the import in the file;</li>
-<li>Line 26: You can also use <code>await</code> directly within <code>import-04.ts</code> itself, at its own top level.</li>
+<li>line 26: You can also use <code>await</code> directly within <code>import-04.ts</code> itself, at its own top level.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">npx</span> <span class="n">tsx</span> <span class="n">modules</span><span class="o">/</span><span class="n">import</span><span class="o">-</span><span class="mf">04.</span><span class="n">ts</span>
 </code></pre></div>

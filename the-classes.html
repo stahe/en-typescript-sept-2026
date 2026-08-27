@@ -1057,10 +1057,10 @@
 <a id="__codelineno-3-50" name="__codelineno-3-50"></a><span class="nx">main</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><strong><span style="color: #9a3412">[class] </span></strong>introduces the class; <strong><span style="color: #9a3412">[constructor] is </span></strong>its constructor—there can only be one per class;</li>
+<li><strong><span style="color: #9a3412">[class] </span></strong>defines the class; <strong><span style="color: #9a3412">[constructor] is </span></strong>its constructor—there can only be one per class;</li>
 <li>lines 4–6: the fields <span style="color: #9a3412">_nom</span>, <span style="color: #9a3412">_prénom</span>, and <span style="color: #9a3412">_âge </span>are declared with the modifier <strong><span style="color: #9a3412">[private]</span></strong>—accessible only from within the class, unlike a simple naming convention. The <span style="color: #9a3412">! </span>(*definite assignment assertion*) tells TypeScript that these fields will indeed be assigned before any read operation, even if this is not directly visible in their declaration (the constructor, via the setters, handles this);</li>
-<li>lines 18–35: getters and setters — syntax identical to that seen for object literals (chapter “Object Literals,” script <span style="color: #9a3412">obj-03</span>), but integrated into the class;</li>
-<li>line 46: <code>person instanceof (Person)</code>—you can determine the exact type of a class instance, unlike with literal objects.</li>
+<li>lines 16–35: getters and setters — syntax identical to that seen for object literals (chapter “Object Literals,” script <span style="color: #9a3412">obj-03</span>), but integrated into the class;</li>
+<li>line 46: <code>person instanceof (Person)</code>—unlike with literal objects, you can determine the exact type of a class instance.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>npx tsx classes/class-01.ts
 </code></pre></div>
@@ -1233,8 +1233,8 @@
 <ul>
 <li>line 5: <span style="color: #9a3412">import Person from &#x27;./Personne.js&#x27; </span>— the class is imported from its module. The <span style="color: #9a3412">.js </span>extension (not <span style="color: #9a3412">.ts</span>) is <strong>required</strong> with Node.js’s modern module resolution, even if the source file is a <span style="color: #9a3412">.ts </span>file (see the “Installation” chapter);</li>
 <li>line 8: <span style="color: #9a3412">class Teacher extends Person </span>— <span style="color: #9a3412">Teacher </span>inherits all members from <span style="color: #9a3412">Person </span>and adds a property <span style="color: #9a3412">_discipline </span>with its getter/setter;</li>
-<li>line 13: <span style="color: #9a3412">super(lastName, firstName, age) </span>calls the parent class’s constructor, which initializes <span style="color: #9a3412">_nom</span>, <span style="color: #9a3412">_prénom</span>, and <span style="color: #9a3412">_âge</span>;</li>
-<li>line 30: <code>teacher instanceof Teacher</code> — <code>TypeScript/JavaScript</code> knows the exact type of the instance, even after inheritance.</li>
+<li>line 14: <span style="color: #9a3412">super(lastName, firstName, age) </span>calls the parent class’s constructor, which initializes <span style="color: #9a3412">_nom</span>, <span style="color: #9a3412">_prénom</span>, and <span style="color: #9a3412">_âge</span>;</li>
+<li>line 31: <code>teacher instanceof Teacher</code> — <code>TypeScript/JavaScript</code> knows the exact type of the instance, even after inheritance.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>npx tsx classes/class-02.ts
 </code></pre></div>
@@ -1432,8 +1432,8 @@
 <a id="__codelineno-14-23" name="__codelineno-14-23"></a><span class="n">show</span><span class="p">(</span><span class="n">new</span> <span class="n">Personne</span><span class="p">(</span><span class="s2">"Marple"</span><span class="p">,</span> <span class="s2">"Miss"</span><span class="p">,</span> <span class="mi">70</span><span class="p">));</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>line 6: <span style="color: #9a3412">function show(person: Person): void </span>— the function expects a parameter of type <span style="color: #9a3412">Person</span>, but accepts any <strong>derived</strong> type (<span style="color: #9a3412">Teacher</span>) — this is the principle of substitution, which is fundamental to object-oriented programming;</li>
-<li>Lines 10–16: <span style="color: #9a3412"><code>instanceof</code> </span>allows the behavior to be adapted to the <strong>actual</strong> type of the received object, beyond its declared type.</li>
+<li>line 8: <span style="color: #9a3412">function show(person: Person): void </span>— the function expects a parameter of type <span style="color: #9a3412">Person</span>, but accepts any <strong>derived</strong> type (<span style="color: #9a3412">Teacher</span>) — this is the principle of substitution, which is fundamental to object-oriented programming;</li>
+<li>Lines 9–18: <span style="color: #9a3412"><code>instanceof</code> </span>allows the behavior to be adapted to the <strong>actual</strong> type of the received object, beyond its declared type.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>npx tsx classes/class-04.ts
 </code></pre></div>
@@ -1639,7 +1639,7 @@
 <a id="__codelineno-17-94" name="__codelineno-17-94"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"prochainId() ="</span><span class="p">,</span><span class="w"> </span><span class="nx">GénérateurIdentifiant</span><span class="p">.</span><span class="nx">prochainId</span><span class="p">());</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><strong><span style="color: #9a3412">[#solde]</span></strong>, <strong><span style="color: #9a3412">[#historique]</span></strong>: true private fields—unlike <span style="color: #9a3412">_nom </span>in the <span style="color: #9a3412">class-01</span> script, they <strong>cannot</strong> be accessed from outside the class, even via <span style="color: #9a3412">compte[&#x27;#solde&#x27;] </span>(line 60), which returns <span style="color: #9a3412">undefined </span>rather than the actual value;</li>
+<li><strong><span style="color: #9a3412">[#solde]</span></strong>, <strong><span style="color: #9a3412">[#historique]</span></strong>: true private fields—unlike <span style="color: #9a3412">_nom </span>in the <span style="color: #9a3412">class-01</span> script, they <strong>cannot</strong> be accessed from outside the class, even via <span style="color: #9a3412">compte[&#x27;#solde&#x27;] </span>(line 69), which returns <span style="color: #9a3412">undefined </span>rather than the actual value;</li>
 <li><strong><span style="color: #9a3412">[#ajouterHistorique]</span></strong>: a <strong>private method</strong>, callable only from within the class;</li>
 <li><strong><span style="color: #9a3412">[static { ... }]</span></strong>: a <strong>static initialization block</strong> (ES2022), executed only once when the class is loaded—useful for initialization that is more complex than a simple assignment;</li>
 <li><strong><span style="color: #9a3412">[static #dernierId]</span></strong>: a <strong>private static</strong> field, shared by all instances but invisible from the outside.</li>

@@ -1011,8 +1011,8 @@
 <ul>
 <li>Primitive types (<span style="color: #9a3412">number</span>, <span style="color: #9a3412">string</span>, <span style="color: #9a3412">boolean</span>) are passed <strong>by value</strong>: modifying <span style="color: #9a3412"><code>param</code> </span>inside the function never changes the original variable (<span style="color: #9a3412">pass-by-reference = false </span>in each case);</li>
 <li>arrays, objects, and functions are passed <strong>by reference</strong>: <code>param === tab</code> (or <code>obj</code>, or <code>f</code>) evaluates to <span style="color: #9a3412"><code>true</code></span>, and a modification made inside the function is visible outside;</li>
-<li>line 41: <span style="color: #9a3412">function doSomethingWithObject(param: any) </span>— typed <span style="color: #9a3412">as <code>any</code> </span>because a property (<span style="color: #9a3412">unePropriétéNouvelle</span>) not provided for in the original type of the <code>obj</code> array is dynamically added;</li>
-<li>line 51: same thing for <span style="color: #9a3412">doSomethingWithFunction </span>— a property is added to the function itself; this behavior (JavaScript) is a bit confusing but perfectly valid (a function is also an object).</li>
+<li>line 45: <span style="color: #9a3412">function doSomethingWithObject(param: any) </span>— typed <span style="color: #9a3412">as <code>any</code> </span>because a property (<span style="color: #9a3412">unePropriétéNouvelle</span>) not provided for in the original type of the <code>obj</code> array is dynamically added;</li>
+<li>line 58: same thing for <span style="color: #9a3412">doSomethingWithFunction </span>— a property is added to the function itself; this behavior (JavaScript) is a bit confusing but perfectly valid (a function is also an object).</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npx tsx fonctions/func-01.ts
 </code></pre></div>
@@ -1060,7 +1060,7 @@
 <span class="normal"><a href="#__codelineno-3-15">15</a></span>
 <span class="normal"><a href="#__codelineno-3-16">16</a></span>
 <span class="normal"><a href="#__codelineno-3-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="s1">'use strict'</span><span class="p">;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="c1">// You can assign a function to a variable</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="c1">// you can assign a function to a variable</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">variable1</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
 <a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="p">};</span>
@@ -1078,7 +1078,7 @@
 <a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"variable3(10,12,14)="</span><span class="p">,</span><span class="w"> </span><span class="nx">variable3</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span><span class="w"> </span><span class="mf">14</span><span class="p">));</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>line 3: <span style="color: #9a3412">const variable1: (a: number, b: number) =&gt; number = function (a, b) {...} </span>— the type of a function variable is declared as a signature <span style="color: #9a3412">(parameters) =&gt; typeDeRetour</span>;</li>
+<li>Line 3: <span style="color: #9a3412">const variable1: (a: number, b: number) =&gt; number = function (a, b) {...} </span>— the type of a function variable is declared as a signature <span style="color: #9a3412">(parameters) =&gt; typeDeRetour</span>;</li>
 <li>Lines 10–12: The same thing using arrow notation<span style="color: #9a3412">: (a, b, c) =&gt; { ... }</span>;</li>
 <li>line 16: without curly braces, the function body is reduced to a single expression, which automatically becomes the return value — <span style="color: #9a3412">(a, b, c): number =&gt; a + b + c</span>.</li>
 </ul>
@@ -1163,7 +1163,7 @@
 <a id="__codelineno-8-4" name="__codelineno-8-4"></a>150
 </code></pre></div></td></tr></table></div>
 <h2 id="84-script-func-04">8.4. <span style="color: #2e74b5">script [func-04]</span></h2>
-<p>This script demonstrates that a function can behave like a class—a mechanism that predates ES6 but is still valid, although it has now been replaced by the <span style="color: #9a3412"><code>class</code> </span>keyword (see the chapter “Classes”):</p>
+<p>This script demonstrates that a function can behave like a class—a mechanism that predates ES6 but is still valid, although it has now been replaced by the <code>class</code> keyword (see the chapter “Classes”):</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
@@ -1219,11 +1219,11 @@
 <a id="__codelineno-9-27" name="__codelineno-9-27"></a><span class="n">new</span> <span class="p">(</span><span class="n">g</span> <span class="k">as</span> <span class="nb">any</span><span class="p">)()</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>lines 5–9: <span style="color: #9a3412">f </span>is an “empty shell” function, typed as <code>this: any</code>—this special annotation for the first parameter tells TypeScript the type of <span style="color: #9a3412"><code>this</code> </span>inside the function, which is necessary here because properties are added to it from the outside, a pattern that TypeScript cannot deduce on its own;</li>
+<li>lines 5–10: <span style="color: #9a3412">f </span>is an “empty shell” function, typed as <code>this: any</code>—this special annotation for the first parameter tells TypeScript the type of <span style="color: #9a3412"><code>this</code> </span>inside the function, which is necessary here because properties are added to it from the outside, a pattern that TypeScript cannot deduce on its own;</li>
 <li>Lines 12–15: Properties are assigned to <span style="color: #9a3412">f</span> from outside—<span style="color: #9a3412">(f as any).prop1 = ...</span>;</li>
 <li>line 17: <span style="color: #9a3412">f.show()</span> is called, not <span style="color: #9a3412">f()</span>—this is indeed the notation for using an object, not a traditional function call;</li>
-<li>lines 20–27: <span style="color: #9a3412">g </span>defines <span style="color: #9a3412">this.prop2 </span>and <span style="color: #9a3412">this.show </span>within itself, just as a class constructor would;</li>
-<li>line 29: <code>new (g as any)()</code> **instantiates <code>**g</code> as a class.</li>
+<li>lines 20–25: <span style="color: #9a3412">g </span>defines <span style="color: #9a3412">this.prop2 </span>and <span style="color: #9a3412">this.show </span>within itself, just as a class constructor would;</li>
+<li>line 27: <code>new (g as any)()</code> **instantiates <code>**g</code> as a class.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>npx tsx fonctions/func-04.ts
 </code></pre></div>

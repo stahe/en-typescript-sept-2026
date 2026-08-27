@@ -987,7 +987,7 @@
 <p>Here we are creating a client, node.js, for version 14 of the tax calculation service (see the course “Introduction to the PHP7 Language Through Examples” for installation instructions and details about this server). We will examine two client structures:</p>
 <ul>
 <li>Version 1, with a two-tier architecture <strong><span style="color: #9a3412">[main, dao]</span></strong>;</li>
-<li>Version 2, with a three-tier architecture <strong><span style="color: #9a3412">[main, métier, dao]</span></strong>—the business logic layer, which is server-side (PHP) in the original course, is <strong>moved to the client side (</strong>TypeScript) here.</li>
+<li>Version 2, with a three-tier architecture <strong><span style="color: #9a3412">[main, métier, dao]</span></strong>—the business logic layer, which is server-side (PHP) in the original course, is <strong>moved to the client side</strong> (TypeScript) here.</li>
 </ul>
 <div style="margin:0 0 0.75em 0; background-color:#fff4ce; padding:0.35em 0.6em"><b>Important: </b>The scripts in this chapter assume, as in the previous chapter, that the course server PHP is running locally. <b>In the environment where this document was prepared, this server is not available</b>: the executions below show the actual result of this absence (connection error). The “expected” JSON responses, presented separately and clearly identified as such, are taken from the original 2019 document for illustrative purposes—they could not be re-verified here.</div>
 
@@ -1225,7 +1225,7 @@
 <a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="w">        </span><span class="nx">action</span><span class="o">:</span><span class="w"> </span><span class="s1">'authentifier-utilisateur'</span>
 <a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="w">      </span><span class="p">}</span>
 <a id="__codelineno-0-56" name="__codelineno-0-56"></a><span class="w">    </span><span class="p">};</span>
-<a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="w">    </span><span class="c1">// Execution of the query HTTP</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="w">    </span><span class="c1">// execution of the request HTTP</span>
 <a id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">getRemoteData</span><span class="p">(</span><span class="nx">options</span><span class="p">);</span>
 <a id="__codelineno-0-59" name="__codelineno-0-59"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-0-60" name="__codelineno-0-60"></a>
@@ -1311,7 +1311,7 @@
 <a id="__codelineno-0-140" name="__codelineno-0-140"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="nx">error</span><span class="p">;</span>
 <a id="__codelineno-0-141" name="__codelineno-0-141"></a><span class="w">      </span><span class="p">}</span>
 <a id="__codelineno-0-142" name="__codelineno-0-142"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-143" name="__codelineno-0-143"></a><span class="w">    </span><span class="c1">// response is the entire HTTP response from the server (HTTP headers + the response itself)</span>
+<a id="__codelineno-0-143" name="__codelineno-0-143"></a><span class="w">    </span><span class="c1">// response is the entire response HTTP from the server (HTTP headers + the response itself)</span>
 <a id="__codelineno-0-144" name="__codelineno-0-144"></a><span class="w">    </span><span class="c1">// retrieves the session cookie if it exists</span>
 <a id="__codelineno-0-145" name="__codelineno-0-145"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">setCookie</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">headers</span><span class="p">[</span><span class="s1">'set-cookie'</span><span class="p">];</span>
 <a id="__codelineno-0-146" name="__codelineno-0-146"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">setCookie</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -1343,9 +1343,9 @@
 <a id="__codelineno-0-172" name="__codelineno-0-172"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">Dao1</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Lines 8–10: The class has three private properties: <span style="color: #9a3412">axios </span>(the instance passed by the calling code), <span style="color: #9a3412">sessionCookieName </span>(the name of the session cookie—<span style="color: #9a3412">PHPSESSID</span>, specific to PHP), <span style="color: #9a3412">sessionCookie </span>(the cookie actually received, stored for subsequent requests);</li>
-<li>lines 60–73: <span style="color: #9a3412">calculerImpot (married, children, salary) </span>posts these three parameters to <span style="color: #9a3412">main.php?action=calculate-tax</span>, and returns the server’s response JSON as an object TypeScript;</li>
-<li>lines 122–160: <span style="color: #9a3412">getRemoteData </span>centralizes the execution of requests: it adds the current session cookie to each outgoing request (line 126), then, upon receipt, searches for and stores any new session cookie in the response’s <span style="color: #9a3412">Set-Cookie</span> header (lines 141–159)—manually handling what a browser would do automatically.</li>
+<li>Lines 9–11: The class has three private properties: <span style="color: #9a3412">axios </span>(the instance passed by the calling code), <span style="color: #9a3412">sessionCookieName </span>(the name of the session cookie—<span style="color: #9a3412">PHPSESSID</span>, specific to PHP), <span style="color: #9a3412">sessionCookie </span>(the cookie actually received, stored for subsequent requests);</li>
+<li>lines 61–85: <span style="color: #9a3412">calculerImpot (married, children, salary) </span>posts these three parameters to <span style="color: #9a3412">main.php?action=calculate-tax</span>, and returns the server’s response JSON as the object TypeScript;</li>
+<li>lines 122–168: <span style="color: #9a3412">getRemoteData </span>centralizes the execution of requests: it adds the current session cookie to each outgoing request (line 127), then, upon receipt, searches for and stores any new session cookie in the response’s <span style="color: #9a3412">Set-Cookie</span> header (lines 143–165)—manually handling what a browser would do automatically.</li>
 </ul>
 <h3 id="1422-the-main1-script">14.2.2. <span style="color: #1f4d78">The [main1] script</span></h3>
 <p>This script chains together a series of calls to the server via the <span style="color: #9a3412">Dao1</span> class: session initialization, authentication, three tax calculations (in parallel), a list of simulations, and the deletion of one of them:</p>
@@ -1454,9 +1454,9 @@
 <a id="__codelineno-1-52" name="__codelineno-1-52"></a><span class="n">main</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Lines 9–10: Default Axios configuration—2-second timeout, base URL from server version 14;</li>
-<li>lines 26–30: the three tax calculations are requested <strong>in parallel</strong> with <span style="color: #9a3412">Promise.all([...])</span>—execution waits until all three results are obtained;</li>
-<li>lines 46–48: <span style="color: #9a3412">The log </span>displays the string JSON for an object, indented by two spaces, for easier reading.</li>
+<li>Lines 11–12: Default Axios configuration—2-second timeout, URL from version 14 of the server;</li>
+<li>lines 27–31: the three tax calculations are requested <strong>in parallel</strong> with <span style="color: #9a3412">Promise.all([...])</span>—execution waits until all three results are obtained;</li>
+<li>lines 47–50: <span style="color: #9a3412">The log </span>displays the string JSON for an object, indented by two spaces, for easier reading.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>npx tsx main1.ts
 </code></pre></div>
@@ -1876,8 +1876,8 @@
 <a id="__codelineno-6-191" name="__codelineno-6-191"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">Métier</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Line 7: <span style="color: #9a3412">taxAdminData: any </span>— the exact structure of the data sent by the tax server (rates, thresholds, etc.) is not documented; we are therefore intentionally keeping this type flexible rather than speculating on an uncertain interface;</li>
-<li>Unlike version PHP, the constructor (line 10) no <strong>longer</strong> receives an instance of the <span style="color: #9a3412">DAO</span> layer—the <span style="color: #9a3412">business</span> layer, in this case, is completely independent of the network; the calling code provides it with the tax data directly;</li>
+<li>Line 8: <span style="color: #9a3412">taxAdminData: any </span>— the exact structure of the data sent by the tax server (rates, thresholds, etc.) is not documented; we are therefore intentionally keeping this type flexible rather than speculating on an uncertain interface;</li>
+<li>Unlike version PHP, the constructor (line 11) no <strong>longer</strong> receives an instance of the <span style="color: #9a3412">DAO</span> layer—the <span style="color: #9a3412">business</span> layer, in this case, is completely independent of the network; the calling code provides it with the tax data directly;</li>
 <li>The <span style="color: #9a3412">executeBatchImpots</span> method from the original PHP code has not been included: it used to save results to the file system, an operation that cannot be replicated exactly in a browser.</li>
 </ul>
 <h3 id="1432-the-dao2-class">14.3.2. <span style="color: #1f4d78">The [Dao2] class</span></h3>
@@ -2055,7 +2055,7 @@
 <a id="__codelineno-7-47" name="__codelineno-7-47"></a><span class="w">        </span><span class="nx">user</span><span class="o">:</span><span class="w"> </span><span class="nx">user</span><span class="p">,</span>
 <a id="__codelineno-7-48" name="__codelineno-7-48"></a><span class="w">        </span><span class="nx">password</span><span class="o">:</span><span class="w"> </span><span class="nx">password</span>
 <a id="__codelineno-7-49" name="__codelineno-7-49"></a><span class="w">      </span><span class="p">}),</span>
-<a id="__codelineno-7-50" name="__codelineno-7-50"></a><span class="w">      </span><span class="c1">// URL parameters</span>
+<a id="__codelineno-7-50" name="__codelineno-7-50"></a><span class="w">      </span><span class="c1">// parameters of the URL</span>
 <a id="__codelineno-7-51" name="__codelineno-7-51"></a><span class="w">      </span><span class="nx">params</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-7-52" name="__codelineno-7-52"></a><span class="w">        </span><span class="nx">action</span><span class="o">:</span><span class="w"> </span><span class="s1">'authentifier-utilisateur'</span>
 <a id="__codelineno-7-53" name="__codelineno-7-53"></a><span class="w">      </span><span class="p">}</span>
@@ -2260,8 +2260,8 @@
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>Line 30: <span style="color: #9a3412">taxAdminData = response.réponse </span>— the tax data, received only once from the server, is then reused locally for all calculations;</li>
-<li>line 37: <span style="color: #9a3412">const business = new Business(taxAdminData) </span>— the business layer is instantiated with this data, without ever making another network request;</li>
-<li>lines 40–43: the three tax calculations are now <strong>synchronous</strong>, executed directly in the browser or node.js, without going through the server.</li>
+<li>line 39: <span style="color: #9a3412">const business = new Business(taxAdminData) </span>— the business layer is instantiated with this data, without ever making another network request;</li>
+<li>lines 44–46: the three tax calculations are now <strong>synchronous</strong>, executed directly in the browser or node.js, without going through the server.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>npx tsx main2.ts
 </code></pre></div>
@@ -2388,7 +2388,7 @@
 <a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a>}
 </code></pre></div>
 <h3 id="1442-the-main3-script">14.4.2. <span style="color: #1f4d78">The [main3] script</span></h3>
-<p>This script uses the content from <span style="color: #9a3412">main2.ts </span>(previous chapter), adapted for the browser—including polyfill imports and a correction along the way:</p>
+<p>This script uses the content from <span style="color: #9a3412">main2.ts </span>(previous chapter), adapted for the browser—including the import of polyfills and a correction along the way:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
@@ -2548,7 +2548,7 @@
 <ul>
 <li>lines 3–4: <span style="color: #9a3412">import &quot;core-js/stable&quot; </span>and <span style="color: #9a3412">import &quot;regenerator-runtime/runtime&quot; </span>— the polyfills needed for the compiled code to work in browsers that do not yet natively support all the latest language features;</li>
 <li>lines 7–11: <strong><span style="color: #9a3412">[correction d&#x27;une coquille] </span></strong>— the original JavaScript script from 2019 imported <span style="color: #9a3412">./Métier </span>(with an accent), whereas the file is named <span style="color: #9a3412">Metier </span>(without an accent). webpack and Babel tolerated this difference; <strong>TypeScript, however, does not tolerate it</strong>, and this typo had to be corrected during the project’s conversion;</li>
-<li>Line 18: <span style="color: #9a3412">axios.defaults.withCredentials = true </span>— essential in a browser so that session cookies are automatically passed between requests, which the code did manually in previous versions (node.js does not support browser cookies).</li>
+<li>Line 19: <span style="color: #9a3412">axios.defaults.withCredentials = true </span>— essential in a browser so that session cookies are automatically passed between requests, which the code did manually in previous versions (node.js does not support browser cookies).</li>
 </ul>
 <h3 id="1443-compilation-and-execution">14.4.3. <span style="color: #1f4d78">Compilation and Execution</span></h3>
 <p>The <span style="color: #9a3412">package.json</span> file defines two npm tasks:</p>

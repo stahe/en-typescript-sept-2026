@@ -999,8 +999,8 @@
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>Lines 14–17: <strong><span style="color: #9a3412">[setTimeout] </span></strong>takes two parameters: a function to execute and a delay in milliseconds. It executes <strong>instantly</strong>: it starts a timer and immediately returns control, without waiting for the delay to expire;</li>
-<li>line 19: this message is therefore displayed <strong>before</strong> the one on line 15, even though it is written later in the code;</li>
-<li>line 22: <span style="color: #9a3412">function heure(start?: moment.Moment): string </span>— the <span style="color: #9a3412">start</span> parameter is optional (<span style="color: #9a3412">?</span>), of type <span style="color: #9a3412">moment.Moment</span>; if provided, the function calculates and adds the elapsed time.</li>
+<li>line 20: this message is therefore displayed <strong>before</strong> the one on line 16, even though it is written later in the code;</li>
+<li>line 23: <span style="color: #9a3412">function time(start?: moment.Moment): string </span>— the <span style="color: #9a3412">start</span> parameter is optional (<span style="color: #9a3412">?</span>), of type <span style="color: #9a3412">moment.Moment</span>; if provided, the function calculates and adds the elapsed time.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">npx</span><span class="w"> </span><span class="nx">tsx</span><span class="w"> </span><span class="k">async</span><span class="err">/async-01.ts</span>
 </code></pre></div>
@@ -1012,7 +1012,7 @@
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="p">[</span><span class="nx">fin</span><span class="w"> </span><span class="nx">de</span><span class="w"> </span><span class="nx">l</span><span class="err">'</span><span class="nx">action</span><span class="w"> </span><span class="nx">asynchrone</span><span class="w"> </span><span class="nx">setTimeout</span><span class="p">],</span><span class="w"> </span><span class="nx">heure</span><span class="o">=</span><span class="mo">07</span><span class="o">:</span><span class="mf">41</span><span class="o">:</span><span class="mf">37</span><span class="o">:</span><span class="mf">458</span><span class="p">,</span><span class="w"> </span><span class="nx">durée</span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="nx">seconde</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span><span class="w"> </span><span class="nx">et</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="nx">millisecondes</span>
 </code></pre></div></td></tr></table></div>
 <p>We can see that the asynchronous action <span style="color: #9a3412">setTimeout </span>completes about 1 second after the main code finishes—which is exactly the programmed delay. The overall script, however, does not complete until this asynchronous task is finished.</p>
-<div style="margin:0 0 0.75em 0; background-color:#fff4ce; padding:0.35em 0.6em"><b>Note: </b>We’ll use <span style="color: #9a3412">setTimeout </span>to <b>simulate asynchronous tasks </b>throughout this chapter. A real asynchronous task (network request, file read, etc.) behaves in the same way: it yields control immediately and then reports its result later—usually via two possible events, one for success and one for failure.</div>
+<div style="margin:0 0 0.75em 0; background-color:#fff4ce; padding:0.35em 0.6em"><b>Note: </b>We’ll use <span style="color: #9a3412">setTimeout </span>to <b>simulate asynchronous tasks </b>throughout this chapter. A real asynchronous task (network request, file read, etc.) behaves in the same way: it immediately yields control, then reports its result later—usually via two possible events, one for success and one for failure.</div>
 
 <h2 id="112-script-async-02">11.2. <span style="color: #2e74b5">script [async-02]</span></h2>
 <p>This script demonstrates how an asynchronous function can communicate its result by <strong>emitting events</strong>, using the native class <span style="color: #9a3412">EventEmitter </span>(<span style="color: #9a3412">node:events </span>module):</p>
@@ -1133,7 +1133,7 @@
 <a id="__codelineno-3-58" name="__codelineno-3-58"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Line 8: <span style="color: #9a3412">import EventEmitter from &#x27;events&#x27; </span>— imports the class that allows you to trigger and listen for events;</li>
+<li>Line 9: <span style="color: #9a3412">import EventEmitter from &#x27;events&#x27; </span>— imports the class that allows you to trigger and listen for events;</li>
 <li>line 15: <span style="color: #9a3412">const eventEmitter = new EventEmitter() </span>— an event emitter is instantiated using <code>new</code>;</li>
 <li>lines 24 and 26: the function encapsulated in <span style="color: #9a3412">setTimeout </span>emits <strong>two</strong> events, <span style="color: #9a3412">timer1Success </span>and <span style="color: #9a3412">timer1Failure</span>, each with its own associated data (here, for demonstration purposes only—normally, a single task would emit only one or the other);</li>
 <li>lines 29–37: the main code <strong>subscribes</strong> to these two events using <span style="color: #9a3412">eventEmitter.on(nomÉvénement, callback)</span>—the callback will not execute until the event is actually emitted, not at the time of subscription;</li>
@@ -1285,7 +1285,7 @@
 <a id="__codelineno-6-65" name="__codelineno-6-65"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Lines 41–45: a purely synchronous double loop, completely unrelated to the asynchronous task, but which keeps the processor busy for several seconds;</li>
+<li>Lines 40–44: a purely synchronous double loop, completely unrelated to the asynchronous task, but which keeps the processor busy for several seconds;</li>
 <li>the 1-second timer has finished its countdown well before the end of this loop—but the event it triggered must <strong>wait</strong> for the synchronous code to yield control back to the event loop before it can finally be processed.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nx">npx</span><span class="w"> </span><span class="nx">tsx</span><span class="w"> </span><span class="k">async</span><span class="err">/async-03.ts</span>
@@ -1506,9 +1506,9 @@
 <a id="__codelineno-10-92" name="__codelineno-10-92"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Line 20: <span style="color: #9a3412">new Promise&lt;string&gt;(function (resolve) {...}) </span>— TypeScript allows you to specify, via the generic parameter <span style="color: #9a3412">&lt;string&gt;</span>, the type of value that <code>resolve</code> will return; without it, the type would be inferred as <code>unknown</code>;</li>
+<li>Line 18: <span style="color: #9a3412">new Promise&lt;string&gt;(function (resolve) {...}) </span>— TypeScript allows you to specify, via the generic parameter <span style="color: #9a3412">&lt;string&gt;</span>, the type of value that <code>resolve</code> will return; without it, the type would be inferred as <code>unknown</code>;</li>
 <li><span style="color: #9a3412">promise1 </span>resolves successfully after 1 second (<span style="color: #9a3412">resolve(&#x27;[réussite]&#x27;)</span>); <span style="color: #9a3412">promise2 </span>fails after 2 seconds (<span style="color: #9a3412">reject(&#x27;[échec]&#x27;)</span>);</li>
-<li>the main code (line 78) finishes well before both promises have a result—the global script, however, continues until both are settled.</li>
+<li>the main code (line 75) finishes well before both promises have a result—the global script, however, continues until both are settled.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nx">npx</span><span class="w"> </span><span class="nx">tsx</span><span class="w"> </span><span class="k">async</span><span class="err">/async-04.ts</span>
 </code></pre></div>
@@ -1534,7 +1534,7 @@
 <a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="p">[</span><span class="nx">promise2</span><span class="p">.</span><span class="k">finally</span><span class="p">],</span><span class="w"> </span><span class="nx">heure</span><span class="o">=</span><span class="mo">07</span><span class="o">:</span><span class="mf">42</span><span class="o">:</span><span class="mf">31</span><span class="o">:</span><span class="mf">446</span><span class="p">,</span><span class="w"> </span><span class="nx">durée</span><span class="o">=</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="nx">seconde</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span><span class="w"> </span><span class="nx">et</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="nx">millisecondes</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="116-script-async-05">11.6. <span style="color: #2e74b5">script [async-05]</span></h2>
-<p>It is most common to define an asynchronous function that returns a <span style="color: #9a3412">Promise</span>, rather than creating the <span style="color: #9a3412">Promise</span> object directly—which is useful when the function requires parameters. This script defines two asynchronous functions and waits for <strong>both of them</strong> to complete using <strong><span style="color: #9a3412">[Promise.all]</span></strong>:</p>
+<p>Most often, we define an asynchronous function that returns a <span style="color: #9a3412">Promise</span>, rather than creating the <span style="color: #9a3412">Promise</span> object directly—which is useful when the function requires parameters. This script defines two asynchronous functions and waits for <strong>both of them</strong> to complete using <strong><span style="color: #9a3412">[Promise.all]</span></strong>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
@@ -1660,7 +1660,7 @@
 <a id="__codelineno-13-26" name="__codelineno-13-26"></a><span class="w">    </span><span class="c1">// the asynchronous task</span>
 <a id="__codelineno-13-27" name="__codelineno-13-27"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">débutAsync01</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">moment</span><span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">());</span>
 <a id="__codelineno-13-28" name="__codelineno-13-28"></a><span class="w">    </span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-29" name="__codelineno-13-29"></a><span class="w">      </span><span class="c1">// This code is executed after a 1-second delay (second parameter)</span>
+<a id="__codelineno-13-29" name="__codelineno-13-29"></a><span class="w">      </span><span class="c1">// this code is executed after a 1-second delay (second parameter)</span>
 <a id="__codelineno-13-30" name="__codelineno-13-30"></a><span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"[fin de la tâche asynchrone async01],"</span><span class="p">,</span><span class="w"> </span><span class="nx">heure</span><span class="p">(</span><span class="nx">débutAsync01</span><span class="p">));</span>
 <a id="__codelineno-13-31" name="__codelineno-13-31"></a><span class="w">      </span><span class="c1">// the asynchronous task can return a complex result</span>
 <a id="__codelineno-13-32" name="__codelineno-13-32"></a><span class="w">      </span><span class="nx">resolve</span><span class="p">({</span>
@@ -1733,7 +1733,7 @@
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>Lines 20 and 36: The asynchronous functions are typed as <span style="color: #9a3412">Promise&lt;RésultatAsync&gt; </span>thanks to the <span style="color: #9a3412">RésultatAsync</span> interface defined above;</li>
-<li>line 62: <strong><span style="color: #9a3412">[Promise.all([...])] </span></strong>waits for <strong>all</strong> promises in the array to resolve before executing its <span style="color: #9a3412"><code>then</code></span>—as soon as one fails, its <span style="color: #9a3412"><code>catch</code> </span>executes immediately, without waiting for the others;</li>
+<li>line 65: <strong><span style="color: #9a3412">[Promise.all([...])] </span></strong>waits for <strong>all</strong> promises in the array to resolve before executing its <span style="color: #9a3412"><code>then</code></span>—as soon as one fails, its <span style="color: #9a3412"><code>catch</code> </span>executes immediately, without waiting for the others;</li>
 <li>the two tasks run <strong>in parallel</strong> (their respective waits overlap): the total duration (~2s) corresponds to the longer of the two, not to their sum (~3s).</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nx">npx</span><span class="w"> </span><span class="nx">tsx</span><span class="w"> </span><span class="k">async</span><span class="err">/async-05.ts</span>
@@ -1920,7 +1920,7 @@
 <a id="__codelineno-16-25" name="__codelineno-16-25"></a><span class="w">    </span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-16-26" name="__codelineno-16-26"></a><span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"[fin fonction asynchrone async01],"</span><span class="p">,</span><span class="w"> </span><span class="nx">heure</span><span class="p">(</span><span class="nx">débutAsync01</span><span class="p">));</span>
 <a id="__codelineno-16-27" name="__codelineno-16-27"></a><span class="w">      </span><span class="c1">// The asynchronous operation can return a complex result</span>
-<a id="__codelineno-16-28" name="__codelineno-16-28"></a><span class="w">      </span><span class="c1">// success here</span>
+<a id="__codelineno-16-28" name="__codelineno-16-28"></a><span class="w">      </span><span class="c1">// Success here</span>
 <a id="__codelineno-16-29" name="__codelineno-16-29"></a><span class="w">      </span><span class="nx">resolve</span><span class="p">({</span>
 <a id="__codelineno-16-30" name="__codelineno-16-30"></a><span class="w">        </span><span class="nx">prop1</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">11</span><span class="p">,</span><span class="w"> </span><span class="mf">21</span><span class="p">,</span><span class="w"> </span><span class="mf">31</span><span class="p">],</span>
 <a id="__codelineno-16-31" name="__codelineno-16-31"></a><span class="w">        </span><span class="nx">prop2</span><span class="o">:</span><span class="w"> </span><span class="s2">"abcd"</span>
@@ -1937,7 +1937,7 @@
 <a id="__codelineno-16-42" name="__codelineno-16-42"></a><span class="w">    </span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-16-43" name="__codelineno-16-43"></a><span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"[fin fonction asynchrone async02],"</span><span class="p">,</span><span class="w"> </span><span class="nx">heure</span><span class="p">(</span><span class="nx">débutAsync02</span><span class="p">));</span>
 <a id="__codelineno-16-44" name="__codelineno-16-44"></a><span class="w">      </span><span class="c1">// an asynchronous action can return a complex result</span>
-<a id="__codelineno-16-45" name="__codelineno-16-45"></a><span class="w">      </span><span class="c1">// success here</span>
+<a id="__codelineno-16-45" name="__codelineno-16-45"></a><span class="w">      </span><span class="c1">// Success here</span>
 <a id="__codelineno-16-46" name="__codelineno-16-46"></a><span class="w">      </span><span class="nx">resolve</span><span class="p">({</span>
 <a id="__codelineno-16-47" name="__codelineno-16-47"></a><span class="w">        </span><span class="nx">prop1</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mf">12</span><span class="p">,</span><span class="w"> </span><span class="mf">22</span><span class="p">,</span><span class="w"> </span><span class="mf">32</span><span class="p">],</span>
 <a id="__codelineno-16-48" name="__codelineno-16-48"></a><span class="w">        </span><span class="nx">prop2</span><span class="o">:</span><span class="w"> </span><span class="s2">"xyzt"</span>
@@ -2032,10 +2032,10 @@
 <a id="__codelineno-16-137" name="__codelineno-16-137"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>line 79: <span style="color: #9a3412">async function main(): Promise&lt;void&gt; </span>— an <span style="color: #9a3412">async-tagged</span> function always returns a <span style="color: #9a3412">Promise</span>, even if its body does not explicitly indicate this;</li>
-<li>line 87: <span style="color: #9a3412"><code>await async01(débutAsync01)</code> </span><strong>suspends</strong> the execution of <span style="color: #9a3412"><code>main</code> </span>until the promise is resolved, without blocking the rest of the program (the <span style="color: #9a3412"><code>await</code> keyword </span>can only be used inside an <code>async</code> function or at the top level of a module—see the chapter “Modules,” script <code>import-04</code>);</li>
-<li>lines 85–100: <strong>sequential</strong> execution—each <span style="color: #9a3412"><code>await</code> </span>waits for the previous task to finish before starting the next one; the total duration is the <strong>sum</strong> of the three wait times (~6s);</li>
-<li>lines 106–113: <strong>parallel</strong> execution, with <code>await Promise.all([...])</code>—the total duration is that of the <strong>longest</strong> task (~3s);</li>
+<li>line 72: <span style="color: #9a3412">async function main(): Promise&lt;void&gt; </span>— a function marked as <span style="color: #9a3412"><code>async</code> </span>always returns a <span style="color: #9a3412">Promise</span>, even if its body does not explicitly indicate this;</li>
+<li>line 79: <span style="color: #9a3412"><code>await async01(débutAsync01)</code> </span><strong>suspends</strong> the execution of <span style="color: #9a3412"><code>main</code> </span>until the promise is resolved, without blocking the rest of the program (the <span style="color: #9a3412"><code>await</code> keyword </span>can only be used inside an <code>async</code> function or at the top level of a module—see the chapter “Modules,” script <code>import-04</code>);</li>
+<li>lines 76–90: <strong>sequential</strong> execution—each <span style="color: #9a3412"><code>await</code> </span>waits for the previous task to finish before starting the next one; the total duration is the <strong>sum</strong> of the three wait times (~6s);</li>
+<li>lines 102–111: <strong>parallel</strong> execution, with <code>await Promise.all([...])</code>—the total duration is that of the <strong>longest</strong> task (~3s);</li>
 <li>A standard <span style="color: #9a3412">try/catch</span> block is sufficient to handle the failure of an awaited promise—there’s no longer a need for chained <span style="color: #9a3412">.catch() calls </span>as in the previous scripts.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nx">npx</span><span class="w"> </span><span class="nx">tsx</span><span class="w"> </span><span class="k">async</span><span class="err">/async-06.ts</span>
@@ -2260,7 +2260,7 @@
 <a id="__codelineno-19-43" name="__codelineno-19-43"></a><span class="c1">// ------------------------------------------------------------------------</span>
 <a id="__codelineno-19-44" name="__codelineno-19-44"></a><span class="c1">// 2) Promise.any()  (ECMAScript 2021)</span>
 <a id="__codelineno-19-45" name="__codelineno-19-45"></a><span class="c1">// ------------------------------------------------------------------------</span>
-<a id="__codelineno-19-46" name="__codelineno-19-46"></a><span class="c1">// returns the result of the successful PREMIÈRE promise (the others are ignored)</span>
+<a id="__codelineno-19-46" name="__codelineno-19-46"></a><span class="c1">// returns the result of the PREMIÈRE promise that succeeds (the others are ignored)</span>
 <a id="__codelineno-19-47" name="__codelineno-19-47"></a><span class="c1">// fails only if the TOUTES promises fail (with a AggregateError containing the errors)</span>
 <a id="__codelineno-19-48" name="__codelineno-19-48"></a><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">démoAny</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="ow">void</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-19-49" name="__codelineno-19-49"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"--- Promise.any ---"</span><span class="p">);</span>
@@ -2281,7 +2281,7 @@
 <a id="__codelineno-19-64" name="__codelineno-19-64"></a><span class="c1">// 3) Promise.withResolvers()  (ECMAScript 2024)</span>
 <a id="__codelineno-19-65" name="__codelineno-19-65"></a><span class="c1">// ------------------------------------------------------------------------</span>
 <a id="__codelineno-19-66" name="__codelineno-19-66"></a><span class="c1">// Previously, to "extract" the resolve/reject functions from the Promise constructor</span>
-<a id="__codelineno-19-67" name="__codelineno-19-67"></a><span class="c1">// (e.g., to call them much later, elsewhere in the code), you had to</span>
+<a id="__codelineno-19-67" name="__codelineno-19-67"></a><span class="c1">// (e.g., to call them much later, elsewhere in the code), it was necessary to</span>
 <a id="__codelineno-19-68" name="__codelineno-19-68"></a><span class="c1">// a somewhat artificial intermediate variable:</span>
 <a id="__codelineno-19-69" name="__codelineno-19-69"></a><span class="c1">//   let resolveExterne;</span>
 <a id="__codelineno-19-70" name="__codelineno-19-70"></a><span class="c1">//   const promise = new Promise(resolve =&gt; { resolveExterne = resolve; });</span>

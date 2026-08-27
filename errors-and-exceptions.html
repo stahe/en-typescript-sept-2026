@@ -905,7 +905,7 @@
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1">// package moment</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="k">import</span><span class="w"> </span><span class="nx">moment</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'moment'</span><span class="p">;</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="c1">// the try/catch/finally principle</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="c1">// the try/catch/finally concept</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">  </span><span class="c1">// current date and time</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">();</span>
@@ -935,7 +935,7 @@
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>Line 4: <span style="color: #9a3412">import moment from &#x27;moment&#x27; </span>— imports a third-party library, just like <span style="color: #9a3412">sprintf-js </span>in the chapter “Strings”;</li>
-<li>On each loop iteration, if the current number of milliseconds is even, an error is thrown (line 20) and caught by the <code>catch</code> block; otherwise, the message “no error” is displayed;</li>
+<li>On each loop iteration, if the current number of milliseconds is even, an error is thrown (line 21) and caught by the <code>catch</code> block; otherwise, the message “no error” is displayed;</li>
 <li>The <strong><span style="color: #9a3412">[finally]</span></strong> clause is executed systematically, regardless of whether an error occurred or not.</li>
 </ul>
 <p>This script depends on the exact execution time: the result below (obtained from an actual run) will therefore <strong>differ each time it is run</strong>—only the principle (the <code>finally</code> block is always executed) is guaranteed:</p>
@@ -1106,7 +1106,7 @@
 </code></pre></div></td></tr></table></div>
 <ul>
 <li><strong><span style="color: #9a3412">[Error] </span></strong>is a built-in class whose constructor accepts an error message as its first parameter, which can be retrieved from <span style="color: #9a3412">error.message</span>;</li>
-<li>TypeScript sets the <span style="color: #9a3412">catch</span> variable’s default type to <code>unknown</code> (see the note on line 47): accessing a property such as <span style="color: #9a3412"><code>.message</code> </span>then requires either a type check (<code>instanceof</code>, see the following script) or an explicit <span style="color: #9a3412"><code>catch</code> </span>annotation <span style="color: #9a3412">(<code>error: any</code>) </span>as shown on line 47 here;</li>
+<li>TypeScript sets the <span style="color: #9a3412">catch</span> variable’s default type to <code>unknown</code> (see the note on line 47): accessing a property such as <span style="color: #9a3412"><code>.message</code> </span>therefore requires either a type check (<code>instanceof</code>, see the following script) or an explicit <span style="color: #9a3412"><code>catch</code> </span>annotation <span style="color: #9a3412">(<code>error: any</code>) </span>as shown on line 47 here;</li>
 <li>There are other classes besides <code>Error</code> that can be used to signal an error: <span style="color: #9a3412">EvalError</span>, <span style="color: #9a3412">RangeError</span>, <span style="color: #9a3412">ReferenceError</span>, <span style="color: #9a3412">SyntaxError</span>, <span style="color: #9a3412">TypeError</span>, <span style="color: #9a3412">URIError</span>.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>npx tsx exceptions/excep-02.ts
@@ -1349,7 +1349,7 @@
 <a id="__codelineno-9-5" name="__codelineno-9-5"></a>
 <a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="c1">// It is common to encounter a technical (low-level) error and to</span>
 <a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="c1">// trigger it again in the form of a more explicit (high-level) error, so that</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="c1">// so that the calling code better understands the business context.</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="c1">// so that the calling code can better understand the business context.</span>
 <a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="c1">// AVANT In 2022, doing this caused us to lose track of the original error.</span>
 <a id="__codelineno-9-10" name="__codelineno-9-10"></a>
 <a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="kd">function</span><span class="w"> </span><span class="nx">lireConfiguration</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
@@ -1424,8 +1424,8 @@
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>lines 17–22: When catching a low-level technical error to re-throw it in a more explicit form, the second parameter <span style="color: #9a3412">{cause} </span>of <span style="color: #9a3412">new Error(...) </span>allows you to <strong>keep track of the original error</strong>, which would otherwise be lost (behavior prior to 2022);</li>
-<li>line 30: <span style="color: #9a3412">erreur.cause?.message </span>retrieves the message from the original error, which is very useful for debugging;</li>
-<li>lines 39–51: A <strong>custom error class</strong> (<span style="color: #9a3412">ErreurValidation extends Error</span>) allows you to create your own business error types, which can then be distinguished using <code>instanceof</code> (line 62), just like <span style="color: #9a3412">ReferenceError </span>or <span style="color: #9a3412">RangeError </span>in the previous script.</li>
+<li>line 31: <span style="color: #9a3412">erreur.cause?.message </span>retrieves the message from the original error, which is very useful for debugging;</li>
+<li>lines 41–53: A <strong>custom error class</strong> (<span style="color: #9a3412">ErreurValidation extends Error</span>) allows you to create your own business error types, which can then be distinguished using <code>instanceof</code> (line 72), just like <span style="color: #9a3412">ReferenceError </span>or <span style="color: #9a3412">RangeError </span>in the previous script.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>npx tsx exceptions/excep-04.ts
 </code></pre></div>
