@@ -285,7 +285,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome
+    Home
   
 
     
@@ -1461,9 +1461,10 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>npx tsx main1.ts
 </code></pre></div>
 <p><em>Actual execution result (the PHP server was not launched in this environment):</em></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>  1  "-----------init-session"
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  2  erreur= connect ECONNREFUSED 127.0.0.1:80
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>"-----------init-session"
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>erreur= connect ECONNREFUSED 127.0.0.1:80
+</code></pre></div></td></tr></table></div>
 <p>On an available PHP server, the original 2019 document reported the following response for <span style="color: #9a3412"><code>init-session</code></span>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>{
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  "action": "init-session",
@@ -2266,9 +2267,10 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>npx tsx main2.ts
 </code></pre></div>
 <p><em>Result of the actual execution (the PHP server is not running in this environment):</em></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>  1  "-----------init-session"
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>  2  erreur= connect ECONNREFUSED 127.0.0.1:80
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>"-----------init-session"
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a>erreur= connect ECONNREFUSED 127.0.0.1:80
+</code></pre></div></td></tr></table></div>
 <h2 id="144-client-http-3">14.4. <span style="color: #2e74b5">Client HTTP 3</span></h2>
 <p>In this final section, we load the HTTP 2 client into a <strong>browser</strong>. While node.js natively executes TypeScript via <span style="color: #9a3412">tsx</span>, this is not the case for browsers: a tool is needed to <strong>compile</strong> TypeScript into JavaScript, then <strong>assemble</strong> the whole thing into a single file that can be used by a HTML page. This is the role of <strong><span style="color: #9a3412">[webpack]</span></strong>.</p>
 <h3 id="1441-changes-to-the-toolset-since-2019">14.4.1. <span style="color: #1f4d78">Changes to the toolset since 2019</span></h3>
@@ -2599,9 +2601,9 @@
           https://stahe.github.io
         </a>
         <br>
-        This tutorial, written by <strong>Serge Tahé</strong>, is made available to the public under the terms of the
+        This tutorial, written by the AI <strong>Claude AI</strong> under the supervision of <strong>Serge Tahé</strong>, is made available to the public under the terms of the
         <em>Creative Commons Attribution – No Commercial Use –
-        ShareAlike 3.0 Unported License</em>.
+        ShareAlike 3.0 Unported License </em>.
 
       </div>
 

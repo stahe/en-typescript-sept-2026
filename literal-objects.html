@@ -285,7 +285,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome
+    Home
   
 
     
@@ -1238,37 +1238,37 @@
 <a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="c1">// or enclosed in quotation marks ["nom"]</span>
 <a id="__codelineno-9-4" name="__codelineno-9-4"></a>
 <a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="kr">interface</span><span class="w"> </span><span class="nx">NomPrénom</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">  </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">  </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">    </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">    </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
 <a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="p">}</span>
 <a id="__codelineno-9-9" name="__codelineno-9-9"></a>
 <a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="c1">// literals</span>
 <a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="kd">const</span><span class="w"> </span><span class="nx">obj1</span><span class="o">:</span><span class="w"> </span><span class="nx">NomPrénom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="w">  </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="s2">"martin"</span><span class="p">,</span>
-<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="w">  </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="s2">"jean"</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="w">    </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="s2">"martin"</span><span class="p">,</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="w">    </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="s2">"jean"</span>
 <a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="p">};</span>
 <a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"prénom="</span><span class="p">,</span><span class="w"> </span><span class="nx">obj1</span><span class="p">.</span><span class="nx">prénom</span><span class="p">);</span>
 <a id="__codelineno-9-16" name="__codelineno-9-16"></a>
 <a id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="c1">// enclosed in single quotes</span>
 <a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="kd">const</span><span class="w"> </span><span class="nx">obj2</span><span class="o">:</span><span class="w"> </span><span class="nx">NomPrénom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="w">  </span><span class="s1">'name'</span><span class="o">:</span><span class="w"> </span><span class="s2">"martin"</span><span class="p">,</span>
-<a id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="w">  </span><span class="s1">'first_name: "jean"</span>
-<a id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="s1">};</span>
-<a id="__codelineno-9-22" name="__codelineno-9-22"></a><span class="s1">console.log("nom=", obj2.nom);</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="w">    </span><span class="s1">'nom'</span><span class="o">:</span><span class="w"> </span><span class="s2">"martin"</span><span class="p">,</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="w">    </span><span class="s1">'prénom'</span><span class="o">:</span><span class="w"> </span><span class="s2">"jean"</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="p">};</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"nom="</span><span class="p">,</span><span class="w"> </span><span class="nx">obj2</span><span class="p">.</span><span class="nx">nom</span><span class="p">);</span>
 <a id="__codelineno-9-23" name="__codelineno-9-23"></a>
-<a id="__codelineno-9-24" name="__codelineno-9-24"></a><span class="s1">// enclosed in quotation marks</span>
-<a id="__codelineno-9-25" name="__codelineno-9-25"></a><span class="s1">const obj3: NomPrénom = {</span>
-<a id="__codelineno-9-26" name="__codelineno-9-26"></a><span class="s1">  "nom": "martin",</span>
-<a id="__codelineno-9-27" name="__codelineno-9-27"></a><span class="s1">  "prénom": "jean"</span>
-<a id="__codelineno-9-28" name="__codelineno-9-28"></a><span class="s1">};</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24"></a><span class="c1">// enclosed in quotation marks</span>
+<a id="__codelineno-9-25" name="__codelineno-9-25"></a><span class="kd">const</span><span class="w"> </span><span class="nx">obj3</span><span class="o">:</span><span class="w"> </span><span class="nx">NomPrénom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-26" name="__codelineno-9-26"></a><span class="w">    </span><span class="s2">"nom"</span><span class="o">:</span><span class="w"> </span><span class="s2">"martin"</span><span class="p">,</span>
+<a id="__codelineno-9-27" name="__codelineno-9-27"></a><span class="w">    </span><span class="s2">"prénom"</span><span class="o">:</span><span class="w"> </span><span class="s2">"jean"</span>
+<a id="__codelineno-9-28" name="__codelineno-9-28"></a><span class="p">};</span>
 <a id="__codelineno-9-29" name="__codelineno-9-29"></a>
-<a id="__codelineno-9-30" name="__codelineno-9-30"></a><span class="s1">// two possible syntaxes for accessing the property [nom]</span>
-<a id="__codelineno-9-31" name="__codelineno-9-31"></a><span class="s1">console.log("nom=", obj3.nom);</span>
-<a id="__codelineno-9-32" name="__codelineno-9-32"></a><span class="s1">console.log("nom=", obj3['</span><span class="nx">nom</span><span class="err">'</span><span class="p">]);</span>
+<a id="__codelineno-9-30" name="__codelineno-9-30"></a><span class="c1">// two possible syntaxes for accessing the property [nom]</span>
+<a id="__codelineno-9-31" name="__codelineno-9-31"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"nom="</span><span class="p">,</span><span class="w"> </span><span class="nx">obj3</span><span class="p">.</span><span class="nx">nom</span><span class="p">);</span>
+<a id="__codelineno-9-32" name="__codelineno-9-32"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"nom="</span><span class="p">,</span><span class="w"> </span><span class="nx">obj3</span><span class="p">[</span><span class="s1">'nom'</span><span class="p">]);</span>
 <a id="__codelineno-9-33" name="__codelineno-9-33"></a>
 <a id="__codelineno-9-34" name="__codelineno-9-34"></a><span class="c1">// shorthand notation equivalent to {obj1:obj1, obj2:obj2}</span>
 <a id="__codelineno-9-35" name="__codelineno-9-35"></a><span class="kd">const</span><span class="w"> </span><span class="nx">obj4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-36" name="__codelineno-9-36"></a><span class="w">  </span><span class="nx">obj1</span><span class="p">,</span><span class="w"> </span><span class="nx">obj2</span>
+<a id="__codelineno-9-36" name="__codelineno-9-36"></a><span class="w">    </span><span class="nx">obj1</span><span class="p">,</span><span class="w"> </span><span class="nx">obj2</span>
 <a id="__codelineno-9-37" name="__codelineno-9-37"></a><span class="p">}</span>
 <a id="__codelineno-9-38" name="__codelineno-9-38"></a>
 <a id="__codelineno-9-39" name="__codelineno-9-39"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"obj4="</span><span class="p">,</span><span class="w"> </span><span class="nx">obj4</span><span class="p">)</span>
@@ -1693,9 +1693,10 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>npx tsx objets/obj-08.ts
 </code></pre></div>
 <p><em>Execution result:</em></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>  1  obj2===obj1 : false
-<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>  2  obj2= { nom: 'martin', 'prénom': 'jean' }
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a>obj2===obj1 : false
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a>obj2= { nom: 'martin', 'prénom': 'jean' }
+</code></pre></div></td></tr></table></div>
 <ul>
 <li><span style="color: #9a3412">obj2===obj1 </span>evaluates to <span style="color: #9a3412">false</span>: the two references <strong>do not</strong> point to the same object;</li>
 <li><span style="color: #9a3412">obj2 </span>does indeed contain a copy of <span style="color: #9a3412">obj1’s</span> properties—but be careful, as we’ll see in the next script, it’s only a <strong>shallow</strong> copy.</li>
@@ -1931,9 +1932,9 @@
           https://stahe.github.io
         </a>
         <br>
-        This tutorial, written by <strong>Serge Tahé</strong>, is made available to the public under the terms of the
+        This tutorial, written by the AI <strong>Claude AI</strong> under the supervision of <strong>Serge Tahé</strong>, is made available to the public under the terms of the
         <em>Creative Commons Attribution – No Commercial Use –
-        ShareAlike 3.0 Unported License</em>.
+        ShareAlike 3.0 Unported License </em>.
 
       </div>
 

@@ -285,7 +285,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome
+    Home
   
 
     
@@ -940,8 +940,8 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npx tsc --noEmit
 </code></pre></div>
 <p><em>Execution result:</em></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>  1  strings/str-01.ts(15,1): error TS2540: Cannot assign to '2' because it is a read-only property.
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>strings/str-01.ts(15,1): error TS2540: Cannot assign to '2' because it is a read-only property.
+</code></pre></div></td></tr></table></div>
 <p>Execution with <span style="color: #9a3412">tsx </span>(without prior type checking):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>npx tsx strings/str-01.ts
 </code></pre></div>
@@ -1036,8 +1036,8 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>npx tsx strings/str-03.ts
 </code></pre></div>
 <p><em>Result of execution:</em></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>  1  [Introduction à Javascript par l'exemple].substr(3, 2)=ro
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a>[Introduction à Javascript par l'exemple].substr(3, 2)=ro
+</code></pre></div></td></tr></table></div>
 <h2 id="64-script-str-04">6.4. <span style="color: #2e74b5">script [str-04]</span></h2>
 <p>The template string alone is insufficient for precise formatting (width, alignment, decimal precision, etc.). For this purpose, we use an external package, <strong><span style="color: #9a3412">[sprintf-js]</span></strong>, which replicates the <span style="color: #9a3412">printf/sprintf</span> functions familiar from other languages. It is installed with <code>npm install sprintf-js</code> and can be easily imported:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
@@ -1059,8 +1059,8 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>npx tsx strings/str-04.ts
 </code></pre></div>
 <p><em>Execution result:</em></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>  1  [Introduction à Javascript par l'exemple].substr(3,2)=[ro]
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a>[Introduction à Javascript par l'exemple].substr(3,2)=[ro]
+</code></pre></div></td></tr></table></div>
 <h2 id="65-script-str-05">6.5. <span style="color: #2e74b5">script [str-05]</span></h2>
 <p>The <strong><span style="color: #9a3412">[sprintf]</span></strong> function accepts, as in C, &quot;formats&quot; introduced by <span style="color: #9a3412">%</span>: <span style="color: #9a3412">%s </span>(string), <span style="color: #9a3412">%d </span>(integer), <span style="color: #9a3412">%f </span>(floating-point), <span style="color: #9a3412">%j </span>(JSON), <span style="color: #9a3412">%T </span>(type), <span style="color: #9a3412">%t </span>(boolean), along with width and alignment modifiers (<span style="color: #9a3412">%20s</span>, <span style="color: #9a3412">%-20s</span>, <span style="color: #9a3412">%04d</span>...):</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
@@ -1436,9 +1436,9 @@
           https://stahe.github.io
         </a>
         <br>
-        This tutorial, written by <strong>Serge Tahé</strong>, is made available to the public under the terms of the
+        This tutorial, written by the AI <strong>Claude AI</strong> under the supervision of <strong>Serge Tahé</strong>, is made available to the public under the terms of the
         <em>Creative Commons Attribution – No Commercial Use –
-        ShareAlike 3.0 Unported License</em>.
+        ShareAlike 3.0 Unported License </em>.
 
       </div>
 

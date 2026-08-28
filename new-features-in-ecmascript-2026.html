@@ -285,7 +285,7 @@
   <span class="md-ellipsis">
     
   
-    Welcome
+    Home
   
 
     
@@ -1007,9 +1007,10 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npx tsx ecmascript-2026/01-math-sumPrecise.ts
 </code></pre></div>
 <p><em>Execution result:</em></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>  1  somme avec reduce = 1.9000000000000004
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  2  Math.sumPrecise n'est pas encore disponible sur ce moteur JavaScript (voir le commentaire en tête de ce fichier)
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>somme avec reduce = 1.9000000000000004
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>Math.sumPrecise n'est pas encore disponible sur ce moteur JavaScript (voir le commentaire en tête de ce fichier)
+</code></pre></div></td></tr></table></div>
 <h2 id="163-script-02-iterator-concat">16.3. <span style="color: #2e74b5">script [02-iterator-concat]</span></h2>
 <p><strong><span style="color: #9a3412">[Iterator.concat] </span></strong>concatenates multiple iterables (array, <span style="color: #9a3412">Set</span>, generator, etc.) into a single <strong>lazy</strong> iterator: the elements are generated only as needed, without constructing a complete intermediate collection—unlike the spread operator <span style="color: #9a3412">[...a, ...b]</span>, which copies everything immediately into memory.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
@@ -1115,9 +1116,10 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>npx tsx ecmascript-2026/02-iterator-concat.ts
 </code></pre></div>
 <p><em>Execution result:</em></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>  1  avec spread : [ 'Ana', 'Léo', 'Nora', 'Théo', 'Zoé' ]
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  2  Iterator.concat n'est pas disponible sur ce moteur JavaScript (voir le commentaire en tête de ce fichier)
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>avec spread : [ 'Ana', 'Léo', 'Nora', 'Théo', 'Zoé' ]
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>Iterator.concat n'est pas disponible sur ce moteur JavaScript (voir le commentaire en tête de ce fichier)
+</code></pre></div></td></tr></table></div>
 <h2 id="164-script-03-error-iserror">16.4. <span style="color: #2e74b5">script [03-error-isError]</span></h2>
 <p><strong><span style="color: #9a3412">[Error.isError] </span></strong>reliably detects whether a value is an error, even when it comes from another &quot;realm&quot; JavaScript (an isolated execution context—an iframe, a worker, or Node.js&#x27;s <span style="color: #9a3412">vm</span> module): Each realm has its own <span style="color: #9a3412">Error</span> class, which causes <span style="color: #9a3412"><code>instanceof Error</code> </span>to fail, as the script demonstrates in practice:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
@@ -1411,9 +1413,10 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>npx tsx ecmascript-2026/04-map-weakmap-getOrInsert.ts
 </code></pre></div>
 <p><em>Execution result:</em></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>  1  avec l'ancienne façon : Map(1) { 'cuisine' =&gt; [ 'Ana', 'Léo' ] }
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>  2  Map.prototype.getOrInsert n'est pas disponible sur ce moteur JavaScript (voir le commentaire en tête de ce fichier) - seule la partie 1) ci-dessus a pu s'exécuter
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>avec l'ancienne façon : Map(1) { 'cuisine' =&gt; [ 'Ana', 'Léo' ] }
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>Map.prototype.getOrInsert n'est pas disponible sur ce moteur JavaScript (voir le commentaire en tête de ce fichier) - seule la partie 1) ci-dessus a pu s'exécuter
+</code></pre></div></td></tr></table></div>
 <h2 id="166-script-05-uint8array-base64-hex">16.6. <span style="color: #2e74b5">script [05-uint8array-base64-hex]</span></h2>
 <p><span style="color: #9a3412">Uint8Array</span> (a raw byte array) now includes new methods for converting to and from <strong>Base64</strong> and <strong>hexadecimal</strong>—formats commonly used to transmit binary data in JSON or URL—without relying on a third-party package:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
@@ -1535,8 +1538,8 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>npx tsx ecmascript-2026/05-uint8array-base64-hex.ts
 </code></pre></div>
 <p><em>Execution result:</em></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>  1  Uint8Array.prototype.toBase64 n'est pas disponible sur ce moteur JavaScript (voir le commentaire en tête de ce fichier)
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>Uint8Array.prototype.toBase64 n'est pas disponible sur ce moteur JavaScript (voir le commentaire en tête de ce fichier)
+</code></pre></div></td></tr></table></div>
 <h2 id="167-script-06-json-rawjson-et-reviver">16.7. <span style="color: #2e74b5">script [06-json-rawJSON-et-reviver]</span></h2>
 <p>This last script differs from the previous ones: <strong><span style="color: #9a3412">[JSON.rawJSON]/[isRawJSON]</span></strong>, as well as the new <span style="color: #9a3412">&quot;context&quot; </span>parameter in the <span style="color: #9a3412">JSON.parse</span> reviver, <strong>already work</strong> in the preparation environment for this course (Node 22):</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
@@ -1702,9 +1705,9 @@
           https://stahe.github.io
         </a>
         <br>
-        This tutorial, written by <strong>Serge Tahé</strong>, is made available to the public under the terms of the
+        This tutorial, written by the AI <strong>Claude AI</strong> under the supervision of <strong>Serge Tahé</strong>, is made available to the public under the terms of the
         <em>Creative Commons Attribution – No Commercial Use –
-        ShareAlike 3.0 Unported License</em>.
+        ShareAlike 3.0 Unported License </em>.
 
       </div>
 
