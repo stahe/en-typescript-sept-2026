@@ -12,10 +12,10 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/en-typescript-sept-2026/new-features-ecmascript-2020-2024.html">
+        <link rel="canonical" href="https://stahe.github.io/en-typescript-sept-2026/new-features-in-ecmascript-2020-2024.html">
       
       
-        <link rel="prev" href="http-typescript-clients-of-the-tax-calculation-service.html">
+        <link rel="prev" href="clients-http-and-typescript-of-the-tax-calculation-service.html">
       
       
         <link rel="next" href="new-features-in-ecmascript-2026.html">
@@ -29,7 +29,7 @@
     
     
       
-        <title>15. New Features ECMAScript 2020–2024 - Introduction to TypeScript Through Examples</title>
+        <title>15. New Features in ECMAScript 2020–2024 - Introduction to TypeScript Through Examples</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#15-new-features-ecmascript-20202024" class="md-skip">
+        <a href="#15-new-features-in-ecmascript-20202024" class="md-skip">
           Skip to content
         </a>
       
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              15. New Features ECMAScript 2020–2024
+              15. New Features in ECMAScript 2020–2024
             
           </span>
         </div>
@@ -494,14 +494,14 @@
   
   
     <li class="md-nav__item">
-      <a href="functions.html" class="md-nav__link">
+      <a href="the-functions.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. Functions
+    8. The Functions
   
 
     
@@ -602,14 +602,14 @@
   
   
     <li class="md-nav__item">
-      <a href="the-functions-http-and-typescript.html" class="md-nav__link">
+      <a href="the-http-and-typescript-functions.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. The functions HTTP and TypeScript
+    12. The HTTP and TypeScript functions
   
 
     
@@ -656,14 +656,14 @@
   
   
     <li class="md-nav__item">
-      <a href="http-typescript-clients-of-the-tax-calculation-service.html" class="md-nav__link">
+      <a href="clients-http-and-typescript-of-the-tax-calculation-service.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. HTTP TypeScript clients of the tax calculation service
+    14. Clients HTTP and TypeScript of the tax calculation service
   
 
     
@@ -699,7 +699,7 @@
   <span class="md-ellipsis">
     
   
-    15. New Features ECMAScript 2020–2024
+    15. New Features in ECMAScript 2020–2024
   
 
     
@@ -710,14 +710,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="new-features-ecmascript-2020-2024.html" class="md-nav__link md-nav__link--active">
+      <a href="new-features-in-ecmascript-2020-2024.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. New Features ECMAScript 2020–2024
+    15. New Features in ECMAScript 2020–2024
   
 
     
@@ -843,9 +843,9 @@
 
 
 
-<h1 id="15-new-features-ecmascript-20202024">15. <span style="color: #2e74b5">New Features ECMAScript 2020–2024</span></h1>
+<h1 id="15-new-features-in-ecmascript-20202024">15. <span style="color: #2e74b5">New Features in ECMAScript 2020–2024</span></h1>
 <p>The previous chapters have already covered, as we went along, most of the language features introduced since 2019—optional chaining and null coalescing (<span style="color: #9a3412">bases-09</span>), <span style="color: #9a3412">Object.hasOwn </span>and <span style="color: #9a3412">structuredClone </span>(<span style="color: #9a3412">obj-09</span>), new array methods (<span style="color: #9a3412">tab-05</span>), <span style="color: #9a3412">replaceAll/matchAll </span>(<span style="color: #9a3412">str-07</span>), native private fields (<span style="color: #9a3412">class-05</span>), <span style="color: #9a3412">Error </span>with <span style="color: #9a3412">cause </span>(<span style="color: #9a3412">excep-04</span>), top-level <span style="color: #9a3412">await </span>(<span style="color: #9a3412">import-04</span>), and <span style="color: #9a3412">Promise</span> extensions (<span style="color: #9a3412">async-07</span>).</p>
-<p>This chapter brings together the last two new features from ECMAScript 2024 that did not fit into any existing chapter: <strong><span style="color: #9a3412">[Object.groupBy]/[Map.groupBy]</span></strong>, and <strong><span style="color: #9a3412">[Array.fromAsync]</span></strong>. The script is located in the <strong><span style="color: #9a3412">[nouveautes]</span></strong> folder of the project.</p>
+<p>This chapter brings together the last two new features of ECMAScript 2024 that did not fit into any existing chapter: <strong><span style="color: #9a3412">[Object.groupBy]/[Map.groupBy]</span></strong>, and <strong><span style="color: #9a3412">[Array.fromAsync]</span></strong>. The script is located in the <strong><span style="color: #9a3412">[nouveautes]</span></strong> folder of the project.</p>
 <h2 id="151-script-groupby-et-fromasync">15.1. <span style="color: #2e74b5">script [groupBy-et-fromAsync]</span></h2>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
@@ -939,7 +939,7 @@
 <a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="c1">// the old way, using `reduce()`</span>
 <a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="kd">const</span><span class="w"> </span><span class="nx">groupesAvecReduce</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">étudiants</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">accumulateur</span><span class="o">:</span><span class="w"> </span><span class="nx">Record</span><span class="o">&lt;</span><span class="nx">string</span><span class="p">,</span><span class="w"> </span><span class="nx">Étudiant</span><span class="p">[]</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="nx">étudiant</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">catégorie</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">étudiant</span><span class="p">.</span><span class="nx">note</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s2">"admis"</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">"recalé"</span><span class="p">;</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">  </span><span class="c1">// if an array for this category doesn’t exist yet, create it</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">   </span><span class="c1">// if an array for this category doesn’t exist yet, create it</span>
 <a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">  </span><span class="p">(</span><span class="nx">accumulateur</span><span class="p">[</span><span class="nx">catégorie</span><span class="p">]</span><span class="w"> </span><span class="o">??=</span><span class="w"> </span><span class="p">[]).</span><span class="nx">push</span><span class="p">(</span><span class="nx">étudiant</span><span class="p">);</span>
 <a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">accumulateur</span><span class="p">;</span>
 <a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="p">},</span><span class="w"> </span><span class="p">{});</span>
@@ -961,14 +961,14 @@
 <a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="c1">// 2) Array.fromAsync(itérableAsynchrone)</span>
 <a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="c1">// ------------------------------------------------------------------------</span>
 <a id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="c1">// Array.from() (ES2015) knows how to construct an array from a synchronous iterable</span>
-<a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="c1">// Array.fromAsync() can do the same thing from an iterable ASYNCHRONE,</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="c1">// Array.fromAsync() can do the same thing with an iterable ASYNCHRONE,</span>
 <a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="c1">// that is, a source that produces its elements one by one over time</span>
 <a id="__codelineno-0-50" name="__codelineno-0-50"></a><span class="c1">// (for example: reading a network stream page by page)</span>
 <a id="__codelineno-0-51" name="__codelineno-0-51"></a>
 <a id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="c1">// an asynchronous generator that produces 3 values, with a short delay between each one</span>
 <a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="o">*</span><span class="w"> </span><span class="nx">générateurDePages</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">AsyncGenerator</span><span class="o">&lt;</span><span class="nx">string</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="w">    </span><span class="c1">// we simulate a network wait before each page</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="w">     </span><span class="c1">// we simulate a network wait before each page</span>
 <a id="__codelineno-0-56" name="__codelineno-0-56"></a><span class="w">    </span><span class="k">await</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Promise</span><span class="p">(</span><span class="nx">resolve</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">setTimeout</span><span class="p">(</span><span class="nx">resolve</span><span class="p">,</span><span class="w"> </span><span class="mf">100</span><span class="p">));</span>
 <a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="w">    </span><span class="k">yield</span><span class="w"> </span><span class="sb">`page </span><span class="si">${</span><span class="nx">i</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
 <a id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="w">  </span><span class="p">}</span>
@@ -976,7 +976,7 @@
 <a id="__codelineno-0-60" name="__codelineno-0-60"></a>
 <a id="__codelineno-0-61" name="__codelineno-0-61"></a><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">démoFromAsync</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="ow">void</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-62" name="__codelineno-0-62"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"--- Array.fromAsync ---"</span><span class="p">);</span>
-<a id="__codelineno-0-63" name="__codelineno-0-63"></a><span class="w">  </span><span class="c1">// Without Array.fromAsync, we would have had to write a manual "for await...of" loop</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63"></a><span class="w">   </span><span class="c1">// Without Array.fromAsync, we would have had to write a manual "for await...of" loop</span>
 <a id="__codelineno-0-64" name="__codelineno-0-64"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">pages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nb">Array</span><span class="p">.</span><span class="nx">fromAsync</span><span class="p">(</span><span class="nx">générateurDePages</span><span class="p">());</span>
 <a id="__codelineno-0-65" name="__codelineno-0-65"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"pages ="</span><span class="p">,</span><span class="w"> </span><span class="nx">pages</span><span class="p">);</span>
 <a id="__codelineno-0-66" name="__codelineno-0-66"></a><span class="p">}</span>
@@ -984,8 +984,8 @@
 <a id="__codelineno-0-68" name="__codelineno-0-68"></a><span class="nx">démoFromAsync</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><strong><span style="color: #9a3412">[Object.groupBy(tableau, fonction)] </span></strong>groups the elements of an array based on the result of a sorting function—much more readable than the manual construction using <code>reduce()</code> (compare the two constructions, lines 24–29 and line 33);</li>
-<li>the result of <span style="color: #9a3412">Object.groupBy </span>is an object <strong>without a prototype</strong> (<span style="color: #9a3412">[Object: null prototype]</span>)—a detail visible at runtime that avoids certain pitfalls related to properties inherited from <span style="color: #9a3412">Object.prototype</span> (such as <span style="color: #9a3412">toString</span>, <span style="color: #9a3412">hasOwnProperty</span>...) if a category were to bear that name;</li>
+<li><strong><span style="color: #9a3412">[Object.groupBy(tableau, fonction)] </span></strong>groups the elements of an array based on the result of a sorting function—much more readable than the manual construction using <code>reduce()</code> (compare the two constructions, lines 24–29 and then line 33);</li>
+<li>the result of <span style="color: #9a3412">Object.groupBy </span>is an object <strong>without a prototype</strong> (<span style="color: #9a3412">[Object: null prototype]</span>)—a detail visible at runtime, which avoids certain pitfalls related to properties inherited from <span style="color: #9a3412">Object.prototype</span> (such as <span style="color: #9a3412">toString</span>, <span style="color: #9a3412">hasOwnProperty</span>...) if a category were to bear that name;</li>
 <li><strong><span style="color: #9a3412">[Map.groupBy] </span></strong>works identically but returns a <span style="color: #9a3412">Map </span>rather than a literal object—essential whenever the grouping keys are not strings (in this case, booleans);</li>
 <li><strong><span style="color: #9a3412">[Array.fromAsync(itérableAsynchrone)] </span></strong>constructs an array from an <strong>asynchronous</strong> source—an <span style="color: #9a3412"><code>async function\*</code> </span>generator, for example—without having to write a manual <span style="color: #9a3412"><code>for</code> </span>loop yourself to accumulate the results.</li>
 </ul>
@@ -1027,7 +1027,7 @@
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a>    <span class="p">{</span> <span class="n">nom</span><span class="p">:</span> <span class="s1">'Nora'</span><span class="p">,</span> <span class="n">note</span><span class="p">:</span> <span class="mi">12</span> <span class="p">},</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a>    <span class="p">{</span> <span class="n">nom</span><span class="p">:</span> <span class="s1">'Zoé'</span><span class="p">,</span> <span class="n">note</span><span class="p">:</span> <span class="mi">17</span> <span class="p">}</span>
 <a id="__codelineno-2-6" name="__codelineno-2-6"></a>  <span class="p">],</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a>  <span class="s1">'rejected: [ { nom: '</span><span class="n">Léo</span><span class="s1">', note: 8 }, { nom: '</span><span class="n">Théo</span><span class="s1">', note: 6 } ]</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a>  <span class="s1">'recalé'</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="n">nom</span><span class="p">:</span> <span class="s1">'Léo'</span><span class="p">,</span> <span class="n">note</span><span class="p">:</span> <span class="mi">8</span> <span class="p">},</span> <span class="p">{</span> <span class="n">nom</span><span class="p">:</span> <span class="s1">'Théo'</span><span class="p">,</span> <span class="n">note</span><span class="p">:</span> <span class="mi">6</span> <span class="p">}</span> <span class="p">]</span>
 <a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="p">}</span>
 <a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">avec</span> <span class="n">Object</span><span class="o">.</span><span class="n">groupBy</span> <span class="p">:</span> <span class="p">[</span><span class="n">Object</span><span class="p">:</span> <span class="n">null</span> <span class="n">prototype</span><span class="p">]</span> <span class="p">{</span>
 <a id="__codelineno-2-10" name="__codelineno-2-10"></a>  <span class="n">admis</span><span class="p">:</span> <span class="p">[</span>
@@ -1035,7 +1035,7 @@
 <a id="__codelineno-2-12" name="__codelineno-2-12"></a>    <span class="p">{</span> <span class="n">nom</span><span class="p">:</span> <span class="s1">'Nora'</span><span class="p">,</span> <span class="n">note</span><span class="p">:</span> <span class="mi">12</span> <span class="p">},</span>
 <a id="__codelineno-2-13" name="__codelineno-2-13"></a>    <span class="p">{</span> <span class="n">nom</span><span class="p">:</span> <span class="s1">'Zoé'</span><span class="p">,</span> <span class="n">note</span><span class="p">:</span> <span class="mi">17</span> <span class="p">}</span>
 <a id="__codelineno-2-14" name="__codelineno-2-14"></a>  <span class="p">],</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a>  <span class="s1">'failed: [ { nom: '</span><span class="n">Léo</span><span class="s1">', note: 8 }, { nom: '</span><span class="n">Théo</span><span class="s1">', note: 6 } ]</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a>  <span class="s1">'recalé'</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="n">nom</span><span class="p">:</span> <span class="s1">'Léo'</span><span class="p">,</span> <span class="n">note</span><span class="p">:</span> <span class="mi">8</span> <span class="p">},</span> <span class="p">{</span> <span class="n">nom</span><span class="p">:</span> <span class="s1">'Théo'</span><span class="p">,</span> <span class="n">note</span><span class="p">:</span> <span class="mi">6</span> <span class="p">}</span> <span class="p">]</span>
 <a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="p">}</span>
 <a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="n">admis</span> <span class="o">=</span> <span class="p">[</span>
 <a id="__codelineno-2-18" name="__codelineno-2-18"></a>  <span class="p">{</span> <span class="n">nom</span><span class="p">:</span> <span class="s1">'Ana'</span><span class="p">,</span> <span class="n">note</span><span class="p">:</span> <span class="mi">15</span> <span class="p">},</span>
@@ -1061,7 +1061,7 @@
 <li><strong><span style="color: #9a3412">[ES2023]</span></strong>: <span style="color: #9a3412">findLast/findLastIndex</span>, immutable methods <span style="color: #9a3412">toSorted/toReversed/toSpliced/with</span>;</li>
 <li><strong><span style="color: #9a3412">[ES2024]</span></strong>: <span style="color: #9a3412">Object.groupBy/Map.groupBy</span>, <span style="color: #9a3412">Array.fromAsync</span>, <span style="color: #9a3412">Promise.withResolvers</span>, <span style="color: #9a3412">String.isWellFormed/toWellFormed</span>.</li>
 </ul>
-<p>The following chapters describe the new features of ECMAScript 2026, as well as <strong><span style="color: #9a3412">[Temporal]</span></strong>, the modern replacement for the <span style="color: #9a3412">Date</span> object.</p>
+<p>The following sections describe the new features of ECMAScript 2026, as well as <strong><span style="color: #9a3412">[Temporal]</span></strong>, the modern replacement for the <span style="color: #9a3412">Date</span> object.</p>
 
 
 

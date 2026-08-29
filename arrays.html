@@ -607,14 +607,14 @@
   
   
     <li class="md-nav__item">
-      <a href="functions.html" class="md-nav__link">
+      <a href="the-functions.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. Functions
+    8. The Functions
   
 
     
@@ -715,14 +715,14 @@
   
   
     <li class="md-nav__item">
-      <a href="the-functions-http-and-typescript.html" class="md-nav__link">
+      <a href="the-http-and-typescript-functions.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. The functions HTTP and TypeScript
+    12. The HTTP and TypeScript functions
   
 
     
@@ -769,14 +769,14 @@
   
   
     <li class="md-nav__item">
-      <a href="http-typescript-clients-of-the-tax-calculation-service.html" class="md-nav__link">
+      <a href="clients-http-and-typescript-of-the-tax-calculation-service.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. HTTP TypeScript clients of the tax calculation service
+    14. Clients HTTP and TypeScript of the tax calculation service
   
 
     
@@ -796,14 +796,14 @@
   
   
     <li class="md-nav__item">
-      <a href="new-features-ecmascript-2020-2024.html" class="md-nav__link">
+      <a href="new-features-in-ecmascript-2020-2024.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. New Features ECMAScript 2020–2024
+    15. New Features in ECMAScript 2020–2024
   
 
     
@@ -981,7 +981,7 @@
 <a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>line 5: <span style="color: #9a3412">const tab: any[] = [] </span>— an empty array, typed as <span style="color: #9a3412">any[] </span>because it will intentionally contain “gaps”;</li>
+<li>line 5: <span style="color: #9a3412">const tab: any[] = [] </span>— an empty array, typed as <span style="color: #9a3412"><code>any[]</code> </span>because it will intentionally contain “gaps”;</li>
 <li>lines 9–10: element #3 can be initialized even if elements 0, 1, and 2 do not yet exist—they become “gaps” (<span style="color: #9a3412">empty items</span>), which are distinct from <code>undefined</code> even though they are often displayed similarly;</li>
 <li>lines 18–20: the <span style="color: #9a3412">keys() </span>and <span style="color: #9a3412">values() </span>methods return <strong>iterators</strong> that can be traversed using <span style="color: #9a3412">for...of</span>.</li>
 </ul>
@@ -1019,7 +1019,7 @@
 <a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="n">valeur</span><span class="o">=</span><span class="p">[</span> <span class="mi">100</span> <span class="p">]</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="43-script-tab-03">4.3. <span style="color: #2e74b5">script [tab-03]</span></h2>
-<p>This script demonstrates the main methods for manipulating an array: iterating through, adding, and removing elements.</p>
+<p>This script demonstrates the main methods for manipulating an array: iterating, adding, and removing elements.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
@@ -1076,7 +1076,7 @@
 <span class="normal"><a href="#__codelineno-6-54">54</a></span>
 <span class="normal"><a href="#__codelineno-6-55">55</a></span>
 <span class="normal"><a href="#__codelineno-6-56">56</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="s1">'use strict'</span><span class="p">;</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="c1">// An array can contain different data types</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="c1">// An array can contain different types of data</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="c1">// [any] because this array intentionally mixes several types (demonstration)</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tab</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="s2">"un"</span><span class="p">,</span><span class="w"> </span><span class="s2">"deux"</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">],</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">prop1</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">prop2</span><span class="o">:</span><span class="w"> </span><span class="s2">"abc"</span><span class="w"> </span><span class="p">}];</span>
 <a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="c1">// console.log can display the contents of an array</span>
@@ -1088,17 +1088,17 @@
 <a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"élément="</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">element</span><span class="p">));</span>
 <a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="p">});</span>
 <a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="nx">show</span><span class="p">(</span><span class="s2">"2b"</span><span class="p">);</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="c1">// Another way to do the same thing</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="c1">// another way to do the same thing</span>
 <a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="nx">tab</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"élément="</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">element</span><span class="p">));</span>
 <a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="p">});</span>
 <a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="nx">show</span><span class="p">(</span><span class="mf">3</span><span class="p">);</span>
-<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="c1">// Iterating through an array using a for loop</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="c1">// Iterating through the array using `for`</span>
 <a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"i="</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="s2">"tab[i]="</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
 <a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="p">}</span>
 <a id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="nx">show</span><span class="p">(</span><span class="mf">4</span><span class="p">);</span>
-<a id="__codelineno-6-24" name="__codelineno-6-24"></a><span class="c1">// modifying tab[i]</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24"></a><span class="c1">// Modifying a table[i]</span>
 <a id="__codelineno-6-25" name="__codelineno-6-25"></a><span class="nx">tab</span><span class="p">[</span><span class="mf">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
 <a id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="c1">// display</span>
 <a id="__codelineno-6-27" name="__codelineno-6-27"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"tab="</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
@@ -1123,7 +1123,7 @@
 <a id="__codelineno-6-46" name="__codelineno-6-46"></a><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
 <a id="__codelineno-6-47" name="__codelineno-6-47"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"élément="</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="s2">"tab="</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
 <a id="__codelineno-6-48" name="__codelineno-6-48"></a><span class="nx">show</span><span class="p">(</span><span class="mf">10</span><span class="p">);</span>
-<a id="__codelineno-6-49" name="__codelineno-6-49"></a><span class="c1">// Removes two elements from the array, starting with the element numbered 1</span>
+<a id="__codelineno-6-49" name="__codelineno-6-49"></a><span class="c1">// Removes two elements from the array, starting with the first element</span>
 <a id="__codelineno-6-50" name="__codelineno-6-50"></a><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
 <a id="__codelineno-6-51" name="__codelineno-6-51"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"élément="</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="s2">"tab="</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
 <a id="__codelineno-6-52" name="__codelineno-6-52"></a>
@@ -1136,7 +1136,7 @@
 <li>Line 4: Although <span style="color: #9a3412"><code>tab</code> </span>is declared <span style="color: #9a3412">as <code>const</code></span>, its <strong>contents</strong> can be modified (line 25, <code>tab[5] = []</code>). It is the pointer to the array that is constant, not the array itself;</li>
 <li>lines 10–12: <code>forEach</code> iterates through the array and calls the function passed as a parameter for each element—here written using <strong>arrow notation</strong>: <code>element =&gt; { ... }</code>;</li>
 <li>lines 15–17: the same thing, written using traditional <span style="color: #9a3412">function</span> syntax—the two forms are equivalent;</li>
-<li>The methods <span style="color: #9a3412">pop()</span>, <span style="color: #9a3412">push()</span>, <span style="color: #9a3412">unshift()</span>, <span style="color: #9a3412">shift()</span>, and <span style="color: #9a3412">splice() </span>modify the array <strong>in place</strong> (they have side effects): this is an important difference from the “immutable” methods seen in script <span style="color: #9a3412">tab-05</span>.</li>
+<li>The <span style="color: #9a3412">pop(), push(), unshift(), shift(), splice()</span> methods modify the <strong>in-place</strong> array (they have side effects): this is a key difference from the “immutable” methods discussed in script <span style="color: #9a3412">tab-05</span>.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>npx tsx tableaux/tab-03.ts
 </code></pre></div>
@@ -1222,7 +1222,7 @@
 <a id="__codelineno-8-40" name="__codelineno-8-40"></a>élément= [ 2, 'deux' ] tab= [ 1, true, [], 'xyz' ]
 </code></pre></div></td></tr></table></div>
 <h2 id="44-script-tab-04">4.4. <span style="color: #2e74b5">script [tab-04]</span></h2>
-<p>This script demonstrates the functional methods for transforming an array: <span style="color: #9a3412">map</span>, <span style="color: #9a3412">reduce</span>, <span style="color: #9a3412">filter</span>, <span style="color: #9a3412">find</span>, <span style="color: #9a3412">findIndex</span>, <span style="color: #9a3412">indexOf</span>, <span style="color: #9a3412">sort</span>.</p>
+<p>This script demonstrates the functional methods for transforming an array: <span style="color: #9a3412">map, reduce, filter, find</span>, <span style="color: #9a3412">findIndex</span>, <span style="color: #9a3412">indexOf</span>, <span style="color: #9a3412">sort</span>.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
@@ -1306,7 +1306,7 @@
 <a id="__codelineno-9-24" name="__codelineno-9-24"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"somme2 tab="</span><span class="p">,</span><span class="w"> </span><span class="nx">somme2</span><span class="p">);</span>
 <a id="__codelineno-9-25" name="__codelineno-9-25"></a><span class="c1">// filter</span>
 <a id="__codelineno-9-26" name="__codelineno-9-26"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tab4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tab</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-27" name="__codelineno-9-27"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">element</span><span class="o">&gt;</span><span class="mf">50</span><span class="p">;</span>
+<a id="__codelineno-9-27" name="__codelineno-9-27"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">50</span><span class="p">;</span>
 <a id="__codelineno-9-28" name="__codelineno-9-28"></a><span class="p">});</span>
 <a id="__codelineno-9-29" name="__codelineno-9-29"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"tab4="</span><span class="p">,</span><span class="w"> </span><span class="nx">tab4</span><span class="p">);</span>
 <a id="__codelineno-9-30" name="__codelineno-9-30"></a><span class="c1">// find</span>
@@ -1343,8 +1343,8 @@
 <li><strong><span style="color: #9a3412">[map] </span></strong>transforms each element and returns a <strong>new</strong> array—the original remains unchanged;</li>
 <li><strong><span style="color: #9a3412">[reduce] </span></strong>“accumulates” the elements one by one into a single result. The first parameter of its function (<span style="color: #9a3412">accumulator</span>) is the result accumulated so far; the second (<span style="color: #9a3412">currentValue</span>) is the current element. Without an initial value (line 20), the accumulator starts with the first element of the array;</li>
 <li><strong><span style="color: #9a3412">[filter] </span></strong>retains only those elements for which the function returns a “true” value;</li>
-<li><strong><span style="color: #9a3412">[find] </span></strong>returns the first element that satisfies the criterion (or <code>undefined</code>), while <strong><span style="color: #9a3412">[findIndex] </span></strong>returns its index (or <code>-1</code>);</li>
-<li><strong><span style="color: #9a3412">[sort] </span></strong>without parameters sorts in natural order. With a comparison function <span style="color: #9a3412">(e1, e2) =&gt; ...</span>, you have complete control over the order: <span style="color: #9a3412">-1 </span>if <span style="color: #9a3412">e1 </span>must come before <span style="color: #9a3412">e2</span>, <span style="color: #9a3412">+1 </span>otherwise,<span style="color: #9a3412"> 0 </span>in case of equality.</li>
+<li><strong><span style="color: #9a3412">[find] </span></strong>returns the first element that satisfies the criterion (or <code>undefined</code>), while <strong><span style="color: #9a3412">[findIndex] </span></strong>returns its index (or <span style="color: #9a3412"><code>-1</code></span>);</li>
+<li><strong><span style="color: #9a3412">[sort] </span></strong>without a parameter sorts in natural order. With a comparison function <span style="color: #9a3412">(e1, e2) =&gt; ...</span>, you have complete control over the order: <span style="color: #9a3412">-1 </span>if <span style="color: #9a3412">e1 </span>must come before <span style="color: #9a3412">e2</span>, <span style="color: #9a3412">+1 </span>otherwise,<span style="color: #9a3412"> 0 </span>in case of a tie.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>npx tsx tableaux/tab-04.ts
 </code></pre></div>
@@ -1398,7 +1398,7 @@
 <a id="__codelineno-11-24" name="__codelineno-11-24"></a>tab6= [ 5, 4, 4, 2 ]
 </code></pre></div></td></tr></table></div>
 <h2 id="45-script-tab-05">4.5. <span style="color: #2e74b5">script [tab-05]</span></h2>
-<p><strong><span style="color: #9a3412">[NOUVEAU depuis 2019] </span></strong>This script presents the new array methods introduced between 2022 and 2023:</p>
+<p><strong><span style="color: #9a3412">[NOUVEAU depuis 2019] </span></strong>This script demonstrates the new array methods introduced between 2022 and 2023:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
@@ -1462,7 +1462,7 @@
 <a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="c1">// ========================================================================</span>
 <a id="__codelineno-12-5" name="__codelineno-12-5"></a>
 <a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="c1">// ------------------------------------------------------------------------</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="c1">// 1) at(index)  (ECMAScript 2022)</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="c1">// 1) at(index)   (ECMAScript 2022)</span>
 <a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="c1">// ------------------------------------------------------------------------</span>
 <a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="c1">// Previously, to access the last element of an array, we wrote tab[tab.length - 1]</span>
 <a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="kd">const</span><span class="w"> </span><span class="nx">tab</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">20</span><span class="p">,</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span><span class="w"> </span><span class="mf">40</span><span class="p">,</span><span class="w"> </span><span class="mf">50</span><span class="p">];</span>
@@ -1476,22 +1476,22 @@
 <a id="__codelineno-12-18" name="__codelineno-12-18"></a><span class="c1">// ------------------------------------------------------------------------</span>
 <a id="__codelineno-12-19" name="__codelineno-12-19"></a><span class="c1">// 2) findLast() and findLastIndex()  (ECMAScript 2023)</span>
 <a id="__codelineno-12-20" name="__codelineno-12-20"></a><span class="c1">// ------------------------------------------------------------------------</span>
-<a id="__codelineno-12-21" name="__codelineno-12-21"></a><span class="c1">// symmetrical to find() / findIndex(), but starting from the end of the array</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21"></a><span class="c1">// symmetric to find() / findIndex()</span>
 <a id="__codelineno-12-22" name="__codelineno-12-22"></a><span class="kd">const</span><span class="w"> </span><span class="nx">nombres</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="mf">21</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">17</span><span class="p">];</span>
 <a id="__codelineno-12-23" name="__codelineno-12-23"></a><span class="kd">const</span><span class="w"> </span><span class="nx">dernierPair</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nombres</span><span class="p">.</span><span class="nx">findLast</span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
-<a id="__codelineno-12-24" name="__codelineno-12-24"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"dernier nombre pair ="</span><span class="p">,</span><span class="w"> </span><span class="nx">dernierPair</span><span class="p">);</span><span class="w"> </span><span class="c1">// -&gt; 8 (the last even number counting from the end)</span>
+<a id="__codelineno-12-24" name="__codelineno-12-24"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"dernier nombre pair ="</span><span class="p">,</span><span class="w"> </span><span class="nx">dernierPair</span><span class="p">);</span><span class="w"> </span><span class="c1">// -&gt; 8 </span>
 <a id="__codelineno-12-25" name="__codelineno-12-25"></a><span class="kd">const</span><span class="w"> </span><span class="nx">indexDernierPair</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nombres</span><span class="p">.</span><span class="nx">findLastIndex</span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
 <a id="__codelineno-12-26" name="__codelineno-12-26"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"index du dernier nombre pair ="</span><span class="p">,</span><span class="w"> </span><span class="nx">indexDernierPair</span><span class="p">);</span>
 <a id="__codelineno-12-27" name="__codelineno-12-27"></a>
 <a id="__codelineno-12-28" name="__codelineno-12-28"></a><span class="c1">// ------------------------------------------------------------------------</span>
-<a id="__codelineno-12-29" name="__codelineno-12-29"></a><span class="c1">// 3) "immutable" methods  (ECMAScript 2023)</span>
+<a id="__codelineno-12-29" name="__codelineno-12-29"></a><span class="c1">// 3) "immutable" methods (ECM AScript 2023)</span>
 <a id="__codelineno-12-30" name="__codelineno-12-30"></a><span class="c1">// ------------------------------------------------------------------------</span>
 <a id="__codelineno-12-31" name="__codelineno-12-31"></a><span class="c1">// sort(), reverse(), and splice() modify the original array (side effect) — see tab-04.js</span>
 <a id="__codelineno-12-32" name="__codelineno-12-32"></a><span class="c1">// Their "to..." equivalents return an array and leave the original intact</span>
-<a id="__codelineno-12-33" name="__codelineno-12-33"></a><span class="c1">// [(number | string)[]] because toSpliced() inserts strings into this array from the bottom up</span>
+<a id="__codelineno-12-33" name="__codelineno-12-33"></a><span class="c1">// [(number | string)[]] because toSpliced() inserts strings further down in this array</span>
 <a id="__codelineno-12-34" name="__codelineno-12-34"></a><span class="kd">const</span><span class="w"> </span><span class="nx">original</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">string</span><span class="p">)[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">];</span>
 <a id="__codelineno-12-35" name="__codelineno-12-35"></a>
-<a id="__codelineno-12-36" name="__codelineno-12-36"></a><span class="c1">// toSorted: like sort(), but without modifying the original</span>
+<a id="__codelineno-12-36" name="__codelineno-12-36"></a><span class="c1">// toSorted: same as sort(), but without modifying the original</span>
 <a id="__codelineno-12-37" name="__codelineno-12-37"></a><span class="kd">const</span><span class="w"> </span><span class="nx">trié</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">original</span><span class="p">.</span><span class="nx">toSorted</span><span class="p">();</span>
 <a id="__codelineno-12-38" name="__codelineno-12-38"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"original ="</span><span class="p">,</span><span class="w"> </span><span class="nx">original</span><span class="p">,</span><span class="w"> </span><span class="s2">" (inchangé)"</span><span class="p">);</span>
 <a id="__codelineno-12-39" name="__codelineno-12-39"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"trié ="</span><span class="p">,</span><span class="w"> </span><span class="nx">trié</span><span class="p">);</span>
@@ -1517,7 +1517,7 @@
 </code></pre></div></td></tr></table></div>
 <ul>
 <li><strong><span style="color: #9a3412">[at(index)] </span></strong>(ES2022): secure and readable access, including with negative indices (<span style="color: #9a3412">at(-1) </span>= last element) — more readable than <span style="color: #9a3412">tab[tab.length - 1]</span>;</li>
-<li><strong><span style="color: #9a3412">[findLast]/[findLastIndex] </span></strong>(ES2023): same as <span style="color: #9a3412">find/findIndex</span>, but starting from the end;</li>
+<li><strong><span style="color: #9a3412">[findLast]/[findLastIndex] </span></strong>(ES2023): same as <span style="color: #9a3412">find/findIndex</span>, but returns the last element that satisfies the condition;</li>
 <li><strong><span style="color: #9a3412">[toSorted]</span></strong>, <strong><span style="color: #9a3412">[toReversed]</span></strong>, <strong><span style="color: #9a3412">[toSpliced]</span></strong>, <strong><span style="color: #9a3412">[with] </span></strong>(ES2023): the <strong>immutable</strong> equivalents of <span style="color: #9a3412">sort</span>, <span style="color: #9a3412">reverse</span>, <span style="color: #9a3412">splice</span>, and indexed assignment—they return a <strong>new</strong> array without modifying the original, unlike the methods in the <span style="color: #9a3412">tab-03</span> script. Very useful in front-end frameworks (React, Vue...) where you need to produce a new state without modifying the old one.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>npx tsx tableaux/tab-05.ts
@@ -1548,7 +1548,7 @@
 <a id="__codelineno-14-12" name="__codelineno-14-12"></a>remplacé = [ 999, 5, 4, 2 ] , original toujours = [ 4, 5, 4, 2 ]
 </code></pre></div></td></tr></table></div>
 <h2 id="46-conclusion">4.6. <span style="color: #2e74b5">Conclusion</span></h2>
-<p>The key takeaway from this chapter is that an array is an <strong>object referenced by a pointer</strong>, with no fixed size, and equipped with a rich set of methods—some of which modify the array in place (<span style="color: #9a3412">push</span>, <span style="color: #9a3412">sort</span>...), while others, more recent ones, consistently return a new array (<span style="color: #9a3412">toSorted</span>, <span style="color: #9a3412">with</span>...). The next chapter covers literal objects.</p>
+<p>The key takeaway from this chapter is that an array is an <strong>object referenced by a pointer</strong>, with no fixed size, and equipped with a rich set of methods—some of which modify the array in place (<span style="color: #9a3412">push</span>, sort…), while others, more recent ones, consistently return a new array (<span style="color: #9a3412">toSorted</span>, with…). The next chapter covers literal objects.</p>
 
 
 

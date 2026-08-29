@@ -651,14 +651,14 @@
   
   
     <li class="md-nav__item">
-      <a href="functions.html" class="md-nav__link">
+      <a href="the-functions.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. Functions
+    8. The Functions
   
 
     
@@ -759,14 +759,14 @@
   
   
     <li class="md-nav__item">
-      <a href="the-functions-http-and-typescript.html" class="md-nav__link">
+      <a href="the-http-and-typescript-functions.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. The functions HTTP and TypeScript
+    12. The HTTP and TypeScript functions
   
 
     
@@ -813,14 +813,14 @@
   
   
     <li class="md-nav__item">
-      <a href="http-typescript-clients-of-the-tax-calculation-service.html" class="md-nav__link">
+      <a href="clients-http-and-typescript-of-the-tax-calculation-service.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. HTTP TypeScript clients of the tax calculation service
+    14. Clients HTTP and TypeScript of the tax calculation service
   
 
     
@@ -840,14 +840,14 @@
   
   
     <li class="md-nav__item">
-      <a href="new-features-ecmascript-2020-2024.html" class="md-nav__link">
+      <a href="new-features-in-ecmascript-2020-2024.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. New Features ECMAScript 2020–2024
+    15. New Features in ECMAScript 2020–2024
   
 
     
@@ -932,7 +932,7 @@
 
 
 <h1 id="5-literal-objects">5. <span style="color: #2e74b5">Literal Objects</span></h1>
-<p>Here, we refer to “literal objects” as objects defined directly in the code, as opposed to instances of <strong><span style="color: #9a3412">[class] </span></strong>(discussed in the chapter “Classes”). The scripts for this chapter are located in the <strong><span style="color: #9a3412">[objets]</span></strong> folder of the project.</p>
+<p>In this chapter, we refer to objects defined directly in the code as “literal objects,” as opposed to instances of <strong><span style="color: #9a3412">[class] </span></strong>(discussed in the chapter “Classes”). The scripts for this chapter are located in the <strong><span style="color: #9a3412">[objets]</span></strong> folder of the project.</p>
 <h2 id="51-script-obj-01">5.1. <span style="color: #2e74b5">script [obj-01]</span></h2>
 <p>As with arrays, an object is manipulated via a pointer. In TypeScript, you must also <strong>describe the</strong> object’s <strong>structure</strong> using an <span style="color: #9a3412">interface </span>before you can dynamically add properties to it.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
@@ -994,7 +994,7 @@
 <a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'prop1='</span><span class="p">,</span><span class="w"> </span><span class="nx">obj1</span><span class="p">[</span><span class="nx">var1</span><span class="p">]);</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Lines 5–9: <strong><span style="color: #9a3412">The [interface] </span></strong><span style="color: #9a3412">Obj1 </span>declares in advance the properties that will be added (<span style="color: #9a3412">prop1</span>, <span style="color: #9a3412">prop2</span>, <span style="color: #9a3412">prop3</span>—all optional, indicated by <span style="color: #9a3412">“?”</span>). The line <span style="color: #9a3412">[clé: string]: unknown </span>is an <strong>index signature</strong>: it also allows the addition of any other property not specified in advance;</li>
+<li>Lines 5–9: <strong><span style="color: #9a3412">[interface] </span></strong><span style="color: #9a3412">Obj1 </span>declares in advance the properties that will be added (<span style="color: #9a3412">prop1, prop2, prop3</span>, all optional with <span style="color: #9a3412">?</span>). The line <span style="color: #9a3412">[clé: string]: unknown </span>is an <strong>index signature</strong>: it also allows the addition of any other property not specified in advance;</li>
 <li>line 19: <span style="color: #9a3412">obj1.prop3 </span>can also be written as <span style="color: #9a3412">obj1[&#x27;prop3&#x27;]</span>—this notation is essential when the property name is actually the value of a variable (lines 28–29);</li>
 <li>lines 22–25: <span style="color: #9a3412"><code>const obj2: Obj1 = obj1</code> </span>is a <strong>reference copy</strong>, not a copy of the object—therefore, modifying <span style="color: #9a3412"><code>obj2</code> </span>also modifies what is seen through <code>obj1</code>, just as with arrays.</li>
 </ul>
@@ -1079,14 +1079,14 @@
 <a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="c1">// You can also display the object's string jSON</span>
 <a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="kd">let</span><span class="w"> </span><span class="nx">json</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">personne</span><span class="p">);</span>
 <a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"jSON="</span><span class="p">,</span><span class="w"> </span><span class="nx">json</span><span class="p">);</span>
-<a id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="c1">// the jSON string can be read again</span>
+<a id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="c1">// the jSON can be read again</span>
 <a id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="kd">let</span><span class="w"> </span><span class="nx">personne2</span><span class="o">:</span><span class="w"> </span><span class="nx">PersonneFamille</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">json</span><span class="p">);</span>
 <a id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"père="</span><span class="p">,</span><span class="w"> </span><span class="nx">personne2</span><span class="p">.</span><span class="nx">père</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Lines 3–8: A <strong><span style="color: #9a3412">[interface] </span></strong>can itself contain nested object types (<span style="color: #9a3412">parent</span>, <span style="color: #9a3412">child</span>);</li>
+<li>Lines 3–8: A <strong><span style="color: #9a3412">[interface] </span></strong>can itself contain nested object types (<span style="color: #9a3412">père, mère</span>);</li>
 <li>line 30: <strong><span style="color: #9a3412">[JSON.stringify] </span></strong>converts a TypeScript object into a JSON string;</li>
-<li>line 33: <strong><span style="color: #9a3412">[JSON.parse] </span></strong>does the reverse—note that the result is of type <span style="color: #9a3412">PersonneFamille</span>, which implies that the string JSON does indeed conform to this format (TypeScript does not check this at runtime, only at compile time).</li>
+<li>line 33: <strong><span style="color: #9a3412">[JSON.parse] </span></strong>performs the reverse operation—note that the result is of type <span style="color: #9a3412">PersonneFamille</span>, which implies that the string JSON does indeed conform to this format (TypeScript does not check this at runtime, only at compile time).</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>npx tsx objets/obj-02.ts
 </code></pre></div>
@@ -1106,17 +1106,17 @@
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a>prénom mère= micheline
 <a id="__codelineno-5-3" name="__codelineno-5-3"></a>âge mère= 40
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a>personne= {
-<a id="__codelineno-5-5" name="__codelineno-5-5"></a>  'first_name': 'martin',
-<a id="__codelineno-5-6" name="__codelineno-5-6"></a>  'age': 12,
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a>  ''father': { 'first name': 'paul', 'age': 45 },
-<a id="__codelineno-5-8" name="__codelineno-5-8"></a>  ''mother': { 'first_name': 'micheline', 'age': 40 }
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>  'prénom': 'martin',
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>  'âge': 12,
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>  'père': { 'prénom': 'paul', 'âge': 45 },
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a>  'mère': { 'prénom': 'micheline', 'âge': 40 }
 <a id="__codelineno-5-9" name="__codelineno-5-9"></a>}
 <a id="__codelineno-5-10" name="__codelineno-5-10"></a>mère= { 'prénom': 'micheline', 'âge': 40 }
 <a id="__codelineno-5-11" name="__codelineno-5-11"></a>jSON= {"prénom":"martin","âge":12,"père":{"prénom":"paul","âge":45},"mère":{"prénom":"micheline","âge":40}}
 <a id="__codelineno-5-12" name="__codelineno-5-12"></a>père= { 'prénom': 'paul', 'âge': 45 }
 </code></pre></div></td></tr></table></div>
 <h2 id="53-script-obj-03">5.3. <span style="color: #2e74b5">script [obj-03]</span></h2>
-<p>This script introduces the concept of <strong>getters</strong> and <strong>setters</strong> for an object&#x27;s property:</p>
+<p>This script introduces the concept of <strong>getters</strong> and <strong>setters</strong> for an object’s property:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
@@ -1150,12 +1150,12 @@
 <a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">  </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
 <a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="p">}</span>
 <a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="kd">const</span><span class="w"> </span><span class="nx">personne</span><span class="o">:</span><span class="w"> </span><span class="nx">PersonneAvecNom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">  </span><span class="c1">// getter</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">   </span><span class="c1">// getter</span>
 <a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">  </span><span class="nx">get</span><span class="w"> </span><span class="nx">nom</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"getter nom"</span><span class="p">);</span>
 <a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">_nom</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
 <a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">  </span><span class="p">},</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">  </span><span class="c1">// setter</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">   </span><span class="c1">// setter</span>
 <a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">  </span><span class="nx">set</span><span class="w"> </span><span class="nx">nom</span><span class="p">(</span><span class="nx">unNom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"setter nom"</span><span class="p">);</span>
 <a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">_nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">unNom</span><span class="p">;</span>
@@ -1234,49 +1234,49 @@
 <span class="normal"><a href="#__codelineno-9-37">37</a></span>
 <span class="normal"><a href="#__codelineno-9-38">38</a></span>
 <span class="normal"><a href="#__codelineno-9-39">39</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="s1">'use strict'</span><span class="p">;</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="c1">// The names of an object’s properties  can be literals [nom], enclosed in single quotes ['nom']</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="c1">// The names of an object's properties  can be literals [nom], enclosed in single quotes ['nom']</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="c1">// or enclosed in quotation marks ["nom"]</span>
 <a id="__codelineno-9-4" name="__codelineno-9-4"></a>
 <a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="kr">interface</span><span class="w"> </span><span class="nx">NomPrénom</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">    </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">    </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">  </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">  </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
 <a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="p">}</span>
 <a id="__codelineno-9-9" name="__codelineno-9-9"></a>
 <a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="c1">// literals</span>
 <a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="kd">const</span><span class="w"> </span><span class="nx">obj1</span><span class="o">:</span><span class="w"> </span><span class="nx">NomPrénom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="w">    </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="s2">"martin"</span><span class="p">,</span>
-<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="w">    </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="s2">"jean"</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="w">  </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="s2">"martin"</span><span class="p">,</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="w">  </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="s2">"jean"</span>
 <a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="p">};</span>
 <a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"prénom="</span><span class="p">,</span><span class="w"> </span><span class="nx">obj1</span><span class="p">.</span><span class="nx">prénom</span><span class="p">);</span>
 <a id="__codelineno-9-16" name="__codelineno-9-16"></a>
 <a id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="c1">// enclosed in single quotes</span>
 <a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="kd">const</span><span class="w"> </span><span class="nx">obj2</span><span class="o">:</span><span class="w"> </span><span class="nx">NomPrénom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="w">    </span><span class="s1">'nom'</span><span class="o">:</span><span class="w"> </span><span class="s2">"martin"</span><span class="p">,</span>
-<a id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="w">    </span><span class="s1">'prénom'</span><span class="o">:</span><span class="w"> </span><span class="s2">"jean"</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="w">  </span><span class="s1">'nom'</span><span class="o">:</span><span class="w"> </span><span class="s2">"martin"</span><span class="p">,</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="w">  </span><span class="s1">'prénom'</span><span class="o">:</span><span class="w"> </span><span class="s2">"jean"</span>
 <a id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="p">};</span>
 <a id="__codelineno-9-22" name="__codelineno-9-22"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"nom="</span><span class="p">,</span><span class="w"> </span><span class="nx">obj2</span><span class="p">.</span><span class="nx">nom</span><span class="p">);</span>
 <a id="__codelineno-9-23" name="__codelineno-9-23"></a>
 <a id="__codelineno-9-24" name="__codelineno-9-24"></a><span class="c1">// enclosed in quotation marks</span>
 <a id="__codelineno-9-25" name="__codelineno-9-25"></a><span class="kd">const</span><span class="w"> </span><span class="nx">obj3</span><span class="o">:</span><span class="w"> </span><span class="nx">NomPrénom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-26" name="__codelineno-9-26"></a><span class="w">    </span><span class="s2">"nom"</span><span class="o">:</span><span class="w"> </span><span class="s2">"martin"</span><span class="p">,</span>
-<a id="__codelineno-9-27" name="__codelineno-9-27"></a><span class="w">    </span><span class="s2">"prénom"</span><span class="o">:</span><span class="w"> </span><span class="s2">"jean"</span>
+<a id="__codelineno-9-26" name="__codelineno-9-26"></a><span class="w">  </span><span class="s2">"nom"</span><span class="o">:</span><span class="w"> </span><span class="s2">"martin"</span><span class="p">,</span>
+<a id="__codelineno-9-27" name="__codelineno-9-27"></a><span class="w">  </span><span class="s2">"prénom"</span><span class="o">:</span><span class="w"> </span><span class="s2">"jean"</span>
 <a id="__codelineno-9-28" name="__codelineno-9-28"></a><span class="p">};</span>
 <a id="__codelineno-9-29" name="__codelineno-9-29"></a>
-<a id="__codelineno-9-30" name="__codelineno-9-30"></a><span class="c1">// two possible syntaxes for accessing the property [nom]</span>
+<a id="__codelineno-9-30" name="__codelineno-9-30"></a><span class="c1">// Two possible syntaxes for accessing the property [nom]</span>
 <a id="__codelineno-9-31" name="__codelineno-9-31"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"nom="</span><span class="p">,</span><span class="w"> </span><span class="nx">obj3</span><span class="p">.</span><span class="nx">nom</span><span class="p">);</span>
 <a id="__codelineno-9-32" name="__codelineno-9-32"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"nom="</span><span class="p">,</span><span class="w"> </span><span class="nx">obj3</span><span class="p">[</span><span class="s1">'nom'</span><span class="p">]);</span>
 <a id="__codelineno-9-33" name="__codelineno-9-33"></a>
 <a id="__codelineno-9-34" name="__codelineno-9-34"></a><span class="c1">// shorthand notation equivalent to {obj1:obj1, obj2:obj2}</span>
 <a id="__codelineno-9-35" name="__codelineno-9-35"></a><span class="kd">const</span><span class="w"> </span><span class="nx">obj4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-36" name="__codelineno-9-36"></a><span class="w">    </span><span class="nx">obj1</span><span class="p">,</span><span class="w"> </span><span class="nx">obj2</span>
+<a id="__codelineno-9-36" name="__codelineno-9-36"></a><span class="w">  </span><span class="nx">obj1</span><span class="p">,</span><span class="w"> </span><span class="nx">obj2</span>
 <a id="__codelineno-9-37" name="__codelineno-9-37"></a><span class="p">}</span>
 <a id="__codelineno-9-38" name="__codelineno-9-38"></a>
 <a id="__codelineno-9-39" name="__codelineno-9-39"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"obj4="</span><span class="p">,</span><span class="w"> </span><span class="nx">obj4</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>Property names can be written literally (<span style="color: #9a3412">name:</span>), enclosed in single quotes (<span style="color: #9a3412">&#x27;name&#x27;:</span>), or enclosed in double quotes (<span style="color: #9a3412">&quot;name&quot;:</span>)—all three are equivalent;</li>
-<li>lines 31-32: <span style="color: #9a3412">obj3.nom </span>and <span style="color: #9a3412">obj3[&#x27;nom&#x27;] </span>access the same property;</li>
-<li>Lines 35–37: <span style="color: #9a3412"><code>const obj4 = { obj1, obj2 }</code> </span>is the <strong>shorthand notation</strong> for <code>{ obj1: obj1, obj2: obj2 }</code>—widely used when grouping existing variables into an object.</li>
+<li>Line 31: <span style="color: #9a3412">obj3.nom </span>and <span style="color: #9a3412">obj3[&#x27;nom&#x27;] </span>access the same property;</li>
+<li>Lines 34–36: <span style="color: #9a3412"><code>const obj4 = { obj1, obj2 }</code> </span>is the <strong>shorthand notation</strong> for <code>{ obj1: obj1, obj2: obj2 }</code> — widely used when grouping existing variables into an object.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>npx tsx objets/obj-04.ts
 </code></pre></div>
@@ -1331,7 +1331,7 @@
 <span class="normal"><a href="#__codelineno-12-30">30</a></span>
 <span class="normal"><a href="#__codelineno-12-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="s1">'use strict'</span><span class="p">;</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2"></a>
-<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="c1">// an object can have properties of type [function]</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="c1">// An object can have properties of type [function]</span>
 <a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="kr">interface</span><span class="w"> </span><span class="nx">PersonneAvecToString</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">  </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
 <a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">  </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="p">;</span>
@@ -1340,7 +1340,7 @@
 <a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="w">  </span><span class="nx">toString</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
 <a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="p">}</span>
 <a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="kd">const</span><span class="w"> </span><span class="nx">personne</span><span class="o">:</span><span class="w"> </span><span class="nx">PersonneAvecToString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="w">  </span><span class="c1">// properties</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="w">   </span><span class="c1">// properties</span>
 <a id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="w">  </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="s2">"martin"</span><span class="p">,</span>
 <a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="w">  </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span>
 <a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="w">  </span><span class="nx">père</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
@@ -1351,7 +1351,7 @@
 <a id="__codelineno-12-20" name="__codelineno-12-20"></a><span class="w">    </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="s2">"micheline"</span><span class="p">,</span>
 <a id="__codelineno-12-21" name="__codelineno-12-21"></a><span class="w">    </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="mf">42</span>
 <a id="__codelineno-12-22" name="__codelineno-12-22"></a><span class="w">  </span><span class="p">},</span>
-<a id="__codelineno-12-23" name="__codelineno-12-23"></a><span class="w">  </span><span class="c1">// method</span>
+<a id="__codelineno-12-23" name="__codelineno-12-23"></a><span class="w">   </span><span class="c1">// method</span>
 <a id="__codelineno-12-24" name="__codelineno-12-24"></a><span class="w">  </span><span class="nx">toString</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-12-25" name="__codelineno-12-25"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
 <a id="__codelineno-12-26" name="__codelineno-12-26"></a><span class="w">  </span><span class="p">}</span>
@@ -1362,7 +1362,7 @@
 <a id="__codelineno-12-31" name="__codelineno-12-31"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"personne.toString="</span><span class="p">,</span><span class="w"> </span><span class="nx">personne</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Line 4: <strong><span style="color: #9a3412">[interface] </span></strong>declares <span style="color: #9a3412">toString: () =&gt; string</span>—the type of a method is declared as that of a function property;</li>
+<li>line 4: <strong><span style="color: #9a3412">[interface] </span></strong>declares <span style="color: #9a3412">toString: () =&gt; string</span>—the type of a method is declared as that of a function property;</li>
 <li>line 25: inside the method, <strong><span style="color: #9a3412">[this] </span></strong>refers to the object itself—<span style="color: #9a3412">this.prénom </span>is the <span style="color: #9a3412">“first_name”</span> property of that object.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>npx tsx objets/obj-05.ts
@@ -1376,16 +1376,16 @@
 <span class="normal"><a href="#__codelineno-14-6">6</a></span>
 <span class="normal"><a href="#__codelineno-14-7">7</a></span>
 <span class="normal"><a href="#__codelineno-14-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>personne= {
-<a id="__codelineno-14-2" name="__codelineno-14-2"></a>  'first_name': 'martin',
-<a id="__codelineno-14-3" name="__codelineno-14-3"></a>  'age': 12,
-<a id="__codelineno-14-4" name="__codelineno-14-4"></a>  'father': { 'first name': 'paul', 'age': 45 },
-<a id="__codelineno-14-5" name="__codelineno-14-5"></a>  ''mother': { 'first name': 'micheline', 'age': 42 },
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a>  'prénom': 'martin',
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a>  'âge': 12,
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a>  'père': { 'prénom': 'paul', 'âge': 45 },
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a>  'mère': { 'prénom': 'micheline', 'âge': 42 },
 <a id="__codelineno-14-6" name="__codelineno-14-6"></a>  toString: [Function: toString]
 <a id="__codelineno-14-7" name="__codelineno-14-7"></a>}
 <a id="__codelineno-14-8" name="__codelineno-14-8"></a>personne.toString= {"prénom":"martin","âge":12,"père":{"prénom":"paul","âge":45},"mère":{"prénom":"micheline","âge":42}}
 </code></pre></div></td></tr></table></div>
 <h2 id="56-script-obj-06">5.6. <span style="color: #2e74b5">script [obj-06]</span></h2>
-<p>This script demonstrates how to iterate through an object&#x27;s properties without knowing their names in advance:</p>
+<p>This script demonstrates how to iterate through an object’s properties without knowing their names in advance:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
@@ -1425,52 +1425,34 @@
 <span class="normal"><a href="#__codelineno-15-37">37</a></span>
 <span class="normal"><a href="#__codelineno-15-38">38</a></span>
 <span class="normal"><a href="#__codelineno-15-39">39</a></span>
-<span class="normal"><a href="#__codelineno-15-40">40</a></span>
-<span class="normal"><a href="#__codelineno-15-41">41</a></span>
-<span class="normal"><a href="#__codelineno-15-42">42</a></span>
-<span class="normal"><a href="#__codelineno-15-43">43</a></span>
-<span class="normal"><a href="#__codelineno-15-44">44</a></span>
-<span class="normal"><a href="#__codelineno-15-45">45</a></span>
-<span class="normal"><a href="#__codelineno-15-46">46</a></span>
-<span class="normal"><a href="#__codelineno-15-47">47</a></span>
-<span class="normal"><a href="#__codelineno-15-48">48</a></span>
-<span class="normal"><a href="#__codelineno-15-49">49</a></span>
-<span class="normal"><a href="#__codelineno-15-50">50</a></span>
-<span class="normal"><a href="#__codelineno-15-51">51</a></span>
-<span class="normal"><a href="#__codelineno-15-52">52</a></span>
-<span class="normal"><a href="#__codelineno-15-53">53</a></span>
-<span class="normal"><a href="#__codelineno-15-54">54</a></span>
-<span class="normal"><a href="#__codelineno-15-55">55</a></span>
-<span class="normal"><a href="#__codelineno-15-56">56</a></span>
-<span class="normal"><a href="#__codelineno-15-57">57</a></span>
-<span class="normal"><a href="#__codelineno-15-58">58</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="s1">'use strict'</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-15-40">40</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="s1">'use strict'</span><span class="p">;</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2"></a>
 <a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="c1">// An object can have properties of type [function]</span>
 <a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="kr">interface</span><span class="w"> </span><span class="nx">PersonneAvecToString</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">  </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
-<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">  </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="p">;</span>
-<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="w">  </span><span class="nx">père</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span><span class="w"> </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="p">};</span>
-<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">  </span><span class="nx">mère</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span><span class="w"> </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="p">};</span>
-<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">  </span><span class="nx">toString</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
-<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">  </span><span class="c1">// signature index required to enable the dynamic traversal for..in below</span>
-<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="w">  </span><span class="p">[</span><span class="nx">clé</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">]</span><span class="o">:</span><span class="w"> </span><span class="nx">unknown</span><span class="p">;</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">    </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">    </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="p">;</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="w">    </span><span class="nx">père</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span><span class="w"> </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="p">};</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">    </span><span class="nx">mère</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span><span class="w"> </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="p">};</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">    </span><span class="nx">toString</span><span class="o">:</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">    </span><span class="c1">// signature index required to enable the dynamic traversal for..in below</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="w">    </span><span class="p">[</span><span class="nx">clé</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">]</span><span class="o">:</span><span class="w"> </span><span class="nx">unknown</span><span class="p">;</span>
 <a id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="p">}</span>
 <a id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="kd">let</span><span class="w"> </span><span class="nx">personne</span><span class="o">:</span><span class="w"> </span><span class="nx">PersonneAvecToString</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="w">  </span><span class="c1">// properties</span>
-<a id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="w">  </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="s2">"martin"</span><span class="p">,</span>
-<a id="__codelineno-15-16" name="__codelineno-15-16"></a><span class="w">  </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span>
-<a id="__codelineno-15-17" name="__codelineno-15-17"></a><span class="w">  </span><span class="nx">père</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-18" name="__codelineno-15-18"></a><span class="w">    </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="s2">"paul"</span><span class="p">,</span>
-<a id="__codelineno-15-19" name="__codelineno-15-19"></a><span class="w">    </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="mf">45</span>
-<a id="__codelineno-15-20" name="__codelineno-15-20"></a><span class="w">  </span><span class="p">},</span>
-<a id="__codelineno-15-21" name="__codelineno-15-21"></a><span class="w">  </span><span class="nx">mère</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-22" name="__codelineno-15-22"></a><span class="w">    </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="s2">"micheline"</span><span class="p">,</span>
-<a id="__codelineno-15-23" name="__codelineno-15-23"></a><span class="w">    </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="mf">42</span>
-<a id="__codelineno-15-24" name="__codelineno-15-24"></a><span class="w">  </span><span class="p">},</span>
-<a id="__codelineno-15-25" name="__codelineno-15-25"></a><span class="w">  </span><span class="c1">// method</span>
-<a id="__codelineno-15-26" name="__codelineno-15-26"></a><span class="w">  </span><span class="nx">toString</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-27" name="__codelineno-15-27"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
-<a id="__codelineno-15-28" name="__codelineno-15-28"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="w">    </span><span class="c1">// properties</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="w">    </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="s2">"martin"</span><span class="p">,</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16"></a><span class="w">    </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17"></a><span class="w">    </span><span class="nx">père</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18"></a><span class="w">        </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="s2">"paul"</span><span class="p">,</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19"></a><span class="w">        </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="mf">45</span>
+<a id="__codelineno-15-20" name="__codelineno-15-20"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21"></a><span class="w">    </span><span class="nx">mère</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-22" name="__codelineno-15-22"></a><span class="w">        </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="s2">"micheline"</span><span class="p">,</span>
+<a id="__codelineno-15-23" name="__codelineno-15-23"></a><span class="w">        </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="mf">42</span>
+<a id="__codelineno-15-24" name="__codelineno-15-24"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-15-25" name="__codelineno-15-25"></a><span class="w">    </span><span class="c1">// method</span>
+<a id="__codelineno-15-26" name="__codelineno-15-26"></a><span class="w">    </span><span class="nx">toString</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-27" name="__codelineno-15-27"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+<a id="__codelineno-15-28" name="__codelineno-15-28"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-15-29" name="__codelineno-15-29"></a><span class="p">}</span>
 <a id="__codelineno-15-30" name="__codelineno-15-30"></a>
 <a id="__codelineno-15-31" name="__codelineno-15-31"></a><span class="c1">// usage</span>
@@ -1478,87 +1460,22 @@
 <a id="__codelineno-15-33" name="__codelineno-15-33"></a><span class="c1">// properties</span>
 <a id="__codelineno-15-34" name="__codelineno-15-34"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"-----------------------"</span><span class="p">);</span>
 <a id="__codelineno-15-35" name="__codelineno-15-35"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">personne</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-36" name="__codelineno-15-36"></a><span class="w">  </span><span class="c1">// eslint-disable-next-line no-prototype-builtins</span>
-<a id="__codelineno-15-37" name="__codelineno-15-37"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">personne</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">key</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-38" name="__codelineno-15-38"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">personne</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
-<a id="__codelineno-15-39" name="__codelineno-15-39"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="s2">"="</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">);</span>
-<a id="__codelineno-15-40" name="__codelineno-15-40"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-15-41" name="__codelineno-15-41"></a><span class="p">}</span>
-<a id="__codelineno-15-42" name="__codelineno-15-42"></a><span class="c1">// to avoid the ESLint warning (1)</span>
-<a id="__codelineno-15-43" name="__codelineno-15-43"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"-----------------------"</span><span class="p">);</span>
-<a id="__codelineno-15-44" name="__codelineno-15-44"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">personne</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-45" name="__codelineno-15-45"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">Object</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">personne</span><span class="p">,</span><span class="w"> </span><span class="nx">key</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-46" name="__codelineno-15-46"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">personne</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
-<a id="__codelineno-15-47" name="__codelineno-15-47"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="s2">"="</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">);</span>
-<a id="__codelineno-15-48" name="__codelineno-15-48"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-15-49" name="__codelineno-15-49"></a><span class="p">}</span>
-<a id="__codelineno-15-50" name="__codelineno-15-50"></a><span class="c1">// to avoid the ESLint warning (2)</span>
-<a id="__codelineno-15-51" name="__codelineno-15-51"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"-----------------------"</span><span class="p">);</span>
-<a id="__codelineno-15-52" name="__codelineno-15-52"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">const</span><span class="w"> </span><span class="nx">key</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">personne</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-53" name="__codelineno-15-53"></a><span class="w">  </span><span class="c1">// eslint-disable-next-line no-prototype-builtins</span>
-<a id="__codelineno-15-54" name="__codelineno-15-54"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">personne</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">key</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-55" name="__codelineno-15-55"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">personne</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
-<a id="__codelineno-15-56" name="__codelineno-15-56"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="s2">"="</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">);</span>
-<a id="__codelineno-15-57" name="__codelineno-15-57"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-15-58" name="__codelineno-15-58"></a><span class="p">}</span>
+<a id="__codelineno-15-36" name="__codelineno-15-36"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">personne</span><span class="p">.</span><span class="nx">hasOwnProperty</span><span class="p">(</span><span class="nx">key</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-37" name="__codelineno-15-37"></a><span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">personne</span><span class="p">[</span><span class="nx">key</span><span class="p">];</span>
+<a id="__codelineno-15-38" name="__codelineno-15-38"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span><span class="w"> </span><span class="s2">"="</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">);</span>
+<a id="__codelineno-15-39" name="__codelineno-15-39"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-40" name="__codelineno-15-40"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Line 11: The index signature <span style="color: #9a3412">[clé: string]: unknown </span>is <strong>required</strong> here so that TypeScript can grant dynamic access to <span style="color: #9a3412">person[key] </span>from the loop <span style="color: #9a3412">for...in</span>;</li>
-<li>Lines 35–41: <span style="color: #9a3412"><code>for (const key in person)</code> </span>iterates through the property names. The <code>hasOwnProperty</code> test eliminates any inherited properties (not present in this script, but a good practice to follow systematically);</li>
-<li>this script offers three equivalent ways to write this test—the second (<span style="color: #9a3412">Object.prototype.hasOwnProperty.call(...)</span>) is the most robust, while the third simply suppresses the corresponding ESLint warning. Since 2022, the <span style="color: #9a3412">Object.hasOwn()</span> method (next chapter, <span style="color: #9a3412">obj-09</span>) has made this choice unnecessary.</li>
+<li>Line 11: The index signature <span style="color: #9a3412">[clé: string]: unknown </span>is <strong>required</strong> here so that TypeScript allows dynamic access to <span style="color: #9a3412">personne[key] </span>from the loop <span style="color: #9a3412">for...in</span>;</li>
+<li>Lines 35–40: <span style="color: #9a3412"><code>for (const key in personne)</code> </span>iterates through the property names. The <code>hasOwnProperty</code> test filters out any inherited properties (not present in this script, but a good practice to follow systematically);</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>npx tsx objets/obj-06.ts
 </code></pre></div>
 <p><em>Execution result:</em></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-17-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-17-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-17-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-17-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-17-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-17-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-17-10">10</a></span>
-<span class="normal"><a href="#__codelineno-17-11">11</a></span>
-<span class="normal"><a href="#__codelineno-17-12">12</a></span>
-<span class="normal"><a href="#__codelineno-17-13">13</a></span>
-<span class="normal"><a href="#__codelineno-17-14">14</a></span>
-<span class="normal"><a href="#__codelineno-17-15">15</a></span>
-<span class="normal"><a href="#__codelineno-17-16">16</a></span>
-<span class="normal"><a href="#__codelineno-17-17">17</a></span>
-<span class="normal"><a href="#__codelineno-17-18">18</a></span>
-<span class="normal"><a href="#__codelineno-17-19">19</a></span>
-<span class="normal"><a href="#__codelineno-17-20">20</a></span>
-<span class="normal"><a href="#__codelineno-17-21">21</a></span>
-<span class="normal"><a href="#__codelineno-17-22">22</a></span>
-<span class="normal"><a href="#__codelineno-17-23">23</a></span>
-<span class="normal"><a href="#__codelineno-17-24">24</a></span>
-<span class="normal"><a href="#__codelineno-17-25">25</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>{
-<a id="__codelineno-17-2" name="__codelineno-17-2"></a>  ''first_name': 'martin',
-<a id="__codelineno-17-3" name="__codelineno-17-3"></a>  ''age': 12,
-<a id="__codelineno-17-4" name="__codelineno-17-4"></a>  ''father': { 'first_name': 'paul', 'age': 45 },
-<a id="__codelineno-17-5" name="__codelineno-17-5"></a>  ''mother': { 'first_name': 'micheline', 'age': 42 },
-<a id="__codelineno-17-6" name="__codelineno-17-6"></a>  toString: [Function: toString]
-<a id="__codelineno-17-7" name="__codelineno-17-7"></a>}
-<a id="__codelineno-17-8" name="__codelineno-17-8"></a>-----------------------
-<a id="__codelineno-17-9" name="__codelineno-17-9"></a>prénom = martin
-<a id="__codelineno-17-10" name="__codelineno-17-10"></a>âge = 12
-<a id="__codelineno-17-11" name="__codelineno-17-11"></a>père = { 'prénom': 'paul', 'âge': 45 }
-<a id="__codelineno-17-12" name="__codelineno-17-12"></a>mère = { 'prénom': 'micheline', 'âge': 42 }
-<a id="__codelineno-17-13" name="__codelineno-17-13"></a>toString = [Function: toString]
-<a id="__codelineno-17-14" name="__codelineno-17-14"></a>-----------------------
-<a id="__codelineno-17-15" name="__codelineno-17-15"></a>prénom = martin
-<a id="__codelineno-17-16" name="__codelineno-17-16"></a>âge = 12
-<a id="__codelineno-17-17" name="__codelineno-17-17"></a>père = { 'prénom': 'paul', 'âge': 45 }
-<a id="__codelineno-17-18" name="__codelineno-17-18"></a>mère = { 'prénom': 'micheline', 'âge': 42 }
-<a id="__codelineno-17-19" name="__codelineno-17-19"></a>toString = [Function: toString]
-<a id="__codelineno-17-20" name="__codelineno-17-20"></a>-----------------------
-<a id="__codelineno-17-21" name="__codelineno-17-21"></a>prénom = martin
-<a id="__codelineno-17-22" name="__codelineno-17-22"></a>âge = 12
-<a id="__codelineno-17-23" name="__codelineno-17-23"></a>père = { 'prénom': 'paul', 'âge': 45 }
-<a id="__codelineno-17-24" name="__codelineno-17-24"></a>mère = { 'prénom': 'micheline', 'âge': 42 }
-<a id="__codelineno-17-25" name="__codelineno-17-25"></a>toString = [Function: toString]
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a>{ 'prénom': 'martin', 'âge': 12, 'père': { 'prénom': 'paul', 'âge': 45 }, 'mère': { 'prénom': 'micheline', 'âge': 42 }, toString: [Function: toString] }
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>prénom = martin âge = 12 père = { 'prénom': 'paul', 'âge': 45 } mère = { 'prénom': 'micheline', 'âge': 42 } toString = [Function: toString]
 </code></pre></div></td></tr></table></div>
 <h2 id="57-script-obj-07">5.7. <span style="color: #2e74b5">script [obj-07]</span></h2>
 <p>This script demonstrates object <strong>destructuring</strong>—a syntax that directly extracts properties into variables:</p>
@@ -1598,7 +1515,7 @@
 <span class="normal"><a href="#__codelineno-18-34">34</a></span>
 <span class="normal"><a href="#__codelineno-18-35">35</a></span>
 <span class="normal"><a href="#__codelineno-18-36">36</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="s1">'use strict'</span><span class="p">;</span>
-<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="c1">// deserialization</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="c1">// destructuring</span>
 <a id="__codelineno-18-3" name="__codelineno-18-3"></a>
 <a id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="kr">interface</span><span class="w"> </span><span class="nx">NomPrénom</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="w">  </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
@@ -1615,7 +1532,7 @@
 <a id="__codelineno-18-16" name="__codelineno-18-16"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="nx">n</span><span class="p">,</span><span class="w"> </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="nx">p</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">obj1</span><span class="p">;</span>
 <a id="__codelineno-18-17" name="__codelineno-18-17"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"n="</span><span class="p">,</span><span class="w"> </span><span class="nx">n</span><span class="p">,</span><span class="w"> </span><span class="s2">"p="</span><span class="p">,</span><span class="w"> </span><span class="nx">p</span><span class="p">);</span>
 <a id="__codelineno-18-18" name="__codelineno-18-18"></a>
-<a id="__codelineno-18-19" name="__codelineno-18-19"></a><span class="c1">// unpacking obj1 into variables [n2,p2]</span>
+<a id="__codelineno-18-19" name="__codelineno-18-19"></a><span class="c1">// destructuring obj1 into variables [n2,p2]</span>
 <a id="__codelineno-18-20" name="__codelineno-18-20"></a><span class="kd">function</span><span class="w"> </span><span class="nx">f</span><span class="p">({</span><span class="w"> </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="nx">n2</span><span class="p">,</span><span class="w"> </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="nx">p2</span><span class="w"> </span><span class="p">}</span><span class="o">:</span><span class="w"> </span><span class="nx">NomPrénom</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-18-21" name="__codelineno-18-21"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"f-n2="</span><span class="p">,</span><span class="w"> </span><span class="nx">n2</span><span class="p">,</span><span class="w"> </span><span class="s2">"f-p2="</span><span class="p">,</span><span class="w"> </span><span class="nx">p2</span><span class="p">);</span>
 <a id="__codelineno-18-22" name="__codelineno-18-22"></a><span class="p">}</span>
@@ -1628,16 +1545,16 @@
 <a id="__codelineno-18-29" name="__codelineno-18-29"></a><span class="nx">g</span><span class="p">(</span><span class="nx">obj1</span><span class="p">);</span>
 <a id="__codelineno-18-30" name="__codelineno-18-30"></a>
 <a id="__codelineno-18-31" name="__codelineno-18-31"></a><span class="c1">// unpacking obj1 into variables [nom,prénom]</span>
-<a id="__codelineno-18-32" name="__codelineno-18-32"></a><span class="c1">// using shorthand notation equivalent to h({last_name:last_name,first_name:first_name})</span>
+<a id="__codelineno-18-32" name="__codelineno-18-32"></a><span class="c1">// with shorthand notation equivalent to h({nom:nom,prénom:prénom})</span>
 <a id="__codelineno-18-33" name="__codelineno-18-33"></a><span class="kd">function</span><span class="w"> </span><span class="nx">h</span><span class="p">({</span><span class="w"> </span><span class="nx">nom</span><span class="p">,</span><span class="w"> </span><span class="nx">prénom</span><span class="w"> </span><span class="p">}</span><span class="o">:</span><span class="w"> </span><span class="nx">NomPrénom</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-18-34" name="__codelineno-18-34"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"h-nom="</span><span class="p">,</span><span class="w"> </span><span class="nx">nom</span><span class="p">,</span><span class="w"> </span><span class="s2">"h-prénom="</span><span class="p">,</span><span class="w"> </span><span class="nx">prénom</span><span class="p">);</span>
 <a id="__codelineno-18-35" name="__codelineno-18-35"></a><span class="p">}</span>
 <a id="__codelineno-18-36" name="__codelineno-18-36"></a><span class="nx">h</span><span class="p">(</span><span class="nx">obj1</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Line 16: <span style="color: #9a3412">const { last_name: n, first_name: p } = obj1 </span>creates two variables, <span style="color: #9a3412">n </span>and <span style="color: #9a3412">p</span>, equivalent to <span style="color: #9a3412">const n = obj1.nom; const p = obj1.prénom</span>;</li>
+<li>line 16: <span style="color: #9a3412">const { nom: n, prénom: p } = obj1 </span>creates two variables <span style="color: #9a3412">n </span>and <span style="color: #9a3412">p</span>, equivalent to <span style="color: #9a3412">const n = obj1.nom; const p = obj1.prénom</span>;</li>
 <li>lines 19–22, 24–27, 30–33: destructuring also works directly <strong>on function parameters</strong>—very common in TypeScript/React for extracting properties from a configuration object or props;</li>
-<li>line 33: <span style="color: #9a3412">function h({ firstName, lastName }: NomPrénom) </span>is a shorthand for <span style="color: #9a3412">{ firstName: firstName, lastName: lastName }</span>—when the name of the created variable is identical to the property name, it can be omitted.</li>
+<li>line 33: <span style="color: #9a3412">function h({ nom, prénom }: NomPrénom) </span>is a shorthand for <span style="color: #9a3412">{ nom: nom, prénom: prénom }</span>—when the name of the created variable is identical to the property name, it can be omitted.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>npx tsx objets/obj-07.ts
 </code></pre></div>
@@ -1651,7 +1568,7 @@
 <a id="__codelineno-20-4" name="__codelineno-20-4"></a>h-nom= martin h-prénom= jean
 </code></pre></div></td></tr></table></div>
 <h2 id="58-script-obj-08">5.8. <span style="color: #2e74b5">script [obj-08]</span></h2>
-<p>This script demonstrates how to obtain a shallow copy of an object using <strong>the spread operator</strong> <span style="color: #9a3412">... </span>:</p>
+<p>This script shows how to create a shallow copy of an object using <strong>the spread operator</strong> <span style="color: #9a3412">... </span>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
@@ -1672,7 +1589,7 @@
 <span class="normal"><a href="#__codelineno-21-18">18</a></span>
 <span class="normal"><a href="#__codelineno-21-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="s1">'use strict'</span>
 <a id="__codelineno-21-2" name="__codelineno-21-2"></a>
-<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="c1">// cloning objects</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="c1">// object cloning</span>
 <a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="kr">interface</span><span class="w"> </span><span class="nx">NomPrénom</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="w">  </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
 <a id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="w">  </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
@@ -1698,7 +1615,7 @@
 <a id="__codelineno-23-2" name="__codelineno-23-2"></a>obj2= { nom: 'martin', 'prénom': 'jean' }
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><span style="color: #9a3412">obj2===obj1 </span>evaluates to <span style="color: #9a3412">false</span>: the two references <strong>do not</strong> point to the same object;</li>
+<li><span style="color: #9a3412">obj2===obj1 </span>evaluates to <span style="color: #9a3412">false</span>: the two references do <strong>not</strong> point to the same object;</li>
 <li><span style="color: #9a3412">obj2 </span>does indeed contain a copy of <span style="color: #9a3412">obj1’s</span> properties—but be careful, as we’ll see in the next script, it’s only a <strong>shallow</strong> copy.</li>
 </ul>
 <h2 id="59-script-obj-09">5.9. <span style="color: #2e74b5">script [obj-09]</span></h2>
@@ -1785,12 +1702,12 @@
 <a id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="c1">// ========================================================================</span>
 <a id="__codelineno-24-5" name="__codelineno-24-5"></a>
 <a id="__codelineno-24-6" name="__codelineno-24-6"></a><span class="c1">// ------------------------------------------------------------------------</span>
-<a id="__codelineno-24-7" name="__codelineno-24-7"></a><span class="c1">// 1) Object.hasOwn(object, property)  (ECMAScript 2022)</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7"></a><span class="c1">// 1) Object.hasOwn(object, property)   (ECMAScript 2022)</span>
 <a id="__codelineno-24-8" name="__codelineno-24-8"></a><span class="c1">// ------------------------------------------------------------------------</span>
 <a id="__codelineno-24-9" name="__codelineno-24-9"></a><span class="c1">// Previously, to determine whether a property belongs directly to an object (and is not</span>
 <a id="__codelineno-24-10" name="__codelineno-24-10"></a><span class="c1">// inherited through the prototype chain), we would write:</span>
-<a id="__codelineno-24-11" name="__codelineno-24-11"></a><span class="c1">//   objet.hasOwnProperty(property)               -&gt; may crash if the object redefines hasOwnProperty</span>
-<a id="__codelineno-24-12" name="__codelineno-24-12"></a><span class="c1">//   Object.prototype.hasOwnProperty.call(object, property)  -&gt; correct but verbose (see objects/obj-06.js)</span>
+<a id="__codelineno-24-11" name="__codelineno-24-11"></a><span class="c1">//    objet.hasOwnProperty(property)               -&gt; may crash if the object redefines hasOwnProperty</span>
+<a id="__codelineno-24-12" name="__codelineno-24-12"></a><span class="c1">//    Object.prototype.hasOwnProperty.call(object, property ) -&gt; correct but verbose (see objects/obj-06.js)</span>
 <a id="__codelineno-24-13" name="__codelineno-24-13"></a><span class="c1">// [Object.hasOwn] does this job simply and safely</span>
 <a id="__codelineno-24-14" name="__codelineno-24-14"></a><span class="kr">interface</span><span class="w"> </span><span class="nx">NomPrénom</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-24-15" name="__codelineno-24-15"></a><span class="w">  </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
@@ -1811,7 +1728,7 @@
 <a id="__codelineno-24-30" name="__codelineno-24-30"></a><span class="p">}</span>
 <a id="__codelineno-24-31" name="__codelineno-24-31"></a>
 <a id="__codelineno-24-32" name="__codelineno-24-32"></a><span class="c1">// ------------------------------------------------------------------------</span>
-<a id="__codelineno-24-33" name="__codelineno-24-33"></a><span class="c1">// 2) structuredClone (object)  (Global API available since Node 17)</span>
+<a id="__codelineno-24-33" name="__codelineno-24-33"></a><span class="c1">// 2) structuredClone (object ) (Global API available since Node 17)</span>
 <a id="__codelineno-24-34" name="__codelineno-24-34"></a><span class="c1">// ------------------------------------------------------------------------</span>
 <a id="__codelineno-24-35" name="__codelineno-24-35"></a><span class="c1">// obj-08.js demonstrates shallow cloning using the spread operator [...obj]</span>
 <a id="__codelineno-24-36" name="__codelineno-24-36"></a><span class="c1">// but a spread only clones the first level: the subobjects remain shared!</span>
@@ -1847,8 +1764,8 @@
 <a id="__codelineno-24-66" name="__codelineno-24-66"></a><span class="w">  </span><span class="nx">apparence</span><span class="o">?:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">thème</span><span class="o">?:</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="p">};</span>
 <a id="__codelineno-24-67" name="__codelineno-24-67"></a><span class="p">}</span>
 <a id="__codelineno-24-68" name="__codelineno-24-68"></a><span class="kd">function</span><span class="w"> </span><span class="nx">afficheThème</span><span class="p">(</span><span class="nx">configuration</span><span class="o">?:</span><span class="w"> </span><span class="nx">ConfigurationApparence</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-24-69" name="__codelineno-24-69"></a><span class="w">  </span><span class="c1">// if configuration, configuration.apparence or configuration.apparence.thème is missing,</span>
-<a id="__codelineno-24-70" name="__codelineno-24-70"></a><span class="w">  </span><span class="c1">// it reverts to "clear" without ever crashing</span>
+<a id="__codelineno-24-69" name="__codelineno-24-69"></a><span class="w">   </span><span class="c1">// if configuration, configuration.apparence or configuration.apparence.thème is missing,</span>
+<a id="__codelineno-24-70" name="__codelineno-24-70"></a><span class="w">   </span><span class="c1">// it reverts to "clear" without ever crashing</span>
 <a id="__codelineno-24-71" name="__codelineno-24-71"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">thème</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">configuration</span><span class="o">?</span><span class="p">.</span><span class="nx">apparence</span><span class="o">?</span><span class="p">.</span><span class="nx">thème</span><span class="w"> </span><span class="o">??</span><span class="w"> </span><span class="s2">"clair"</span><span class="p">;</span>
 <a id="__codelineno-24-72" name="__codelineno-24-72"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"thème ="</span><span class="p">,</span><span class="w"> </span><span class="nx">thème</span><span class="p">);</span>
 <a id="__codelineno-24-73" name="__codelineno-24-73"></a><span class="p">}</span>
@@ -1858,7 +1775,7 @@
 <a id="__codelineno-24-77" name="__codelineno-24-77"></a><span class="nx">afficheThème</span><span class="p">(</span><span class="kc">undefined</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><strong><span style="color: #9a3412">[Object.hasOwn(objet, propriété)] </span></strong>(ES2022) is a better replacement for <span style="color: #9a3412">objet.hasOwnProperty(...) </span>(see script <span style="color: #9a3412">obj-06</span>): it is easier to read and never encounters issues if the object redefines <span style="color: #9a3412">hasOwnProperty</span> itself;</li>
+<li><strong><span style="color: #9a3412">[Object.hasOwn(objet, propriété)] </span></strong>(ES2022) is a better replacement for <span style="color: #9a3412">objet.hasOwnProperty(...) </span>(see script <span style="color: #9a3412">obj-06</span>): it is easier to read and never encounters issues if the object itself redefines <span style="color: #9a3412">hasOwnProperty</span>;</li>
 <li><strong><span style="color: #9a3412">[structuredClone(objet)] </span></strong>(available natively since Node 17) performs a <strong>deep clone</strong>: unlike the spread <span style="color: #9a3412">{ ...obj } </span>in the <span style="color: #9a3412">obj-08</span> script, which copies only the first level, <span style="color: #9a3412">structuredClone </span>also copies the subobjects—modifying the copy never modifies the original, at any level;</li>
 <li>the function <span style="color: #9a3412">afficheThème </span>combines <span style="color: #9a3412">?. </span>and <span style="color: #9a3412">?? </span>to read a multi-level, potentially incomplete configuration without ever crashing and with a clear fallback value.</li>
 </ul>

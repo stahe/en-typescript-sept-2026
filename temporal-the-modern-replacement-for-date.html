@@ -492,14 +492,14 @@
   
   
     <li class="md-nav__item">
-      <a href="functions.html" class="md-nav__link">
+      <a href="the-functions.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. Functions
+    8. The Functions
   
 
     
@@ -600,14 +600,14 @@
   
   
     <li class="md-nav__item">
-      <a href="the-functions-http-and-typescript.html" class="md-nav__link">
+      <a href="the-http-and-typescript-functions.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. The functions HTTP and TypeScript
+    12. The HTTP and TypeScript functions
   
 
     
@@ -654,14 +654,14 @@
   
   
     <li class="md-nav__item">
-      <a href="http-typescript-clients-of-the-tax-calculation-service.html" class="md-nav__link">
+      <a href="clients-http-and-typescript-of-the-tax-calculation-service.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. HTTP TypeScript clients of the tax calculation service
+    14. Clients HTTP and TypeScript of the tax calculation service
   
 
     
@@ -681,14 +681,14 @@
   
   
     <li class="md-nav__item">
-      <a href="new-features-ecmascript-2020-2024.html" class="md-nav__link">
+      <a href="new-features-in-ecmascript-2020-2024.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. New Features ECMAScript 2020–2024
+    15. New Features in ECMAScript 2020–2024
   
 
     
@@ -886,7 +886,7 @@
 
 
 <h1 id="17-temporal-the-modern-replacement-for-date">17. <span style="color: #2e74b5">Temporal: the modern replacement for Date</span></h1>
-<p><strong><span style="color: #9a3412">[Temporal] </span></strong>is a new global namespace intended to replace the old <span style="color: #9a3412">Date</span> object, which has long been considered flawed: mutability, months numbered 0 through 11, lack of true time zone handling, and ambiguous string parsing. <span style="color: #9a3412">Date </span>has not been removed from the language—existing code continues to work—but <span style="color: #9a3412">Temporal </span>is now the recommended approach for any new code that manipulates dates, times, and durations.</p>
+<p><strong><span style="color: #9a3412">[Temporal] </span></strong>is a new global namespace intended to replace the old <span style="color: #9a3412">Date</span> object, which has long been considered flawed due to its mutability, months numbered from 0 to 11, lack of true time zone support, and ambiguous string parsing. <span style="color: #9a3412">Date </span>has not been removed from the language—existing code continues to work—but <span style="color: #9a3412">Temporal </span>is now the recommended approach for any new code that manipulates dates, times, and durations.</p>
 <h2 id="171-exact-status-regarding-ecmascript-2026">17.1. <span style="color: #2e74b5">⚠️ Exact status regarding ECMAScript 2026</span></h2>
 <p>The <span style="color: #9a3412">Temporal</span> proposal reached Stage 4 of TC39 in March 2026, and numerous articles have presented it as part of ECMAScript 2026. However, the official section of the specification summarizing the content of ECMAScript 2026 (cited in the previous chapter) does not explicitly mention it—the matter remains to be clarified. In practical terms, <span style="color: #9a3412">Temporal </span>is natively available in <strong>Node.js 26</strong> and up-to-date browsers, making this chapter relevant right now.</p>
 <h2 id="172-homemade-typescript">17.2. <span style="color: #2e74b5">⚠️ “Homemade” TypeScript</span></h2>
@@ -981,7 +981,7 @@
 <a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="kd">const</span><span class="w"> </span><span class="nx">anniversaire</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Temporal</span><span class="p">.</span><span class="nx">PlainDate</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="s2">"2026-08-24"</span><span class="p">);</span>
 <a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"anniversaire ="</span><span class="p">,</span><span class="w"> </span><span class="nx">anniversaire</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
 <a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"année ="</span><span class="p">,</span><span class="w"> </span><span class="nx">anniversaire</span><span class="p">.</span><span class="nx">year</span><span class="p">,</span><span class="w"> </span><span class="s2">", mois ="</span><span class="p">,</span><span class="w"> </span><span class="nx">anniversaire</span><span class="p">.</span><span class="nx">month</span><span class="p">,</span><span class="w"> </span><span class="s2">", jour ="</span><span class="p">,</span><span class="w"> </span><span class="nx">anniversaire</span><span class="p">.</span><span class="nx">day</span><span class="p">);</span>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="c1">// Unlike the old Date class, the month is numbered normally: 8 = August (not 7!)</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="c1">// Unlike the old Date format, the month is numbered normally: 8 = August (not 7!)</span>
 <a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"jour de la semaine (1=lundi..7=dimanche) ="</span><span class="p">,</span><span class="w"> </span><span class="nx">anniversaire</span><span class="p">.</span><span class="nx">dayOfWeek</span><span class="p">);</span>
 <a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"nombre de jours dans ce mois ="</span><span class="p">,</span><span class="w"> </span><span class="nx">anniversaire</span><span class="p">.</span><span class="nx">daysInMonth</span><span class="p">);</span>
 <a id="__codelineno-0-24" name="__codelineno-0-24"></a>
@@ -1032,8 +1032,8 @@
 <a id="__codelineno-0-69" name="__codelineno-0-69"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"partie heure ="</span><span class="p">,</span><span class="w"> </span><span class="nx">rendezVous</span><span class="p">.</span><span class="nx">toPlainTime</span><span class="p">().</span><span class="nx">toString</span><span class="p">());</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Unlike <span style="color: #9a3412">the</span> old <span style="color: #9a3412">Date</span>, the month in <span style="color: #9a3412">Temporal.PlainDate </span>is numbered normally:<span style="color: #9a3412"> 8 </span>refers to August, not July;</li>
-<li><strong><span style="color: #9a3412">[immutabilité]</span></strong>: <span style="color: #9a3412">add() </span>and <span style="color: #9a3412">subtract() </span>always return a <strong>new</strong> object—the original is never modified, unlike in <span style="color: #9a3412">Date.prototype.setDate</span>;</li>
+<li>Unlike the old <span style="color: #9a3412">Date</span> object, the month in <span style="color: #9a3412">Temporal.PlainDate </span>is numbered normally:<span style="color: #9a3412"> 8 </span>refers to August, not July;</li>
+<li><strong><span style="color: #9a3412">[immutabilité]</span></strong>: <span style="color: #9a3412">add() </span>and <span style="color: #9a3412">subtract() </span>always return a <strong>new</strong> object—the original is never modified, unlike <span style="color: #9a3412">Date.prototype.setDate</span>;</li>
 <li>Arithmetic operations on months automatically handle different month lengths (<span style="color: #9a3412">January 31 + 1 month </span>correctly yields February 28, not an overflow into March);</li>
 <li><span style="color: #9a3412">Temporal.PlainDate.compare(...) </span>and <span style="color: #9a3412">.until(...) </span>allow you to compare two dates and calculate the duration between them.</li>
 </ul>
@@ -1119,7 +1119,7 @@
 <a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="c1">// ------------------------------------------------------------------------</span>
 <a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="c1">// 2) Convert the same meeting to a different time zone</span>
 <a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="c1">// ------------------------------------------------------------------------</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="c1">// withTimeZone() does not change PAS the actual time, only the way it is displayed—</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="c1">// withTimeZone() does not change PAS the actual time, only how it is displayed—</span>
 <a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="c1">// useful for showing the time of the same event to participants around the world</span>
 <a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="kd">const</span><span class="w"> </span><span class="nx">réunionNewYork</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">réunionParis</span><span class="p">.</span><span class="nx">withTimeZone</span><span class="p">(</span><span class="s2">"America/New_York"</span><span class="p">);</span>
 <a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"même réunion, vue depuis New York ="</span><span class="p">,</span><span class="w"> </span><span class="nx">réunionNewYork</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
@@ -1129,7 +1129,7 @@
 <a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="c1">// ------------------------------------------------------------------------</span>
 <a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="c1">// 3) The calculations automatically handle daylight saving time changes (DST)</span>
 <a id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="c1">// ------------------------------------------------------------------------</span>
-<a id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="c1">// This is the classic pitfall of the old Date function: adding "24 hours" doesn't match</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="c1">// This is the classic pitfall of the old Date function: adding “24 hours” doesn’t match</span>
 <a id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="c1">// Always add "1 day" during a daylight saving time change</span>
 <a id="__codelineno-1-35" name="__codelineno-1-35"></a><span class="kd">const</span><span class="w"> </span><span class="nx">avantChangementHeure</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Temporal</span><span class="p">.</span><span class="nx">ZonedDateTime</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="s2">"2026-10-24T20:00:00[Europe/Paris]"</span><span class="p">);</span>
 <a id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="c1">// Add one “calendar” day: Temporal understands that the time change must be skipped</span>
@@ -1158,7 +1158,7 @@
 <a id="__codelineno-1-59" name="__codelineno-1-59"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"durée du vol ="</span><span class="p">,</span><span class="w"> </span><span class="nx">duréeVol</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>unlike <span style="color: #9a3412">new Date(&#x27;2026-08-24T14:30:00&#x27;)</span>, whose interpretation (local time or UTC) depends on the exact format of the string, <span style="color: #9a3412">Temporal.ZonedDateTime.from(...) </span>requires an <strong>explicit</strong> time zone, enclosed in square brackets;</li>
+<li>unlike <code>new Date('2026-08-24T14:30:00')</code>, whose interpretation (local time or <code>UTC</code>) depends on the exact format of the string, <span style="color: #9a3412">Temporal.ZonedDateTime.from(...) </span>requires an <strong>explicit</strong> time zone, enclosed in square brackets;</li>
 <li><span style="color: #9a3412">withTimeZone(...) </span>converts the display of the same actual time to another time zone, without changing the time itself—useful for displaying a meeting time to participants in multiple countries;</li>
 <li>the arithmetic correctly handles daylight saving time changes: adding “1 calendar day” is not always the same as adding “exactly 24 hours”—a classic pitfall of <span style="color: #9a3412">the</span> old <span style="color: #9a3412">Date function</span>.</li>
 </ul>
@@ -1227,7 +1227,7 @@
 <a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="c1">// 1) Temporal.Duration: represents a LAPS of time (not a specific moment)</span>
 <a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="c1">// ------------------------------------------------------------------------</span>
 <a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="c1">// Previously, a duration had to be cobbled together “by hand” in milliseconds—</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="c1">// difficult to read, and with no distinction between calendar units (months, years)</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="c1">// hard to read, and with no distinction between calendar units (months, years)</span>
 <a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="c1">// and fixed units (hours, minutes, seconds)</span>
 <a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="kd">const</span><span class="w"> </span><span class="nx">duréeTrajet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Temporal</span><span class="p">.</span><span class="nx">Duration</span><span class="p">.</span><span class="kr">from</span><span class="p">({</span><span class="w"> </span><span class="nx">hours</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">minutes</span><span class="o">:</span><span class="w"> </span><span class="mf">45</span><span class="w"> </span><span class="p">});</span>
 <a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"duréeTrajet ="</span><span class="p">,</span><span class="w"> </span><span class="nx">duréeTrajet</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
@@ -1248,7 +1248,7 @@
 <a id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"départ ="</span><span class="p">,</span><span class="w"> </span><span class="nx">départ</span><span class="p">.</span><span class="nx">toString</span><span class="p">(),</span><span class="w"> </span><span class="s2">", arrivée ="</span><span class="p">,</span><span class="w"> </span><span class="nx">arrivée</span><span class="p">.</span><span class="nx">toString</span><span class="p">());</span>
 <a id="__codelineno-2-30" name="__codelineno-2-30"></a>
 <a id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="c1">// ------------------------------------------------------------------------</span>
-<a id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="c1">// 3) Temporal.Instant: a point PRÉCIS and UNIVERSEL in time</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="c1">// 3) Temporal.Instant: a point in time PRÉCIS and UNIVERSEL</span>
 <a id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="c1">// ------------------------------------------------------------------------</span>
 <a id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="c1">// unlike PlainDateTime or ZonedDateTime (which involve a calendar</span>
 <a id="__codelineno-2-35" name="__codelineno-2-35"></a><span class="c1">// and time zone), Instant simply represents “a moment,” like a timestamp—</span>
@@ -1273,12 +1273,12 @@
 <a id="__codelineno-2-54" name="__codelineno-2-54"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"début avant fin :"</span><span class="p">,</span><span class="w"> </span><span class="nx">Temporal</span><span class="p">.</span><span class="nx">Instant</span><span class="p">.</span><span class="nx">compare</span><span class="p">(</span><span class="nx">début</span><span class="p">,</span><span class="w"> </span><span class="nx">fin</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>A <span style="color: #9a3412">Duration </span>can be constructed from an object (<span style="color: #9a3412">{ hours: 2, minutes: 45 }</span>) or a string in the format ISO 8601 (<span style="color: #9a3412">&quot;P3M2W&quot; </span>for 3 months and 2 weeks);</li>
-<li><span style="color: #9a3412"><code>total(unit)</code> </span>converts an integer duration into a single unit (for example, minutes);</li>
-<li>The same <span style="color: #9a3412">Instant </span>can be converted to <span style="color: #9a3412">ZonedDateTime </span>in any time zone—a specific instant corresponds to a different local time depending on your location.</li>
+<li>A <code>Duration</code> can be constructed from an object (<span style="color: #9a3412">{ hours: 2, minutes: 45 }</span>) or a string in the ISO 8601 format (<span style="color: #9a3412">&quot;P3M2W&quot; </span>for 3 months and 2 weeks);</li>
+<li><span style="color: #9a3412">total(unit) </span>converts an integer duration into a single unit (for example, minutes);</li>
+<li>The same <span style="color: #9a3412">time </span>can be converted to <span style="color: #9a3412">ZonedDateTime </span>in any time zone—a specific time corresponds to a different local time depending on your location.</li>
 </ul>
 <h2 id="176-04-comparaison-avec-date-script">17.6. <span style="color: #2e74b5">[04-comparaison-avec-Date] script</span></h2>
-<p>This script addresses, one by one, the historical flaws in <span style="color: #9a3412">Date </span>mentioned in the introduction and shows how <span style="color: #9a3412">Temporal </span>corrects them:</p>
+<p>This script addresses, one by one, the historical flaws in <span style="color: #9a3412">Date </span>mentioned in the introduction and demonstrates how <span style="color: #9a3412">Temporal </span>corrects them:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
@@ -1352,11 +1352,11 @@
 <span class="normal"><a href="#__codelineno-3-71">71</a></span>
 <span class="normal"><a href="#__codelineno-3-72">72</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="s1">'use strict'</span><span class="p">;</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="c1">// ========================================================================</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="c1">// [NOUVEAU ECMAScript 2026] Temporal vs. Date: Common pitfalls corrected</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="c1">// [NOUVEAU ECMAScript 2026] Temporal vs. Date: Common Pitfalls Corrected</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1">// ========================================================================</span>
 <a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="c1">// [nécessite Node 26+ - voir temporal/README.md]</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="c1">// [Date] has not been removed from the language (the existing code continues to work),</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="c1">// [Date] has not been removed from the language (existing code continues to work),</span>
 <a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="c1">// but [Temporal] is now the recommended API for all new code.</span>
 <a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="c1">// This script illustrates, one by one, the historical flaws of [Date].</span>
 <a id="__codelineno-3-10" name="__codelineno-3-10"></a>
@@ -1394,13 +1394,13 @@
 <a id="__codelineno-3-42" name="__codelineno-3-42"></a><span class="c1">// pitfall #3: Date’s parsing of a string is ambiguous</span>
 <a id="__codelineno-3-43" name="__codelineno-3-43"></a><span class="c1">// ------------------------------------------------------------------------</span>
 <a id="__codelineno-3-44" name="__codelineno-3-44"></a><span class="c1">// Depending on the string format, "new Date(...)" interprets it sometimes as local time,</span>
-<a id="__codelineno-3-45" name="__codelineno-3-45"></a><span class="c1">// or as UTC—a common pitfall in production</span>
+<a id="__codelineno-3-45" name="__codelineno-3-45"></a><span class="c1">// and sometimes as UTC—a common pitfall in production</span>
 <a id="__codelineno-3-46" name="__codelineno-3-46"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"[Date] new Date('2026-08-24') ="</span><span class="p">,</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="s2">"2026-08-24"</span><span class="p">).</span><span class="nx">toString</span><span class="p">(),</span><span class="w"> </span><span class="s2">"(interprété en UTC)"</span><span class="p">);</span>
 <a id="__codelineno-3-47" name="__codelineno-3-47"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"[Date] new Date('2026-08-24 00:00:00') ="</span><span class="p">,</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Date</span><span class="p">(</span><span class="s2">"2026-08-24 00:00:00"</span><span class="p">).</span><span class="nx">toString</span><span class="p">(),</span><span class="w"> </span><span class="s2">"(interprété en heure locale)"</span><span class="p">);</span>
-<a id="__codelineno-3-48" name="__codelineno-3-48"></a><span class="c1">// -&gt; The two lines above may display different times for the “same” date!</span>
+<a id="__codelineno-3-48" name="__codelineno-3-48"></a><span class="c1">// -&gt; The two lines above may display different times for the "same" date!</span>
 <a id="__codelineno-3-49" name="__codelineno-3-49"></a>
 <a id="__codelineno-3-50" name="__codelineno-3-50"></a><span class="c1">// With Temporal, the behavior is always explicit and unambiguous:</span>
-<a id="__codelineno-3-51" name="__codelineno-3-51"></a><span class="c1">// A PlainDate has no time at all; a ZonedDateTime requires a specific time zone</span>
+<a id="__codelineno-3-51" name="__codelineno-3-51"></a><span class="c1">// A PlainDate has no time at all, while a ZonedDateTime requires a specific time zone</span>
 <a id="__codelineno-3-52" name="__codelineno-3-52"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"[Temporal] PlainDate.from('2026-08-24') ="</span><span class="p">,</span><span class="w"> </span><span class="nx">Temporal</span><span class="p">.</span><span class="nx">PlainDate</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="s2">"2026-08-24"</span><span class="p">).</span><span class="nx">toString</span><span class="p">());</span>
 <a id="__codelineno-3-53" name="__codelineno-3-53"></a>
 <a id="__codelineno-3-54" name="__codelineno-3-54"></a><span class="c1">// ------------------------------------------------------------------------</span>
@@ -1424,8 +1424,8 @@
 <a id="__codelineno-3-72" name="__codelineno-3-72"></a><span class="c1">// ------------------------------------------------------------------------</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><strong><span style="color: #9a3412">[piège n°1]</span></strong>: The months in <span style="color: #9a3412"><code>Date</code> </span>are numbered from 0 to 11 (however, <span style="color: #9a3412"><code>new Date(2026, 7, 24)</code> </span>does indeed refer to August)—a common source of confusion for beginners;</li>
-<li><strong><span style="color: #9a3412">[piège n°2]</span></strong>: <span style="color: #9a3412">Date </span>is <strong>mutable</strong>—modifying a <span style="color: #9a3412">Date</span> object passed as a function parameter also modifies the original, which may come as a surprise; <span style="color: #9a3412">Temporal.PlainDate.add() </span>always returns a new object;</li>
+<li><strong><span style="color: #9a3412">[piège n°1]</span></strong>: The months in <span style="color: #9a3412">Date </span>are numbered from 0 to 11 (however, <code>new Date(2026, 7, 24)</code> does indeed refer to August)—a common source of confusion for beginners;</li>
+<li><strong><span style="color: #9a3412">[piège n°2]</span></strong>: <code>Date</code> is <strong>mutable</strong>—modifying a <code>Date</code> object passed as a function parameter also modifies the original, which can be surprising; <code>Temporal.PlainDate.add()</code> always returns a new object;</li>
 <li><strong><span style="color: #9a3412">[piège n°3]</span></strong>: Parsing a string using <code>new Date(...)</code> is <strong>ambiguous</strong> depending on its exact format (local time or UTC); <code>Temporal</code> is always explicit;</li>
 <li><strong><span style="color: #9a3412">[piège n°4]</span></strong>: <span style="color: #9a3412">Date </span>cannot natively calculate a “clean” duration between two dates (you must subtract timestamps in milliseconds and divide manually); <span style="color: #9a3412">Temporal.PlainDate.until(...) </span>does this directly.</li>
 </ul>

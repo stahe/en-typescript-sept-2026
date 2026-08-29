@@ -635,14 +635,14 @@
   
   
     <li class="md-nav__item">
-      <a href="functions.html" class="md-nav__link">
+      <a href="the-functions.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. Functions
+    8. The Functions
   
 
     
@@ -743,14 +743,14 @@
   
   
     <li class="md-nav__item">
-      <a href="the-functions-http-and-typescript.html" class="md-nav__link">
+      <a href="the-http-and-typescript-functions.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. The functions HTTP and TypeScript
+    12. The HTTP and TypeScript functions
   
 
     
@@ -797,14 +797,14 @@
   
   
     <li class="md-nav__item">
-      <a href="http-typescript-clients-of-the-tax-calculation-service.html" class="md-nav__link">
+      <a href="clients-http-and-typescript-of-the-tax-calculation-service.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. HTTP TypeScript clients of the tax calculation service
+    14. Clients HTTP and TypeScript of the tax calculation service
   
 
     
@@ -824,14 +824,14 @@
   
   
     <li class="md-nav__item">
-      <a href="new-features-ecmascript-2020-2024.html" class="md-nav__link">
+      <a href="new-features-in-ecmascript-2020-2024.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. New Features ECMAScript 2020–2024
+    15. New Features in ECMAScript 2020–2024
   
 
     
@@ -918,7 +918,7 @@
 <h1 id="2-setting-up-a-development-environment">2. <span style="color: #2e74b5">Setting Up a Development Environment</span></h1>
 <p>The original document (2019) provided detailed instructions for installing <strong><span style="color: #9a3412">[Laragon]</span></strong>, <strong><span style="color: #9a3412">[Netbeans]</span></strong>, and <strong><span style="color: #9a3412">[Visual Studio Code] </span></strong>on Windows 10, with numerous screenshots illustrating the configuration of PATH. In 2026, the installation is much simpler: we will use the following tools.</p>
 <ul>
-<li><strong><span style="color: #9a3412">[Visual Studio Code] </span></strong>to generate the code TypeScript;</li>
+<li><strong><span style="color: #9a3412">[Visual Studio Code] </span></strong>to generate the TypeScript code;</li>
 <li><strong><span style="color: #9a3412">[Node.js]</span></strong>, version <strong>26 or later</strong>—this is the version that made the <strong><span style="color: #9a3412">[Temporal]</span></strong> object, presented in the last chapter of this document, available without any special options;</li>
 <li><strong><span style="color: #9a3412">[TypeScript]</span></strong>, version <strong>6</strong>;</li>
 <li><strong><span style="color: #9a3412">[tsx]</span></strong>, a tool that runs a <span style="color: #9a3412">.ts</span> file directly without a prior compilation step—this is what we will use for all the scripts in this document;</li>
@@ -978,7 +978,7 @@
 <a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">  </span><span class="s2">"include"</span><span class="p">:</span><span class="w"> </span><span class="err">["**/*.ts"]</span>
 <a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="err">}</span>
 </code></pre></div>
-<div style="margin:0 0 0.75em 0; background-color:#fff4ce; padding:0.35em 0.6em"><b>Important: </b>Starting with TypeScript 6.0, the <span style="color: #9a3412">&quot;types&quot; </span>line<span style="color: #9a3412">: [&quot;node&quot;] </span>is essential: without it, TypeScript no longer automatically recognizes the global objects of Node.js as <span style="color: #9a3412">a console </span>or <span style="color: #9a3412">process</span>, unlike versions prior to 6.0.</div>
+<div style="margin:0 0 0.75em 0; background-color:#fff4ce; padding:0.35em 0.6em"><b>Important: </b>Starting with TypeScript 6.0, the <span style="color: #9a3412">&quot;types&quot; </span>line<span style="color: #9a3412">: [&quot;node&quot;] </span>is essential: without it, TypeScript no longer automatically recognizes global objects from Node.js as <span style="color: #9a3412">a console </span>or <span style="color: #9a3412">process</span>, unlike versions prior to 6.0.</div>
 
 <p>Next, install the dependencies listed in <span style="color: #9a3412">package.json</span>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>npm install
@@ -1014,7 +1014,7 @@
 <p><em>Execution result:</em></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>tests/test-02.ts(4,1): error TS2322: Type 'string' is not assignable to type 'number'.
 </code></pre></div></td></tr></table></div>
-<p>This is the key advantage of TypeScript over JavaScript: an entire category of errors (accidentally mixing types) is detected <strong>before</strong> execution, directly in the editor, rather than discovered when the code crashes in production.</p>
+<p>This is the key advantage of TypeScript over JavaScript: an entire category of errors (accidental type mixing) is detected <strong>before</strong> execution, directly in the editor, rather than discovered when the code crashes in production.</p>
 <h2 id="25-eslint">2.5. <span style="color: #2e74b5">ESLint</span></h2>
 <p><strong><span style="color: #9a3412">[ESLint] </span></strong>is a tool that verifies that the code adheres to a set of style rules and best practices (unused variables, suspicious comparisons, etc.). The configuration file <span style="color: #9a3412">.eslintrc.cjs </span>(the <span style="color: #9a3412">.cjs </span>extension, not <span style="color: #9a3412">.js</span>, is required because <span style="color: #9a3412">package.json </span>declares <span style="color: #9a3412">&quot;type&quot;: &quot;module&quot;</span>) uses the <span style="color: #9a3412">@typescript-eslint</span> parser, which understands the TypeScript syntax (types, interfaces, private fields <span style="color: #9a3412">#x</span>...):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>

@@ -12,7 +12,7 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/en-typescript-sept-2026/the-functions-http-and-typescript.html">
+        <link rel="canonical" href="https://stahe.github.io/en-typescript-sept-2026/the-http-and-typescript-functions.html">
       
       
         <link rel="prev" href="event-driven-programming-and-asynchronous-functions.html">
@@ -29,7 +29,7 @@
     
     
       
-        <title>12. The functions HTTP and TypeScript - Introduction to TypeScript Through Examples</title>
+        <title>12. The HTTP and TypeScript functions - Introduction to TypeScript Through Examples</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#12-the-functions-http-and-typescript" class="md-skip">
+        <a href="#12-the-http-and-typescript-functions" class="md-skip">
           Skip to content
         </a>
       
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              12. The functions HTTP and TypeScript
+              12. The HTTP and TypeScript functions
             
           </span>
         </div>
@@ -494,14 +494,14 @@
   
   
     <li class="md-nav__item">
-      <a href="functions.html" class="md-nav__link">
+      <a href="the-functions.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. Functions
+    8. The Functions
   
 
     
@@ -618,7 +618,7 @@
   <span class="md-ellipsis">
     
   
-    12. The functions HTTP and TypeScript
+    12. The HTTP and TypeScript functions
   
 
     
@@ -629,14 +629,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="the-functions-http-and-typescript.html" class="md-nav__link md-nav__link--active">
+      <a href="the-http-and-typescript-functions.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. The functions HTTP and TypeScript
+    12. The HTTP and TypeScript functions
   
 
     
@@ -717,10 +717,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#126-axios-03-script-authentication" class="md-nav__link">
+  <a href="#126-script-axios-03-authentication" class="md-nav__link">
     <span class="md-ellipsis">
       
-        12.6. [axios-03] script — authentication
+        12.6. script [axios-03] — authentication
       
     </span>
   </a>
@@ -728,10 +728,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#127-axios-04-script-session-cookie-management" class="md-nav__link">
+  <a href="#127-script-axios-04-session-cookie-management" class="md-nav__link">
     <span class="md-ellipsis">
       
-        12.7. [axios-04] script — session cookie management
+        12.7. script [axios-04] — session cookie management
       
     </span>
   </a>
@@ -739,10 +739,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#128-fetch-03-script-canceling-requests" class="md-nav__link">
+  <a href="#128-script-fetch-03-canceling-requests" class="md-nav__link">
     <span class="md-ellipsis">
       
-        12.8. [fetch-03] script — canceling requests
+        12.8. script [fetch-03] — canceling requests
       
     </span>
   </a>
@@ -791,14 +791,14 @@
   
   
     <li class="md-nav__item">
-      <a href="http-typescript-clients-of-the-tax-calculation-service.html" class="md-nav__link">
+      <a href="clients-http-and-typescript-of-the-tax-calculation-service.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. HTTP TypeScript clients of the tax calculation service
+    14. Clients HTTP and TypeScript of the tax calculation service
   
 
     
@@ -818,14 +818,14 @@
   
   
     <li class="md-nav__item">
-      <a href="new-features-ecmascript-2020-2024.html" class="md-nav__link">
+      <a href="new-features-in-ecmascript-2020-2024.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. New Features ECMAScript 2020–2024
+    15. New Features in ECMAScript 2020–2024
   
 
     
@@ -909,13 +909,13 @@
 
 
 
-<h1 id="12-the-functions-http-and-typescript">12. <span style="color: #2e74b5">The functions HTTP and TypeScript</span></h1>
-<p>Here we present two ways to make HTTP requests in TypeScript: the <strong><span style="color: #9a3412">[fetch]</span></strong> function, which has been native since Node 18, and the third-party library <strong><span style="color: #9a3412">[axios]</span></strong>. The scripts for this chapter are located in the <strong><span style="color: #9a3412">[http]</span></strong> folder of the project.</p>
+<h1 id="12-the-http-and-typescript-functions">12. <span style="color: #2e74b5">The HTTP and TypeScript functions</span></h1>
+<p>Here we present two ways to make HTTP requests in TypeScript: the <strong><span style="color: #9a3412">[fetch]</span></strong> function, which has been native to Node since version 18, and the third-party library <strong><span style="color: #9a3412">[axios]</span></strong>. The scripts for this chapter are located in the <strong><span style="color: #9a3412">[http]</span></strong> folder of the project.</p>
 <h2 id="121-choosing-tools-http">12.1. <span style="color: #2e74b5">Choosing Tools HTTP</span></h2>
-<p>In 2019, <span style="color: #9a3412"><code>fetch</code> </span>had not yet been implemented by node.js, and the original document recommended the <code>node-fetch</code> package. Since Node 18 (2022), <strong><span style="color: #9a3412"><code>fetch</code> </span></strong>has been a <strong>native global</strong> function, standardized by the <code>fetch</code> standard—there is no longer a need to import it.</p>
+<p>In 2019, <code>fetch</code> had not yet been implemented by node.js, and the original document recommended the <code>node-fetch</code> package. Since Node 18 (2022), <strong><span style="color: #9a3412"><code>fetch</code> </span></strong>has been a <strong>native global</strong> function, standardized by the <code>fetch</code> standard—there is no longer a need to import it.</p>
 <p><strong><span style="color: #9a3412">[axios] </span></strong>remains an interesting library, however: compatible with both node.js and browsers, it offers a slightly richer API (interceptors, automatic JSON serialization, standardized error handling). We present both, using the same example, to show that the coding approach is similar.</p>
 <h2 id="122-the-tax-calculation-server">12.2. <span style="color: #2e74b5">The Tax Calculation Server</span></h2>
-<p>This chapter, like the following ones, refers to the tax calculation server PHP built in the course “Introduction to the PHP7 Language Through Examples.” Its installation (Laragon, NetBeans, <span style="color: #9a3412">config.json</span> configuration) has not changed and is still described in this course PHP—we will not revisit it here.</p>
+<p>This chapter, like the following ones, refers to the tax calculation server PHP built in the course “Introduction to the PHP7 Language Through Examples.” Its installation (Laragon, NetBeans, <span style="color: #9a3412">config.json</span> configuration) has not changed and is still described in that course, PHP—we will not revisit it here.</p>
 <p>Reminder of the API hosted by this server:</p>
 <ul>
 <li><strong><span style="color: #9a3412">[init-session] </span></strong>— <span style="color: #9a3412">GET main.php?action=init-session&amp;type=x </span>— sets the type (json, xml, html) of the desired responses; can be issued at any time;</li>
@@ -925,7 +925,7 @@
 <li><strong><span style="color: #9a3412">[supprimer-simulation] </span></strong>— <span style="color: #9a3412">GET main.php?action=delete-simulation&amp;number=x </span>— deletes a simulation from the list;</li>
 <li><strong><span style="color: #9a3412">[fin-session] </span></strong>— ends the simulation session.</li>
 </ul>
-<div style="margin:0 0 0.75em 0; background-color:#fff4ce; padding:0.35em 0.6em"><b>Important: </b>The scripts in this chapter assume that the server PHP is running locally on<span style="color: #9a3412"> http://localhost/php7/scripts-web/impots/version-14/</span>. <b>In the environment where this document was prepared, this PHP server is not available</b>: therefore, the executions below consistently show the “server not running” case (connection error), which is a real and verified result. The behavior in the event of success is described based on the code and comments, but could not be verified by an actual execution in this environment.</div>
+<div style="margin:0 0 0.75em 0; background-color:#fff4ce; padding:0.35em 0.6em"><b>Important: </b>The scripts in this chapter assume that the PHP server is running locally at<span style="color: #9a3412"> http://localhost/php7/scripts-web/impots/version-14/</span>. <b>In the environment where this document was </b><b>prepared, the PHP server is not available</b>: therefore, the executions below consistently show the “server not running” case (connection error), which is a real and verified result. The behavior in the event of success is described based on the code and comments, but could not be verified by an actual execution in this environment.</div>
 
 <h2 id="123-fetch-01-script">12.3. <span style="color: #2e74b5">[fetch-01] script</span></h2>
 <p>This script uses <strong><span style="color: #9a3412">[fetch] </span></strong>to initialize a JSON session with the tax calculation server:</p>
@@ -1025,7 +1025,7 @@
 <span class="normal"><a href="#__codelineno-0-94">94</a></span>
 <span class="normal"><a href="#__codelineno-0-95">95</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="s1">'use strict'</span><span class="p">;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1">// [mise à jour 2026] In 2019, you had to install the [node-fetch] package to have</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1">// [mise à jour 2026] In 2019, you had to install the [node-fetch] package to have access to</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1">// the [fetch] function on the Node side. Since Node 18 (2022), [fetch] has been a</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="c1">// native global function, standardized by the "WHATWG Fetch standard": you no longer need to import it.</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="c1">// imports</span>
@@ -1034,53 +1034,53 @@
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="k">import</span><span class="w"> </span><span class="nx">moment</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'moment'</span><span class="p">;</span>
 <a id="__codelineno-0-10" name="__codelineno-0-10"></a>
 <a id="__codelineno-0-11" name="__codelineno-0-11"></a>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="c1">// Basic URL from the tax calculation server</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="c1">// URL core of the tax calculation server</span>
 <a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="kd">const</span><span class="w"> </span><span class="nx">baseUrl</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'http://localhost/php7/scripts-web/impots/version-14/main.php?'</span><span class="p">;</span>
 <a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="c1">// init session</span>
 <a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">initSession</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">  </span><span class="c1">// [mise à jour 2026] The native [fetch] does not support the [timeout] option.</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">  </span><span class="c1">// To limit the wait time, it is provided with a [signal] generated by</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">  </span><span class="c1">// [AbortSignal.timeout(ms)] (available since Node 17.3): once this timeout has elapsed,</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">  </span><span class="c1">// the query is automatically canceled and [fetch] raises an error.</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">   </span><span class="c1">// [mise à jour 2026] The native [fetch] does not support the [timeout] option.</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">   </span><span class="c1">// To limit the wait time, it is provided with a [signal] generated by</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">   </span><span class="c1">// [AbortSignal.timeout(ms)] (available since Node 17.3): once this timeout has elapsed,</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">   </span><span class="c1">// the query is automatically canceled and [fetch] raises an error.</span>
 <a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="nx">RequestInit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">    </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span>
 <a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">    </span><span class="nx">signal</span><span class="o">:</span><span class="w"> </span><span class="nx">AbortSignal</span><span class="p">.</span><span class="nx">timeout</span><span class="p">(</span><span class="mf">2000</span><span class="p">)</span>
 <a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">  </span><span class="p">};</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">  </span><span class="c1">// Execution of the request HTTP [get /main.php?action=init-session&amp;type=json]</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">   </span><span class="c1">// Execution of the request HTTP [get /main.php?action=init-session&amp;type=json]</span>
 <a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">débutFetch</span><span class="o">:</span><span class="w"> </span><span class="nx">moment</span><span class="p">.</span><span class="nx">Moment</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">undefined</span><span class="p">;</span>
 <a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">    </span><span class="c1">// asynchronous request—[fetch] returns a promise</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">     </span><span class="c1">// asynchronous request—[fetch] returns a promise</span>
 <a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">    </span><span class="nx">débutFetch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">moment</span><span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">());</span>
 <a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="nx">baseUrl</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">qs</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
 <a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">      </span><span class="nx">action</span><span class="o">:</span><span class="w"> </span><span class="s1">'init-session'</span><span class="p">,</span>
 <a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">      </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">'x'</span>
 <a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">    </span><span class="p">}),</span><span class="w"> </span><span class="nx">options</span><span class="p">);</span>
-<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">    </span><span class="c1">// [response] is the entire response HTTP from the server (HTTP headers + the response itself)</span>
-<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">    </span><span class="c1">// We display this response to see its structure</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">     </span><span class="c1">// [response] is the entire response HTTP from the server (HTTP headers + the response itself)</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">     </span><span class="c1">// We display this response to see its structure</span>
 <a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sprintf</span><span class="p">(</span><span class="s2">"réponse fetch formatée en json,=%j, %s"</span><span class="p">,</span><span class="w"> </span><span class="nx">response</span><span class="p">,</span><span class="w"> </span><span class="nx">heure</span><span class="p">(</span><span class="nx">débutFetch</span><span class="p">)));</span>
 <a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"réponse fetch en javascript="</span><span class="p">,</span><span class="w"> </span><span class="nx">response</span><span class="p">);</span>
-<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">    </span><span class="c1">// The headers are HTTP</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">     </span><span class="c1">// The headers are HTTP</span>
 <a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"entêtes de la réponse="</span><span class="p">,</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">headers</span><span class="p">);</span>
-<a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="w">    </span><span class="c1">// if the response is of type application/json, the server’s JSON response is retrieved using the asynchronous function [response.json()]</span>
-<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">    </span><span class="c1">// In this case, the calling code receives a [Promise] object</span>
-<a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">    </span><span class="c1">// [await] allows you to retrieve the server’s response [json] rather than its promise</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="w">     </span><span class="c1">// if the response is of type application/json, the server’s JSON response is retrieved using the asynchronous function [response.json()]</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">     </span><span class="c1">// In this case, the calling code receives a [Promise] object</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">     </span><span class="c1">// [await] allows you to retrieve the server’s response [json] rather than its promise</span>
 <a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">débutJson</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">moment</span><span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">());</span>
 <a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">objet</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
 <a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sprintf</span><span class="p">(</span><span class="s2">"réponse json=%j, type=%s, %s"</span><span class="p">,</span><span class="w"> </span><span class="nx">objet</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">objet</span><span class="p">),</span><span class="w"> </span><span class="nx">heure</span><span class="p">(</span><span class="nx">débutJson</span><span class="p">)));</span>
 <a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">objet</span><span class="p">;</span>
-<a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="w">    </span><span class="c1">// If the response is of type text/plain, the server’s text response is obtained using [response.text()]</span>
-<a id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="w">    </span><span class="c1">// In this case, the calling code receives a [Promise] object</span>
-<a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="w">    </span><span class="c1">// [await] allows you to retrieve the server’s response [texte] rather than its promise</span>
-<a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="w">    </span><span class="c1">// const text = await response.text();</span>
-<a id="__codelineno-0-50" name="__codelineno-0-50"></a><span class="w">    </span><span class="c1">// console.log("response text=", text);</span>
-<a id="__codelineno-0-51" name="__codelineno-0-51"></a><span class="w">    </span><span class="c1">// return text;</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="w">     </span><span class="c1">// If the response is of type text/plain, the server’s text response is obtained using [response.text()]</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="w">     </span><span class="c1">// In this case, the calling code receives a [Promise] object</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="w">     </span><span class="c1">// [await] allows you to retrieve the server’s response [texte] rather than its promise</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="w">     </span><span class="c1">// const text = await response.text();</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50"></a><span class="w">     </span><span class="c1">// console.log("response text=", text);</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51"></a><span class="w">     </span><span class="c1">// return text;</span>
 <a id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="w">    </span><span class="c1">// We're here because the server sent an error code [404 Not Found, ...] along with an empty body—we're displaying the error to see its structure</span>
-<a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="w">    </span><span class="c1">// or because the client [fetch] threw an exception (network inaccessible, etc.)</span>
-<a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="w">    </span><span class="c1">// the error structure is displayed</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="w">     </span><span class="c1">// We're here because the server sent an error code [404 Not Found, ...] along with an empty body—we're displaying the error to see its structure</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="w">     </span><span class="c1">// or because the client [fetch] threw an exception (network inaccessible, etc.)</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="w">     </span><span class="c1">// the error structure is displayed</span>
 <a id="__codelineno-0-56" name="__codelineno-0-56"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sprintf</span><span class="p">(</span><span class="s2">"error fetch en json=%j, %s"</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">,</span><span class="w"> </span><span class="nx">heure</span><span class="p">(</span><span class="nx">débutFetch</span><span class="p">)));</span>
 <a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"error fetch en javascript="</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">),</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
-<a id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="w">    </span><span class="c1">// the received error message is logged</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="w">     </span><span class="c1">// the received error message is displayed</span>
 <a id="__codelineno-0-59" name="__codelineno-0-59"></a><span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">;</span>
 <a id="__codelineno-0-60" name="__codelineno-0-60"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-0-61" name="__codelineno-0-61"></a><span class="p">}</span>
@@ -1103,28 +1103,28 @@
 <a id="__codelineno-0-78" name="__codelineno-0-78"></a>
 <a id="__codelineno-0-79" name="__codelineno-0-79"></a><span class="c1">// utility to display time and duration</span>
 <a id="__codelineno-0-80" name="__codelineno-0-80"></a><span class="kd">function</span><span class="w"> </span><span class="nx">heure</span><span class="p">(</span><span class="nx">début</span><span class="o">?:</span><span class="w"> </span><span class="nx">moment</span><span class="p">.</span><span class="nx">Moment</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-81" name="__codelineno-0-81"></a><span class="w">  </span><span class="c1">// current time</span>
+<a id="__codelineno-0-81" name="__codelineno-0-81"></a><span class="w">   </span><span class="c1">// current time</span>
 <a id="__codelineno-0-82" name="__codelineno-0-82"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">moment</span><span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">());</span>
-<a id="__codelineno-0-83" name="__codelineno-0-83"></a><span class="w">  </span><span class="c1">// time formatting</span>
+<a id="__codelineno-0-83" name="__codelineno-0-83"></a><span class="w">   </span><span class="c1">// time formatting</span>
 <a id="__codelineno-0-84" name="__codelineno-0-84"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"heure="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">now</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="s2">"HH:mm:ss:SSS"</span><span class="p">);</span>
-<a id="__codelineno-0-85" name="__codelineno-0-85"></a><span class="w">  </span><span class="c1">// Should a duration be calculated?</span>
+<a id="__codelineno-0-85" name="__codelineno-0-85"></a><span class="w">   </span><span class="c1">// Should a duration be calculated?</span>
 <a id="__codelineno-0-86" name="__codelineno-0-86"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">début</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-87" name="__codelineno-0-87"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">durée</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">now</span><span class="p">.</span><span class="nx">valueOf</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">début</span><span class="p">.</span><span class="nx">valueOf</span><span class="p">();</span>
 <a id="__codelineno-0-88" name="__codelineno-0-88"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">milliseconds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">durée</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">1000</span><span class="p">;</span>
 <a id="__codelineno-0-89" name="__codelineno-0-89"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">seconds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">durée</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">1000</span><span class="p">);</span>
-<a id="__codelineno-0-90" name="__codelineno-0-90"></a><span class="w">    </span><span class="c1">// time and duration formatting</span>
+<a id="__codelineno-0-90" name="__codelineno-0-90"></a><span class="w">     </span><span class="c1">// formatting heure + durée</span>
 <a id="__codelineno-0-91" name="__codelineno-0-91"></a><span class="w">    </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">sprintf</span><span class="p">(</span><span class="s2">", durée= %s seconde(s) et %s millisecondes"</span><span class="p">,</span><span class="w"> </span><span class="nx">seconds</span><span class="p">,</span><span class="w"> </span><span class="nx">milliseconds</span><span class="p">);</span>
 <a id="__codelineno-0-92" name="__codelineno-0-92"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-0-93" name="__codelineno-0-93"></a><span class="w">  </span><span class="c1">// Result</span>
+<a id="__codelineno-0-93" name="__codelineno-0-93"></a><span class="w">   </span><span class="c1">// result</span>
 <a id="__codelineno-0-94" name="__codelineno-0-94"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">result</span><span class="p">;</span>
 <a id="__codelineno-0-95" name="__codelineno-0-95"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Lines 3–5: <strong><span style="color: #9a3412">[mise à jour 2026] </span></strong>— comment noting that <span style="color: #9a3412">fetch </span>is now native, unlike in 2019;</li>
+<li>lines 3–5: <strong><span style="color: #9a3412">[mise à jour 2026] </span></strong>— comment noting that <span style="color: #9a3412">fetch </span>is now native, unlike in 2019;</li>
 <li>line 22: <span style="color: #9a3412">AbortSignal.timeout(2000) </span>— replaces the <span style="color: #9a3412"><code>timeout</code></span> option in <code>node-fetch</code> (which does not exist in native <code>fetch</code>): after 2 seconds, the request is automatically canceled;</li>
-<li>line 29: <span style="color: #9a3412">fetch(URL, options) </span>— the syntax remains that of standard fetch: a URL and an options object (method, cancellation signal, etc.);</li>
+<li>line 29: <span style="color: #9a3412">fetch(URL, options) </span>— the syntax remains that of standard fetch: a URL, and a objet d&#x27;options (method, cancellation signal, etc.);</li>
 <li>line 43: <span style="color: #9a3412">await response.json() </span>— extracts the JSON body from the response; this is itself an asynchronous operation (<span style="color: #9a3412">response </span>may be a stream currently being received);</li>
-<li>Line 54: <code>fetch</code> only throws an exception if the request HTTP <strong>failed</strong> (network unavailable, timeout, etc.). If a response is received—even with an error code (400, 500, etc.)—<span style="color: #9a3412"><code>fetch</code> </span><strong>does not</strong> throw an exception: the response is available as usual, line 38.</li>
+<li>line 54: <code>fetch</code> only throws an exception if the <code>HTTP</code> request <strong>failed</strong> (network unreachable, timeout, etc.). If a response is received, even with an error code (400, 500, etc.), <span style="color: #9a3412"><code>fetch</code> </span><strong>does not</strong> throw an exception: the response is normally available, line 38.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npx tsx http/fetch-01.ts
 </code></pre></div>
@@ -1158,7 +1158,7 @@
 <a id="__codelineno-2-14" name="__codelineno-2-14"></a>erreur= fetch failed string
 </code></pre></div></td></tr></table></div>
 <h2 id="124-script-fetch-02">12.4. <span style="color: #2e74b5">script [fetch-02]</span></h2>
-<p>This script is based on <span style="color: #9a3412">fetch-01</span>, but removes all demonstration details that are unnecessary for everyday use:</p>
+<p>This script reuses <span style="color: #9a3412">fetch-01 </span>while removing all demonstration details that are unnecessary for everyday use:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
@@ -1210,18 +1210,18 @@
 <a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="kd">const</span><span class="w"> </span><span class="nx">baseUrl</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'http://localhost/php7/scripts-web/impots/version-14/main.php?'</span><span class="p">;</span>
 <a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="c1">// init session</span>
 <a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">initSession</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">  </span><span class="c1">// request options HHTP [get /main.php?action=init-session&amp;type=json]</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">  </span><span class="c1">// [AbortSignal.timeout(ms)] replaces the option [timeout], which does not exist in native fetch</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">   </span><span class="c1">// request options HHTP [get /main.php?action=init-session&amp;type=json]</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">   </span><span class="c1">// [AbortSignal.timeout(ms)] replaces the option [timeout], which does not exist in native fetch</span>
 <a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">options</span><span class="o">:</span><span class="w"> </span><span class="nx">RequestInit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">    </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="p">,</span>
 <a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">    </span><span class="nx">signal</span><span class="o">:</span><span class="w"> </span><span class="nx">AbortSignal</span><span class="p">.</span><span class="nx">timeout</span><span class="p">(</span><span class="mf">2000</span><span class="p">)</span>
 <a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">  </span><span class="p">};</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">  </span><span class="c1">// Execution of the query HTTP [get /main.php?action=init-session&amp;type=json]</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">   </span><span class="c1">// Execution of the query HTTP [get /main.php?action=init-session&amp;type=json]</span>
 <a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="nx">baseUrl</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">qs</span><span class="p">.</span><span class="nx">stringify</span><span class="p">({</span>
 <a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">    </span><span class="nx">action</span><span class="o">:</span><span class="w"> </span><span class="s1">'init-session'</span><span class="p">,</span>
 <a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">    </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">'json'</span>
 <a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">  </span><span class="p">}),</span><span class="w"> </span><span class="nx">options</span><span class="p">);</span>
-<a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">  </span><span class="c1">// Result received as jSON</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">   </span><span class="c1">// Result received as jSON</span>
 <a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
 <a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="p">}</span>
 <a id="__codelineno-3-26" name="__codelineno-3-26"></a>
@@ -1318,47 +1318,47 @@
 <span class="normal"><a href="#__codelineno-6-64">64</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="s1">'use strict'</span><span class="p">;</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">axios</span><span class="o">,</span><span class="w"> </span><span class="p">{</span> <span class="n">AxiosInstance</span><span class="p">,</span> <span class="n">AxiosRequestConfig</span> <span class="p">}</span> <span class="kn">from</span><span class="w"> </span><span class="s1">'axios'</span><span class="p">;</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3"></a>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="o">//</span> <span class="n">Axios</span> <span class="n">default</span> <span class="n">configuration</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="o">//</span> <span class="n">default</span> <span class="n">axios</span> <span class="n">configuration</span>
 <a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="n">axios</span><span class="o">.</span><span class="n">defaults</span><span class="o">.</span><span class="n">timeout</span> <span class="o">=</span> <span class="mi">2000</span><span class="p">;</span>
 <a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="n">axios</span><span class="o">.</span><span class="n">defaults</span><span class="o">.</span><span class="n">baseURL</span> <span class="o">=</span> <span class="s1">'http://localhost/php7/scripts-web/impots/version-14'</span><span class="p">;</span>
 <a id="__codelineno-6-7" name="__codelineno-6-7"></a>
 <a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="o">//</span> <span class="n">init</span> <span class="n">session</span>
 <a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="k">async</span> <span class="n">function</span> <span class="n">initSession</span><span class="p">(</span><span class="n">axios</span><span class="p">:</span> <span class="n">AxiosInstance</span><span class="p">):</span> <span class="n">Promise</span><span class="o">&lt;</span><span class="nb">any</span><span class="o">&gt;</span> <span class="p">{</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a>  <span class="o">//</span> <span class="n">request</span> <span class="n">options</span> <span class="n">HHTP</span> <span class="p">[</span><span class="n">get</span> <span class="o">/</span><span class="n">main</span><span class="o">.</span><span class="n">php</span><span class="err">?</span><span class="n">action</span><span class="o">=</span><span class="n">init</span><span class="o">-</span><span class="n">session</span><span class="o">&amp;</span><span class="nb">type</span><span class="o">=</span><span class="n">json</span><span class="p">]</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>   <span class="o">//</span> <span class="n">request</span> <span class="n">options</span> <span class="n">HHTP</span> <span class="p">[</span><span class="n">get</span> <span class="o">/</span><span class="n">main</span><span class="o">.</span><span class="n">php</span><span class="err">?</span><span class="n">action</span><span class="o">=</span><span class="n">init</span><span class="o">-</span><span class="n">session</span><span class="o">&amp;</span><span class="nb">type</span><span class="o">=</span><span class="n">json</span><span class="p">]</span>
 <a id="__codelineno-6-11" name="__codelineno-6-11"></a>  <span class="n">const</span> <span class="n">options</span><span class="p">:</span> <span class="n">AxiosRequestConfig</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12"></a>    <span class="o">//</span> <span class="p">[</span><span class="n">mise</span> <span class="n">à</span> <span class="n">jour</span> <span class="n">TypeScript</span><span class="p">]</span> <span class="n">axios</span><span class="o">.</span><span class="n">request</span><span class="p">()</span> <span class="n">accepts</span><span class="p">,</span> <span class="ow">in</span> <span class="n">terms</span> <span class="n">of</span> <span class="n">typing</span><span class="p">,</span> <span class="n">only</span> <span class="n">one</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13"></a>    <span class="o">//</span> <span class="n">configuration</span> <span class="n">argument</span><span class="p">:</span> <span class="n">the</span> <span class="n">URL</span> <span class="n">must</span> <span class="n">therefore</span> <span class="n">appear</span> <span class="ow">in</span> <span class="p">[</span><span class="n">options</span><span class="o">.</span><span class="n">url</span><span class="p">]</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14"></a>    <span class="o">//</span> <span class="n">rather</span> <span class="n">than</span> <span class="k">as</span> <span class="n">a</span> <span class="n">separate</span> <span class="n">first</span> <span class="n">parameter</span> <span class="n">of</span> <span class="err">`</span><span class="n">request</span><span class="p">()</span><span class="err">`</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a>     <span class="o">//</span> <span class="p">[</span><span class="n">mise</span> <span class="n">à</span> <span class="n">jour</span> <span class="n">TypeScript</span><span class="p">]</span> <span class="n">axios</span><span class="o">.</span><span class="n">request</span><span class="p">()</span> <span class="n">accepts</span><span class="p">,</span> <span class="ow">in</span> <span class="n">terms</span> <span class="n">of</span> <span class="n">typing</span><span class="p">,</span> <span class="n">only</span> <span class="n">one</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a>     <span class="o">//</span> <span class="n">configuration</span> <span class="n">argument</span><span class="p">:</span> <span class="n">the</span> <span class="n">URL</span> <span class="n">must</span> <span class="n">therefore</span> <span class="n">appear</span> <span class="ow">in</span> <span class="p">[</span><span class="n">options</span><span class="o">.</span><span class="n">url</span><span class="p">]</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a>     <span class="o">//</span> <span class="n">rather</span> <span class="n">than</span> <span class="k">as</span> <span class="n">a</span> <span class="n">separate</span> <span class="n">first</span> <span class="n">parameter</span> <span class="n">of</span> <span class="err">`</span><span class="n">request</span><span class="p">()</span><span class="err">`</span>
 <a id="__codelineno-6-15" name="__codelineno-6-15"></a>    <span class="n">url</span><span class="p">:</span> <span class="s1">'main.php'</span><span class="p">,</span>
 <a id="__codelineno-6-16" name="__codelineno-6-16"></a>    <span class="n">method</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
-<a id="__codelineno-6-17" name="__codelineno-6-17"></a>    <span class="o">//</span> <span class="n">parameters</span> <span class="n">of</span> <span class="n">URL</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a>     <span class="o">//</span> <span class="n">parameters</span> <span class="k">for</span> <span class="n">URL</span>
 <a id="__codelineno-6-18" name="__codelineno-6-18"></a>    <span class="n">params</span><span class="p">:</span> <span class="p">{</span>
 <a id="__codelineno-6-19" name="__codelineno-6-19"></a>      <span class="n">action</span><span class="p">:</span> <span class="s1">'init-session'</span><span class="p">,</span>
 <a id="__codelineno-6-20" name="__codelineno-6-20"></a>      <span class="nb">type</span><span class="p">:</span> <span class="s1">'x'</span>
 <a id="__codelineno-6-21" name="__codelineno-6-21"></a>    <span class="p">}</span>
 <a id="__codelineno-6-22" name="__codelineno-6-22"></a>  <span class="p">};</span>
-<a id="__codelineno-6-23" name="__codelineno-6-23"></a>  <span class="o">//</span> <span class="n">execution</span> <span class="n">of</span> <span class="n">the</span> <span class="n">request</span> <span class="n">HTTP</span> <span class="p">[</span><span class="n">get</span> <span class="o">/</span><span class="n">main</span><span class="o">.</span><span class="n">php</span><span class="err">?</span><span class="n">action</span><span class="o">=</span><span class="n">init</span><span class="o">-</span><span class="n">session</span><span class="o">&amp;</span><span class="nb">type</span><span class="o">=</span><span class="n">json</span><span class="p">]</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23"></a>   <span class="o">//</span> <span class="n">Execution</span> <span class="n">of</span> <span class="n">the</span> <span class="n">HTTP</span> <span class="n">query</span> <span class="p">[</span><span class="n">get</span> <span class="o">/</span><span class="n">main</span><span class="o">.</span><span class="n">php</span><span class="err">?</span><span class="n">action</span><span class="o">=</span><span class="n">init</span><span class="o">-</span><span class="n">session</span><span class="o">&amp;</span><span class="nb">type</span><span class="o">=</span><span class="n">json</span><span class="p">]</span>
 <a id="__codelineno-6-24" name="__codelineno-6-24"></a>  <span class="k">try</span> <span class="p">{</span>
-<a id="__codelineno-6-25" name="__codelineno-6-25"></a>    <span class="o">//</span> <span class="n">asynchronous</span> <span class="n">request</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25"></a>     <span class="o">//</span> <span class="n">asynchronous</span> <span class="n">request</span>
 <a id="__codelineno-6-26" name="__codelineno-6-26"></a>    <span class="n">const</span> <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">axios</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
-<a id="__codelineno-6-27" name="__codelineno-6-27"></a>    <span class="o">//</span> <span class="n">The</span> <span class="n">response</span> <span class="n">consists</span> <span class="n">of</span> <span class="n">the</span> <span class="n">entire</span> <span class="n">HTTP</span> <span class="n">response</span> <span class="kn">from</span><span class="w"> </span><span class="nn">the</span> <span class="n">server</span> <span class="p">(</span><span class="n">HTTP</span> <span class="n">headers</span> <span class="o">+</span> <span class="n">the</span> <span class="n">response</span> <span class="n">itself</span><span class="p">)</span>
-<a id="__codelineno-6-28" name="__codelineno-6-28"></a>    <span class="o">//</span> <span class="n">This</span> <span class="n">response</span> <span class="ow">is</span> <span class="n">displayed</span> <span class="n">to</span> <span class="n">view</span> <span class="n">its</span> <span class="n">structure</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27"></a>     <span class="o">//</span> <span class="n">The</span> <span class="n">response</span> <span class="n">consists</span> <span class="n">of</span> <span class="n">the</span> <span class="n">entire</span> <span class="n">HTTP</span> <span class="n">response</span> <span class="kn">from</span><span class="w"> </span><span class="nn">the</span> <span class="n">server</span> <span class="p">(</span><span class="n">HTTP</span> <span class="n">headers</span> <span class="o">+</span> <span class="n">the</span> <span class="n">response</span> <span class="n">itself</span><span class="p">)</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28"></a>     <span class="o">//</span> <span class="n">This</span> <span class="n">response</span> <span class="ow">is</span> <span class="n">displayed</span> <span class="n">to</span> <span class="n">view</span> <span class="n">its</span> <span class="n">structure</span>
 <a id="__codelineno-6-29" name="__codelineno-6-29"></a>    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">"réponse axios="</span><span class="p">,</span> <span class="n">response</span><span class="p">);</span>
-<a id="__codelineno-6-30" name="__codelineno-6-30"></a>    <span class="o">//</span> <span class="n">The</span> <span class="n">server</span><span class="s1">'s response is in [response.data]</span>
+<a id="__codelineno-6-30" name="__codelineno-6-30"></a>     <span class="o">//</span> <span class="n">The</span> <span class="n">server</span><span class="s1">'s response is in [response.data]</span>
 <a id="__codelineno-6-31" name="__codelineno-6-31"></a>    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">;</span>
 <a id="__codelineno-6-32" name="__codelineno-6-32"></a>  <span class="p">}</span> <span class="n">catch</span> <span class="p">(</span><span class="n">error</span><span class="p">:</span> <span class="nb">any</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-6-33" name="__codelineno-6-33"></a>    <span class="o">//</span> <span class="n">We</span> <span class="n">are</span> <span class="n">here</span> <span class="n">because</span> <span class="n">the</span> <span class="n">server</span> <span class="n">sent</span> <span class="n">an</span> <span class="n">error</span> <span class="n">code</span><span class="p">:</span> <span class="p">[</span><span class="mi">404</span> <span class="n">Not</span> <span class="n">Found</span><span class="p">,</span> <span class="mi">500</span> <span class="n">Internal</span> <span class="n">Server</span> <span class="n">Error</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
-<a id="__codelineno-6-34" name="__codelineno-6-34"></a>    <span class="o">//</span> <span class="n">The</span> <span class="n">parameter</span> <span class="p">[</span><span class="n">error</span><span class="p">]</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">exception</span> <span class="n">instance</span><span class="err">—</span><span class="n">it</span> <span class="n">can</span> <span class="n">take</span> <span class="n">various</span> <span class="n">forms</span>
-<a id="__codelineno-6-35" name="__codelineno-6-35"></a>    <span class="o">//</span> <span class="n">It</span> <span class="ow">is</span> <span class="n">displayed</span> <span class="n">to</span> <span class="n">show</span> <span class="n">its</span> <span class="n">structure</span>
+<a id="__codelineno-6-33" name="__codelineno-6-33"></a>     <span class="o">//</span> <span class="n">We</span> <span class="n">are</span> <span class="n">here</span> <span class="n">because</span> <span class="n">the</span> <span class="n">server</span> <span class="n">sent</span> <span class="n">an</span> <span class="n">error</span> <span class="n">code</span><span class="p">:</span> <span class="p">[</span><span class="mi">404</span> <span class="n">Not</span> <span class="n">Found</span><span class="p">,</span> <span class="mi">500</span> <span class="n">Internal</span> <span class="n">Server</span> <span class="n">Error</span><span class="p">,</span> <span class="o">...</span><span class="p">]</span>
+<a id="__codelineno-6-34" name="__codelineno-6-34"></a>     <span class="o">//</span> <span class="n">The</span> <span class="n">parameter</span> <span class="p">[</span><span class="n">error</span><span class="p">]</span> <span class="ow">is</span> <span class="n">an</span> <span class="n">exception</span> <span class="n">instance</span><span class="err">—</span><span class="n">it</span> <span class="n">can</span> <span class="n">take</span> <span class="n">various</span> <span class="n">forms</span>
+<a id="__codelineno-6-35" name="__codelineno-6-35"></a>     <span class="o">//</span> <span class="n">It</span> <span class="ow">is</span> <span class="n">displayed</span> <span class="n">to</span> <span class="n">show</span> <span class="n">its</span> <span class="n">structure</span>
 <a id="__codelineno-6-36" name="__codelineno-6-36"></a>    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">"axios error="</span><span class="p">,</span> <span class="n">typeof</span> <span class="p">(</span><span class="n">error</span><span class="p">),</span> <span class="n">error</span><span class="p">);</span>
 <a id="__codelineno-6-37" name="__codelineno-6-37"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">response</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-6-38" name="__codelineno-6-38"></a>      <span class="o">//</span> <span class="n">The</span> <span class="n">server</span> <span class="n">reported</span> <span class="n">an</span> <span class="n">error</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">status</span> <span class="n">HTTP</span><span class="p">,</span> <span class="n">but</span> <span class="n">it</span> <span class="n">also</span> <span class="n">sent</span> <span class="n">a</span> <span class="n">response</span>
-<a id="__codelineno-6-39" name="__codelineno-6-39"></a>      <span class="o">//</span> <span class="n">so</span> <span class="n">this</span> <span class="n">response</span> <span class="ow">is</span> <span class="n">found</span> <span class="ow">in</span> <span class="p">[</span><span class="n">error</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">]</span>
-<a id="__codelineno-6-40" name="__codelineno-6-40"></a>      <span class="o">//</span> <span class="n">We</span> <span class="n">know</span> <span class="n">that</span> <span class="n">the</span> <span class="n">server</span> <span class="n">sends</span> <span class="n">responses</span> <span class="n">jSON</span> <span class="k">with</span> <span class="n">the</span> <span class="n">structure</span> <span class="p">{</span><span class="n">action</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">response</span><span class="p">}</span>
-<a id="__codelineno-6-41" name="__codelineno-6-41"></a>      <span class="o">//</span> <span class="ow">and</span> <span class="n">that</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">event</span> <span class="n">of</span> <span class="n">an</span> <span class="n">error</span><span class="p">,</span> <span class="n">the</span> <span class="n">error</span> <span class="n">message</span> <span class="ow">is</span> <span class="ow">in</span> <span class="p">[</span><span class="n">réponse</span><span class="p">]</span>
+<a id="__codelineno-6-38" name="__codelineno-6-38"></a>       <span class="o">//</span> <span class="n">The</span> <span class="n">server</span> <span class="n">reported</span> <span class="n">an</span> <span class="n">error</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">status</span> <span class="n">HTTP</span><span class="p">,</span> <span class="n">but</span> <span class="n">it</span> <span class="n">also</span> <span class="n">sent</span> <span class="n">a</span> <span class="n">response</span>
+<a id="__codelineno-6-39" name="__codelineno-6-39"></a>       <span class="o">//</span> <span class="n">so</span> <span class="n">this</span> <span class="n">response</span> <span class="ow">is</span> <span class="n">found</span> <span class="ow">in</span> <span class="p">[</span><span class="n">error</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">]</span>
+<a id="__codelineno-6-40" name="__codelineno-6-40"></a>       <span class="o">//</span> <span class="n">We</span> <span class="n">know</span> <span class="n">that</span> <span class="n">the</span> <span class="n">server</span> <span class="n">sends</span> <span class="n">responses</span> <span class="n">jSON</span> <span class="k">with</span> <span class="n">the</span> <span class="n">structure</span> <span class="p">{</span><span class="n">action</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">response</span><span class="p">}</span>
+<a id="__codelineno-6-41" name="__codelineno-6-41"></a>       <span class="o">//</span> <span class="ow">and</span> <span class="n">that</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">event</span> <span class="n">of</span> <span class="n">an</span> <span class="n">error</span><span class="p">,</span> <span class="n">the</span> <span class="n">error</span> <span class="n">message</span> <span class="ow">is</span> <span class="ow">in</span> <span class="p">[</span><span class="n">réponse</span><span class="p">]</span>
 <a id="__codelineno-6-42" name="__codelineno-6-42"></a>      <span class="k">return</span> <span class="n">error</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">;</span>
 <a id="__codelineno-6-43" name="__codelineno-6-43"></a>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-<a id="__codelineno-6-44" name="__codelineno-6-44"></a>      <span class="o">//</span> <span class="n">the</span> <span class="n">error</span> <span class="ow">is</span> <span class="n">triggered</span>
+<a id="__codelineno-6-44" name="__codelineno-6-44"></a>       <span class="o">//</span> <span class="n">the</span> <span class="n">error</span> <span class="ow">is</span> <span class="n">triggered</span>
 <a id="__codelineno-6-45" name="__codelineno-6-45"></a>      <span class="n">throw</span> <span class="n">error</span><span class="p">;</span>
 <a id="__codelineno-6-46" name="__codelineno-6-46"></a>    <span class="p">}</span>
 <a id="__codelineno-6-47" name="__codelineno-6-47"></a>  <span class="p">}</span>
@@ -1381,8 +1381,8 @@
 <a id="__codelineno-6-64" name="__codelineno-6-64"></a><span class="n">main</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>line 26: <span style="color: #9a3412">axios.request(options) </span>— unlike <code>fetch</code>, the URL and options are grouped into a single configuration object;</li>
-<li>line 37: <span style="color: #9a3412">error.response </span>— if the server responded (even with an error code), Axios places this response in <span style="color: #9a3412">error.response</span>, which is accessible in the <code>catch</code> block — unlike <code>fetch</code>, Axios <strong>always throws an exception</strong> whenever the status code is not a success (2xx);</li>
+<li>line 26: <span style="color: #9a3412">axios.request(options) </span>— unlike <span style="color: #9a3412">fetch</span>, URL and the options are grouped into a single configuration object;</li>
+<li>line 37: <span style="color: #9a3412">error.response </span>— if the server responded (even with an error code), Axios places this response in <span style="color: #9a3412">error.response</span>, which is accessible in the <code>catch</code> block — unlike <code>fetch</code>, Axios <strong>always throws an exception</strong> as soon as the status code is not a success (2xx);</li>
 <li>line 31: the successful response is in <span style="color: #9a3412">response.data </span>— axios automatically extracts JSON; there’s no need for a separate <span style="color: #9a3412">await response.json() </span>as with <span style="color: #9a3412">fetch</span>.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>npx tsx http/axios-01.ts
@@ -1420,8 +1420,8 @@
 <a id="__codelineno-8-15" name="__codelineno-8-15"></a>erreur ---------------------------------------------
 <a id="__codelineno-8-16" name="__codelineno-8-16"></a>erreur= connect ECONNREFUSED 127.0.0.1:80
 </code></pre></div></td></tr></table></div>
-<h2 id="126-axios-03-script-authentication">12.6. <span style="color: #2e74b5">[axios-03] script — authentication</span></h2>
-<p>This script chains two requests: <span style="color: #9a3412">init-session</span>, followed by <span style="color: #9a3412">user-authentication </span>in <strong><span style="color: #9a3412">[POST]</span></strong>, with a body encoded by the <strong><span style="color: #9a3412">[qs]</span></strong> library:</p>
+<h2 id="126-script-axios-03-authentication">12.6. <span style="color: #2e74b5">script [axios-03] — authentication</span></h2>
+<p>This script chains two requests: <span style="color: #9a3412">init-session</span>, followed by <span style="color: #9a3412">authenticate-user </span>in <strong><span style="color: #9a3412">[POST]</span></strong>, with a body encoded by the <strong><span style="color: #9a3412">[qs]</span></strong> library:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
@@ -1528,65 +1528,65 @@
 <a id="__codelineno-9-9" name="__codelineno-9-9"></a>
 <a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="o">//</span> <span class="n">session</span> <span class="n">initialization</span>
 <a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="k">async</span> <span class="n">function</span> <span class="n">initSession</span><span class="p">(</span><span class="n">axios</span><span class="p">:</span> <span class="n">AxiosInstance</span><span class="p">):</span> <span class="n">Promise</span><span class="o">&lt;</span><span class="nb">any</span><span class="o">&gt;</span> <span class="p">{</span>
-<a id="__codelineno-9-12" name="__codelineno-9-12"></a>  <span class="o">//</span> <span class="n">request</span> <span class="n">options</span> <span class="n">HHTP</span> <span class="p">[</span><span class="n">get</span> <span class="o">/</span><span class="n">main</span><span class="o">.</span><span class="n">php</span><span class="err">?</span><span class="n">action</span><span class="o">=</span><span class="n">init</span><span class="o">-</span><span class="n">session</span><span class="o">&amp;</span><span class="nb">type</span><span class="o">=</span><span class="n">json</span><span class="p">]</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a>   <span class="o">//</span> <span class="n">request</span> <span class="n">options</span> <span class="n">HHTP</span> <span class="p">[</span><span class="n">get</span> <span class="o">/</span><span class="n">main</span><span class="o">.</span><span class="n">php</span><span class="err">?</span><span class="n">action</span><span class="o">=</span><span class="n">init</span><span class="o">-</span><span class="n">session</span><span class="o">&amp;</span><span class="nb">type</span><span class="o">=</span><span class="n">json</span><span class="p">]</span>
 <a id="__codelineno-9-13" name="__codelineno-9-13"></a>  <span class="n">const</span> <span class="n">options</span><span class="p">:</span> <span class="n">AxiosRequestConfig</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-9-14" name="__codelineno-9-14"></a>    <span class="o">//</span> <span class="p">[</span><span class="n">mise</span> <span class="n">à</span> <span class="n">jour</span> <span class="n">TypeScript</span><span class="p">]</span> <span class="n">URL</span> <span class="n">included</span> <span class="ow">in</span> <span class="p">[</span><span class="n">options</span><span class="o">.</span><span class="n">url</span><span class="p">]</span> <span class="p">(</span><span class="n">The</span> <span class="n">axios</span><span class="o">.</span><span class="n">request</span><span class="p">()</span> <span class="nb">type</span> <span class="n">accepts</span> <span class="n">only</span> <span class="n">one</span> <span class="n">argument</span><span class="p">)</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a>     <span class="o">//</span> <span class="p">[</span><span class="n">mise</span> <span class="n">à</span> <span class="n">jour</span> <span class="n">TypeScript</span><span class="p">]</span> <span class="n">URL</span> <span class="n">included</span> <span class="ow">in</span> <span class="p">[</span><span class="n">options</span><span class="o">.</span><span class="n">url</span><span class="p">]</span> <span class="p">(</span><span class="n">The</span> <span class="n">axios</span><span class="o">.</span><span class="n">request</span><span class="p">()</span> <span class="nb">type</span> <span class="n">accepts</span> <span class="n">only</span> <span class="n">one</span> <span class="n">argument</span><span class="p">)</span>
 <a id="__codelineno-9-15" name="__codelineno-9-15"></a>    <span class="n">url</span><span class="p">:</span> <span class="s1">'main.php'</span><span class="p">,</span>
 <a id="__codelineno-9-16" name="__codelineno-9-16"></a>    <span class="n">method</span><span class="p">:</span> <span class="s2">"GET"</span><span class="p">,</span>
-<a id="__codelineno-9-17" name="__codelineno-9-17"></a>    <span class="o">//</span> <span class="n">parameters</span> <span class="n">of</span> <span class="n">URL</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17"></a>     <span class="o">//</span> <span class="n">parameters</span> <span class="n">of</span> <span class="n">URL</span>
 <a id="__codelineno-9-18" name="__codelineno-9-18"></a>    <span class="n">params</span><span class="p">:</span> <span class="p">{</span>
 <a id="__codelineno-9-19" name="__codelineno-9-19"></a>      <span class="n">action</span><span class="p">:</span> <span class="s1">'init-session'</span><span class="p">,</span>
 <a id="__codelineno-9-20" name="__codelineno-9-20"></a>      <span class="nb">type</span><span class="p">:</span> <span class="s1">'json'</span>
 <a id="__codelineno-9-21" name="__codelineno-9-21"></a>    <span class="p">}</span>
 <a id="__codelineno-9-22" name="__codelineno-9-22"></a>  <span class="p">};</span>
 <a id="__codelineno-9-23" name="__codelineno-9-23"></a>  <span class="k">try</span> <span class="p">{</span>
-<a id="__codelineno-9-24" name="__codelineno-9-24"></a>    <span class="o">//</span> <span class="n">execution</span> <span class="n">of</span> <span class="n">the</span> <span class="n">query</span> <span class="n">HTTP</span> <span class="p">[</span><span class="n">get</span> <span class="o">/</span><span class="n">main</span><span class="o">.</span><span class="n">php</span><span class="err">?</span><span class="n">action</span><span class="o">=</span><span class="n">init</span><span class="o">-</span><span class="n">session</span><span class="o">&amp;</span><span class="nb">type</span><span class="o">=</span><span class="n">json</span><span class="p">]</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24"></a>     <span class="o">//</span> <span class="n">execution</span> <span class="n">of</span> <span class="n">the</span> <span class="n">query</span> <span class="n">HTTP</span> <span class="p">[</span><span class="n">get</span> <span class="o">/</span><span class="n">main</span><span class="o">.</span><span class="n">php</span><span class="err">?</span><span class="n">action</span><span class="o">=</span><span class="n">init</span><span class="o">-</span><span class="n">session</span><span class="o">&amp;</span><span class="nb">type</span><span class="o">=</span><span class="n">json</span><span class="p">]</span>
 <a id="__codelineno-9-25" name="__codelineno-9-25"></a>    <span class="n">const</span> <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">axios</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
-<a id="__codelineno-9-26" name="__codelineno-9-26"></a>    <span class="o">//</span> <span class="n">The</span> <span class="n">server</span><span class="s1">'s response is in [response.data]</span>
+<a id="__codelineno-9-26" name="__codelineno-9-26"></a>     <span class="o">//</span> <span class="n">The</span> <span class="n">server</span><span class="s1">'s response is in [response.data]</span>
 <a id="__codelineno-9-27" name="__codelineno-9-27"></a>    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">;</span>
 <a id="__codelineno-9-28" name="__codelineno-9-28"></a>  <span class="p">}</span> <span class="n">catch</span> <span class="p">(</span><span class="n">error</span><span class="p">:</span> <span class="nb">any</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-9-29" name="__codelineno-9-29"></a>    <span class="o">//</span> <span class="n">server</span> <span class="n">response</span>
+<a id="__codelineno-9-29" name="__codelineno-9-29"></a>     <span class="o">//</span> <span class="n">server</span> <span class="n">response</span>
 <a id="__codelineno-9-30" name="__codelineno-9-30"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">response</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-9-31" name="__codelineno-9-31"></a>      <span class="o">//</span> <span class="n">The</span> <span class="n">response</span> <span class="n">jSON</span> <span class="ow">is</span> <span class="ow">in</span> <span class="p">[</span><span class="n">error</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">]</span>
+<a id="__codelineno-9-31" name="__codelineno-9-31"></a>       <span class="o">//</span> <span class="n">The</span> <span class="n">response</span> <span class="n">jSON</span> <span class="ow">is</span> <span class="ow">in</span> <span class="p">[</span><span class="n">error</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">]</span>
 <a id="__codelineno-9-32" name="__codelineno-9-32"></a>      <span class="k">return</span> <span class="n">error</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">;</span>
 <a id="__codelineno-9-33" name="__codelineno-9-33"></a>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-<a id="__codelineno-9-34" name="__codelineno-9-34"></a>      <span class="o">//</span> <span class="n">The</span> <span class="n">error</span> <span class="ow">is</span> <span class="n">retried</span>
+<a id="__codelineno-9-34" name="__codelineno-9-34"></a>       <span class="o">//</span> <span class="n">The</span> <span class="n">error</span> <span class="ow">is</span> <span class="n">retried</span>
 <a id="__codelineno-9-35" name="__codelineno-9-35"></a>      <span class="n">throw</span> <span class="n">error</span><span class="p">;</span>
 <a id="__codelineno-9-36" name="__codelineno-9-36"></a>    <span class="p">}</span>
 <a id="__codelineno-9-37" name="__codelineno-9-37"></a>  <span class="p">}</span>
 <a id="__codelineno-9-38" name="__codelineno-9-38"></a><span class="p">}</span>
 <a id="__codelineno-9-39" name="__codelineno-9-39"></a>
 <a id="__codelineno-9-40" name="__codelineno-9-40"></a><span class="k">async</span> <span class="n">function</span> <span class="n">authentifierUtilisateur</span><span class="p">(</span><span class="n">axios</span><span class="p">:</span> <span class="n">AxiosInstance</span><span class="p">,</span> <span class="n">user</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span> <span class="n">password</span><span class="p">:</span> <span class="n">string</span><span class="p">):</span> <span class="n">Promise</span><span class="o">&lt;</span><span class="nb">any</span><span class="o">&gt;</span> <span class="p">{</span>
-<a id="__codelineno-9-41" name="__codelineno-9-41"></a>  <span class="o">//</span> <span class="n">request</span> <span class="n">options</span><span class="p">:</span> <span class="n">HHTP</span> <span class="p">[</span><span class="n">post</span> <span class="o">/</span><span class="n">main</span><span class="o">.</span><span class="n">php</span><span class="err">?</span><span class="n">action</span><span class="o">=</span><span class="n">authentifier</span><span class="o">-</span><span class="n">utilisateur</span><span class="p">]</span>
+<a id="__codelineno-9-41" name="__codelineno-9-41"></a>   <span class="o">//</span> <span class="n">Request</span> <span class="n">options</span><span class="p">:</span> <span class="n">HHTP</span> <span class="p">[</span><span class="n">post</span> <span class="o">/</span><span class="n">main</span><span class="o">.</span><span class="n">php</span><span class="err">?</span><span class="n">action</span><span class="o">=</span><span class="n">authentifier</span><span class="o">-</span><span class="n">utilisateur</span><span class="p">]</span>
 <a id="__codelineno-9-42" name="__codelineno-9-42"></a>  <span class="n">const</span> <span class="n">options</span><span class="p">:</span> <span class="n">AxiosRequestConfig</span> <span class="o">=</span> <span class="p">{</span>
-<a id="__codelineno-9-43" name="__codelineno-9-43"></a>    <span class="o">//</span> <span class="p">[</span><span class="n">mise</span> <span class="n">à</span> <span class="n">jour</span> <span class="n">TypeScript</span><span class="p">]</span> <span class="n">URL</span> <span class="n">included</span> <span class="ow">in</span> <span class="p">[</span><span class="n">options</span><span class="o">.</span><span class="n">url</span><span class="p">]</span>
+<a id="__codelineno-9-43" name="__codelineno-9-43"></a>     <span class="o">//</span> <span class="p">[</span><span class="n">mise</span> <span class="n">à</span> <span class="n">jour</span> <span class="n">TypeScript</span><span class="p">]</span> <span class="n">URL</span> <span class="n">included</span> <span class="ow">in</span> <span class="p">[</span><span class="n">options</span><span class="o">.</span><span class="n">url</span><span class="p">]</span>
 <a id="__codelineno-9-44" name="__codelineno-9-44"></a>    <span class="n">url</span><span class="p">:</span> <span class="s1">'main.php'</span><span class="p">,</span>
 <a id="__codelineno-9-45" name="__codelineno-9-45"></a>    <span class="n">method</span><span class="p">:</span> <span class="s2">"POST"</span><span class="p">,</span>
 <a id="__codelineno-9-46" name="__codelineno-9-46"></a>    <span class="n">headers</span><span class="p">:</span> <span class="p">{</span>
 <a id="__codelineno-9-47" name="__codelineno-9-47"></a>      <span class="s1">'Content-type'</span><span class="p">:</span> <span class="s1">'application/x-www-form-urlencoded'</span><span class="p">,</span>
 <a id="__codelineno-9-48" name="__codelineno-9-48"></a>    <span class="p">},</span>
-<a id="__codelineno-9-49" name="__codelineno-9-49"></a>    <span class="o">//</span> <span class="n">body</span> <span class="n">of</span> <span class="n">POST</span>
+<a id="__codelineno-9-49" name="__codelineno-9-49"></a>     <span class="o">//</span> <span class="n">body</span> <span class="n">of</span> <span class="n">POST</span>
 <a id="__codelineno-9-50" name="__codelineno-9-50"></a>    <span class="n">data</span><span class="p">:</span> <span class="n">qs</span><span class="o">.</span><span class="n">stringify</span><span class="p">({</span>
 <a id="__codelineno-9-51" name="__codelineno-9-51"></a>      <span class="n">user</span><span class="p">:</span> <span class="n">user</span><span class="p">,</span>
 <a id="__codelineno-9-52" name="__codelineno-9-52"></a>      <span class="n">password</span><span class="p">:</span> <span class="n">password</span>
 <a id="__codelineno-9-53" name="__codelineno-9-53"></a>    <span class="p">}),</span>
-<a id="__codelineno-9-54" name="__codelineno-9-54"></a>    <span class="o">//</span> <span class="n">parameters</span> <span class="n">of</span> <span class="n">URL</span>
+<a id="__codelineno-9-54" name="__codelineno-9-54"></a>     <span class="o">//</span> <span class="n">parameters</span> <span class="n">of</span> <span class="n">URL</span>
 <a id="__codelineno-9-55" name="__codelineno-9-55"></a>    <span class="n">params</span><span class="p">:</span> <span class="p">{</span>
 <a id="__codelineno-9-56" name="__codelineno-9-56"></a>      <span class="n">action</span><span class="p">:</span> <span class="s1">'authentifier-utilisateur'</span>
 <a id="__codelineno-9-57" name="__codelineno-9-57"></a>    <span class="p">}</span>
 <a id="__codelineno-9-58" name="__codelineno-9-58"></a>  <span class="p">};</span>
 <a id="__codelineno-9-59" name="__codelineno-9-59"></a>  <span class="k">try</span> <span class="p">{</span>
-<a id="__codelineno-9-60" name="__codelineno-9-60"></a>    <span class="o">//</span> <span class="n">Execution</span> <span class="n">of</span> <span class="n">the</span> <span class="n">request</span> <span class="n">HTTP</span> <span class="p">[</span><span class="n">get</span> <span class="o">/</span><span class="n">main</span><span class="o">.</span><span class="n">php</span><span class="err">?</span><span class="n">action</span><span class="o">=</span><span class="n">init</span><span class="o">-</span><span class="n">session</span><span class="o">&amp;</span><span class="nb">type</span><span class="o">=</span><span class="n">json</span><span class="p">]</span>
+<a id="__codelineno-9-60" name="__codelineno-9-60"></a>     <span class="o">//</span> <span class="n">execution</span> <span class="n">of</span> <span class="n">the</span> <span class="n">request</span> <span class="n">HTTP</span> <span class="p">[</span><span class="n">get</span> <span class="o">/</span><span class="n">main</span><span class="o">.</span><span class="n">php</span><span class="err">?</span><span class="n">action</span><span class="o">=</span><span class="n">init</span><span class="o">-</span><span class="n">session</span><span class="o">&amp;</span><span class="nb">type</span><span class="o">=</span><span class="n">json</span><span class="p">]</span>
 <a id="__codelineno-9-61" name="__codelineno-9-61"></a>    <span class="n">const</span> <span class="n">response</span> <span class="o">=</span> <span class="k">await</span> <span class="n">axios</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">options</span><span class="p">);</span>
-<a id="__codelineno-9-62" name="__codelineno-9-62"></a>    <span class="o">//</span> <span class="n">The</span> <span class="n">server</span><span class="s1">'s response is in [response.data]</span>
+<a id="__codelineno-9-62" name="__codelineno-9-62"></a>     <span class="o">//</span> <span class="n">The</span> <span class="n">server</span><span class="s1">'s response is in [response.data]</span>
 <a id="__codelineno-9-63" name="__codelineno-9-63"></a>    <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">;</span>
 <a id="__codelineno-9-64" name="__codelineno-9-64"></a>  <span class="p">}</span> <span class="n">catch</span> <span class="p">(</span><span class="n">error</span><span class="p">:</span> <span class="nb">any</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-9-65" name="__codelineno-9-65"></a>    <span class="o">//</span> <span class="n">server</span> <span class="n">response</span>
+<a id="__codelineno-9-65" name="__codelineno-9-65"></a>     <span class="o">//</span> <span class="n">server</span> <span class="n">response</span>
 <a id="__codelineno-9-66" name="__codelineno-9-66"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">error</span><span class="o">.</span><span class="n">response</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-9-67" name="__codelineno-9-67"></a>      <span class="o">//</span> <span class="n">The</span> <span class="n">response</span> <span class="n">jSON</span> <span class="ow">is</span> <span class="ow">in</span> <span class="p">[</span><span class="n">error</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">]</span>
+<a id="__codelineno-9-67" name="__codelineno-9-67"></a>       <span class="o">//</span> <span class="n">The</span> <span class="n">response</span> <span class="n">jSON</span> <span class="ow">is</span> <span class="ow">in</span> <span class="p">[</span><span class="n">error</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">]</span>
 <a id="__codelineno-9-68" name="__codelineno-9-68"></a>      <span class="k">return</span> <span class="n">error</span><span class="o">.</span><span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">;</span>
 <a id="__codelineno-9-69" name="__codelineno-9-69"></a>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-<a id="__codelineno-9-70" name="__codelineno-9-70"></a>      <span class="o">//</span> <span class="n">The</span> <span class="n">error</span> <span class="ow">is</span> <span class="n">re</span><span class="o">-</span><span class="n">triggered</span>
+<a id="__codelineno-9-70" name="__codelineno-9-70"></a>       <span class="o">//</span> <span class="n">The</span> <span class="n">error</span> <span class="ow">is</span> <span class="n">re</span><span class="o">-</span><span class="n">triggered</span>
 <a id="__codelineno-9-71" name="__codelineno-9-71"></a>      <span class="n">throw</span> <span class="n">error</span><span class="p">;</span>
 <a id="__codelineno-9-72" name="__codelineno-9-72"></a>    <span class="p">}</span>
 <a id="__codelineno-9-73" name="__codelineno-9-73"></a>  <span class="p">}</span>
@@ -1595,12 +1595,12 @@
 <a id="__codelineno-9-76" name="__codelineno-9-76"></a><span class="o">//</span> <span class="n">The</span> <span class="err">`</span><span class="n">main</span><span class="err">`</span> <span class="n">function</span> <span class="n">executes</span> <span class="n">the</span> <span class="n">asynchronous</span> <span class="n">functions</span> <span class="n">one</span> <span class="n">by</span> <span class="n">one</span>
 <a id="__codelineno-9-77" name="__codelineno-9-77"></a><span class="k">async</span> <span class="n">function</span> <span class="n">main</span><span class="p">():</span> <span class="n">Promise</span><span class="o">&lt;</span><span class="n">void</span><span class="o">&gt;</span> <span class="p">{</span>
 <a id="__codelineno-9-78" name="__codelineno-9-78"></a>  <span class="k">try</span> <span class="p">{</span>
-<a id="__codelineno-9-79" name="__codelineno-9-79"></a>    <span class="o">//</span> <span class="n">init</span><span class="o">-</span><span class="n">session</span>
+<a id="__codelineno-9-79" name="__codelineno-9-79"></a>     <span class="o">//</span> <span class="n">init</span><span class="o">-</span><span class="n">session</span>
 <a id="__codelineno-9-80" name="__codelineno-9-80"></a>    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">"action init-session en cours ---------------------------------------------"</span><span class="p">);</span>
 <a id="__codelineno-9-81" name="__codelineno-9-81"></a>    <span class="n">const</span> <span class="n">response1</span> <span class="o">=</span> <span class="k">await</span> <span class="n">initSession</span><span class="p">(</span><span class="n">axios</span><span class="p">);</span>
 <a id="__codelineno-9-82" name="__codelineno-9-82"></a>    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">"succès ---------------------------------------------"</span><span class="p">);</span>
 <a id="__codelineno-9-83" name="__codelineno-9-83"></a>    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">"réponse="</span><span class="p">,</span> <span class="n">response1</span><span class="p">);</span>
-<a id="__codelineno-9-84" name="__codelineno-9-84"></a>    <span class="o">//</span> <span class="n">authenticate</span><span class="o">-</span><span class="n">user</span>
+<a id="__codelineno-9-84" name="__codelineno-9-84"></a>     <span class="o">//</span> <span class="n">authenticate</span><span class="o">-</span><span class="n">user</span>
 <a id="__codelineno-9-85" name="__codelineno-9-85"></a>    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">"action authentifier-utilisateur en cours ---------------------------------------------"</span><span class="p">);</span>
 <a id="__codelineno-9-86" name="__codelineno-9-86"></a>    <span class="n">const</span> <span class="n">response2</span> <span class="o">=</span> <span class="k">await</span> <span class="n">authentifierUtilisateur</span><span class="p">(</span><span class="n">axios</span><span class="p">,</span> <span class="s1">'admin'</span><span class="p">,</span> <span class="s1">'admin'</span><span class="p">);</span>
 <a id="__codelineno-9-87" name="__codelineno-9-87"></a>    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">"succès ---------------------------------------------"</span><span class="p">);</span>
@@ -1615,7 +1615,7 @@
 <a id="__codelineno-9-96" name="__codelineno-9-96"></a><span class="n">main</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Lines 40–53: The request POST sends its parameters (<span style="color: #9a3412">user</span>, <span style="color: #9a3412">password</span>) encoded as <span style="color: #9a3412">application/x-www-form-urlencoded </span>via <span style="color: #9a3412">qs.stringify(...) </span>in <span style="color: #9a3412">options.data</span>;</li>
+<li>lines 40–53: the POST request sends its parameters (<span style="color: #9a3412">user, password</span>), encoded as <span style="color: #9a3412">application/x-www-form-urlencoded</span>, via <span style="color: #9a3412">qs.stringify(...) </span>in <span style="color: #9a3412">options.data</span>;</li>
 <li>Both functions are executed <strong>sequentially</strong> in <code>main</code> (<span style="color: #9a3412">awaited </span>one after the other): the second function only makes sense if the first one succeeded, since it depends on the session cookie set by <code>init-session</code>.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>npx tsx http/axios-03.ts
@@ -1639,7 +1639,7 @@
 <a id="__codelineno-11-8" name="__codelineno-11-8"></a>  [cause]: Error: connect ECONNREFUSED 127.0.0.1:80
 <a id="__codelineno-11-9" name="__codelineno-11-9"></a>}
 </code></pre></div></td></tr></table></div>
-<h2 id="127-axios-04-script-session-cookie-management">12.7. <span style="color: #2e74b5">[axios-04] script — session cookie management</span></h2>
+<h2 id="127-script-axios-04-session-cookie-management">12.7. <span style="color: #2e74b5">script [axios-04] — session cookie management</span></h2>
 <p>This script refactors <span style="color: #9a3412">initSession </span>and <span style="color: #9a3412">authentifierUtilisateur </span>around a common function, <strong><span style="color: #9a3412">[getRemoteData]</span></strong>, which explicitly manages the <strong>session cookie</strong> PHP (<span style="color: #9a3412">PHPSESSID</span>)—which is essential because the server associates authentication and simulations with a session HTTP:</p>
 <ul>
 <li><span style="color: #9a3412">getRemoteData </span>adds the current session cookie (<span style="color: #9a3412">sessionCookie</span>) to every outgoing request and updates this variable based on the <span style="color: #9a3412">Set-Cookie</span> header of each received response—manually replicating what a browser would do automatically.</li>
@@ -1653,7 +1653,7 @@
 <a id="__codelineno-13-2" name="__codelineno-13-2"></a>erreur ---------------------------------------------
 <a id="__codelineno-13-3" name="__codelineno-13-3"></a>erreur= connect ECONNREFUSED 127.0.0.1:80
 </code></pre></div></td></tr></table></div>
-<h2 id="128-fetch-03-script-canceling-requests">12.8. <span style="color: #2e74b5">[fetch-03] script — canceling requests</span></h2>
+<h2 id="128-script-fetch-03-canceling-requests">12.8. <span style="color: #2e74b5">script [fetch-03] — canceling requests</span></h2>
 <p><strong><span style="color: #9a3412">[NOUVEAU depuis 2019] </span></strong>This script illustrates two uses of the <span style="color: #9a3412">fetch</span> request <strong>cancellation</strong> mechanism, available natively since Node 18:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
@@ -1725,7 +1725,7 @@
 <a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="c1">// added to these two files)</span>
 <a id="__codelineno-14-9" name="__codelineno-14-9"></a>
 <a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="c1">// URL—the base file for the tax calculation server (see http/README.md)</span>
-<a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="c1">// As with axios-01.js, this script assumes that the PHP server for the stock price is running</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="c1">// As with axios-01.js, this script assumes that the PHP price server is running</span>
 <a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="c1">// locally: without it, requests fail with "fetch failed," which is normal</span>
 <a id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="kd">const</span><span class="w"> </span><span class="nx">baseUrl</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'http://localhost/php7/scripts-web/impots/version-14/main.php'</span><span class="p">;</span>
 <a id="__codelineno-14-14" name="__codelineno-14-14"></a>
@@ -1734,14 +1734,14 @@
 <a id="__codelineno-14-17" name="__codelineno-14-17"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"--- requête avec AbortSignal.timeout ---"</span><span class="p">);</span>
 <a id="__codelineno-14-18" name="__codelineno-14-18"></a><span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-14-19" name="__codelineno-14-19"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">fetch</span><span class="p">(</span><span class="nx">baseUrl</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">'?action=init-session&amp;type=json'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-14-20" name="__codelineno-14-20"></a><span class="w">      </span><span class="c1">// After 2 seconds, the request is automatically canceled</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20"></a><span class="w">       </span><span class="c1">// After 2 seconds, the request is automatically canceled</span>
 <a id="__codelineno-14-21" name="__codelineno-14-21"></a><span class="w">      </span><span class="nx">signal</span><span class="o">:</span><span class="w"> </span><span class="nx">AbortSignal</span><span class="p">.</span><span class="nx">timeout</span><span class="p">(</span><span class="mf">2000</span><span class="p">)</span>
 <a id="__codelineno-14-22" name="__codelineno-14-22"></a><span class="w">    </span><span class="p">});</span>
 <a id="__codelineno-14-23" name="__codelineno-14-23"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">données</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">();</span>
 <a id="__codelineno-14-24" name="__codelineno-14-24"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"réponse ="</span><span class="p">,</span><span class="w"> </span><span class="nx">données</span><span class="p">);</span>
 <a id="__codelineno-14-25" name="__codelineno-14-25"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">erreur</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-14-26" name="__codelineno-14-26"></a><span class="w">    </span><span class="c1">// if the server does not exist (which is likely in this exercise), or if the timeout is exceeded,</span>
-<a id="__codelineno-14-27" name="__codelineno-14-27"></a><span class="w">    </span><span class="c1">// [erreur.name] is either "TimeoutError" or "AbortError," as appropriate</span>
+<a id="__codelineno-14-26" name="__codelineno-14-26"></a><span class="w">     </span><span class="c1">// if the server does not exist (which is likely in this exercise), or if the timeout is exceeded,</span>
+<a id="__codelineno-14-27" name="__codelineno-14-27"></a><span class="w">     </span><span class="c1">// [erreur.name] is either "TimeoutError" or "AbortError," as appropriate</span>
 <a id="__codelineno-14-28" name="__codelineno-14-28"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"erreur.name ="</span><span class="p">,</span><span class="w"> </span><span class="nx">erreur</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="s2">", message ="</span><span class="p">,</span><span class="w"> </span><span class="nx">erreur</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
 <a id="__codelineno-14-29" name="__codelineno-14-29"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-14-30" name="__codelineno-14-30"></a><span class="p">}</span>
@@ -1752,8 +1752,8 @@
 <a id="__codelineno-14-35" name="__codelineno-14-35"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"--- requête annulée manuellement ---"</span><span class="p">);</span>
 <a id="__codelineno-14-36" name="__codelineno-14-36"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">contrôleur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">AbortController</span><span class="p">();</span>
 <a id="__codelineno-14-37" name="__codelineno-14-37"></a>
-<a id="__codelineno-14-38" name="__codelineno-14-38"></a><span class="w">  </span><span class="c1">// a "business logic" cancellation is scheduled after 500 ms</span>
-<a id="__codelineno-14-39" name="__codelineno-14-39"></a><span class="w">  </span><span class="c1">// (in a real application, this would be, for example, clicking a “Cancel” button)</span>
+<a id="__codelineno-14-38" name="__codelineno-14-38"></a><span class="w">   </span><span class="c1">// a "business logic" cancellation is scheduled after 500 ms</span>
+<a id="__codelineno-14-39" name="__codelineno-14-39"></a><span class="w">   </span><span class="c1">// (in a real application, this would be, for example, clicking a “Cancel” button)</span>
 <a id="__codelineno-14-40" name="__codelineno-14-40"></a><span class="w">  </span><span class="nx">setTimeout</span><span class="p">(()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-14-41" name="__codelineno-14-41"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"annulation manuelle déclenchée"</span><span class="p">);</span>
 <a id="__codelineno-14-42" name="__codelineno-14-42"></a><span class="w">    </span><span class="nx">contrôleur</span><span class="p">.</span><span class="nx">abort</span><span class="p">();</span>
@@ -1779,7 +1779,7 @@
 </code></pre></div></td></tr></table></div>
 <ul>
 <li><strong><span style="color: #9a3412">[AbortSignal.timeout(ms)]</span></strong>: automatically cancels the request if it exceeds the specified timeout—a pattern already seen in the <span style="color: #9a3412">fetch-01</span> script;</li>
-<li><strong><span style="color: #9a3412">[AbortController]</span></strong>: allows for <strong>manual</strong> cancellation, triggered by any application event (here, a <span style="color: #9a3412">setTimeout </span>simulating, for example, a click on a “Cancel” button, or new text entered in a search field that invalidates the previous query).</li>
+<li><strong><span style="color: #9a3412">[AbortController]</span></strong>: allows for <strong>manual</strong> cancellation, triggered by any application event (here, a <span style="color: #9a3412">setTimeout </span>simulating, for example, a click on a “Cancel” button, or new text entered into a search field that invalidates the previous request).</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>npx tsx http/fetch-03.ts
 </code></pre></div>
@@ -1794,7 +1794,7 @@
 <a id="__codelineno-16-4" name="__codelineno-16-4"></a>erreur.name = TypeError , message = fetch failed
 <a id="__codelineno-16-5" name="__codelineno-16-5"></a>annulation manuelle déclenchée
 </code></pre></div></td></tr></table></div>
-<p>Since the server is not available here, the <span style="color: #9a3412">&quot;fetch failed</span>&quot; (connection refused) error appears before the cancellation mechanisms even have a chance to trigger—on an available but slow server, you would instead get <span style="color: #9a3412">erreur.name = TimeoutError </span>or <span style="color: #9a3412">AbortError</span>, as indicated by the script’s comment.</p>
+<p>Since the server is unavailable here, the error “erreur fetch <span style="color: #9a3412">failed </span>(connection refused)” appears before the cancellation mechanisms even have a chance to trigger—on an available but slow server, we would instead get <span style="color: #9a3412">erreur.name = TimeoutError </span>or <span style="color: #9a3412">AbortError</span>, as indicated by the script’s comment.</p>
 
 
 

@@ -12,7 +12,7 @@
         <meta name="author" content="Serge Tahé">
       
       
-        <link rel="canonical" href="https://stahe.github.io/en-typescript-sept-2026/functions.html">
+        <link rel="canonical" href="https://stahe.github.io/en-typescript-sept-2026/the-functions.html">
       
       
         <link rel="prev" href="regular-expressions.html">
@@ -29,7 +29,7 @@
     
     
       
-        <title>8. Functions - Introduction to TypeScript Through Examples</title>
+        <title>8. The Functions - Introduction to TypeScript Through Examples</title>
       
     
     
@@ -94,7 +94,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#8-functions" class="md-skip">
+        <a href="#8-the-functions" class="md-skip">
           Skip to content
         </a>
       
@@ -130,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              8. Functions
+              8. The Functions
             
           </span>
         </div>
@@ -510,7 +510,7 @@
   <span class="md-ellipsis">
     
   
-    8. Functions
+    8. The Functions
   
 
     
@@ -521,14 +521,14 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="functions.html" class="md-nav__link md-nav__link--active">
+      <a href="the-functions.html" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. Functions
+    8. The Functions
   
 
     
@@ -704,14 +704,14 @@
   
   
     <li class="md-nav__item">
-      <a href="the-functions-http-and-typescript.html" class="md-nav__link">
+      <a href="the-http-and-typescript-functions.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. The functions HTTP and TypeScript
+    12. The HTTP and TypeScript functions
   
 
     
@@ -758,14 +758,14 @@
   
   
     <li class="md-nav__item">
-      <a href="http-typescript-clients-of-the-tax-calculation-service.html" class="md-nav__link">
+      <a href="clients-http-and-typescript-of-the-tax-calculation-service.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. HTTP TypeScript clients of the tax calculation service
+    14. Clients HTTP and TypeScript of the tax calculation service
   
 
     
@@ -785,14 +785,14 @@
   
   
     <li class="md-nav__item">
-      <a href="new-features-ecmascript-2020-2024.html" class="md-nav__link">
+      <a href="new-features-in-ecmascript-2020-2024.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. New Features ECMAScript 2020–2024
+    15. New Features in ECMAScript 2020–2024
   
 
     
@@ -876,10 +876,10 @@
 
 
 
-<h1 id="8-functions">8. <span style="color: #2e74b5">Functions</span></h1>
+<h1 id="8-the-functions">8. <span style="color: #2e74b5">The Functions</span></h1>
 <p>The scripts in this chapter are located in the <strong><span style="color: #9a3412">[fonctions]</span></strong> folder of the project.</p>
 <h2 id="81-script-func-01">8.1. <span style="color: #2e74b5">script [func-01]</span></h2>
-<p>This script examines <strong>how parameters are passed</strong> to a function: by value for numbers, strings, and booleans; by reference for arrays, literal objects, and functions.</p>
+<p>This script examines <strong>how parameters are passed</strong> to a function: by value for numbers, strings, and Booleans; by reference for arrays, literal objects, and functions.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
@@ -986,7 +986,7 @@
 <a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"[tab outside function]="</span><span class="p">,</span><span class="w"> </span><span class="nx">tab</span><span class="p">);</span>
 <a id="__codelineno-0-42" name="__codelineno-0-42"></a>
 <a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="c1">// --------------------- object - passed by reference</span>
-<a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="c1">// [any] to be able to dynamically add [unePropriétéNouvelle], as in JS</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="c1">// [any] to dynamically add [unePropriétéNouvelle], as in JS</span>
 <a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="kd">function</span><span class="w"> </span><span class="nx">doSomethingWithObject</span><span class="p">(</span><span class="nx">param</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="w">  </span><span class="nx">param</span><span class="p">.</span><span class="nx">unePropriétéNouvelle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"xyz"</span><span class="p">;</span>
 <a id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"[param inside function]="</span><span class="p">,</span><span class="w"> </span><span class="nx">param</span><span class="p">,</span><span class="w"> </span><span class="s2">"[type]="</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">param</span><span class="p">),</span><span class="w"> </span><span class="s2">"[passage par référence]="</span><span class="p">,</span><span class="w"> </span><span class="nx">param</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">obj</span><span class="p">);</span>
@@ -999,7 +999,7 @@
 <a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="c1">// --------------------- function - passed by reference</span>
 <a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="c1">// [any] because a property is dynamically assigned to the function itself (see below)</span>
 <a id="__codelineno-0-56" name="__codelineno-0-56"></a><span class="kd">function</span><span class="w"> </span><span class="nx">doSomethingWithFunction</span><span class="p">(</span><span class="nx">param</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="w">  </span><span class="c1">// something rather odd, but it works anyway</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="w">   </span><span class="c1">// something rather odd, but it works anyway</span>
 <a id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="w">  </span><span class="nx">param</span><span class="p">.</span><span class="nx">unePropriétéNouvelle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"xyz"</span><span class="p">;</span>
 <a id="__codelineno-0-59" name="__codelineno-0-59"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"[param inside function]="</span><span class="p">,</span><span class="w"> </span><span class="nx">param</span><span class="p">,</span><span class="w"> </span><span class="s2">"[type]="</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">param</span><span class="p">),</span><span class="w"> </span><span class="s2">"[passage par référence]="</span><span class="p">,</span><span class="w"> </span><span class="nx">param</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="nx">f</span><span class="p">);</span>
 <a id="__codelineno-0-60" name="__codelineno-0-60"></a><span class="p">}</span>
@@ -1010,8 +1010,8 @@
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>Primitive types (<span style="color: #9a3412">number</span>, <span style="color: #9a3412">string</span>, <span style="color: #9a3412">boolean</span>) are passed <strong>by value</strong>: modifying <span style="color: #9a3412"><code>param</code> </span>inside the function never changes the original variable (<span style="color: #9a3412">pass-by-reference = false </span>in each case);</li>
-<li>arrays, objects, and functions are passed <strong>by reference</strong>: <code>param === tab</code> (or <code>obj</code>, or <code>f</code>) evaluates to <span style="color: #9a3412"><code>true</code></span>, and a modification made inside the function is visible outside;</li>
-<li>line 45: <span style="color: #9a3412">function doSomethingWithObject(param: any) </span>— typed <span style="color: #9a3412">as <code>any</code> </span>because a property (<span style="color: #9a3412">unePropriétéNouvelle</span>) not provided for in the original type of the <code>obj</code> array is dynamically added;</li>
+<li>arrays, objects, and functions are passed <strong>by reference</strong>: <span style="color: #9a3412">param === tab </span>(or <span style="color: #9a3412">obj</span>, or <span style="color: #9a3412">f</span>) is <span style="color: #9a3412">true</span>, and a modification inside the function is visible outside;</li>
+<li>line 45: <span style="color: #9a3412">function doSomethingWithObject(param: any) </span>— typed <span style="color: #9a3412">as <code>any</code> </span>because a property (<span style="color: #9a3412">unePropriétéNouvelle</span>) is dynamically added that was not specified in the original type of the <code>obj</code> array;</li>
 <li>line 58: same thing for <span style="color: #9a3412">doSomethingWithFunction </span>— a property is added to the function itself; this behavior (JavaScript) is a bit confusing but perfectly valid (a function is also an object).</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npx tsx fonctions/func-01.ts
@@ -1060,14 +1060,14 @@
 <span class="normal"><a href="#__codelineno-3-15">15</a></span>
 <span class="normal"><a href="#__codelineno-3-16">16</a></span>
 <span class="normal"><a href="#__codelineno-3-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="s1">'use strict'</span><span class="p">;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="c1">// you can assign a function to a variable</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="c1">// You can assign a function to a variable</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">variable1</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
 <a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="p">};</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"typeof(variable1)="</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">variable1</span><span class="p">));</span>
 <a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="c1">// the variable can then be used as a function</span>
 <a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"variable1(10,12)="</span><span class="p">,</span><span class="w"> </span><span class="nx">variable1</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">12</span><span class="p">));</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="c1">// the function can be defined using the =&gt; notation</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="c1">// The function can be defined using the =&gt; notation</span>
 <a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="kd">const</span><span class="w"> </span><span class="nx">variable2</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">,</span><span class="w"> </span><span class="nx">c</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">c</span><span class="p">;</span>
 <a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="p">};</span>
@@ -1078,8 +1078,8 @@
 <a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"variable3(10,12,14)="</span><span class="p">,</span><span class="w"> </span><span class="nx">variable3</span><span class="p">(</span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">12</span><span class="p">,</span><span class="w"> </span><span class="mf">14</span><span class="p">));</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Line 3: <span style="color: #9a3412">const variable1: (a: number, b: number) =&gt; number = function (a, b) {...} </span>— the type of a function variable is declared as a signature <span style="color: #9a3412">(parameters) =&gt; typeDeRetour</span>;</li>
-<li>Lines 10–12: The same thing using arrow notation<span style="color: #9a3412">: (a, b, c) =&gt; { ... }</span>;</li>
+<li>line 3: <span style="color: #9a3412">const variable1: (a: number, b: number) =&gt; number = function (a, b) {...} </span>— the type of a function variable is declared as a signature <span style="color: #9a3412">(parameters) =&gt; typeDeRetour</span>;</li>
+<li>lines 10–12: the same thing using arrow notation <span style="color: #9a3412">(a, b, c) =&gt; { ... }</span>;</li>
 <li>line 16: without curly braces, the function body is reduced to a single expression, which automatically becomes the return value — <span style="color: #9a3412">(a, b, c): number =&gt; a + b + c</span>.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>npx tsx fonctions/func-02.ts
@@ -1138,7 +1138,7 @@
 <a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="c1">// Uses of g</span>
 <a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">g</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">f1</span><span class="p">));</span>
 <a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">g</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="nx">f2</span><span class="p">));</span>
-<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="c1">// the actual function-type parameter can be passed by reference—form 1</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="c1">// the actual function-type parameter can be passed by reference - form 1</span>
 <a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">g</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nx">param1</span><span class="p">,</span><span class="w"> </span><span class="nx">param2</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">param1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">param2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">30</span><span class="p">;</span>
 <a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="p">}));</span>
@@ -1148,7 +1148,7 @@
 <a id="__codelineno-6-26" name="__codelineno-6-26"></a><span class="p">}));</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>line 13: <span style="color: #9a3412">function g(param1: number, param2: number, f: (a: number, b: number) =&gt; number): number </span>— the third parameter <span style="color: #9a3412">f </span>is itself typed as a function;</li>
+<li>line 13: <span style="color: #9a3412">function g(param1: number, param2: number, f: (a: number, b: number) =&gt; number): number </span>— the third parameter, <span style="color: #9a3412">f, </span>is itself typed as a function;</li>
 <li>lines 20–22 and 24–26: the actual function-type parameter can be passed <strong>directly</strong>, either as an arrow function or a regular function, without first being stored in a variable.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>npx tsx fonctions/func-03.ts
@@ -1163,7 +1163,7 @@
 <a id="__codelineno-8-4" name="__codelineno-8-4"></a>150
 </code></pre></div></td></tr></table></div>
 <h2 id="84-script-func-04">8.4. <span style="color: #2e74b5">script [func-04]</span></h2>
-<p>This script demonstrates that a function can behave like a class—a mechanism that predates ES6 but is still valid, although it has now been replaced by the <code>class</code> keyword (see the chapter “Classes”):</p>
+<p>This script demonstrates that a function can behave like a class—a mechanism that predates ES6 but is still valid, although it has now been replaced by the <span style="color: #9a3412"><code>class</code> </span>keyword (see the chapter “Classes”):</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
@@ -1219,10 +1219,10 @@
 <a id="__codelineno-9-27" name="__codelineno-9-27"></a><span class="n">new</span> <span class="p">(</span><span class="n">g</span> <span class="k">as</span> <span class="nb">any</span><span class="p">)()</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>lines 5–10: <span style="color: #9a3412">f </span>is an “empty shell” function, typed as <code>this: any</code>—this special annotation for the first parameter tells TypeScript the type of <span style="color: #9a3412"><code>this</code> </span>inside the function, which is necessary here because properties are added to it from the outside, a pattern that TypeScript cannot deduce on its own;</li>
-<li>Lines 12–15: Properties are assigned to <span style="color: #9a3412">f</span> from outside—<span style="color: #9a3412">(f as any).prop1 = ...</span>;</li>
+<li>lines 5–10: <span style="color: #9a3412">f </span>is an “empty shell” function, typed as <code>this: any</code>—this special annotation on the first parameter tells TypeScript the type of <span style="color: #9a3412"><code>this</code> </span>inside the function, which is necessary here because properties are added to it from the outside, a pattern that TypeScript cannot deduce on its own;</li>
+<li>lines 12–15: properties are assigned to <code>f</code> from outside — <code>(f as any).prop1 = ...</code>;</li>
 <li>line 17: <span style="color: #9a3412">f.show()</span> is called, not <span style="color: #9a3412">f()</span>—this is indeed the notation for using an object, not a traditional function call;</li>
-<li>lines 20–25: <span style="color: #9a3412">g </span>defines <span style="color: #9a3412">this.prop2 </span>and <span style="color: #9a3412">this.show </span>within itself, just as a class constructor would;</li>
+<li>Lines 20–25: <span style="color: #9a3412">g </span>defines <span style="color: #9a3412">this.prop2 </span>and <span style="color: #9a3412">this.show </span>within itself, just as a class constructor would;</li>
 <li>line 27: <code>new (g as any)()</code> **instantiates <code>**g</code> as a class.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>npx tsx fonctions/func-04.ts
@@ -1253,9 +1253,9 @@
 <span class="normal"><a href="#__codelineno-12-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="s1">'use strict'</span><span class="p">;</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="c1">// rest operator</span>
 <a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="kd">function</span><span class="w"> </span><span class="nx">f</span><span class="p">(</span><span class="nx">arg1</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="nx">otherArgs</span><span class="o">:</span><span class="w"> </span><span class="nx">unknown</span><span class="p">[])</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">  </span><span class="c1">// first argument</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">   </span><span class="c1">// first argument</span>
 <a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"arg1="</span><span class="p">,</span><span class="w"> </span><span class="nx">arg1</span><span class="p">);</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">  </span><span class="c1">// the other arguments</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">   </span><span class="c1">// the other arguments</span>
 <a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
 <a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">  </span><span class="nx">otherArgs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">element</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"otherArguments["</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="s2">"]="</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">);</span>
@@ -1267,7 +1267,7 @@
 <a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="nx">f</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"deux"</span><span class="p">,</span><span class="w"> </span><span class="s2">"trois"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="p">})</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Line 3: <span style="color: #9a3412">function f(arg1: number, ...otherArgs: unknown[]): void </span>— <span style="color: #9a3412">otherArgs </span>groups all arguments passed after <span style="color: #9a3412">arg1</span>, regardless of their number. The <code>unknown[]</code> type is appropriate here because <span style="color: #9a3412">otherArgs </span>intentionally mixes different types (strings and objects, in the call on line 15).</li>
+<li>line 3: <span style="color: #9a3412">function f(arg1: number, ...otherArgs: unknown[]): void </span>— <span style="color: #9a3412">otherArgs </span>collects all arguments passed after <span style="color: #9a3412">arg1</span>, regardless of their number. The <code>unknown[]</code> type is appropriate here because <span style="color: #9a3412">otherArgs </span>intentionally mixes different types (strings and objects, in the call on line 15).</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>npx tsx fonctions/func-05.ts
 </code></pre></div>

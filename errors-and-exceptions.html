@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://stahe.github.io/en-typescript-sept-2026/errors-and-exceptions.html">
       
       
-        <link rel="prev" href="functions.html">
+        <link rel="prev" href="the-functions.html">
       
       
         <link rel="next" href="modules.html">
@@ -494,14 +494,14 @@
   
   
     <li class="md-nav__item">
-      <a href="functions.html" class="md-nav__link">
+      <a href="the-functions.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. Functions
+    8. The Functions
   
 
     
@@ -614,10 +614,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#94-excep-04-script" class="md-nav__link">
+  <a href="#94-script-excep-04" class="md-nav__link">
     <span class="md-ellipsis">
       
-        9.4. [excep-04] script
+        9.4. script [excep-04]
       
     </span>
   </a>
@@ -693,14 +693,14 @@
   
   
     <li class="md-nav__item">
-      <a href="the-functions-http-and-typescript.html" class="md-nav__link">
+      <a href="the-http-and-typescript-functions.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. The functions HTTP and TypeScript
+    12. The HTTP and TypeScript functions
   
 
     
@@ -747,14 +747,14 @@
   
   
     <li class="md-nav__item">
-      <a href="http-typescript-clients-of-the-tax-calculation-service.html" class="md-nav__link">
+      <a href="clients-http-and-typescript-of-the-tax-calculation-service.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. HTTP TypeScript clients of the tax calculation service
+    14. Clients HTTP and TypeScript of the tax calculation service
   
 
     
@@ -774,14 +774,14 @@
   
   
     <li class="md-nav__item">
-      <a href="new-features-ecmascript-2020-2024.html" class="md-nav__link">
+      <a href="new-features-in-ecmascript-2020-2024.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. New Features ECMAScript 2020–2024
+    15. New Features in ECMAScript 2020–2024
   
 
     
@@ -866,7 +866,7 @@
 
 
 <h1 id="9-errors-and-exceptions">9. <span style="color: #2e74b5">Errors and Exceptions</span></h1>
-<p>TypeScript inherits the exception handling mechanism from JavaScript, which is rather basic: the <strong><span style="color: #9a3412">[throw]</span></strong> statement signals an error, and the <strong><span style="color: #9a3412">[try / catch / finally]</span></strong> structure catches it. The scripts in this chapter are located in the <strong><span style="color: #9a3412">[exceptions]</span></strong> folder of the project.</p>
+<p>TypeScript inherits the exception handling system from JavaScript, which is rather basic: the <strong><span style="color: #9a3412">[throw]</span></strong> statement signals an error, and the <strong><span style="color: #9a3412">[try / catch / finally]</span></strong> structure catches it. The scripts in this chapter are located in the <strong><span style="color: #9a3412">[exceptions]</span></strong> folder of the project.</p>
 <h2 id="91-script-excep-01">9.1. <span style="color: #2e74b5">script [excep-01]</span></h2>
 <p>This script displays the current time in the format hours:minutes:seconds:milliseconds using the <strong><span style="color: #9a3412">[moment.js]</span></strong> library (<span style="color: #9a3412">npm install moment</span>), then demonstrates how <span style="color: #9a3412">try/catch/finally</span> works by triggering an error based on the parity of the current milliseconds:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
@@ -905,36 +905,36 @@
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="c1">// package moment</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="k">import</span><span class="w"> </span><span class="nx">moment</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">'moment'</span><span class="p">;</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="c1">// the try/catch/finally concept</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="c1">// the try/catch/finally principle</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">10</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">  </span><span class="c1">// current date and time</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">   </span><span class="c1">// current date and time</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">now</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">();</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">  </span><span class="c1">// time formatting to include milliseconds</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">   </span><span class="c1">// formatting the time to include milliseconds</span>
 <a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">moment</span><span class="p">(</span><span class="nx">now</span><span class="p">).</span><span class="nx">format</span><span class="p">(</span><span class="s2">"HH:mm:ss:SSS"</span><span class="p">);</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">  </span><span class="c1">// milliseconds</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">   </span><span class="c1">// milliseconds</span>
 <a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">milli</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Number</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="nx">time</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">3</span><span class="p">));</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">  </span><span class="c1">// display</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">   </span><span class="c1">// display</span>
 <a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"--------------------itération n° "</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="s2">"à"</span><span class="p">,</span><span class="w"> </span><span class="nx">time</span><span class="p">);</span>
 <a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">    </span><span class="c1">// random number</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">     </span><span class="c1">// random number</span>
 <a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">nbre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">milli</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span>
 <a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">nbre</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">      </span><span class="c1">// display an error message</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">       </span><span class="c1">// display an error message</span>
 <a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">      </span><span class="k">throw</span><span class="w"> </span><span class="s2">"erreur"</span><span class="p">;</span>
 <a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">    </span><span class="c1">// if you've reached this point, it means there was no error</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">     </span><span class="c1">// if you've reached this point, it means there was no error</span>
 <a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"pas d'erreur"</span><span class="p">);</span>
 <a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">    </span><span class="c1">// if you've reached this point, an error occurred</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">     </span><span class="c1">// if you've reached this point, an error occurred</span>
 <a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"erreur1="</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
 <a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">    </span><span class="c1">// executed in all cases, whether there is an error or not</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">     </span><span class="c1">// executed in all cases, whether there is an error or not</span>
 <a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"finally"</span><span class="p">)</span>
 <a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Line 4: <span style="color: #9a3412">import moment from &#x27;moment&#x27; </span>— imports a third-party library, just like <span style="color: #9a3412">sprintf-js </span>in the chapter “Strings”;</li>
+<li>line 4: <span style="color: #9a3412">import moment from &#x27;moment&#x27; </span>— imports a third-party library, just like <span style="color: #9a3412">sprintf-js </span>in the “Strings” chapter;</li>
 <li>On each loop iteration, if the current number of milliseconds is even, an error is thrown (line 21) and caught by the <code>catch</code> block; otherwise, the message “no error” is displayed;</li>
 <li>The <strong><span style="color: #9a3412">[finally]</span></strong> clause is executed systematically, regardless of whether an error occurred or not.</li>
 </ul>
@@ -1062,7 +1062,7 @@
 <a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">  </span><span class="k">throw</span><span class="w"> </span><span class="s2">"msg d'erreur"</span><span class="p">;</span>
 <a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">  </span><span class="c1">// an error occurred</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">   </span><span class="c1">// An error occurred</span>
 <a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"erreur=["</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">,</span><span class="w"> </span><span class="s2">"], type="</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">));</span>
 <a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="p">}</span>
 <a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="c1">// Throw a literal object</span>
@@ -1071,7 +1071,7 @@
 <a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">  </span><span class="k">throw</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">]</span>
 <a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">  </span><span class="c1">// An error occurred</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">   </span><span class="c1">// An error occurred</span>
 <a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"erreur=["</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">,</span><span class="w"> </span><span class="s2">"], type="</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">));</span>
 <a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="p">}</span>
 <a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="c1">// Throw an object</span>
@@ -1080,7 +1080,7 @@
 <a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">  </span><span class="k">throw</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="s2">"hercule"</span><span class="p">,</span><span class="w"> </span><span class="nx">pays</span><span class="o">:</span><span class="w"> </span><span class="s2">"grèce antique"</span><span class="w"> </span><span class="p">}</span>
 <a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="w">  </span><span class="c1">// An error occurred</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="w">   </span><span class="c1">// An error occurred</span>
 <a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"erreur=["</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">,</span><span class="w"> </span><span class="s2">"], type="</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">));</span>
 <a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="p">}</span>
 <a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="c1">// Throw an Error type</span>
@@ -1089,7 +1089,7 @@
 <a id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="w">  </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s2">"erreur de connexion au réseau"</span><span class="p">);</span>
 <a id="__codelineno-3-36" name="__codelineno-3-36"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="w">  </span><span class="c1">// An error occurred</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="w">   </span><span class="c1">// An error occurred</span>
 <a id="__codelineno-3-38" name="__codelineno-3-38"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"erreur=["</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">,</span><span class="w"> </span><span class="s2">"], type="</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">));</span>
 <a id="__codelineno-3-39" name="__codelineno-3-39"></a><span class="p">}</span>
 <a id="__codelineno-3-40" name="__codelineno-3-40"></a><span class="c1">// Throw an "Error" type</span>
@@ -1098,16 +1098,16 @@
 <a id="__codelineno-3-43" name="__codelineno-3-43"></a><span class="k">try</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-3-44" name="__codelineno-3-44"></a><span class="w">  </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s2">"erreur de connexion au réseau"</span><span class="p">);</span>
 <a id="__codelineno-3-45" name="__codelineno-3-45"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-46" name="__codelineno-3-46"></a><span class="w">  </span><span class="c1">// An error occurred—the message is in [error.message]</span>
-<a id="__codelineno-3-47" name="__codelineno-3-47"></a><span class="w">  </span><span class="c1">// [any] because TypeScript sets the catch variables to their default values in [unknown] (see the other</span>
-<a id="__codelineno-3-48" name="__codelineno-3-48"></a><span class="w">  </span><span class="c1">// try/catch blocks above, where it is sufficient to display [error] without accessing a property)</span>
+<a id="__codelineno-3-46" name="__codelineno-3-46"></a><span class="w">   </span><span class="c1">// An error occurred—the message is in [error.message]</span>
+<a id="__codelineno-3-47" name="__codelineno-3-47"></a><span class="w">   </span><span class="c1">// [any] because TypeScript sets the catch variables to their default values in [unknown] (see the other</span>
+<a id="__codelineno-3-48" name="__codelineno-3-48"></a><span class="w">   </span><span class="c1">// try/catch blocks above, where it is sufficient to display [error] without accessing a property)</span>
 <a id="__codelineno-3-49" name="__codelineno-3-49"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"erreur.message=["</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">.</span><span class="nx">message</span><span class="p">,</span><span class="w"> </span><span class="s2">"], type(error)="</span><span class="p">,</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">));</span>
 <a id="__codelineno-3-50" name="__codelineno-3-50"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><strong><span style="color: #9a3412">[Error] </span></strong>is a built-in class whose constructor accepts an error message as its first parameter, which can be retrieved from <span style="color: #9a3412">error.message</span>;</li>
-<li>TypeScript sets the <span style="color: #9a3412">catch</span> variable’s default type to <code>unknown</code> (see the note on line 47): accessing a property such as <span style="color: #9a3412"><code>.message</code> </span>therefore requires either a type check (<code>instanceof</code>, see the following script) or an explicit <span style="color: #9a3412"><code>catch</code> </span>annotation <span style="color: #9a3412">(<code>error: any</code>) </span>as shown on line 47 here;</li>
-<li>There are other classes besides <code>Error</code> that can be used to signal an error: <span style="color: #9a3412">EvalError</span>, <span style="color: #9a3412">RangeError</span>, <span style="color: #9a3412">ReferenceError</span>, <span style="color: #9a3412">SyntaxError</span>, <span style="color: #9a3412">TypeError</span>, <span style="color: #9a3412">URIError</span>.</li>
+<li><strong><span style="color: #9a3412">[Error] </span></strong>is a built-in class whose constructor accepts an error message as its first parameter, which can be retrieved in <span style="color: #9a3412">error.message</span>;</li>
+<li>TypeScript sets the <span style="color: #9a3412">catch</span> variable’s default type to <code>unknown</code> (see the note on line 47): accessing a property such as <span style="color: #9a3412"><code>.message</code> </span>then requires either a type check (<code>instanceof</code>, see the following script) or an explicit <span style="color: #9a3412"><code>catch</code> </span>annotation <span style="color: #9a3412">(<code>error: any</code>) </span>as shown on line 47 here;</li>
+<li>There are other classes besides <span style="color: #9a3412">Error </span>that can be used to report an error: <span style="color: #9a3412">EvalError</span>, <span style="color: #9a3412">RangeError</span>, <span style="color: #9a3412">ReferenceError</span>, <span style="color: #9a3412">SyntaxError</span>, <span style="color: #9a3412">TypeError</span>, <span style="color: #9a3412">URIError</span>.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>npx tsx exceptions/excep-02.ts
 </code></pre></div>
@@ -1183,15 +1183,15 @@
 <a id="__codelineno-6-5" name="__codelineno-6-5"></a>
 <a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="o">//</span> <span class="n">distinguish</span> <span class="n">the</span> <span class="n">Error</span> <span class="n">instance</span> <span class="n">received</span> <span class="ow">in</span> <span class="n">a</span> <span class="p">[</span><span class="n">catch</span><span class="p">]</span>
 <a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="k">for</span> <span class="p">(</span><span class="n">let</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a>  <span class="o">//</span> <span class="n">current</span> <span class="n">date</span> <span class="ow">and</span> <span class="n">time</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>   <span class="o">//</span> <span class="n">current</span> <span class="n">date</span> <span class="ow">and</span> <span class="n">time</span>
 <a id="__codelineno-6-9" name="__codelineno-6-9"></a>  <span class="n">const</span> <span class="n">now</span> <span class="o">=</span> <span class="n">Date</span><span class="o">.</span><span class="n">now</span><span class="p">();</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a>  <span class="o">//</span> <span class="n">formatting</span> <span class="n">the</span> <span class="n">time</span> <span class="n">to</span> <span class="n">include</span> <span class="n">milliseconds</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a>   <span class="o">//</span> <span class="n">formatting</span> <span class="n">the</span> <span class="n">time</span> <span class="n">to</span> <span class="n">include</span> <span class="n">milliseconds</span>
 <a id="__codelineno-6-11" name="__codelineno-6-11"></a>  <span class="n">const</span> <span class="n">time</span> <span class="o">=</span> <span class="n">moment</span><span class="p">(</span><span class="n">now</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">"HH:mm:ss:SSS"</span><span class="p">);</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12"></a>  <span class="o">//</span> <span class="n">milliseconds</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a>   <span class="o">//</span> <span class="n">milliseconds</span>
 <a id="__codelineno-6-13" name="__codelineno-6-13"></a>  <span class="n">const</span> <span class="n">milli</span> <span class="o">=</span> <span class="n">Number</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">substr</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">length</span> <span class="o">-</span> <span class="mi">3</span><span class="p">));</span>
 <a id="__codelineno-6-14" name="__codelineno-6-14"></a>  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">"--------------------itération n° "</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
 <a id="__codelineno-6-15" name="__codelineno-6-15"></a>  <span class="k">try</span> <span class="p">{</span>
-<a id="__codelineno-6-16" name="__codelineno-6-16"></a>    <span class="o">//</span> <span class="n">random</span> <span class="n">number</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a>     <span class="o">//</span> <span class="n">random</span> <span class="n">number</span>
 <a id="__codelineno-6-17" name="__codelineno-6-17"></a>    <span class="n">const</span> <span class="n">nbre</span> <span class="o">=</span> <span class="n">milli</span> <span class="o">%</span> <span class="mi">3</span><span class="p">;</span>
 <a id="__codelineno-6-18" name="__codelineno-6-18"></a>    <span class="n">switch</span> <span class="p">(</span><span class="n">nbre</span><span class="p">)</span> <span class="p">{</span>
 <a id="__codelineno-6-19" name="__codelineno-6-19"></a>      <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
@@ -1202,7 +1202,7 @@
 <a id="__codelineno-6-24" name="__codelineno-6-24"></a>        <span class="n">throw</span> <span class="n">new</span> <span class="n">EvalError</span><span class="p">(</span><span class="s2">"erreur 3"</span><span class="p">);</span>
 <a id="__codelineno-6-25" name="__codelineno-6-25"></a>    <span class="p">}</span>
 <a id="__codelineno-6-26" name="__codelineno-6-26"></a>  <span class="p">}</span> <span class="n">catch</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-6-27" name="__codelineno-6-27"></a>    <span class="o">//</span> <span class="n">an</span> <span class="n">error</span> <span class="n">occurred</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27"></a>     <span class="o">//</span> <span class="n">an</span> <span class="n">error</span> <span class="n">occurred</span>
 <a id="__codelineno-6-28" name="__codelineno-6-28"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">error</span> <span class="n">instanceof</span> <span class="ne">ReferenceError</span><span class="p">)</span> <span class="p">{</span>
 <a id="__codelineno-6-29" name="__codelineno-6-29"></a>      <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">"ReferenceError :"</span><span class="p">,</span> <span class="n">error</span><span class="o">.</span><span class="n">message</span><span class="p">);</span>
 <a id="__codelineno-6-30" name="__codelineno-6-30"></a>    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
@@ -1218,7 +1218,7 @@
 <a id="__codelineno-6-40" name="__codelineno-6-40"></a>  <span class="p">}</span>
 <a id="__codelineno-6-41" name="__codelineno-6-41"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>Again, the result depends on the exact time of execution—each run yields a different distribution among the three types of errors:</p>
+<p>Again, the result depends on the exact time of execution—each run yields a different distribution among the three error types:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>npx tsx exceptions/excep-03.ts
 </code></pre></div>
 <p><em>Execution result:</em></p>
@@ -1262,8 +1262,8 @@
 <a id="__codelineno-8-19" name="__codelineno-8-19"></a>--------------------itération n°  9
 <a id="__codelineno-8-20" name="__codelineno-8-20"></a>EvalError : erreur 3
 </code></pre></div></td></tr></table></div>
-<h2 id="94-excep-04-script">9.4. <span style="color: #2e74b5">[excep-04] script</span></h2>
-<p><strong><span style="color: #9a3412">[NOUVEAU depuis 2019] </span></strong>This script introduces two important additions introduced with ECMAScript 2022: the <strong><span style="color: #9a3412">[cause] </span></strong><span style="color: #9a3412">error </span>option and <strong>custom error classes</strong>.</p>
+<h2 id="94-script-excep-04">9.4. <span style="color: #2e74b5">script [excep-04]</span></h2>
+<p><strong><span style="color: #9a3412">[NOUVEAU depuis 2019] </span></strong>This script includes two important additions introduced with ECMAScript 2022: the <strong><span style="color: #9a3412">[cause]</span></strong> option for <span style="color: #9a3412">Error</span>, and <strong>custom error classes</strong>.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
@@ -1349,11 +1349,11 @@
 <a id="__codelineno-9-5" name="__codelineno-9-5"></a>
 <a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="c1">// It is common to encounter a technical (low-level) error and to</span>
 <a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="c1">// trigger it again in the form of a more explicit (high-level) error, so that</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="c1">// so that the calling code can better understand the business context.</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="c1">// the calling code can better understand the business context.</span>
 <a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="c1">// AVANT In 2022, doing this caused us to lose track of the original error.</span>
 <a id="__codelineno-9-10" name="__codelineno-9-10"></a>
 <a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="kd">function</span><span class="w"> </span><span class="nx">lireConfiguration</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="w">  </span><span class="c1">// simulates a low-level technical error (e.g., file not found)</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="w">   </span><span class="c1">// simulates a low-level technical error (e.g., file not found)</span>
 <a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="w">  </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s2">"ENOENT: fichier 'config.json' introuvable"</span><span class="p">);</span>
 <a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="p">}</span>
 <a id="__codelineno-9-15" name="__codelineno-9-15"></a>
@@ -1361,8 +1361,8 @@
 <a id="__codelineno-9-17" name="__codelineno-9-17"></a><span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="w">    </span><span class="nx">lireConfiguration</span><span class="p">();</span>
 <a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">erreurTechnique</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="w">    </span><span class="c1">// The second parameter {cause} allows you to link the original error</span>
-<a id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="w">    </span><span class="c1">// to the new error without losing the information</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="w">     </span><span class="c1">// The second parameter {cause} allows the original error to be linked</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="w">     </span><span class="c1">// to the new error, without losing the information</span>
 <a id="__codelineno-9-22" name="__codelineno-9-22"></a><span class="w">    </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s2">"impossible de démarrer l'application"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">cause</span><span class="o">:</span><span class="w"> </span><span class="nx">erreurTechnique</span><span class="w"> </span><span class="p">});</span>
 <a id="__codelineno-9-23" name="__codelineno-9-23"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-9-24" name="__codelineno-9-24"></a><span class="p">}</span>
@@ -1371,13 +1371,13 @@
 <a id="__codelineno-9-27" name="__codelineno-9-27"></a><span class="w">  </span><span class="nx">démarrerApplication</span><span class="p">();</span>
 <a id="__codelineno-9-28" name="__codelineno-9-28"></a><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">erreur</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-9-29" name="__codelineno-9-29"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"erreur="</span><span class="p">,</span><span class="w"> </span><span class="nx">erreur</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
-<a id="__codelineno-9-30" name="__codelineno-9-30"></a><span class="w">  </span><span class="c1">// erreur.cause provides access to the original error, which is very useful for debugging</span>
+<a id="__codelineno-9-30" name="__codelineno-9-30"></a><span class="w">   </span><span class="c1">// erreur.cause provides access to the original error, which is very useful for debugging</span>
 <a id="__codelineno-9-31" name="__codelineno-9-31"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"cause="</span><span class="p">,</span><span class="w"> </span><span class="nx">erreur</span><span class="p">.</span><span class="nx">cause</span><span class="o">?</span><span class="p">.</span><span class="nx">message</span><span class="p">);</span>
 <a id="__codelineno-9-32" name="__codelineno-9-32"></a><span class="p">}</span>
 <a id="__codelineno-9-33" name="__codelineno-9-33"></a>
 <a id="__codelineno-9-34" name="__codelineno-9-34"></a><span class="c1">// ------------------------------------------------------------------------</span>
 <a id="__codelineno-9-35" name="__codelineno-9-35"></a><span class="c1">// custom error classes (available since ECMAScript 2015,</span>
-<a id="__codelineno-9-36" name="__codelineno-9-36"></a><span class="c1">// but very often used with [cause] since 2022, so reviewed here)</span>
+<a id="__codelineno-9-36" name="__codelineno-9-36"></a><span class="c1">// (but very often used with [cause] since 2022, so reviewed here)</span>
 <a id="__codelineno-9-37" name="__codelineno-9-37"></a><span class="c1">// ------------------------------------------------------------------------</span>
 <a id="__codelineno-9-38" name="__codelineno-9-38"></a><span class="c1">// you can create your own error types by extending [Error], which allows</span>
 <a id="__codelineno-9-39" name="__codelineno-9-39"></a><span class="c1">// to distinguish them using [instanceof], as with ReferenceError or RangeError</span>
@@ -1387,11 +1387,11 @@
 <a id="__codelineno-9-43" name="__codelineno-9-43"></a><span class="w">  </span><span class="nx">champEnErreur</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
 <a id="__codelineno-9-44" name="__codelineno-9-44"></a>
 <a id="__codelineno-9-45" name="__codelineno-9-45"></a><span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">,</span><span class="w"> </span><span class="nx">champEnErreur</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="o">?:</span><span class="w"> </span><span class="nx">ErrorOptions</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-46" name="__codelineno-9-46"></a><span class="w">    </span><span class="c1">// the message and the [options] (including any cause) are forwarded to the parent [Error]</span>
+<a id="__codelineno-9-46" name="__codelineno-9-46"></a><span class="w">     </span><span class="c1">// the message and the [options] (including any cause) are forwarded to the parent [Error]</span>
 <a id="__codelineno-9-47" name="__codelineno-9-47"></a><span class="w">    </span><span class="k">super</span><span class="p">(</span><span class="nx">message</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">);</span>
-<a id="__codelineno-9-48" name="__codelineno-9-48"></a><span class="w">    </span><span class="c1">// The default name would be "Error"; it can be customized</span>
+<a id="__codelineno-9-48" name="__codelineno-9-48"></a><span class="w">     </span><span class="c1">// The default name would be "Error"; it can be customized</span>
 <a id="__codelineno-9-49" name="__codelineno-9-49"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"ErreurValidation"</span><span class="p">;</span>
-<a id="__codelineno-9-50" name="__codelineno-9-50"></a><span class="w">    </span><span class="c1">// Business-specific information for this type of error can be added</span>
+<a id="__codelineno-9-50" name="__codelineno-9-50"></a><span class="w">     </span><span class="c1">// Business-specific information for this type of error can be added</span>
 <a id="__codelineno-9-51" name="__codelineno-9-51"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">champEnErreur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">champEnErreur</span><span class="p">;</span>
 <a id="__codelineno-9-52" name="__codelineno-9-52"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-9-53" name="__codelineno-9-53"></a><span class="p">}</span>
@@ -1412,18 +1412,18 @@
 <a id="__codelineno-9-68" name="__codelineno-9-68"></a><span class="w">    </span><span class="nx">valider</span><span class="p">(</span><span class="nx">valeur</span><span class="p">);</span>
 <a id="__codelineno-9-69" name="__codelineno-9-69"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`valeur [</span><span class="si">${</span><span class="nx">valeur</span><span class="si">}</span><span class="sb">] : validation OK`</span><span class="p">);</span>
 <a id="__codelineno-9-70" name="__codelineno-9-70"></a><span class="w">  </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">erreur</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-71" name="__codelineno-9-71"></a><span class="w">    </span><span class="c1">// We can distinguish our business errors from other errors using `instanceof`</span>
+<a id="__codelineno-9-71" name="__codelineno-9-71"></a><span class="w">     </span><span class="c1">// We can distinguish our business errors from other errors using `instanceof`</span>
 <a id="__codelineno-9-72" name="__codelineno-9-72"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">erreur</span><span class="w"> </span><span class="ow">instanceof</span><span class="w"> </span><span class="nx">ErreurValidation</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-9-73" name="__codelineno-9-73"></a><span class="w">      </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`valeur [</span><span class="si">${</span><span class="nx">valeur</span><span class="si">}</span><span class="sb">] : erreur de validation sur [</span><span class="si">${</span><span class="nx">erreur</span><span class="p">.</span><span class="nx">champEnErreur</span><span class="si">}</span><span class="sb">] - </span><span class="si">${</span><span class="nx">erreur</span><span class="p">.</span><span class="nx">message</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
 <a id="__codelineno-9-74" name="__codelineno-9-74"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-75" name="__codelineno-9-75"></a><span class="w">      </span><span class="c1">// An unexpected error not anticipated by our code</span>
+<a id="__codelineno-9-75" name="__codelineno-9-75"></a><span class="w">       </span><span class="c1">// An unexpected error not anticipated by our code</span>
 <a id="__codelineno-9-76" name="__codelineno-9-76"></a><span class="w">      </span><span class="k">throw</span><span class="w"> </span><span class="nx">erreur</span><span class="p">;</span>
 <a id="__codelineno-9-77" name="__codelineno-9-77"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-9-78" name="__codelineno-9-78"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-9-79" name="__codelineno-9-79"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>lines 17–22: When catching a low-level technical error to re-throw it in a more explicit form, the second parameter <span style="color: #9a3412">{cause} </span>of <span style="color: #9a3412">new Error(...) </span>allows you to <strong>keep track of the original error</strong>, which would otherwise be lost (behavior prior to 2022);</li>
+<li>lines 17–22: When catching a low-level technical error to rethrow it in a more explicit form, the second parameter <span style="color: #9a3412">{cause} </span>of <span style="color: #9a3412"><code>new Error(...)</code> </span>allows you to <strong>preserve the trace of the original error</strong>, which would otherwise be lost (behavior prior to 2022);</li>
 <li>line 31: <span style="color: #9a3412">erreur.cause?.message </span>retrieves the message from the original error, which is very useful for debugging;</li>
 <li>lines 41–53: A <strong>custom error class</strong> (<span style="color: #9a3412">ErreurValidation extends Error</span>) allows you to create your own business error types, which can then be distinguished using <code>instanceof</code> (line 72), just like <span style="color: #9a3412">ReferenceError </span>or <span style="color: #9a3412">RangeError </span>in the previous script.</li>
 </ul>

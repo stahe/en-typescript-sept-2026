@@ -15,10 +15,10 @@
         <link rel="canonical" href="https://stahe.github.io/en-typescript-sept-2026/the-classes.html">
       
       
-        <link rel="prev" href="the-functions-http-and-typescript.html">
+        <link rel="prev" href="the-http-and-typescript-functions.html">
       
       
-        <link rel="next" href="http-typescript-clients-of-the-tax-calculation-service.html">
+        <link rel="next" href="clients-http-and-typescript-of-the-tax-calculation-service.html">
       
       
         
@@ -494,14 +494,14 @@
   
   
     <li class="md-nav__item">
-      <a href="functions.html" class="md-nav__link">
+      <a href="the-functions.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. Functions
+    8. The Functions
   
 
     
@@ -602,14 +602,14 @@
   
   
     <li class="md-nav__item">
-      <a href="the-functions-http-and-typescript.html" class="md-nav__link">
+      <a href="the-http-and-typescript-functions.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. The functions HTTP and TypeScript
+    12. The HTTP and TypeScript functions
   
 
     
@@ -733,10 +733,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#135-script-class-04-polymorphism" class="md-nav__link">
+  <a href="#135-class-04-script-polymorphism" class="md-nav__link">
     <span class="md-ellipsis">
       
-        13.5. script [class-04] — polymorphism
+        13.5. [class-04] script — polymorphism
       
     </span>
   </a>
@@ -744,10 +744,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#136-class-05-script-native-private-fields" class="md-nav__link">
+  <a href="#136-script-class-05-native-private-fields" class="md-nav__link">
     <span class="md-ellipsis">
       
-        13.6. [class-05] script — native private fields
+        13.6. script [class-05] — native private fields
       
     </span>
   </a>
@@ -769,14 +769,14 @@
   
   
     <li class="md-nav__item">
-      <a href="http-typescript-clients-of-the-tax-calculation-service.html" class="md-nav__link">
+      <a href="clients-http-and-typescript-of-the-tax-calculation-service.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. HTTP TypeScript clients of the tax calculation service
+    14. Clients HTTP and TypeScript of the tax calculation service
   
 
     
@@ -796,14 +796,14 @@
   
   
     <li class="md-nav__item">
-      <a href="new-features-ecmascript-2020-2024.html" class="md-nav__link">
+      <a href="new-features-in-ecmascript-2020-2024.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. New Features ECMAScript 2020–2024
+    15. New Features in ECMAScript 2020–2024
   
 
     
@@ -888,7 +888,7 @@
 
 
 <h1 id="13-the-classes">13. <span style="color: #2e74b5">The classes</span></h1>
-<p>Here we introduce the classes ECMAScript, typed as TypeScript. Before presenting them, let’s recall (script <span style="color: #9a3412">class-00</span>, previously covered in the chapter “Functions” under the name <span style="color: #9a3412">func-04</span>) that functions can already behave like classes—it is this historical mechanism that the keyword <strong><span style="color: #9a3412">[class] </span></strong>simplifies.</p>
+<p>Here we introduce the classes ECMAScript, typed as TypeScript. Before presenting them, let’s recall (script <span style="color: #9a3412">class-00</span>, already covered in the chapter “Functions” under the name <span style="color: #9a3412">func-04</span>) that functions can already behave like classes—it is this historical mechanism that the keyword <strong><span style="color: #9a3412">[class] </span></strong>simplifies.</p>
 <p>The scripts for this chapter are located in the <strong><span style="color: #9a3412">[classes]</span></strong> folder of the project.</p>
 <h2 id="131-script-class-00">13.1. <span style="color: #2e74b5">script [class-00]</span></h2>
 <p>Reminder of the historical mechanism (functions used as classes):</p>
@@ -922,9 +922,9 @@
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="o">//</span> <span class="n">A</span> <span class="n">function</span> <span class="n">can</span> <span class="n">be</span> <span class="n">used</span> <span class="k">as</span> <span class="n">an</span> <span class="nb">object</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a>
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="o">//</span> <span class="n">an</span> <span class="n">empty</span> <span class="n">shell</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="o">//</span> <span class="p">[</span><span class="nb">any</span><span class="p">]:</span> <span class="n">The</span> <span class="nb">type</span> <span class="n">of</span> <span class="p">[</span><span class="n">this</span><span class="p">]</span> <span class="ow">is</span> <span class="n">intentionally</span> <span class="n">flexible</span> <span class="n">here</span><span class="p">,</span> <span class="n">because</span> <span class="n">we</span> <span class="n">assign</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="o">//</span> <span class="n">properties</span> <span class="n">to</span> <span class="n">the</span> <span class="n">function</span> <span class="n">itself</span><span class="p">,</span> <span class="n">APRÈS</span><span class="p">,</span> <span class="ow">in</span> <span class="n">its</span> <span class="n">definition</span> <span class="p">(</span><span class="n">see</span> <span class="n">below</span><span class="p">)</span> <span class="o">-</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="o">//</span> <span class="n">a</span> <span class="n">pattern</span> <span class="n">that</span> <span class="n">TypeScript</span> <span class="n">cannot</span> <span class="n">deduce</span> <span class="n">on</span> <span class="n">its</span> <span class="n">own</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="o">//</span> <span class="p">[</span><span class="nb">any</span><span class="p">]:</span> <span class="n">the</span> <span class="nb">type</span> <span class="n">of</span> <span class="p">[</span><span class="n">this</span><span class="p">]</span> <span class="ow">is</span> <span class="n">intentionally</span> <span class="n">flexible</span> <span class="n">here</span><span class="p">,</span> <span class="n">because</span> <span class="n">we</span> <span class="n">assign</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="o">//</span> <span class="n">properties</span> <span class="n">to</span> <span class="n">the</span> <span class="n">function</span> <span class="n">itself</span><span class="p">,</span> <span class="n">APRÈS</span><span class="p">,</span> <span class="ow">in</span> <span class="n">its</span> <span class="n">definition</span> <span class="p">(</span><span class="n">see</span> <span class="n">below</span><span class="p">)</span> <span class="err">—</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="o">//</span> <span class="n">a</span> <span class="n">schema</span> <span class="n">that</span> <span class="n">TypeScript</span> <span class="n">cannot</span> <span class="n">deduce</span> <span class="n">on</span> <span class="n">its</span> <span class="n">own</span>
 <a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="n">function</span> <span class="n">f</span><span class="p">(</span><span class="n">this</span><span class="p">:</span> <span class="nb">any</span><span class="p">):</span> <span class="n">void</span> <span class="p">{</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9"></a>
 <a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="p">}</span>
@@ -956,7 +956,7 @@
 <div style="margin:0 0 0.75em 0; background-color:#fff4ce; padding:0.35em 0.6em"><b>Note: </b>ES6 introduced the <span style="color: #9a3412">`class`</span> keyword, which allows you to achieve the same result in a much more readable and reliable way, without resorting to this functional workaround—as demonstrated by the following scripts.</div>
 
 <h2 id="132-script-class-01">13.2. <span style="color: #2e74b5">script [class-01]</span></h2>
-<p>This script defines a class <strong><span style="color: #9a3412">[Personne]</span></strong>, with a constructor, getters/setters, and a method <span style="color: #9a3412">toString</span>:</p>
+<p>This script defines a class named <strong><span style="color: #9a3412">[Personne]</span></strong>, with a constructor, getters/setters, and a method named <span style="color: #9a3412">toString</span>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
@@ -1013,14 +1013,14 @@
 <a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">  </span><span class="kr">private</span><span class="w"> </span><span class="nx">_prénom</span><span class="o">!:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
 <a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">  </span><span class="kr">private</span><span class="w"> </span><span class="nx">_âge</span><span class="o">!:</span><span class="w"> </span><span class="nx">number</span><span class="p">;</span>
 <a id="__codelineno-3-7" name="__codelineno-3-7"></a>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">  </span><span class="c1">// constructor</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">   </span><span class="c1">// constructor</span>
 <a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">,</span><span class="w"> </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">,</span><span class="w"> </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nom</span><span class="p">;</span>
 <a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">prénom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prénom</span><span class="p">;</span>
 <a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">âge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">âge</span><span class="p">;</span>
 <a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-3-14" name="__codelineno-3-14"></a>
-<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">  </span><span class="c1">// getters and setters</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">   </span><span class="c1">// getters and setters</span>
 <a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">  </span><span class="nx">get</span><span class="w"> </span><span class="nx">nom</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">_nom</span><span class="p">;</span>
 <a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">  </span><span class="p">}</span>
@@ -1042,7 +1042,7 @@
 <a id="__codelineno-3-34" name="__codelineno-3-34"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">_âge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">value</span><span class="p">;</span>
 <a id="__codelineno-3-35" name="__codelineno-3-35"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-3-36" name="__codelineno-3-36"></a>
-<a id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="w">  </span><span class="c1">// toString to JSON</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="w">   </span><span class="c1">// toString to JSON</span>
 <a id="__codelineno-3-38" name="__codelineno-3-38"></a><span class="w">  </span><span class="nx">toString</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-3-39" name="__codelineno-3-39"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
 <a id="__codelineno-3-40" name="__codelineno-3-40"></a><span class="w">  </span><span class="p">}</span>
@@ -1054,14 +1054,14 @@
 <a id="__codelineno-3-46" name="__codelineno-3-46"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"personne="</span><span class="p">,</span><span class="w"> </span><span class="nx">personne</span><span class="p">.</span><span class="nx">toString</span><span class="p">(),</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="p">(</span><span class="nx">personne</span><span class="p">),</span><span class="w"> </span><span class="nx">personne</span><span class="w"> </span><span class="ow">instanceof</span><span class="w"> </span><span class="p">(</span><span class="nx">Personne</span><span class="p">));</span>
 <a id="__codelineno-3-47" name="__codelineno-3-47"></a><span class="p">}</span>
 <a id="__codelineno-3-48" name="__codelineno-3-48"></a>
-<a id="__codelineno-3-49" name="__codelineno-3-49"></a><span class="c1">// calling `main`</span>
+<a id="__codelineno-3-49" name="__codelineno-3-49"></a><span class="c1">// main call</span>
 <a id="__codelineno-3-50" name="__codelineno-3-50"></a><span class="nx">main</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><strong><span style="color: #9a3412">[class] </span></strong>defines the class; <strong><span style="color: #9a3412">[constructor] is </span></strong>its constructor—there can only be one per class;</li>
+<li><strong><span style="color: #9a3412">[class] </span></strong>introduces the class; <strong><span style="color: #9a3412">[constructor] is </span></strong>its constructor—there can only be one per class;</li>
 <li>lines 4–6: the fields <span style="color: #9a3412">_nom</span>, <span style="color: #9a3412">_prénom</span>, and <span style="color: #9a3412">_âge </span>are declared with the modifier <strong><span style="color: #9a3412">[private]</span></strong>—accessible only from within the class, unlike a simple naming convention. The <span style="color: #9a3412">! </span>(*definite assignment assertion*) tells TypeScript that these fields will indeed be assigned before any read operation, even if this is not directly visible in their declaration (the constructor, via the setters, handles this);</li>
-<li>lines 16–35: getters and setters — syntax identical to that seen for object literals (chapter “Object Literals,” script <span style="color: #9a3412">obj-03</span>), but integrated into the class;</li>
-<li>line 46: <code>person instanceof (Person)</code>—unlike with literal objects, you can determine the exact type of a class instance.</li>
+<li>lines 16–35: getters and setters—the syntax is identical to that seen for object literals (chapter “Object Literals,” script <span style="color: #9a3412">obj-03</span>), but integrated into the class;</li>
+<li>line 46: <code>person instanceof (Person)</code> — unlike with object literals, you can determine the exact type of a class instance.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>npx tsx classes/class-01.ts
 </code></pre></div>
@@ -1118,21 +1118,21 @@
 <span class="normal"><a href="#__codelineno-6-46">46</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1">// class</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="kd">class</span><span class="w"> </span><span class="nx">Personne</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3"></a>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">  </span><span class="c1">// private properties (accessed via the getters/setters below)</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">  </span><span class="c1">// [!]: We assure TypeScript that they will be assigned before being read</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">  </span><span class="c1">// (here, via the constructor that calls the setters)</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">   </span><span class="c1">// private properties (accessed via the getters/setters below)</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">   </span><span class="c1">// [!]: We assure TypeScript that they will be assigned before being read</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">   </span><span class="c1">// (here, via the constructor that calls the setters)</span>
 <a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">  </span><span class="kr">private</span><span class="w"> </span><span class="nx">_nom</span><span class="o">!:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
 <a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">  </span><span class="kr">private</span><span class="w"> </span><span class="nx">_prénom</span><span class="o">!:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
 <a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">  </span><span class="kr">private</span><span class="w"> </span><span class="nx">_âge</span><span class="o">!:</span><span class="w"> </span><span class="nx">number</span><span class="p">;</span>
 <a id="__codelineno-6-10" name="__codelineno-6-10"></a>
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">  </span><span class="c1">// constructor</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">   </span><span class="c1">// constructor</span>
 <a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">nom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">,</span><span class="w"> </span><span class="nx">prénom</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">,</span><span class="w"> </span><span class="nx">âge</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nom</span><span class="p">;</span>
 <a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">prénom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prénom</span><span class="p">;</span>
 <a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">âge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">âge</span><span class="p">;</span>
 <a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-6-17" name="__codelineno-6-17"></a>
-<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="w">  </span><span class="c1">// getters and setters</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="w">   </span><span class="c1">// getters and setters</span>
 <a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="w">  </span><span class="nx">get</span><span class="w"> </span><span class="nx">nom</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">_nom</span><span class="p">;</span>
 <a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="w">  </span><span class="p">}</span>
@@ -1154,7 +1154,7 @@
 <a id="__codelineno-6-37" name="__codelineno-6-37"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">_âge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">value</span><span class="p">;</span>
 <a id="__codelineno-6-38" name="__codelineno-6-38"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-6-39" name="__codelineno-6-39"></a>
-<a id="__codelineno-6-40" name="__codelineno-6-40"></a><span class="w">  </span><span class="c1">// toString to JSON</span>
+<a id="__codelineno-6-40" name="__codelineno-6-40"></a><span class="w">   </span><span class="c1">// toString to JSON</span>
 <a id="__codelineno-6-41" name="__codelineno-6-41"></a><span class="w">  </span><span class="nx">toString</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-6-42" name="__codelineno-6-42"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
 <a id="__codelineno-6-43" name="__codelineno-6-43"></a><span class="w">  </span><span class="p">}</span>
@@ -1162,7 +1162,7 @@
 <a id="__codelineno-6-45" name="__codelineno-6-45"></a><span class="c1">// export class</span>
 <a id="__codelineno-6-46" name="__codelineno-6-46"></a><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">Personne</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
-<p>The <strong><span style="color: #9a3412">[class-02]</span></strong> script creates a class named <strong><span style="color: #9a3412">[Enseignant] </span></strong>derived from <span style="color: #9a3412">Person</span>:</p>
+<p>The script <strong><span style="color: #9a3412">[class-02] </span></strong>creates a class <strong><span style="color: #9a3412">[Enseignant] </span></strong>derived from <span style="color: #9a3412">Person</span>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
@@ -1206,13 +1206,13 @@
 <a id="__codelineno-7-8" name="__codelineno-7-8"></a>
 <a id="__codelineno-7-9" name="__codelineno-7-9"></a>  <span class="n">private</span> <span class="n">_discipline</span><span class="err">!</span><span class="p">:</span> <span class="n">string</span><span class="p">;</span>
 <a id="__codelineno-7-10" name="__codelineno-7-10"></a>
-<a id="__codelineno-7-11" name="__codelineno-7-11"></a>  <span class="o">//</span> <span class="n">constructor</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a>   <span class="o">//</span> <span class="n">constructor</span>
 <a id="__codelineno-7-12" name="__codelineno-7-12"></a>  <span class="n">constructor</span><span class="p">(</span><span class="n">nom</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span> <span class="n">prénom</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span> <span class="n">âge</span><span class="p">:</span> <span class="n">number</span><span class="p">,</span> <span class="n">discipline</span><span class="p">:</span> <span class="n">string</span><span class="p">)</span> <span class="p">{</span>
 <a id="__codelineno-7-13" name="__codelineno-7-13"></a>    <span class="nb">super</span><span class="p">(</span><span class="n">nom</span><span class="p">,</span> <span class="n">prénom</span><span class="p">,</span> <span class="n">âge</span><span class="p">);</span>
 <a id="__codelineno-7-14" name="__codelineno-7-14"></a>    <span class="n">this</span><span class="o">.</span><span class="n">discipline</span> <span class="o">=</span> <span class="n">discipline</span><span class="p">;</span>
 <a id="__codelineno-7-15" name="__codelineno-7-15"></a>  <span class="p">}</span>
 <a id="__codelineno-7-16" name="__codelineno-7-16"></a>
-<a id="__codelineno-7-17" name="__codelineno-7-17"></a>  <span class="o">//</span> <span class="n">getters</span> <span class="ow">and</span> <span class="n">setters</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a>   <span class="o">//</span> <span class="n">getters</span> <span class="ow">and</span> <span class="n">setters</span>
 <a id="__codelineno-7-18" name="__codelineno-7-18"></a>  <span class="n">get</span> <span class="n">discipline</span><span class="p">():</span> <span class="n">string</span> <span class="p">{</span>
 <a id="__codelineno-7-19" name="__codelineno-7-19"></a>    <span class="k">return</span> <span class="n">this</span><span class="o">.</span><span class="n">_discipline</span><span class="p">;</span>
 <a id="__codelineno-7-20" name="__codelineno-7-20"></a>  <span class="p">}</span>
@@ -1234,8 +1234,8 @@
 <ul>
 <li>line 5: <span style="color: #9a3412">import Person from &#x27;./Personne.js&#x27; </span>— the class is imported from its module. The <span style="color: #9a3412">.js </span>extension (not <span style="color: #9a3412">.ts</span>) is <strong>required</strong> with Node.js’s modern module resolution, even if the source file is a <span style="color: #9a3412">.ts </span>file (see the “Installation” chapter);</li>
 <li>line 8: <span style="color: #9a3412">class Teacher extends Person </span>— <span style="color: #9a3412">Teacher </span>inherits all members from <span style="color: #9a3412">Person </span>and adds a property <span style="color: #9a3412">_discipline </span>with its getter/setter;</li>
-<li>line 14: <span style="color: #9a3412">super(lastName, firstName, age) </span>calls the parent class’s constructor, which initializes <span style="color: #9a3412">_nom</span>, <span style="color: #9a3412">_prénom</span>, and <span style="color: #9a3412">_âge</span>;</li>
-<li>line 31: <code>teacher instanceof Teacher</code> — <code>TypeScript/JavaScript</code> knows the exact type of the instance, even after inheritance.</li>
+<li>line 14: <span style="color: #9a3412">super(nom, prénom, âge </span>calls the parent class’s constructor, which initializes <span style="color: #9a3412">_nom</span>, <span style="color: #9a3412">_prénom</span>, and <span style="color: #9a3412">_âge</span>;</li>
+<li>line 31: <span style="color: #9a3412">teacher instanceof Teacher </span>— TypeScript/JavaScript knows the exact type of the instance, even after inheritance.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>npx tsx classes/class-02.ts
 </code></pre></div>
@@ -1291,13 +1291,13 @@
 <a id="__codelineno-10-8" name="__codelineno-10-8"></a>
 <a id="__codelineno-10-9" name="__codelineno-10-9"></a>  <span class="n">private</span> <span class="n">_discipline</span><span class="err">!</span><span class="p">:</span> <span class="n">string</span><span class="p">;</span>
 <a id="__codelineno-10-10" name="__codelineno-10-10"></a>
-<a id="__codelineno-10-11" name="__codelineno-10-11"></a>  <span class="o">//</span> <span class="n">constructor</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a>   <span class="o">//</span> <span class="n">constructor</span>
 <a id="__codelineno-10-12" name="__codelineno-10-12"></a>  <span class="n">constructor</span><span class="p">(</span><span class="n">nom</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span> <span class="n">prénom</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span> <span class="n">âge</span><span class="p">:</span> <span class="n">number</span><span class="p">,</span> <span class="n">discipline</span><span class="p">:</span> <span class="n">string</span><span class="p">)</span> <span class="p">{</span>
 <a id="__codelineno-10-13" name="__codelineno-10-13"></a>    <span class="nb">super</span><span class="p">(</span><span class="n">nom</span><span class="p">,</span> <span class="n">prénom</span><span class="p">,</span> <span class="n">âge</span><span class="p">);</span>
 <a id="__codelineno-10-14" name="__codelineno-10-14"></a>    <span class="n">this</span><span class="o">.</span><span class="n">discipline</span> <span class="o">=</span> <span class="n">discipline</span><span class="p">;</span>
 <a id="__codelineno-10-15" name="__codelineno-10-15"></a>  <span class="p">}</span>
 <a id="__codelineno-10-16" name="__codelineno-10-16"></a>
-<a id="__codelineno-10-17" name="__codelineno-10-17"></a>  <span class="o">//</span> <span class="n">getters</span> <span class="ow">and</span> <span class="n">setters</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17"></a>   <span class="o">//</span> <span class="n">getters</span> <span class="ow">and</span> <span class="n">setters</span>
 <a id="__codelineno-10-18" name="__codelineno-10-18"></a>  <span class="n">get</span> <span class="n">discipline</span><span class="p">():</span> <span class="n">string</span> <span class="p">{</span>
 <a id="__codelineno-10-19" name="__codelineno-10-19"></a>    <span class="k">return</span> <span class="n">this</span><span class="o">.</span><span class="n">_discipline</span><span class="p">;</span>
 <a id="__codelineno-10-20" name="__codelineno-10-20"></a>  <span class="p">}</span>
@@ -1305,14 +1305,14 @@
 <a id="__codelineno-10-22" name="__codelineno-10-22"></a>    <span class="n">this</span><span class="o">.</span><span class="n">_discipline</span> <span class="o">=</span> <span class="n">value</span><span class="p">;</span>
 <a id="__codelineno-10-23" name="__codelineno-10-23"></a>  <span class="p">}</span>
 <a id="__codelineno-10-24" name="__codelineno-10-24"></a>
-<a id="__codelineno-10-25" name="__codelineno-10-25"></a>  <span class="o">//</span> <span class="n">override</span> <span class="n">of</span> <span class="n">toString</span>
+<a id="__codelineno-10-25" name="__codelineno-10-25"></a>   <span class="o">//</span> <span class="n">override</span> <span class="n">of</span> <span class="n">toString</span>
 <a id="__codelineno-10-26" name="__codelineno-10-26"></a>  <span class="n">toString</span><span class="p">():</span> <span class="n">string</span> <span class="p">{</span>
 <a id="__codelineno-10-27" name="__codelineno-10-27"></a>    <span class="k">return</span> <span class="s2">"[Enseignant]"</span> <span class="o">+</span> <span class="n">JSON</span><span class="o">.</span><span class="n">stringify</span><span class="p">(</span><span class="n">this</span><span class="p">);</span>
 <a id="__codelineno-10-28" name="__codelineno-10-28"></a>  <span class="p">}</span>
 <a id="__codelineno-10-29" name="__codelineno-10-29"></a><span class="p">}</span>
 <a id="__codelineno-10-30" name="__codelineno-10-30"></a>
-<a id="__codelineno-10-31" name="__codelineno-10-31"></a><span class="o">//</span> <span class="n">calling</span> <span class="n">the</span> <span class="k">class</span>
-<a id="__codelineno-10-32" name="__codelineno-10-32"></a><span class="nc">function</span> <span class="n">main</span><span class="p">():</span> <span class="n">void</span> <span class="p">{</span>
+<a id="__codelineno-10-31" name="__codelineno-10-31"></a><span class="o">//</span> <span class="k">class</span><span class="w"> </span><span class="nc">call</span>
+<a id="__codelineno-10-32" name="__codelineno-10-32"></a><span class="n">function</span> <span class="n">main</span><span class="p">():</span> <span class="n">void</span> <span class="p">{</span>
 <a id="__codelineno-10-33" name="__codelineno-10-33"></a>  <span class="n">const</span> <span class="n">enseignant</span> <span class="o">=</span> <span class="n">new</span> <span class="n">Enseignant</span><span class="p">(</span><span class="s2">"Poirot"</span><span class="p">,</span> <span class="s2">"Hercule"</span><span class="p">,</span> <span class="mi">66</span><span class="p">,</span> <span class="s2">"détective"</span><span class="p">);</span>
 <a id="__codelineno-10-34" name="__codelineno-10-34"></a>  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">"enseignant="</span><span class="p">,</span> <span class="n">enseignant</span><span class="o">.</span><span class="n">toString</span><span class="p">(),</span> <span class="n">typeof</span> <span class="p">(</span><span class="n">enseignant</span><span class="p">),</span> <span class="n">enseignant</span> <span class="n">instanceof</span> <span class="n">Enseignant</span><span class="p">);</span>
 <a id="__codelineno-10-35" name="__codelineno-10-35"></a><span class="p">}</span>
@@ -1325,7 +1325,7 @@
 <p><em>Execution result:</em></p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>enseignant= [Enseignant]{"_nom":"Poirot","_prénom":"Hercule","_âge":66,"_discipline":"détective"} object true
 </code></pre></div></td></tr></table></div>
-<h2 id="135-script-class-04-polymorphism">13.5. <span style="color: #2e74b5">script [class-04] — polymorphism</span></h2>
+<h2 id="135-class-04-script-polymorphism">13.5. <span style="color: #2e74b5">[class-04] script — polymorphism</span></h2>
 <p>This script demonstrates <strong>polymorphism</strong> in action: where a function expects a parameter of type <span style="color: #9a3412">Person</span>, we can pass a derived type such as <span style="color: #9a3412">Teacher</span>, since it possesses all the attributes of <span style="color: #9a3412">Person</span>. First, we isolate <span style="color: #9a3412">Teacher </span>in its own module, <span style="color: #9a3412">Enseignant.ts</span>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
@@ -1363,16 +1363,16 @@
 <a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="o">//</span> <span class="k">class</span>
 <a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="nc">class</span> <span class="n">Enseignant</span> <span class="n">extends</span> <span class="n">Personne</span> <span class="p">{</span>
 <a id="__codelineno-13-8" name="__codelineno-13-8"></a>
-<a id="__codelineno-13-9" name="__codelineno-13-9"></a>  <span class="o">//</span> <span class="n">private</span> <span class="nb">property</span> <span class="p">(</span><span class="n">accessed</span> <span class="n">via</span> <span class="n">the</span> <span class="n">getter</span><span class="o">/</span><span class="n">setter</span> <span class="n">below</span><span class="p">)</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a>   <span class="o">//</span> <span class="n">private</span> <span class="nb">property</span> <span class="p">(</span><span class="n">accessed</span> <span class="n">via</span> <span class="n">the</span> <span class="n">getter</span><span class="o">/</span><span class="n">setter</span> <span class="n">below</span><span class="p">)</span>
 <a id="__codelineno-13-10" name="__codelineno-13-10"></a>  <span class="n">private</span> <span class="n">_discipline</span><span class="err">!</span><span class="p">:</span> <span class="n">string</span><span class="p">;</span>
 <a id="__codelineno-13-11" name="__codelineno-13-11"></a>
-<a id="__codelineno-13-12" name="__codelineno-13-12"></a>  <span class="o">//</span> <span class="n">constructor</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a>   <span class="o">//</span> <span class="n">constructor</span>
 <a id="__codelineno-13-13" name="__codelineno-13-13"></a>  <span class="n">constructor</span><span class="p">(</span><span class="n">nom</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span> <span class="n">prénom</span><span class="p">:</span> <span class="n">string</span><span class="p">,</span> <span class="n">âge</span><span class="p">:</span> <span class="n">number</span><span class="p">,</span> <span class="n">discipline</span><span class="p">:</span> <span class="n">string</span><span class="p">)</span> <span class="p">{</span>
 <a id="__codelineno-13-14" name="__codelineno-13-14"></a>    <span class="nb">super</span><span class="p">(</span><span class="n">nom</span><span class="p">,</span> <span class="n">prénom</span><span class="p">,</span> <span class="n">âge</span><span class="p">);</span>
 <a id="__codelineno-13-15" name="__codelineno-13-15"></a>    <span class="n">this</span><span class="o">.</span><span class="n">discipline</span> <span class="o">=</span> <span class="n">discipline</span><span class="p">;</span>
 <a id="__codelineno-13-16" name="__codelineno-13-16"></a>  <span class="p">}</span>
 <a id="__codelineno-13-17" name="__codelineno-13-17"></a>
-<a id="__codelineno-13-18" name="__codelineno-13-18"></a>  <span class="o">//</span> <span class="n">getters</span> <span class="ow">and</span> <span class="n">setters</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a>   <span class="o">//</span> <span class="n">getters</span> <span class="ow">and</span> <span class="n">setters</span>
 <a id="__codelineno-13-19" name="__codelineno-13-19"></a>  <span class="n">get</span> <span class="n">discipline</span><span class="p">():</span> <span class="n">string</span> <span class="p">{</span>
 <a id="__codelineno-13-20" name="__codelineno-13-20"></a>    <span class="k">return</span> <span class="n">this</span><span class="o">.</span><span class="n">_discipline</span><span class="p">;</span>
 <a id="__codelineno-13-21" name="__codelineno-13-21"></a>  <span class="p">}</span>
@@ -1416,13 +1416,13 @@
 <a id="__codelineno-14-6" name="__codelineno-14-6"></a>
 <a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="o">//</span> <span class="n">function</span> <span class="n">that</span> <span class="n">accepts</span> <span class="n">a</span> <span class="n">person</span> <span class="k">as</span> <span class="n">a</span> <span class="n">parameter</span>
 <a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="n">function</span> <span class="n">show</span><span class="p">(</span><span class="n">personne</span><span class="p">:</span> <span class="n">Personne</span><span class="p">):</span> <span class="n">void</span> <span class="p">{</span>
-<a id="__codelineno-14-9" name="__codelineno-14-9"></a>  <span class="o">//</span> <span class="ow">in</span> <span class="nb">all</span> <span class="n">cases</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a>   <span class="o">//</span> <span class="ow">in</span> <span class="nb">all</span> <span class="n">cases</span>
 <a id="__codelineno-14-10" name="__codelineno-14-10"></a>  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">"paramètre="</span><span class="p">,</span> <span class="n">personne</span><span class="o">.</span><span class="n">toString</span><span class="p">(),</span> <span class="n">typeof</span> <span class="p">(</span><span class="n">personne</span><span class="p">));</span>
-<a id="__codelineno-14-11" name="__codelineno-14-11"></a>  <span class="o">//</span> <span class="n">an</span> <span class="n">instance</span> <span class="n">of</span> <span class="n">Person</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a>   <span class="o">//</span> <span class="n">Person</span> <span class="n">instance</span>
 <a id="__codelineno-14-12" name="__codelineno-14-12"></a>  <span class="k">if</span> <span class="p">(</span><span class="n">personne</span> <span class="n">instanceof</span> <span class="n">Personne</span><span class="p">)</span> <span class="p">{</span>
 <a id="__codelineno-14-13" name="__codelineno-14-13"></a>    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">"personne="</span><span class="p">,</span> <span class="n">personne</span><span class="o">.</span><span class="n">toString</span><span class="p">());</span>
 <a id="__codelineno-14-14" name="__codelineno-14-14"></a>  <span class="p">}</span>
-<a id="__codelineno-14-15" name="__codelineno-14-15"></a>  <span class="o">//</span> <span class="n">instance</span> <span class="n">of</span> <span class="n">Teacher</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15"></a>   <span class="o">//</span> <span class="n">instance</span> <span class="n">of</span> <span class="n">Teacher</span>
 <a id="__codelineno-14-16" name="__codelineno-14-16"></a>  <span class="k">if</span> <span class="p">(</span><span class="n">personne</span> <span class="n">instanceof</span> <span class="n">Enseignant</span><span class="p">)</span> <span class="p">{</span>
 <a id="__codelineno-14-17" name="__codelineno-14-17"></a>    <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s2">"enseignant="</span><span class="p">,</span> <span class="n">personne</span><span class="o">.</span><span class="n">toString</span><span class="p">());</span>
 <a id="__codelineno-14-18" name="__codelineno-14-18"></a>  <span class="p">}</span>
@@ -1433,8 +1433,8 @@
 <a id="__codelineno-14-23" name="__codelineno-14-23"></a><span class="n">show</span><span class="p">(</span><span class="n">new</span> <span class="n">Personne</span><span class="p">(</span><span class="s2">"Marple"</span><span class="p">,</span> <span class="s2">"Miss"</span><span class="p">,</span> <span class="mi">70</span><span class="p">));</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>line 8: <span style="color: #9a3412">function show(person: Person): void </span>— the function expects a parameter of type <span style="color: #9a3412">Person</span>, but accepts any <strong>derived</strong> type (<span style="color: #9a3412">Teacher</span>) — this is the principle of substitution, which is fundamental to object-oriented programming;</li>
-<li>Lines 9–18: <span style="color: #9a3412"><code>instanceof</code> </span>allows the behavior to be adapted to the <strong>actual</strong> type of the received object, beyond its declared type.</li>
+<li>line 8: <span style="color: #9a3412">function show(personne: Personne): void </span>— the function expects a parameter of type <span style="color: #9a3412">Person</span>, but accepts any <strong>derived</strong> type (<span style="color: #9a3412">Teacher</span>) — this is the principle of substitution, fundamental to object-oriented programming;</li>
+<li>lines 9–18: <span style="color: #9a3412"><code>instanceof</code> </span>allows the behavior to be adapted to the <strong>actual</strong> type of the received object, beyond its declared type.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>npx tsx classes/class-04.ts
 </code></pre></div>
@@ -1449,8 +1449,8 @@
 <a id="__codelineno-16-4" name="__codelineno-16-4"></a>paramètre= {"_nom":"Marple","_prénom":"Miss","_âge":70} object
 <a id="__codelineno-16-5" name="__codelineno-16-5"></a>personne= {"_nom":"Marple","_prénom":"Miss","_âge":70}
 </code></pre></div></td></tr></table></div>
-<h2 id="136-class-05-script-native-private-fields">13.6. <span style="color: #2e74b5">[class-05] script — native private fields</span></h2>
-<p><strong><span style="color: #9a3412">[NOUVEAU depuis 2019] </span></strong>The previous scripts use the TypeScript <span style="color: #9a3412">private</span> modifier (<span style="color: #9a3412">_nom</span>, <span style="color: #9a3412">_prénom</span>...), a protection mechanism that exists only at <strong>compile</strong> time—at runtime, in pure JavaScript, these fields remain simply normal properties. Since ECMAScript 2022, there have been <strong>true</strong> private fields, prefixed with <span style="color: #9a3412">#</span>, which are invisible and inaccessible even at runtime:</p>
+<h2 id="136-script-class-05-native-private-fields">13.6. <span style="color: #2e74b5">script [class-05] — native private fields</span></h2>
+<p><strong><span style="color: #9a3412">[NOUVEAU depuis 2019] </span></strong>The previous scripts use the <span style="color: #9a3412">private</span> modifier TypeScript (<span style="color: #9a3412">_nom</span>, <span style="color: #9a3412">_prénom</span>...), a protection mechanism that exists only at <strong>compile</strong> time—at runtime, in pure JavaScript, these fields remain simply normal properties. Since ECMAScript 2022, there have been <strong>true</strong> private fields, prefixed with <span style="color: #9a3412">#</span>, which are invisible and inaccessible even at runtime:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
@@ -1546,7 +1546,7 @@
 <span class="normal"><a href="#__codelineno-17-93">93</a></span>
 <span class="normal"><a href="#__codelineno-17-94">94</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="s1">'use strict'</span><span class="p">;</span>
 <a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="c1">// ========================================================================</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="c1">// [NOUVEAU depuis 2019] private fields and static blocks  (ECMAScript 2022)</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="c1">// [NOUVEAU depuis 2019] private fields and static blocks   (ECMAScript 2022)</span>
 <a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="c1">// ========================================================================</span>
 <a id="__codelineno-17-5" name="__codelineno-17-5"></a>
 <a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="c1">// In class-01.js, encapsulation was simulated by convention: a property</span>
@@ -1557,13 +1557,13 @@
 <a id="__codelineno-17-11" name="__codelineno-17-11"></a>
 <a id="__codelineno-17-12" name="__codelineno-17-12"></a><span class="kd">class</span><span class="w"> </span><span class="nx">CompteBancaire</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-17-13" name="__codelineno-17-13"></a>
-<a id="__codelineno-17-14" name="__codelineno-17-14"></a><span class="w">  </span><span class="c1">// private field: exists and is visible only within the methods of this class</span>
-<a id="__codelineno-17-15" name="__codelineno-17-15"></a><span class="w">  </span><span class="n">#balance</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="p">;</span>
+<a id="__codelineno-17-14" name="__codelineno-17-14"></a><span class="w">   </span><span class="c1">// private field: exists and is visible only within the methods of this class</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15"></a><span class="w">   </span><span class="n">#balance</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="p">;</span>
 <a id="__codelineno-17-16" name="__codelineno-17-16"></a>
-<a id="__codelineno-17-17" name="__codelineno-17-17"></a><span class="w">  </span><span class="c1">// private field with a default value</span>
-<a id="__codelineno-17-18" name="__codelineno-17-18"></a><span class="w">  </span><span class="n">#history</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<a id="__codelineno-17-17" name="__codelineno-17-17"></a><span class="w">   </span><span class="c1">// private field with a default value</span>
+<a id="__codelineno-17-18" name="__codelineno-17-18"></a><span class="w">   </span><span class="n">#history</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
 <a id="__codelineno-17-19" name="__codelineno-17-19"></a>
-<a id="__codelineno-17-20" name="__codelineno-17-20"></a><span class="w">  </span><span class="c1">// normal public field (no #): accessible from outside, as before</span>
+<a id="__codelineno-17-20" name="__codelineno-17-20"></a><span class="w">   </span><span class="c1">// normal public field (no #): accessible from outside, as before</span>
 <a id="__codelineno-17-21" name="__codelineno-17-21"></a><span class="w">  </span><span class="nx">titulaire</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">;</span>
 <a id="__codelineno-17-22" name="__codelineno-17-22"></a>
 <a id="__codelineno-17-23" name="__codelineno-17-23"></a><span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="nx">titulaire</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">,</span><span class="w"> </span><span class="nx">soldeInitial</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -1571,14 +1571,14 @@
 <a id="__codelineno-17-25" name="__codelineno-17-25"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="n">#balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">soldeInitial</span><span class="p">;</span>
 <a id="__codelineno-17-26" name="__codelineno-17-26"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-17-27" name="__codelineno-17-27"></a>
-<a id="__codelineno-17-28" name="__codelineno-17-28"></a><span class="w">  </span><span class="c1">// public method that provides controlled access to the private field</span>
+<a id="__codelineno-17-28" name="__codelineno-17-28"></a><span class="w">   </span><span class="c1">// public method that provides controlled access to the private field</span>
 <a id="__codelineno-17-29" name="__codelineno-17-29"></a><span class="w">  </span><span class="nx">get</span><span class="w"> </span><span class="nx">solde</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-17-30" name="__codelineno-17-30"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">#balance</span><span class="p">;</span>
 <a id="__codelineno-17-31" name="__codelineno-17-31"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-17-32" name="__codelineno-17-32"></a>
 <a id="__codelineno-17-33" name="__codelineno-17-33"></a><span class="w">  </span><span class="nx">déposer</span><span class="p">(</span><span class="nx">montant</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-17-34" name="__codelineno-17-34"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="n">#balance</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">amount</span><span class="p">;</span>
-<a id="__codelineno-17-35" name="__codelineno-17-35"></a><span class="w">    </span><span class="c1">// #ajouterHistorique is a private method, callable only from here</span>
+<a id="__codelineno-17-34" name="__codelineno-17-34"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="n">#solde</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">montant</span><span class="p">;</span>
+<a id="__codelineno-17-35" name="__codelineno-17-35"></a><span class="w">     </span><span class="c1">// #ajouterHistorique is a private method, callable only from here</span>
 <a id="__codelineno-17-36" name="__codelineno-17-36"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="n">#ajouterHistorique</span><span class="p">(</span><span class="sb">`deposit of </span><span class="si">${</span><span class="nx">amount</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
 <a id="__codelineno-17-37" name="__codelineno-17-37"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-17-38" name="__codelineno-17-38"></a>
@@ -1586,12 +1586,12 @@
 <a id="__codelineno-17-40" name="__codelineno-17-40"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">montant</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">#balance</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-17-41" name="__codelineno-17-41"></a><span class="w">      </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s2">"solde insuffisant"</span><span class="p">);</span>
 <a id="__codelineno-17-42" name="__codelineno-17-42"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-17-43" name="__codelineno-17-43"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="n">#balance</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="nx">amount</span><span class="p">;</span>
+<a id="__codelineno-17-43" name="__codelineno-17-43"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="n">#solde</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="nx">montant</span><span class="p">;</span>
 <a id="__codelineno-17-44" name="__codelineno-17-44"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="n">#ajouterHistorique</span><span class="p">(</span><span class="sb">`withdrawal of </span><span class="si">${</span><span class="nx">amount</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
 <a id="__codelineno-17-45" name="__codelineno-17-45"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-17-46" name="__codelineno-17-46"></a>
-<a id="__codelineno-17-47" name="__codelineno-17-47"></a><span class="w">  </span><span class="c1">// private method: [#] also works on methods</span>
-<a id="__codelineno-17-48" name="__codelineno-17-48"></a><span class="w">  </span><span class="n">#ajouterHistorique</span><span class="p">(</span><span class="nx">operation</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-47" name="__codelineno-17-47"></a><span class="w">   </span><span class="c1">// private method: [#] also works on methods</span>
+<a id="__codelineno-17-48" name="__codelineno-17-48"></a><span class="w">   </span><span class="n">#ajouterHistorique</span><span class="p">(</span><span class="nx">operation</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-17-49" name="__codelineno-17-49"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="n">#historique</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">operation</span><span class="p">);</span>
 <a id="__codelineno-17-50" name="__codelineno-17-50"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-17-51" name="__codelineno-17-51"></a>
@@ -1607,7 +1607,7 @@
 <a id="__codelineno-17-61" name="__codelineno-17-61"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"solde ="</span><span class="p">,</span><span class="w"> </span><span class="nx">compte</span><span class="p">.</span><span class="nx">solde</span><span class="p">);</span><span class="w"> </span><span class="c1">// via the public getter</span>
 <a id="__codelineno-17-62" name="__codelineno-17-62"></a><span class="nx">compte</span><span class="p">.</span><span class="nx">afficherHistorique</span><span class="p">();</span>
 <a id="__codelineno-17-63" name="__codelineno-17-63"></a>
-<a id="__codelineno-17-64" name="__codelineno-17-64"></a><span class="c1">// The private field cannot be accessed directly from outside</span>
+<a id="__codelineno-17-64" name="__codelineno-17-64"></a><span class="c1">// the private field cannot be accessed directly from outside</span>
 <a id="__codelineno-17-65" name="__codelineno-17-65"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"compte.#solde direct : impossible, provoque une erreur de syntaxe si on essaie"</span><span class="p">);</span>
 <a id="__codelineno-17-66" name="__codelineno-17-66"></a><span class="c1">// console.log(account.#balance); // Uncommenting this line causes a compilation error TypeScript</span>
 <a id="__codelineno-17-67" name="__codelineno-17-67"></a>
@@ -1618,17 +1618,17 @@
 <a id="__codelineno-17-72" name="__codelineno-17-72"></a><span class="c1">// Private fields and methods STATIQUES also exist</span>
 <a id="__codelineno-17-73" name="__codelineno-17-73"></a><span class="c1">// ------------------------------------------------------------------------</span>
 <a id="__codelineno-17-74" name="__codelineno-17-74"></a><span class="kd">class</span><span class="w"> </span><span class="nx">GénérateurIdentifiant</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-17-75" name="__codelineno-17-75"></a><span class="w">  </span><span class="c1">// private static field: shared by all instances, invisible from the outside</span>
+<a id="__codelineno-17-75" name="__codelineno-17-75"></a><span class="w">   </span><span class="c1">// private static field: shared by all instances, invisible from the outside</span>
 <a id="__codelineno-17-76" name="__codelineno-17-76"></a><span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="n">#dernierId</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
 <a id="__codelineno-17-77" name="__codelineno-17-77"></a>
-<a id="__codelineno-17-78" name="__codelineno-17-78"></a><span class="w">  </span><span class="c1">// static initialization block: executed only once, when the class is loaded</span>
-<a id="__codelineno-17-79" name="__codelineno-17-79"></a><span class="w">  </span><span class="c1">// useful for complex initialization that a simple "= value" cannot handle</span>
+<a id="__codelineno-17-78" name="__codelineno-17-78"></a><span class="w">   </span><span class="c1">// static initialization block: executed only once, when the class is loaded</span>
+<a id="__codelineno-17-79" name="__codelineno-17-79"></a><span class="w">   </span><span class="c1">// useful for complex initialization that a simple "= value" cannot handle</span>
 <a id="__codelineno-17-80" name="__codelineno-17-80"></a><span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-17-81" name="__codelineno-17-81"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"[bloc statique] initialisation de GénérateurIdentifiant"</span><span class="p">);</span>
 <a id="__codelineno-17-82" name="__codelineno-17-82"></a><span class="w">    </span><span class="nx">GénérateurIdentifiant</span><span class="p">.</span><span class="n">#dernierId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1000</span><span class="p">;</span><span class="w"> </span><span class="c1">// custom initial value</span>
 <a id="__codelineno-17-83" name="__codelineno-17-83"></a><span class="w">  </span><span class="p">}</span>
 <a id="__codelineno-17-84" name="__codelineno-17-84"></a>
-<a id="__codelineno-17-85" name="__codelineno-17-85"></a><span class="w">  </span><span class="c1">// public static method providing controlled access to the private static field</span>
+<a id="__codelineno-17-85" name="__codelineno-17-85"></a><span class="w">   </span><span class="c1">// public static method providing controlled access to the private static field</span>
 <a id="__codelineno-17-86" name="__codelineno-17-86"></a><span class="w">  </span><span class="k">static</span><span class="w"> </span><span class="nx">prochainId</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-17-87" name="__codelineno-17-87"></a><span class="w">    </span><span class="nx">GénérateurIdentifiant</span><span class="p">.</span><span class="n">#dernierId</span><span class="o">++</span><span class="p">;</span>
 <a id="__codelineno-17-88" name="__codelineno-17-88"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">GénérateurIdentifiant</span><span class="p">.</span><span class="n">#dernierId</span><span class="p">;</span>
@@ -1640,7 +1640,7 @@
 <a id="__codelineno-17-94" name="__codelineno-17-94"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"prochainId() ="</span><span class="p">,</span><span class="w"> </span><span class="nx">GénérateurIdentifiant</span><span class="p">.</span><span class="nx">prochainId</span><span class="p">());</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li><strong><span style="color: #9a3412">[#solde]</span></strong>, <strong><span style="color: #9a3412">[#historique]</span></strong>: true private fields—unlike <span style="color: #9a3412">_nom </span>in the <span style="color: #9a3412">class-01</span> script, they <strong>cannot</strong> be accessed from outside the class, even via <span style="color: #9a3412">compte[&#x27;#solde&#x27;] </span>(line 69), which returns <span style="color: #9a3412">undefined </span>rather than the actual value;</li>
+<li><strong><span style="color: #9a3412">[#solde]</span></strong>, <strong><span style="color: #9a3412">[#historique]</span></strong>: true private fields—unlike <span style="color: #9a3412">_nom </span>in the <span style="color: #9a3412">class-01</span> script, it is <strong>impossible</strong> to access them from outside the class, even via <span style="color: #9a3412">compte[&#x27;#solde&#x27;] </span>(line 69), which returns <span style="color: #9a3412">undefined </span>rather than the actual value;</li>
 <li><strong><span style="color: #9a3412">[#ajouterHistorique]</span></strong>: a <strong>private method</strong>, callable only from within the class;</li>
 <li><strong><span style="color: #9a3412">[static { ... }]</span></strong>: a <strong>static initialization block</strong> (ES2022), executed only once when the class is loaded—useful for initialization that is more complex than a simple assignment;</li>
 <li><strong><span style="color: #9a3412">[static #dernierId]</span></strong>: a <strong>private static</strong> field, shared by all instances but invisible from the outside.</li>

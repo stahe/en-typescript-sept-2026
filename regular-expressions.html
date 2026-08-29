@@ -18,7 +18,7 @@
         <link rel="prev" href="strings.html">
       
       
-        <link rel="next" href="functions.html">
+        <link rel="next" href="the-functions.html">
       
       
         
@@ -563,14 +563,14 @@
   
   
     <li class="md-nav__item">
-      <a href="functions.html" class="md-nav__link">
+      <a href="the-functions.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    8. Functions
+    8. The Functions
   
 
     
@@ -671,14 +671,14 @@
   
   
     <li class="md-nav__item">
-      <a href="the-functions-http-and-typescript.html" class="md-nav__link">
+      <a href="the-http-and-typescript-functions.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    12. The functions HTTP and TypeScript
+    12. The HTTP and TypeScript functions
   
 
     
@@ -725,14 +725,14 @@
   
   
     <li class="md-nav__item">
-      <a href="http-typescript-clients-of-the-tax-calculation-service.html" class="md-nav__link">
+      <a href="clients-http-and-typescript-of-the-tax-calculation-service.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    14. HTTP TypeScript clients of the tax calculation service
+    14. Clients HTTP and TypeScript of the tax calculation service
   
 
     
@@ -752,14 +752,14 @@
   
   
     <li class="md-nav__item">
-      <a href="new-features-ecmascript-2020-2024.html" class="md-nav__link">
+      <a href="new-features-in-ecmascript-2020-2024.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    15. New Features ECMAScript 2020–2024
+    15. New Features in ECMAScript 2020–2024
   
 
     
@@ -844,7 +844,7 @@
 
 
 <h1 id="7-regular-expressions">7. <span style="color: #2e74b5">Regular Expressions</span></h1>
-<p>The scripts in this chapter are located in the <strong><span style="color: #9a3412">[regexp]</span></strong> folder of the project. In both TypeScript and JavaScript, a regular expression is <strong>not a string</strong> but a separate <strong>object</strong> of type <span style="color: #9a3412">RegExp</span>—therefore, you do not enclose a regular expression in quotes.</p>
+<p>The scripts in this chapter are located in the <strong><span style="color: #9a3412">[regexp]</span></strong> folder of the project. In both TypeScript and JavaScript, a regular expression is <strong>not a string</strong> but a separate <strong>object</strong>, such as <span style="color: #9a3412">RegExp</span>—therefore, you do not enclose a regular expression in quotes.</p>
 <h2 id="71-script-regexp-01">7.1. <span style="color: #2e74b5">script [regexp-01]</span></h2>
 <p>This script matches several strings against different patterns (a sequence of digits, a dd/mm/yy date, a decimal number) and retrieves the captured groups:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
@@ -931,18 +931,18 @@
 <a id="__codelineno-0-36" name="__codelineno-0-36"></a>
 <a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="c1">// --------------------------------------------------------------------------</span>
 <a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="kd">function</span><span class="w"> </span><span class="nx">compareModèleToChaîne</span><span class="p">(</span><span class="nx">modèle</span><span class="o">:</span><span class="w"> </span><span class="nb">RegExp</span><span class="p">,</span><span class="w"> </span><span class="nx">chaîne</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="w">  </span><span class="c1">// compares the string [chaîne] to the pattern [modèle]</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="w">   </span><span class="c1">// compares the string [chaîne] to the pattern [modèle]</span>
 <a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`----------- chaîne=</span><span class="si">${</span><span class="nx">chaîne</span><span class="si">}</span><span class="sb">, modèle=</span><span class="si">${</span><span class="nx">modèle</span><span class="si">}</span><span class="sb">`</span><span class="p">)</span>
-<a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">  </span><span class="c1">// the string is compared to the pattern</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">   </span><span class="c1">// the string is compared to the pattern</span>
 <a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">result1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">modèle</span><span class="p">.</span><span class="nx">exec</span><span class="p">(</span><span class="nx">chaîne</span><span class="p">);</span>
 <a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`comparaison avec exec=`</span><span class="p">,</span><span class="w"> </span><span class="nx">result1</span><span class="p">);</span>
-<a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="w">  </span><span class="c1">// another way to do it</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="w">   </span><span class="c1">// another way to do it</span>
 <a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">result2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">chaîne</span><span class="p">.</span><span class="nx">match</span><span class="p">(</span><span class="nx">modèle</span><span class="p">);</span>
 <a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`comparaison avec match=`</span><span class="p">,</span><span class="w"> </span><span class="nx">result2</span><span class="p">);</span>
 <a id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>line 7: <span style="color: #9a3412">let model: RegExp = /(\d+)/ </span>— the type <span style="color: #9a3412">RegExp </span>is explicit here, but TypeScript would have deduced it automatically from the syntax <span style="color: #9a3412">/.../ </span>anyway;</li>
+<li>line 7: <span style="color: #9a3412">let pattern: RegExp = /(\d+)/ </span>— the type <span style="color: #9a3412">RegExp </span>is explicit here, but TypeScript would have deduced it automatically from the <span style="color: #9a3412">/.../ </span>syntax anyway;</li>
 <li>The methods <strong><span style="color: #9a3412">[modèle.exec(chaîne)] </span></strong>and <strong><span style="color: #9a3412">[chaîne.match(modèle)] </span></strong>return the <strong>same result</strong>: either <span style="color: #9a3412">null </span>(no match) or an array where:<ul>
 <li>the element <span style="color: #9a3412">[0] </span>is the entire string that matches the pattern;</li>
 <li>the elements <span style="color: #9a3412">[1]</span>, <span style="color: #9a3412">[2]</span>... correspond to the groups captured in parentheses, in order;</li>
@@ -1047,7 +1047,7 @@
 <a id="__codelineno-2-46" name="__codelineno-2-46"></a><span class="n">comparaison</span> <span class="n">avec</span> <span class="n">match</span><span class="o">=</span> <span class="p">[</span> <span class="s1">' + 4'</span><span class="p">,</span> <span class="s1">'+'</span><span class="p">,</span> <span class="s1">'4'</span><span class="p">,</span> <span class="n">index</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">input</span><span class="p">:</span> <span class="s1">' + 4'</span><span class="p">,</span> <span class="n">groups</span><span class="p">:</span> <span class="n">undefined</span> <span class="p">]</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="72-script-regexp-02">7.2. <span style="color: #2e74b5">script [regexp-02]</span></h2>
-<p>Sometimes, you don’t want to extract elements from the string being tested—you just want to know if it matches the pattern. In that case, use <strong><span style="color: #9a3412">[RegExp.test] </span></strong>instead of <span style="color: #9a3412">exec/match</span>, and you can remove the capture parentheses, which are no longer needed:</p>
+<p>Sometimes, you don’t want to extract elements from the tested string but only want to know if it matches the pattern. In that case, use <strong><span style="color: #9a3412">[RegExp.test] </span></strong>instead of <span style="color: #9a3412">exec/match</span>, and you can remove the capture parentheses, which are no longer needed:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
@@ -1128,9 +1128,9 @@
 <a id="__codelineno-3-36" name="__codelineno-3-36"></a>
 <a id="__codelineno-3-37" name="__codelineno-3-37"></a><span class="c1">// --------------------------------------------------------------------------</span>
 <a id="__codelineno-3-38" name="__codelineno-3-38"></a><span class="kd">function</span><span class="w"> </span><span class="nx">compareModèleToChaîne</span><span class="p">(</span><span class="nx">modèle</span><span class="o">:</span><span class="w"> </span><span class="nb">RegExp</span><span class="p">,</span><span class="w"> </span><span class="nx">chaîne</span><span class="o">:</span><span class="w"> </span><span class="nx">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-39" name="__codelineno-3-39"></a><span class="w">  </span><span class="c1">// test</span>
+<a id="__codelineno-3-39" name="__codelineno-3-39"></a><span class="w">   </span><span class="c1">// test</span>
 <a id="__codelineno-3-40" name="__codelineno-3-40"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">correspond</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">modèle</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">chaîne</span><span class="p">);</span>
-<a id="__codelineno-3-41" name="__codelineno-3-41"></a><span class="w">  </span><span class="c1">// compares the string [chaîne] to the pattern [modèle]</span>
+<a id="__codelineno-3-41" name="__codelineno-3-41"></a><span class="w">   </span><span class="c1">// compares the string [chaîne] to the pattern [modèle]</span>
 <a id="__codelineno-3-42" name="__codelineno-3-42"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`----------- chaîne=</span><span class="si">${</span><span class="nx">chaîne</span><span class="si">}</span><span class="sb">, modèle=</span><span class="si">${</span><span class="nx">modèle</span><span class="si">}</span><span class="sb">, correspond=</span><span class="si">${</span><span class="nx">correspond</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
 <a id="__codelineno-3-43" name="__codelineno-3-43"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
