@@ -957,7 +957,7 @@
 <a id="__codelineno-7-2" name="__codelineno-7-2"></a>2
 </code></pre></div></td></tr></table></div>
 <h2 id="103-import-03-export-03-scripts">10.3. <span style="color: #2e74b5">[import-03, export-03] scripts</span></h2>
-<p>A module can export <strong>multiple elements</strong> using the syntax <code>&lt;span style="color: #9a3412"&gt;export { element }</code></span>:</p>
+<p>A module can export <strong>multiple elements</strong> using the syntax <code>export { element }</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
@@ -1010,7 +1010,7 @@
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>Line 3: Named imports use the <strong>exact names</strong> of the exported elements, enclosed in curly braces;</li>
-<li>Line 8: <code>&lt;span style="color: #9a3412"&gt;import \* as module from &amp;#x27;...&amp;#x27;</code> </span>imports <strong>all</strong> exported elements, grouped into a named object (here, <code>&lt;span style="color: #9a3412"&gt;module&lt;/span&gt;</code>).</li>
+<li>Line 8: <code>import \* as module from '...'</code> imports <strong>all</strong> exported elements, grouped into a named object (here, <code>module</code>).</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">npx</span> <span class="n">tsx</span> <span class="n">modules</span><span class="o">/</span><span class="n">import</span><span class="o">-</span><span class="mf">03.</span><span class="n">ts</span>
 </code></pre></div>
@@ -1024,7 +1024,7 @@
 <a id="__codelineno-11-4" name="__codelineno-11-4"></a>doSomething
 </code></pre></div></td></tr></table></div>
 <h2 id="104-import-04-config-distante-scripts-top-level-await">10.4. <span style="color: #2e74b5">[import-04, config-distante] scripts — top-level await</span></h2>
-<p><strong><span style="color: #9a3412">[NOUVEAU depuis 2019] </span></strong>ECMAScript Version 2022 introduced <strong>top-level await</strong>: the ability to use <code>&lt;span style="color: #9a3412"&gt;await</code> </span>directly at the top level of a module, without wrapping it in an <span style="color: #9a3412"><code>async</code> </span>function. Previously, you had to create an <code>async</code> “main” function and call it immediately (see the next chapter, script <span style="color: #9a3412">async-06</span>).</p>
+<p><strong><span style="color: #9a3412">[NOUVEAU depuis 2019] </span></strong>ECMAScript Version 2022 introduced <strong>top-level await</strong>: the ability to use <code>await</code> directly at the top level of a module, without wrapping it in an <span style="color: #9a3412"><code>async</code> </span>function. Previously, you had to create an <code>async</code> “main” function and call it immediately (see the next chapter, script <span style="color: #9a3412">async-06</span>).</p>
 <p>The <strong><span style="color: #9a3412">[config-distante]</span></strong> module simulates the loading of a remote configuration and uses top-level <code>await</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
@@ -1138,9 +1138,9 @@
 <a id="__codelineno-13-27" name="__codelineno-13-27"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"[import-04] terminé"</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Line 19: Thanks to the top-level <code>await</code> used **in <code>**&lt;span style="color: #9a3412"&gt;config-distante.ts&lt;/span&gt;</code>, the import on line 19 completes only after the configuration has finished loading—no need for <span style="color: #9a3412"><code>.then()</code> </span>or an <code>&lt;span style="color: #9a3412"&gt;async</code> </span>function here;</li>
+<li>Line 19: Thanks to the top-level <code>await</code> used **in <code>**config-distante.ts</code>, the import on line 19 completes only after the configuration has finished loading—no need for <span style="color: #9a3412"><code>.then()</code> </span>or an <code>async</code> function here;</li>
 <li>ES modules are always evaluated <strong>before</strong> the code in the module that imports them, even if the <span style="color: #9a3412">import</span> statement isn’t on the first line of the file: this is why the messages from <span style="color: #9a3412">config-distante.ts </span>are displayed before those from <span style="color: #9a3412">import-04.ts</span>, even though the latter is literally placed before the import in the file;</li>
-<li>line 26: You can also use <code>&lt;span style="color: #9a3412"&gt;await</code> </span>directly within <code>&lt;span style="color: #9a3412"&gt;import-04.ts</code> </span>itself, at its own top level.</li>
+<li>line 26: You can also use <code>await</code> directly within <code>import-04.ts</code> itself, at its own top level.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="n">npx</span> <span class="n">tsx</span> <span class="n">modules</span><span class="o">/</span><span class="n">import</span><span class="o">-</span><span class="mf">04.</span><span class="n">ts</span>
 </code></pre></div>

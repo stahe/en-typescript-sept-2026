@@ -996,7 +996,7 @@
 <ul>
 <li>Lines 5–9: <strong><span style="color: #9a3412">[interface] </span></strong><span style="color: #9a3412">Obj1 </span>declares in advance the properties that will be added (<span style="color: #9a3412">prop1, prop2, prop3</span>, all optional with <span style="color: #9a3412">?</span>). The line <span style="color: #9a3412">[clé: string]: unknown </span>is an <strong>index signature</strong>: it also allows the addition of any other property not specified in advance;</li>
 <li>line 19: <span style="color: #9a3412">obj1.prop3 </span>can also be written as <span style="color: #9a3412">obj1[&#x27;prop3&#x27;]</span>—this notation is essential when the property name is actually the value of a variable (lines 28–29);</li>
-<li>lines 22–25: <span style="color: #9a3412"><code>const obj2: Obj1 = obj1</code> </span>is a <strong>reference copy</strong>, not a copy of the object—therefore, modifying <span style="color: #9a3412"><code>obj2</code> </span>also modifies what is seen through <code>&lt;span style="color: #9a3412"&gt;obj1&lt;/span&gt;</code>, just as with arrays.</li>
+<li>lines 22–25: <span style="color: #9a3412"><code>const obj2: Obj1 = obj1</code> </span>is a <strong>reference copy</strong>, not a copy of the object—therefore, modifying <span style="color: #9a3412"><code>obj2</code> </span>also modifies what is seen through <code>obj1</code>, just as with arrays.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npx tsx objets/obj-01.ts
 </code></pre></div>
@@ -1173,8 +1173,8 @@
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>Lines 3–6: <strong><span style="color: #9a3412">[interface] and </span></strong><span style="color: #9a3412">PersonneAvecNom </span>declare <span style="color: #9a3412">_nom </span>as an <strong>optional</strong> property (prefixed with an underscore by convention, to indicate that it is a “private” property, even though TypeScript does not prevent access to it—see true encapsulation with <span style="color: #9a3412">#field </span>in the chapter “Classes”);</li>
-<li>lines 8–11: <strong><span style="color: #9a3412">[getter]</span></strong>—using the <code>&lt;span style="color: #9a3412"&gt;get</code> </span>keyword rather than <span style="color: #9a3412">a function</span>—returns the value of <span style="color: #9a3412">_nom</span>;</li>
-<li>lines 13–16: <strong><span style="color: #9a3412">[setter]</span></strong>—the <span style="color: #9a3412"><code>set&lt;/span&gt;</code> keyword—receives the assigned value and can validate it before storing it;</li>
+<li>lines 8–11: <strong><span style="color: #9a3412">[getter]</span></strong>—using the <code>get</code> keyword rather than <span style="color: #9a3412">a function</span>—returns the value of <span style="color: #9a3412">_nom</span>;</li>
+<li>lines 13–16: <strong><span style="color: #9a3412">[setter]</span></strong>—the <code>set</code> keyword—receives the assigned value and can validate it before storing it;</li>
 <li>line 20: <span style="color: #9a3412">personne.nom = &quot;Hercule&quot; </span><strong>implicitly</strong> calls the setter;</li>
 <li>line 22: <span style="color: #9a3412">personne.nom </span><strong>implicitly</strong> calls the getter;</li>
 <li>line 26: nothing prevents direct access to <span style="color: #9a3412">_nom</span>—encapsulation by convention depends on the developer’s discipline.</li>
@@ -1276,7 +1276,7 @@
 <ul>
 <li>Property names can be written literally (<span style="color: #9a3412">name:</span>), enclosed in single quotes (<span style="color: #9a3412">&#x27;name&#x27;:</span>), or enclosed in double quotes (<span style="color: #9a3412">&quot;name&quot;:</span>)—all three are equivalent;</li>
 <li>Line 31: <span style="color: #9a3412">obj3.nom </span>and <span style="color: #9a3412">obj3[&#x27;nom&#x27;] </span>access the same property;</li>
-<li>Lines 34–36: <span style="color: #9a3412"><code>const obj4 = { obj1, obj2 }</code> </span>is the <strong>shorthand notation</strong> for <span style="color: #9a3412"><code>{ obj1: obj1, obj2: obj2 }&lt;/span&gt;</code> — widely used when grouping existing variables into an object.</li>
+<li>Lines 34–36: <span style="color: #9a3412"><code>const obj4 = { obj1, obj2 }</code> </span>is the <strong>shorthand notation</strong> for <code>{ obj1: obj1, obj2: obj2 }</code> — widely used when grouping existing variables into an object.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>npx tsx objets/obj-04.ts
 </code></pre></div>
@@ -1468,7 +1468,7 @@
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>Line 11: The index signature <span style="color: #9a3412">[clé: string]: unknown </span>is <strong>required</strong> here so that TypeScript allows dynamic access to <span style="color: #9a3412">personne[key] </span>from the loop <span style="color: #9a3412">for...in</span>;</li>
-<li>Lines 35–40: <span style="color: #9a3412"><code>for (const key in personne)</code> </span>iterates through the property names. The <code>&lt;span style="color: #9a3412"&gt;hasOwnProperty</code> </span>test filters out any inherited properties (not present in this script, but a good practice to follow systematically);</li>
+<li>Lines 35–40: <span style="color: #9a3412"><code>for (const key in personne)</code> </span>iterates through the property names. The <code>hasOwnProperty</code> test filters out any inherited properties (not present in this script, but a good practice to follow systematically);</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>npx tsx objets/obj-06.ts
 </code></pre></div>

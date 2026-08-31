@@ -1011,7 +1011,7 @@
 <ul>
 <li>Primitive types (<span style="color: #9a3412">number</span>, <span style="color: #9a3412">string</span>, <span style="color: #9a3412">boolean</span>) are passed <strong>by value</strong>: modifying <span style="color: #9a3412"><code>param</code> </span>inside the function never changes the original variable (<span style="color: #9a3412">pass-by-reference = false </span>in each case);</li>
 <li>arrays, objects, and functions are passed <strong>by reference</strong>: <span style="color: #9a3412">param === tab </span>(or <span style="color: #9a3412">obj</span>, or <span style="color: #9a3412">f</span>) is <span style="color: #9a3412">true</span>, and a modification inside the function is visible outside;</li>
-<li>line 45: <span style="color: #9a3412">function doSomethingWithObject(param: any) </span>— typed <span style="color: #9a3412">as <code>any</code> </span>because a property (<span style="color: #9a3412">unePropriétéNouvelle</span>) is dynamically added that was not specified in the original type of the <code>&lt;span style="color: #9a3412"&gt;obj</code> </span>array;</li>
+<li>line 45: <span style="color: #9a3412">function doSomethingWithObject(param: any) </span>— typed <span style="color: #9a3412">as <code>any</code> </span>because a property (<span style="color: #9a3412">unePropriétéNouvelle</span>) is dynamically added that was not specified in the original type of the <code>obj</code> array;</li>
 <li>line 58: same thing for <span style="color: #9a3412">doSomethingWithFunction </span>— a property is added to the function itself; this behavior (JavaScript) is a bit confusing but perfectly valid (a function is also an object).</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>npx tsx fonctions/func-01.ts
@@ -1042,7 +1042,7 @@
 <a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="p">[</span><span class="nx">f</span><span class="w"> </span><span class="nx">outside</span><span class="w"> </span><span class="kd">function</span><span class="p">]</span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="nb">Function</span><span class="o">:</span><span class="w"> </span><span class="nx">f</span><span class="p">]</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s1">'unePropriétéNouvelle'</span><span class="o">:</span><span class="w"> </span><span class="s1">'xyz'</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="nx">xyz</span><span class="w"> </span><span class="kd">function</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="82-script-func-02">8.2. <span style="color: #2e74b5">script [func-02]</span></h2>
-<p>This script shows that <strong><span style="color: #9a3412">[function] </span></strong>is a data type like any other: a variable can have this type, and there are two ways to define a function—using the <code>&lt;span style="color: #9a3412"&gt;function&lt;/span&gt;</code> keyword or the <strong>arrow</strong> notation <span style="color: #9a3412"><code>=&amp;gt;&lt;/span&gt;</code>.</p>
+<p>This script shows that <strong><span style="color: #9a3412">[function] </span></strong>is a data type like any other: a variable can have this type, and there are two ways to define a function—using the <code>function</code> keyword or the <strong>arrow</strong> notation <code>=&gt;</code>.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
@@ -1238,11 +1238,11 @@
 <a id="__codelineno-9-27" name="__codelineno-9-27"></a><span class="n">new</span> <span class="p">(</span><span class="n">g</span> <span class="k">as</span> <span class="nb">any</span><span class="p">)()</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>lines 5–10: <span style="color: #9a3412">f </span>is an “empty shell” function, typed as <span style="color: #9a3412"><code>this: any&lt;/span&gt;</code>—this special annotation on the first parameter tells TypeScript the type of <span style="color: #9a3412"><code>this</code> </span>inside the function, which is necessary here because properties are added to it from the outside, a pattern that TypeScript cannot deduce on its own;</li>
-<li>lines 12–15: properties are assigned to <code>&lt;span style="color: #9a3412"&gt;f&lt;/span&gt;</code> from outside — <code>&lt;span style="color: #9a3412"&gt;(f as any).prop1 = ...&lt;/span&gt;</code>;</li>
+<li>lines 5–10: <span style="color: #9a3412">f </span>is an “empty shell” function, typed as <code>this: any</code>—this special annotation on the first parameter tells TypeScript the type of <span style="color: #9a3412"><code>this</code> </span>inside the function, which is necessary here because properties are added to it from the outside, a pattern that TypeScript cannot deduce on its own;</li>
+<li>lines 12–15: properties are assigned to <code>f</code> from outside — <code>(f as any).prop1 = ...</code>;</li>
 <li>line 17: <span style="color: #9a3412">f.show()</span> is called, not <span style="color: #9a3412">f()</span>—this is indeed the notation for using an object, not a traditional function call;</li>
 <li>Lines 20–25: <span style="color: #9a3412">g </span>defines <span style="color: #9a3412">this.prop2 </span>and <span style="color: #9a3412">this.show </span>within itself, just as a class constructor would;</li>
-<li>line 27: <code>&lt;span style="color: #9a3412"&gt;new (g as any)()</code> </span>**instantiates <code>**&lt;span style="color: #9a3412"&gt;g</code> </span>as a class.</li>
+<li>line 27: <code>new (g as any)()</code> **instantiates <code>**g</code> as a class.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>npx tsx fonctions/func-04.ts
 </code></pre></div>
@@ -1286,7 +1286,7 @@
 <a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="nx">f</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"deux"</span><span class="p">,</span><span class="w"> </span><span class="s2">"trois"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="p">})</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>line 3: <span style="color: #9a3412">function f(arg1: number, ...otherArgs: unknown[]): void </span>— <span style="color: #9a3412">otherArgs </span>collects all arguments passed after <span style="color: #9a3412">arg1</span>, regardless of their number. The <code>&lt;span style="color: #9a3412"&gt;unknown[]</code> </span>type is appropriate here because <span style="color: #9a3412">otherArgs </span>intentionally mixes different types (strings and objects, in the call on line 15).</li>
+<li>line 3: <span style="color: #9a3412">function f(arg1: number, ...otherArgs: unknown[]): void </span>— <span style="color: #9a3412">otherArgs </span>collects all arguments passed after <span style="color: #9a3412">arg1</span>, regardless of their number. The <code>unknown[]</code> type is appropriate here because <span style="color: #9a3412">otherArgs </span>intentionally mixes different types (strings and objects, in the call on line 15).</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>npx tsx fonctions/func-05.ts
 </code></pre></div>

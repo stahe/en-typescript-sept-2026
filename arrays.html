@@ -982,7 +982,7 @@
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>line 5: <span style="color: #9a3412">const tab: any[] = [] </span>— an empty array, typed as <span style="color: #9a3412"><code>any[]</code> </span>because it will intentionally contain “gaps”;</li>
-<li>lines 9–10: element #3 can be initialized even if elements 0, 1, and 2 do not yet exist—they become “gaps” (<span style="color: #9a3412">empty items</span>), which are distinct from <code>&lt;span style="color: #9a3412"&gt;undefined</code> </span>even though they are often displayed similarly;</li>
+<li>lines 9–10: element #3 can be initialized even if elements 0, 1, and 2 do not yet exist—they become “gaps” (<span style="color: #9a3412">empty items</span>), which are distinct from <code>undefined</code> even though they are often displayed similarly;</li>
 <li>lines 18–20: the <span style="color: #9a3412">keys() </span>and <span style="color: #9a3412">values() </span>methods return <strong>iterators</strong> that can be traversed using <span style="color: #9a3412">for...of</span>.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>npx tsx tableaux/tab-02.ts
@@ -1133,8 +1133,8 @@
 <a id="__codelineno-6-56" name="__codelineno-6-56"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Line 4: Although <span style="color: #9a3412"><code>tab</code> </span>is declared <span style="color: #9a3412">as <code>const</code></span>, its <strong>contents</strong> can be modified (line 25, <code>&lt;span style="color: #9a3412"&gt;tab[5] = []&lt;/span&gt;</code>). It is the pointer to the array that is constant, not the array itself;</li>
-<li>lines 10–12: <code>&lt;span style="color: #9a3412"&gt;forEach</code> </span>iterates through the array and calls the function passed as a parameter for each element—here written using <strong>arrow notation</strong>: <code>&lt;span style="color: #9a3412"&gt;element =&amp;gt; { ... }&lt;/span&gt;</code>;</li>
+<li>Line 4: Although <span style="color: #9a3412"><code>tab</code> </span>is declared <span style="color: #9a3412">as <code>const</code></span>, its <strong>contents</strong> can be modified (line 25, <code>tab[5] = []</code>). It is the pointer to the array that is constant, not the array itself;</li>
+<li>lines 10–12: <code>forEach</code> iterates through the array and calls the function passed as a parameter for each element—here written using <strong>arrow notation</strong>: <code>element =&gt; { ... }</code>;</li>
 <li>lines 15–17: the same thing, written using traditional <span style="color: #9a3412">function</span> syntax—the two forms are equivalent;</li>
 <li>The <span style="color: #9a3412">pop(), push(), unshift(), shift(), splice()</span> methods modify the <strong>in-place</strong> array (they have side effects): this is a key difference from the “immutable” methods discussed in script <span style="color: #9a3412">tab-05</span>.</li>
 </ul>
@@ -1343,7 +1343,7 @@
 <li><strong><span style="color: #9a3412">[map] </span></strong>transforms each element and returns a <strong>new</strong> array—the original remains unchanged;</li>
 <li><strong><span style="color: #9a3412">[reduce] </span></strong>“accumulates” the elements one by one into a single result. The first parameter of its function (<span style="color: #9a3412">accumulator</span>) is the result accumulated so far; the second (<span style="color: #9a3412">currentValue</span>) is the current element. Without an initial value (line 20), the accumulator starts with the first element of the array;</li>
 <li><strong><span style="color: #9a3412">[filter] </span></strong>retains only those elements for which the function returns a “true” value;</li>
-<li><strong><span style="color: #9a3412">[find] </span></strong>returns the first element that satisfies the criterion (or <code>&lt;span style="color: #9a3412"&gt;undefined&lt;/span&gt;</code>), while <strong><span style="color: #9a3412">[findIndex] </span></strong>returns its index (or <span style="color: #9a3412"><code>-1</code></span>);</li>
+<li><strong><span style="color: #9a3412">[find] </span></strong>returns the first element that satisfies the criterion (or <code>undefined</code>), while <strong><span style="color: #9a3412">[findIndex] </span></strong>returns its index (or <span style="color: #9a3412"><code>-1</code></span>);</li>
 <li><strong><span style="color: #9a3412">[sort] </span></strong>without a parameter sorts in natural order. With a comparison function <span style="color: #9a3412">(e1, e2) =&gt; ...</span>, you have complete control over the order: <span style="color: #9a3412">-1 </span>if <span style="color: #9a3412">e1 </span>must come before <span style="color: #9a3412">e2</span>, <span style="color: #9a3412">+1 </span>otherwise,<span style="color: #9a3412"> 0 </span>in case of a tie.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>npx tsx tableaux/tab-04.ts
