@@ -598,10 +598,71 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#85-script-func-05" class="md-nav__link">
+  <a href="#85-functions-as-objects-expando-properties" class="md-nav__link">
     <span class="md-ellipsis">
       
-        8.5. script [func-05]
+        8.5. Functions as objects: expando properties
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.5. Functions as objects: expando properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#851-original-script" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5.1. Original script
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#852-simplified-script-for-f-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5.2. Simplified script (for [f] only)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#853-why-g-does-not-simplify-the-same-way" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5.3. Why [g] does not simplify the same way
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#854-preference-and-justification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.5.4. Preference and justification
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#86-script-func-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8.6. script [func-05]
       
     </span>
   </a>
@@ -1253,8 +1314,9 @@
 </code></pre></div></td></tr></table></div>
 <div style="margin:0 0 0.75em 0; background-color:#fff4ce; padding:0.35em 0.6em"><b>Note: </b>ES6 introduced the <span style="color: #9a3412">`class`</span> keyword (see the chapter “Classes”), which allows you to achieve this result directly without using this functional workaround.</div>
 
-<h2 id="85-script-func-05">8.5. <span style="color: #2e74b5">script [func-05]</span></h2>
-<p>This script demonstrates the use of <strong><span style="color: #9a3412">[rest operator] </span></strong>(<span style="color: #9a3412">...</span>), which collects all remaining arguments from a call into an array:</p>
+<h2 id="85-functions-as-objects-expando-properties">8.5. <span style="color: #4f81bd">Functions as objects: expando properties</span></h2>
+<p>This note compares two ways of writing script <span style="color: #9a3412">class-00</span>/<span style="color: #9a3412">func-04</span>: the original version, which types <span style="color: #9a3412">this</span> explicitly and casts with <span style="color: #9a3412">as any</span>, and a simplified version suggested during review, which relies on a lesser-known TypeScript mechanism called — in the compiler&#x27;s own source code — “expando properties”.</p>
+<h3 id="851-original-script">8.5.1. <span style="color: #4f81bd">Original script</span></h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
@@ -1269,35 +1331,182 @@
 <span class="normal"><a href="#__codelineno-12-12">12</a></span>
 <span class="normal"><a href="#__codelineno-12-13">13</a></span>
 <span class="normal"><a href="#__codelineno-12-14">14</a></span>
-<span class="normal"><a href="#__codelineno-12-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="s1">'use strict'</span><span class="p">;</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="c1">// rest operator</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="kd">function</span><span class="w"> </span><span class="nx">f</span><span class="p">(</span><span class="nx">arg1</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="nx">otherArgs</span><span class="o">:</span><span class="w"> </span><span class="nx">unknown</span><span class="p">[])</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">   </span><span class="c1">// first argument</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"arg1="</span><span class="p">,</span><span class="w"> </span><span class="nx">arg1</span><span class="p">);</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6"></a><span class="w">   </span><span class="c1">// the other arguments</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">  </span><span class="nx">otherArgs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">element</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"otherArguments["</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="s2">"]="</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">);</span>
-<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="w">    </span><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
-<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="w">  </span><span class="p">});</span>
-<a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="p">}</span>
-<a id="__codelineno-12-13" name="__codelineno-12-13"></a>
-<a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="c1">// call</span>
-<a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="nx">f</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"deux"</span><span class="p">,</span><span class="w"> </span><span class="s2">"trois"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="p">})</span>
+<span class="normal"><a href="#__codelineno-12-15">15</a></span>
+<span class="normal"><a href="#__codelineno-12-16">16</a></span>
+<span class="normal"><a href="#__codelineno-12-17">17</a></span>
+<span class="normal"><a href="#__codelineno-12-18">18</a></span>
+<span class="normal"><a href="#__codelineno-12-19">19</a></span>
+<span class="normal"><a href="#__codelineno-12-20">20</a></span>
+<span class="normal"><a href="#__codelineno-12-21">21</a></span>
+<span class="normal"><a href="#__codelineno-12-22">22</a></span>
+<span class="normal"><a href="#__codelineno-12-23">23</a></span>
+<span class="normal"><a href="#__codelineno-12-24">24</a></span>
+<span class="normal"><a href="#__codelineno-12-25">25</a></span>
+<span class="normal"><a href="#__codelineno-12-26">26</a></span>
+<span class="normal"><a href="#__codelineno-12-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a>    <span class="s1">'use strict'</span><span class="p">;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>    <span class="o">//</span> <span class="n">a</span> <span class="n">function</span> <span class="n">can</span> <span class="n">be</span> <span class="n">used</span> <span class="k">as</span> <span class="n">an</span> <span class="nb">object</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a>    <span class="o">//</span> <span class="n">an</span> <span class="n">empty</span> <span class="n">shell</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a>    <span class="o">//</span> <span class="p">[</span><span class="nb">any</span><span class="p">]:</span> <span class="n">the</span> <span class="nb">type</span> <span class="n">of</span> <span class="p">[</span><span class="n">this</span><span class="p">]</span> <span class="ow">is</span> <span class="n">intentionally</span> <span class="n">flexible</span> <span class="n">here</span><span class="p">,</span> <span class="n">because</span> <span class="n">we</span> <span class="n">assign</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>    <span class="o">//</span> <span class="n">properties</span> <span class="n">to</span> <span class="n">the</span> <span class="n">function</span> <span class="n">itself</span><span class="p">,</span> <span class="n">AFTER</span> <span class="n">its</span> <span class="n">definition</span> <span class="p">(</span><span class="n">see</span> <span class="n">below</span><span class="p">)</span> <span class="err">—</span>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a>    <span class="o">//</span> <span class="n">a</span> <span class="n">schema</span> <span class="n">that</span> <span class="n">TypeScript</span> <span class="n">cannot</span> <span class="n">deduce</span> <span class="n">on</span> <span class="n">its</span> <span class="n">own</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a>    <span class="n">function</span> <span class="n">f</span><span class="p">(</span><span class="n">this</span><span class="p">:</span> <span class="nb">any</span><span class="p">):</span> <span class="n">void</span> <span class="p">{</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a>   <span class="p">}</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a>   <span class="o">//</span> <span class="n">to</span> <span class="n">which</span> <span class="n">properties</span> <span class="n">are</span> <span class="n">assigned</span> <span class="kn">from</span><span class="w"> </span><span class="nn">the</span> <span class="n">outside</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a>   <span class="p">(</span><span class="n">f</span> <span class="k">as</span> <span class="nb">any</span><span class="p">)</span><span class="o">.</span><span class="n">prop1</span> <span class="o">=</span> <span class="s2">"val1"</span><span class="p">;</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a>   <span class="p">(</span><span class="n">f</span> <span class="k">as</span> <span class="nb">any</span><span class="p">)</span><span class="o">.</span><span class="n">show</span> <span class="o">=</span> <span class="n">function</span> <span class="p">(</span><span class="n">this</span><span class="p">:</span> <span class="nb">any</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14"></a>     <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">this</span><span class="o">.</span><span class="n">prop1</span><span class="p">);</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15"></a>   <span class="p">};</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16"></a>   <span class="o">//</span> <span class="n">use</span> <span class="n">of</span> <span class="n">f</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17"></a>   <span class="p">(</span><span class="n">f</span> <span class="k">as</span> <span class="nb">any</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18"></a>
+<a id="__codelineno-12-19" name="__codelineno-12-19"></a>   <span class="o">//</span> <span class="n">a</span> <span class="n">function</span> <span class="n">g</span> <span class="n">behaving</span> <span class="n">like</span> <span class="n">a</span> <span class="k">class</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20"></a><span class="w">   </span><span class="nc">function</span> <span class="n">g</span><span class="p">(</span><span class="n">this</span><span class="p">:</span> <span class="nb">any</span><span class="p">):</span> <span class="n">void</span> <span class="p">{</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21"></a>     <span class="n">this</span><span class="o">.</span><span class="n">prop2</span> <span class="o">=</span> <span class="s2">"val2"</span><span class="p">;</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22"></a>     <span class="n">this</span><span class="o">.</span><span class="n">show</span> <span class="o">=</span> <span class="n">function</span> <span class="p">(</span><span class="n">this</span><span class="p">:</span> <span class="nb">any</span><span class="p">)</span> <span class="p">{</span>
+<a id="__codelineno-12-23" name="__codelineno-12-23"></a>       <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">this</span><span class="o">.</span><span class="n">prop2</span><span class="p">);</span>
+<a id="__codelineno-12-24" name="__codelineno-12-24"></a>     <span class="p">};</span>
+<a id="__codelineno-12-25" name="__codelineno-12-25"></a>   <span class="p">}</span>
+<a id="__codelineno-12-26" name="__codelineno-12-26"></a>   <span class="o">//</span> <span class="n">instantiation</span> <span class="n">of</span> <span class="n">the</span> <span class="n">function</span> <span class="k">with</span> <span class="p">[</span><span class="n">new</span><span class="p">]</span>
+<a id="__codelineno-12-27" name="__codelineno-12-27"></a>   <span class="n">new</span> <span class="p">(</span><span class="n">g</span> <span class="k">as</span> <span class="nb">any</span><span class="p">)()</span><span class="o">.</span><span class="n">show</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>line 8: <strong><span style="color: #9a3412">[function f(this: any): void]</span></strong> — the <span style="color: #9a3412">this: any</span> parameter types the function&#x27;s execution context, so that lines 12–15 (which attach properties to it) are accepted;</li>
+<li>lines 12–15: every property access on <span style="color: #9a3412">f</span> is wrapped in <strong><span style="color: #9a3412">[(f as any)]</span></strong> — a type assertion that switches off type-checking for that one expression;</li>
+<li>lines 20–27: the same pattern for <span style="color: #9a3412">g</span>, used as a constructor with <strong><span style="color: #9a3412">[new]</span></strong>.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>npx tsc --noEmit --strict func-04.ts
+</code></pre></div>
+<p><em>Result: no output — compiles cleanly under strict mode.</em></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>npx tsx func-04.ts
+</code></pre></div>
+<p><em>Execution result:</em></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a>  val1
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a>  val2
+</code></pre></div></td></tr></table></div>
+<h3 id="852-simplified-script-for-f-only">8.5.2. <span style="color: #4f81bd">Simplified script (for [f] only)</span></h3>
+<p>During review, a simpler version of <span style="color: #9a3412">f</span> was suggested, with no <span style="color: #9a3412">this: any</span> parameter and no <span style="color: #9a3412">as any</span> casts at all:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-16-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-16-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-16-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-16-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-16-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-16-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-16-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-16-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-16-10">10</a></span>
+<span class="normal"><a href="#__codelineno-16-11">11</a></span>
+<span class="normal"><a href="#__codelineno-16-12">12</a></span>
+<span class="normal"><a href="#__codelineno-16-13">13</a></span>
+<span class="normal"><a href="#__codelineno-16-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="w">    </span><span class="s1">'use strict'</span><span class="p">;</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="w">    </span><span class="c1">// a function can be used as an object</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="w">    </span><span class="c1">// an empty shell</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">f</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a><span class="w">    </span><span class="c1">// to which properties are assigned from the outside</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9"></a><span class="w">    </span><span class="nx">f</span><span class="p">.</span><span class="nx">prop1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"val1"</span><span class="p">;</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10"></a><span class="w">   </span><span class="nx">f</span><span class="p">.</span><span class="nx">show</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11"></a><span class="w">     </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">prop1</span><span class="p">);</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12"></a><span class="w">   </span><span class="p">};</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13"></a><span class="w">   </span><span class="c1">// use of f</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14"></a><span class="w">   </span><span class="nx">f</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<ul>
+<li>line 5: <strong><span style="color: #9a3412">[function f(): void]</span></strong> — no <span style="color: #9a3412">this</span> annotation at all, unlike the original;</li>
+<li>line 9: <strong><span style="color: #9a3412">[f.prop1 = &quot;val1&quot;]</span></strong> — a plain, uncast assignment. TypeScript allows this specifically because <span style="color: #9a3412">f</span> is a <strong>named function declaration</strong>: the compiler treats it as what its own source code calls an *expando symbol* — a function value that is allowed to grow new properties by direct assignment, exactly like plain JavaScript;</li>
+<li>lines 10–12: <strong><span style="color: #9a3412">[f.show = function () {...}]</span></strong> — a second expando assignment. TypeScript re-examines <span style="color: #9a3412">f</span>&#x27;s type after this line and folds <span style="color: #9a3412">show</span> into it as well, which is what makes line 14 compile;</li>
+<li>line 11: <strong><span style="color: #9a3412">[this.prop1]</span></strong>, inside the anonymous function passed to <span style="color: #9a3412">f.show</span> — unannotated, yet <strong><span style="color: #9a3412">[noImplicitThis]</span></strong> (part of <span style="color: #9a3412">strict</span>) raises no error here: because this function is itself an expando assignment target, TypeScript infers the type of <span style="color: #9a3412">this</span> from how <span style="color: #9a3412">f.show</span> will later be called, rather than requiring an explicit annotation;</li>
+<li>line 14: <strong><span style="color: #9a3412">[f.show()]</span></strong> — compiles because <span style="color: #9a3412">show</span> is now a known member of <span style="color: #9a3412">f</span>&#x27;s inferred type, thanks to line 10.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>npx tsc --noEmit --strict simplified.ts
+</code></pre></div>
+<p><em>Result: no output — compiles cleanly under strict mode, with zero casts.</em></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>npx tsx simplified.ts
+</code></pre></div>
+<p><em>Execution result:</em></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>   val1
+</code></pre></div>
+<h3 id="853-why-g-does-not-simplify-the-same-way">8.5.3. <span style="color: #4f81bd">Why [g] does not simplify the same way</span></h3>
+<p>It is tempting to simplify <span style="color: #9a3412">g</span> the same way, by just dropping its <span style="color: #9a3412">this: any</span> parameter too:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span>
+<span class="normal"><a href="#__codelineno-20-4">4</a></span>
+<span class="normal"><a href="#__codelineno-20-5">5</a></span>
+<span class="normal"><a href="#__codelineno-20-6">6</a></span>
+<span class="normal"><a href="#__codelineno-20-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">g</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">prop2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"val2"</span><span class="p">;</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">show</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">prop2</span><span class="p">);</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="w">  </span><span class="p">};</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6"></a><span class="p">}</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7"></a><span class="ow">new</span><span class="w"> </span><span class="p">(</span><span class="nx">g</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">any</span><span class="p">)().</span><span class="nx">show</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>npx tsc --noEmit --strict simplified-g.ts
+</code></pre></div>
+<p><em>Compiler output:</em></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a>  simplified-g.ts(2,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a>  simplified-g.ts(3,3): error TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
+</code></pre></div></td></tr></table></div>
+<p>This does <strong>not</strong> compile. The expando mechanism that rescues <span style="color: #9a3412">f</span> only applies to properties assigned to a function value <strong>from the outside</strong>, after the function is defined (exactly <span style="color: #9a3412">f</span>&#x27;s case, lines 9–12 above). <span style="color: #9a3412">g</span>, in contrast, assigns to <span style="color: #9a3412">this</span> <strong>from inside its own body</strong> (lines 2–3) — a different situation, where TypeScript needs to know the type of <span style="color: #9a3412">this</span> to check the body at all, and has no outside assignment to infer it from. An explicit <span style="color: #9a3412">this: any</span> parameter remains necessary here.</p>
+<h3 id="854-preference-and-justification">8.5.4. <span style="color: #4f81bd">Preference and justification</span></h3>
+<p>Both versions of <span style="color: #9a3412">f</span> are correct, type-check cleanly under <span style="color: #9a3412">strict</span>, and run identically. The choice between them is a question of what the script is trying to teach, not of correctness:</p>
+<ul>
+<li><strong>keep the original ([this: any] + [as any])</strong> when the goal is to show a pattern that stays correct <strong>regardless of context</strong> — a separate file, a property read before it is written in the same flow, a class method, and so on. <span style="color: #9a3412">as any</span> never depends on the compiler recognizing a special case; it always works, which is precisely why it reads as deliberate, load-bearing code rather than a shortcut;</li>
+<li><strong>use the simplified form</strong> when the goal is to show how close idiomatic TypeScript can stay to plain JavaScript for this exact pattern — useful once <span style="color: #9a3412">this: any</span>/<span style="color: #9a3412">as any</span> have already been taught elsewhere, to make the point that TypeScript is not always as strict as beginners assume.</li>
+</ul>
+<p>For this course, the original stays as the main teaching example, precisely <strong>because</strong> <span style="color: #9a3412">g</span> cannot be simplified the same way: presenting <span style="color: #9a3412">f</span> and <span style="color: #9a3412">g</span> side by side with the same <span style="color: #9a3412">this: any</span> convention keeps the two examples consistent and makes the underlying idea — a function used as an object — the point of the lesson, rather than a TypeScript inference quirk that happens to apply to only one of the two. The simplified <span style="color: #9a3412">f</span> is included here as a documented aside, worth knowing, but not worth teaching first.</p>
+<h2 id="86-script-func-05">8.6. <span style="color: #4f81bd">script [func-05]</span></h2>
+<p>This script demonstrates the use of <strong><span style="color: #9a3412">[rest operator] </span></strong>(<span style="color: #9a3412">...</span>), which collects all remaining arguments from a call into an array:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-23-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-23-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-23-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-23-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-23-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-23-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-23-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-23-10">10</a></span>
+<span class="normal"><a href="#__codelineno-23-11">11</a></span>
+<span class="normal"><a href="#__codelineno-23-12">12</a></span>
+<span class="normal"><a href="#__codelineno-23-13">13</a></span>
+<span class="normal"><a href="#__codelineno-23-14">14</a></span>
+<span class="normal"><a href="#__codelineno-23-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="s1">'use strict'</span><span class="p">;</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="c1">// rest operator</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="kd">function</span><span class="w"> </span><span class="nx">f</span><span class="p">(</span><span class="nx">arg1</span><span class="o">:</span><span class="w"> </span><span class="nx">number</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="nx">otherArgs</span><span class="o">:</span><span class="w"> </span><span class="nx">unknown</span><span class="p">[])</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="w">   </span><span class="c1">// first argument</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"arg1="</span><span class="p">,</span><span class="w"> </span><span class="nx">arg1</span><span class="p">);</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="w">   </span><span class="c1">// the other arguments</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8"></a><span class="w">  </span><span class="nx">otherArgs</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">element</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"otherArguments["</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">,</span><span class="w"> </span><span class="s2">"]="</span><span class="p">,</span><span class="w"> </span><span class="nx">element</span><span class="p">);</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10"></a><span class="w">    </span><span class="nx">i</span><span class="o">++</span><span class="p">;</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11"></a><span class="w">  </span><span class="p">});</span>
+<a id="__codelineno-23-12" name="__codelineno-23-12"></a><span class="p">}</span>
+<a id="__codelineno-23-13" name="__codelineno-23-13"></a>
+<a id="__codelineno-23-14" name="__codelineno-23-14"></a><span class="c1">// call</span>
+<a id="__codelineno-23-15" name="__codelineno-23-15"></a><span class="nx">f</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="s2">"deux"</span><span class="p">,</span><span class="w"> </span><span class="s2">"trois"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">x</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">y</span><span class="o">:</span><span class="w"> </span><span class="mf">3</span><span class="w"> </span><span class="p">})</span>
 </code></pre></div></td></tr></table></div>
 <ul>
 <li>line 3: <span style="color: #9a3412">function f(arg1: number, ...otherArgs: unknown[]): void </span>— <span style="color: #9a3412">otherArgs </span>collects all arguments passed after <span style="color: #9a3412">arg1</span>, regardless of their number. The <code>unknown[]</code> type is appropriate here because <span style="color: #9a3412">otherArgs </span>intentionally mixes different types (strings and objects, in the call on line 15).</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>npx tsx fonctions/func-05.ts
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>npx tsx fonctions/func-05.ts
 </code></pre></div>
 <p><em>Execution result:</em></p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
-<span class="normal"><a href="#__codelineno-14-2">2</a></span>
-<span class="normal"><a href="#__codelineno-14-3">3</a></span>
-<span class="normal"><a href="#__codelineno-14-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a>arg1= 1
-<a id="__codelineno-14-2" name="__codelineno-14-2"></a>otherArguments[ 0 ]= deux
-<a id="__codelineno-14-3" name="__codelineno-14-3"></a>otherArguments[ 1 ]= trois
-<a id="__codelineno-14-4" name="__codelineno-14-4"></a>otherArguments[ 2 ]= { x: 2, y: 3 }
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
+<span class="normal"><a href="#__codelineno-25-2">2</a></span>
+<span class="normal"><a href="#__codelineno-25-3">3</a></span>
+<span class="normal"><a href="#__codelineno-25-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a>arg1= 1
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a>otherArguments[ 0 ]= deux
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a>otherArguments[ 1 ]= trois
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a>otherArguments[ 2 ]= { x: 2, y: 3 }
 </code></pre></div></td></tr></table></div>
 
 
