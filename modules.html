@@ -903,7 +903,7 @@
 <a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">data</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Lines 3 and 7 import the module’s default export under <strong>two different names</strong> (<span style="color: #9a3412">export01</span>, then <span style="color: #9a3412">data</span>)—the name given to the import is arbitrary; it does not need to correspond to anything in the source module;</li>
+<li>Lines 3 and 7 import the module’s default export under <strong>two different names</strong> (<span style="color: #9a3412">export01</span>, then <span style="color: #9a3412">data</span>)—the name given to the import is arbitrary; it does not need to correspond to anything in the source module. Note that although the export file is named “export-01.<strong>ts</strong>”, we write “export-01.<strong>js</strong>”</li>
 <li>Once imported, the object can be used as if it had been defined locally.</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">npx</span> <span class="n">tsx</span> <span class="n">modules</span><span class="o">/</span><span class="n">import</span><span class="o">-</span><span class="mf">01.</span><span class="n">ts</span>
@@ -1009,7 +1009,7 @@
 <a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="nx">module</span><span class="p">.</span><span class="nx">doSomething</span><span class="p">();</span>
 </code></pre></div></td></tr></table></div>
 <ul>
-<li>Line 3: Named imports use the <strong>exact names</strong> of the exported elements, enclosed in curly braces;</li>
+<li>Line 3: Named imports use the <strong>exact names</strong> of the exported elements, enclosed in curly braces. The order of the exported elements has no importance;</li>
 <li>Line 8: <code>import \* as module from '...'</code> imports <strong>all</strong> exported elements, grouped into a named object (here, <code>module</code>).</li>
 </ul>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="n">npx</span> <span class="n">tsx</span> <span class="n">modules</span><span class="o">/</span><span class="n">import</span><span class="o">-</span><span class="mf">03.</span><span class="n">ts</span>
